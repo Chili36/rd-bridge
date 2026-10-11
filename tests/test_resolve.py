@@ -59,6 +59,16 @@ class ResolverTest(unittest.TestCase):
         # an exception's code finds its residue too, so apples get the default back
         self.check("A01DJ", "RF-00007630-PAR", "default", "RF-0416-001-PPP")
 
+    def test_near_link_code_does_not_identify_a_residue(self):
+        # a near match is a suggestion, not a link: its code must not pick a residue
+        near = {c for r in self.r.residues for e in [r["default"], *r["exceptions"]]
+                if e.get("method") == "near" for c in e.get("param_codes", [])}
+        trusted = {c for r in self.r.residues for e in [r["default"], *r["exceptions"]]
+                   if e.get("method") != "near" for c in e.get("param_codes", [])}
+        self.assertTrue(near - trusted)
+        for code in near - trusted:
+            self.assertEqual(self.r.resolve("A01DJ", code)["status"], "unknown_substance", code)
+
     def test_component_code_is_not_a_substance(self):
         # 5-hydroxythiabendazole is a part of a sum, not a residue of its own
         self.assertEqual(self.r.resolve("A02LV", "RF-0926-001-PPP")["status"], "unknown_substance")

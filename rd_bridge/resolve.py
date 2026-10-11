@@ -33,9 +33,12 @@ class Resolver:
                 self.by_name.setdefault(key, []).append(r)
         # A caller may only have the PARAM code it mapped: index whole-residue links, default
         # and exceptions. Component codes are left out: one parent is a part of many sums.
+        # Near matches too: a suggestion is not a link (see "untrusted_link").
         self.by_code = {}
         for r in residues:
             for entry in [r["default"], *r["exceptions"]]:
+                if entry.get("method") == "near":
+                    continue
                 for code in entry.get("param_codes", []):
                     if r not in self.by_code.setdefault(code, []):
                         self.by_code[code].append(r)
