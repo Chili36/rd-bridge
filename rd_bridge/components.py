@@ -112,7 +112,8 @@ def parts(definition: str) -> tuple:
     if head and not SUM_WORDS.search(body) and not re.search(r"\band\b|,", body):
         head, body = None, text
     if head and re.match(r"^includ(?:es|ing)\s+", body, re.I):
-        body = f"{head} including {re.sub(r'^includ(?:es|ing)\s+', '', body, flags=re.I)}"  # "X (includes Y)"
+        rest = re.sub(r"^includ(?:es|ing)\s+", "", body, flags=re.I)
+        body = f"{head} including {rest}"  # "X (includes Y)"
     if head and re.match(r"^(?:sum of (?:isomers|constituent isomers|diasteroisomers)|sum of|mixture of .*)$",
                          body, re.I):
         body = head  # "Bifenthrin (sum of isomers)", "X chloride (mixture of ...)": one analyte

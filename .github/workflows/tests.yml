@@ -18,3 +18,16 @@ jobs:
           python-version: "3.12"
       - name: Run standard-library tests
         run: python -m unittest discover -s tests -t .
+
+  python310:
+    # README promises Python 3.10+ for the package; DMT's image runs 3.11
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Package compiles and resolves on 3.10
+        run: |
+          python -m compileall -q rd_bridge
+          python -m rd_bridge.resolve A02LV RF-0416-001-PPP | grep -q RF-00007630-PAR
