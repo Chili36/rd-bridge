@@ -7,7 +7,7 @@ code        --Annex I hierarchy--> the exception whose scope holds the code, els
 With --analysed, also says whether those PARAM codes cover the chosen definition: the summed
 code, or every part (rd_bridge.components.completeness).
 
-Usage: python -m rd_bridge.resolve <sampMatCode> <substance name or residue id> [--analysed CODE,CODE]
+Usage: python -m rd_bridge.resolve <sampMatCode> <substance name, residue id or PARAM code> [--analysed CODE,CODE]
 """
 import json
 import re
@@ -17,6 +17,7 @@ from rd_bridge import components, compounds, footnotes
 from rd_bridge.commodity import Classifier
 
 MARKERS = re.compile(r"\s*(\((R|F|A|\+|\+\+|\*|)\)\s*)+$")
+PARAM_CODE = re.compile(r"RF-[0-9A-Z-]+", re.I)
 
 
 class Resolver:
@@ -30,6 +31,17 @@ class Resolver:
             name = MARKERS.sub("", r["name"]).strip()
             for key in {compounds.norm(name), compounds.norm(name.split(" (")[0])}:
                 self.by_name.setdefault(key, []).append(r)
+        # A caller may only have the PARAM code it mapped: index whole-residue links, default
+        # and exceptions. Component codes are left out: one parent is a part of many sums.
+        # Near matches too: a suggestion is not a link (see "untrusted_link").
+        self.by_code = {}
+        for r in residues:
+            for entry in [r["default"], *r["exceptions"]]:
+                if entry.get("method") == "near":
+                    continue
+                for code in entry.get("param_codes", []):
+                    if r not in self.by_code.setdefault(code, []):
+                        self.by_code[code].append(r)
         self.active = {}
         for row in active_substances or []:
             if row.get("name"):
@@ -59,6 +71,8 @@ class Resolver:
         if isinstance(substance, int) or str(substance).isdigit():
             hit = self.by_id.get(int(substance))
             return [hit] if hit else []
+        if PARAM_CODE.fullmatch(str(substance).strip()):
+            return self.by_code.get(str(substance).strip().upper(), [])
         return self.by_name.get(compounds.norm(str(substance)), [])
 
     def _active_status(self, substance) -> dict | None:
