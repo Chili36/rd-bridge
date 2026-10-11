@@ -87,6 +87,7 @@ For example, FoodEx2 code `A02LV` (cow milk) maps to Annex I commodity `1020010`
 
 ```bash
 python -m rd_bridge.resolve A02LV thiabendazole
+python -m rd_bridge.resolve A02LV RF-0416-001-PPP   # or by a whole-residue PARAM code
 ```
 
 The FoodEx2 classification selects **which existing definition applies**; it does not create a new definition or change its chemical parts. If the food cannot be placed in an Annex I category and the substance has exceptions, `resolve` returns candidate definitions rather than guessing.
