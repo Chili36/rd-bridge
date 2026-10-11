@@ -1,0 +1,63 @@
+# Scan the complete reachable git history, not just the working tree.
+name: Secret and history scan
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Gitleaks from official GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/gitleaks"
+          gh release download --repo gitleaks/gitleaks \
+            --pattern 'gitleaks_*_linux_x64.tar.gz' \
+            --dir "$RUNNER_TEMP/gitleaks"
+          tar -xzf "$RUNNER_TEMP"/gitleaks/gitleaks_*_linux_x64.tar.gz \
+            -C "$RUNNER_TEMP/gitleaks" gitleaks
+          "$RUNNER_TEMP/gitleaks/gitleaks" version
+      - name: Scan entire reachable history
+        run: |
+          "$RUNNER_TEMP/gitleaks/gitleaks" git --no-banner --redact \
+            --exit-code=1 --report-format=json --report-path="$RUNNER_TEMP/gitleaks-report.json" .
+      - name: Audit tracked sensitive filenames and history metadata
+        run: |
+          python - <<'PY'
+          import re, subprocess
+          names=subprocess.check_output(["git","ls-files","-z"]).decode().split("\0")
+          sensitive=[n for n in names if n and (re.search(
+              r"(?:^|/)(?:\.env(?:\..*)?|id_rsa|id_ed25519|[^/]+\.(?:pem|p12|pfx))$",
+              n,re.I) or re.search(r"(?:secret|credential|private[_-]?key)",n,re.I))]
+          if sensitive:
+              raise SystemExit("Tracked filenames potentially exposing credentials: "+repr(sensitive))
+          commit_count=int(subprocess.check_output(["git","rev-list","--all","--count"]).strip())
+          logs=subprocess.check_output(["git","log","--all","--format=%B"],text=True)
+          session_refs=len(re.findall(r"claude\.ai/code/session_",logs))
+          emails=subprocess.check_output(["git","log","--all","--format=%ae"],text=True)
+          distinct=len({x.strip().lower() for x in emails.splitlines() if x.strip()})
+          print(f"Scanned history: {commit_count} commits; {distinct} distinct author addresses.")
+          print(f"Claude session URLs in historical commit messages: {session_refs}.")
+          with open(__import__("os").environ["GITHUB_STEP_SUMMARY"],"a") as f:
+              f.write(f"History commits: {commit_count}; author addresses: {distinct}.\\n\\n")
+              f.write(f"Historical Claude session references: {session_refs} (may become visible when public).\\n")
+          PY
+      - name: Upload redacted scanner findings on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitleaks-redacted-findings
+          path: ${{ runner.temp }}/gitleaks-report.json
+          if-no-files-found: ignore

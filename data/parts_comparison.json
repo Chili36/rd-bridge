@@ -1,0 +1,831 @@
+{
+ "comparison": {
+  "counts": {
+   "same": 712,
+   "different": 40,
+   "rules_only": 15,
+   "model_not_used": 5
+  },
+  "agreement": {
+   "agree": 591,
+   "disagree": 2
+  },
+  "model_links": [
+   {
+    "residue_id": 778,
+    "definition": "Flonicamid (sum of flonicamid, TFNA and TFNG expressed as flonicamid)",
+    "component": "TFNA",
+    "param": [
+     "TNFA (4-(Trifluoromethyl)nicotinic acid)"
+    ]
+   },
+   {
+    "residue_id": 778,
+    "definition": "Flonicamid (sum of flonicamid, TFNA and TFNG expressed as flonicamid)",
+    "component": "TFNG",
+    "param": [
+     "TNFG (4-(Trifluoromethyl)nicotinoyl glycine)"
+    ]
+   },
+   {
+    "residue_id": 2332,
+    "definition": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+    "component": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C8",
+    "param": [
+     "DDAC-C08"
+    ]
+   },
+   {
+    "residue_id": 2332,
+    "definition": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+    "component": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C10",
+    "param": [
+     "DDAC-C10"
+    ]
+   },
+   {
+    "residue_id": 2332,
+    "definition": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+    "component": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C12",
+    "param": [
+     "DDAC-C12"
+    ]
+   },
+   {
+    "residue_id": 2333,
+    "definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+    "component": "alkylbenzyldimethylammonium chloride C8",
+    "param": [
+     "BAC 8"
+    ]
+   },
+   {
+    "residue_id": 2333,
+    "definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+    "component": "alkylbenzyldimethylammonium chloride C10",
+    "param": [
+     "BAC 10"
+    ]
+   },
+   {
+    "residue_id": 2333,
+    "definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+    "component": "alkylbenzyldimethylammonium chloride C12",
+    "param": [
+     "BAC 12"
+    ]
+   },
+   {
+    "residue_id": 2333,
+    "definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+    "component": "alkylbenzyldimethylammonium chloride C14",
+    "param": [
+     "BAC 14"
+    ]
+   },
+   {
+    "residue_id": 2333,
+    "definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+    "component": "alkylbenzyldimethylammonium chloride C16",
+    "param": [
+     "BAC 16"
+    ]
+   },
+   {
+    "residue_id": 2333,
+    "definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+    "component": "alkylbenzyldimethylammonium chloride C18",
+    "param": [
+     "BAC 18"
+    ]
+   }
+  ],
+  "differences": [
+   {
+    "residue_id": 60,
+    "definition": "Sum of all compounds containing the 2-chlorobenzoyl moiety expressed as clofentezine",
+    "model": [
+     "all compounds containing the 2-chlorobenzoyl moiety [group: -]"
+    ],
+    "rules": [
+     "compounds containing the 2-chlorobenzoyl moiety [group: -]"
+    ]
+   },
+   {
+    "residue_id": 139,
+    "definition": "kresoxim methyl (BF-490-9, expressed as parent)",
+    "model": [
+     "kresoxim methyl (BF-490-9) [analyte: RF-0260-002-PPP]"
+    ],
+    "rules": [
+     "BF-490-9 [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 166,
+    "definition": "free and conjugated forms of alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090), expressed as myclobutanil",
+    "model": [
+     "alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090) [analyte: RF-1005-001-PPP]"
+    ],
+    "rules": [
+     "forms of alpha-(3-hydroxybutyl) - alpha-(4-chloro-phenyl) - 1H-1,2,4-triazole-1-propanenitrile (RH9090) [analyte: RF-00013001-PAR]"
+    ]
+   },
+   {
+    "residue_id": 185,
+    "definition": "Vinclozolin, iprodione, procymidone, sum of compounds and all metabolites containing the 3,5-dichloroaniline moiety expressed as 3,5 dichloroaniline",
+    "model": [
+     "Vinclozolin [analyte: RF-0450-003-PPP]",
+     "iprodione [analyte: RF-0255-001-PPP]",
+     "procymidone [analyte: RF-0350-001-PPP]",
+     "all metabolites containing the 3,5-dichloroaniline moiety [group: -]"
+    ],
+    "rules": [
+     "Vinclozolin [analyte: RF-0450-003-PPP]",
+     "iprodione [analyte: RF-0255-001-PPP]",
+     "procymidone [analyte: RF-0350-001-PPP]",
+     "compounds [group: -]",
+     "metabolites containing the 3,5-dichloroaniline moiety [group: -]"
+    ]
+   },
+   {
+    "residue_id": 253,
+    "definition": "Chloridazon (chloridazon-desphenyl, expressed as chloridazon)",
+    "model": [
+     "chloridazon [analyte: RF-0080-001-PPP]",
+     "chloridazon-desphenyl [analyte: RF-00006186-PAR]"
+    ],
+    "rules": [
+     "chloridazon-desphenyl [analyte: RF-00006186-PAR]"
+    ]
+   },
+   {
+    "residue_id": 259,
+    "definition": "Clethodim (sum of Sethoxydim and Clethodim including degradation products calculated as Sethoxydim)",
+    "model": [
+     "Sethoxydim [analyte: RF-0096-003-PPP]",
+     "Clethodim [analyte: RF-0096-005-PPP]",
+     "degradation products [qualifier: -]"
+    ],
+    "rules": [
+     "Sethoxydim [analyte: RF-0096-003-PPP]",
+     "Clethodim [analyte: RF-0096-005-PPP]",
+     "degradation products [group: -]"
+    ]
+   },
+   {
+    "residue_id": 284,
+    "definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
+    "model": [
+     "Dinocap [analyte: RF-0143-002-PPP]",
+     "sum of dinocap isomers [qualifier: -]",
+     "their corresponding phenols [qualifier: -]",
+     "meptyldinocap [analyte: RF-00002838-PAR]",
+     "meptyldinocap corresponding phenol [analyte: -]"
+    ],
+    "rules": [
+     "dinocap [analyte: RF-0143-002-PPP]",
+     "corresponding phenols [group: -]"
+    ]
+   },
+   {
+    "residue_id": 301,
+    "definition": "Fenpyroximate (metabolite M-3, expressed as fenpyroximate (F))",
+    "model": [
+     "fenpyroximate [analyte: RF-0186-001-PPP]",
+     "fenpyroximate metabolite M-3 [analyte: -]"
+    ],
+    "rules": [
+     "M-3 [analyte: RF-00005723-PAR]"
+    ]
+   },
+   {
+    "residue_id": 307,
+    "definition": "sum of fludioxonil and its metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid, expressed as fludioxonil",
+    "model": [
+     "fludioxonil [analyte: RF-0202-001-PPP]",
+     "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid [analyte: RF-00004643-PAR]"
+    ],
+    "rules": [
+     "fludioxonil [analyte: RF-0202-001-PPP]",
+     "metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid [group: -]"
+    ]
+   },
+   {
+    "residue_id": 312,
+    "definition": "Flurochloridone (sum of cis- and trans- isomers)",
+    "model": [
+     "flurochloridone cis-isomer [analyte: -]",
+     "flurochloridone trans-isomer [analyte: -]"
+    ],
+    "rules": [
+     "cis-Flurochloridone [analyte: -]",
+     "trans-Flurochloridone [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 321,
+    "definition": "Guazatine (guazatine acetate, sum of components)",
+    "model": [
+     "guazatine acetate [analyte: RF-00004664-PAR]"
+    ],
+    "rules": [
+     "guazatine acetate [analyte: -]",
+     "components [group: -]"
+    ]
+   },
+   {
+    "residue_id": 332,
+    "definition": "Metam (see methylisothiocyanate)",
+    "model": [
+     "Metam [analyte: -]"
+    ],
+    "rules": [
+     "Metam (see methylisothiocyanate) [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 354,
+    "definition": "Phosphane and phosphide salts (sum of phosphane and phosphane generators (relevant phosphide salts), determined and expressed as phosphane)",
+    "model": [
+     "Phosphane and phosphide salts [analyte: RF-00005719-PAR]"
+    ],
+    "rules": [
+     "phosphane [analyte: -]",
+     "phosphane generators (relevant phosphide salts) [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 370,
+    "definition": "Quizalofop (sum of quizalofop, its salts, its esters (including propaquizafop) and its conjugates, expressed as quizalofop (any ratio of constituent isomers))",
+    "model": [
+     "quizalofop [analyte: RF-0384-004-PPP]",
+     "its salts [qualifier: -]",
+     "its esters [qualifier: -]",
+     "propaquizafop [analyte: RF-0356-001-PPP]",
+     "its conjugates [qualifier: -]",
+     "any ratio of constituent isomers [qualifier: -]"
+    ],
+    "rules": [
+     "quizalofop [analyte: RF-0384-004-PPP]",
+     "its salts [qualifier: -]",
+     "its esters (including propaquizafop) [qualifier: -]",
+     "propaquizafop [analyte: RF-0356-001-PPP]",
+     "its conjugates [qualifier: -]"
+    ]
+   },
+   {
+    "residue_id": 399,
+    "definition": "1,4-Diaminobutane  (aka Putrescine)",
+    "model": [
+     "1,4-Diaminobutane [analyte: -]",
+     "Putrescine [analyte: -]"
+    ],
+    "rules": [
+     "1,4-Diaminobutane  (aka Putrescine) [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 412,
+    "definition": "Fatty acids / Lauric acid",
+    "model": [
+     "Fatty acids [group: -]",
+     "Lauric acid [analyte: -]"
+    ],
+    "rules": [
+     "Fatty acids / Lauric acid [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 413,
+    "definition": "Fatty acids C7-C20",
+    "model": [
+     "Fatty acids C7 [analyte: -]",
+     "Fatty acids C8 [analyte: -]",
+     "Fatty acids C9 [analyte: -]",
+     "Fatty acids C10 [analyte: -]",
+     "Fatty acids C11 [analyte: -]",
+     "Fatty acids C12 [analyte: -]",
+     "Fatty acids C13 [analyte: -]",
+     "Fatty acids C14 [analyte: -]",
+     "Fatty acids C15 [analyte: -]",
+     "Fatty acids C16 [analyte: -]",
+     "Fatty acids C17 [analyte: -]",
+     "Fatty acids C18 [analyte: -]",
+     "Fatty acids C19 [analyte: -]",
+     "Fatty acids C20 [analyte: -]"
+    ],
+    "rules": [
+     "Fatty acids C7-C20 [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 418,
+    "definition": "Fatty acids: Oleic acid incl ethyloleate",
+    "model": [
+     "Oleic acid [analyte: -]",
+     "ethyloleate [analyte: -]"
+    ],
+    "rules": [
+     "Oleic acid incl ethyloleate [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 422,
+    "definition": "Ferric sulphate (Iron (III) sulphate)",
+    "model": [
+     "Ferric sulphate [analyte: -]",
+     "Iron (III) sulphate [qualifier: -]"
+    ],
+    "rules": [
+     "Ferric sulphate (Iron (III) sulphate) [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 435,
+    "definition": "Plant oils / Citronellol",
+    "model": [
+     "Citronellol [analyte: -]"
+    ],
+    "rules": [
+     "Plant oils / Citronellol [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 436,
+    "definition": "Plant oils / Clove oil Eugenol",
+    "model": [
+     "Eugenol [analyte: -]"
+    ],
+    "rules": [
+     "Plant oils / Clove oil Eugenol [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 438,
+    "definition": "Plant oils / Spearmint oil",
+    "model": [
+     "Spearmint oil [analyte: -]"
+    ],
+    "rules": [
+     "Plant oils / Spearmint oil [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 776,
+    "definition": "sum of cyflufenamid (Z-isomer), its E-isomer and metabolite 149-F1, expressed as cyflufenamid",
+    "model": [
+     "cyflufenamid Z-isomer [analyte: -]",
+     "cyflufenamid E-isomer [analyte: -]",
+     "149-F1 [analyte: RF-00012292-PAR]"
+    ],
+    "rules": [
+     "cyflufenamid [analyte: -]",
+     "its E-isomer [qualifier: -]",
+     "149-F1 [analyte: RF-00012292-PAR]"
+    ]
+   },
+   {
+    "residue_id": 778,
+    "definition": "Flonicamid (sum of flonicamid, TFNA and TFNG expressed as flonicamid)",
+    "model": [
+     "flonicamid [analyte: RF-0194-002-PPP]",
+     "TFNA [analyte: RF-00003348-PAR]",
+     "TFNG [analyte: RF-00003349-PAR]"
+    ],
+    "rules": [
+     "flonicamid [analyte: RF-0194-002-PPP]",
+     "TFNA [analyte: -]",
+     "TFNG [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 793,
+    "definition": "Metaflumizone (sum of E- and Z- isomers)",
+    "model": [
+     "Metaflumizone E-isomer [analyte: -]",
+     "Metaflumizone Z-isomer [analyte: RF-00007590-PAR]"
+    ],
+    "rules": [
+     "E-Metaflumizone [analyte: -]",
+     "Z-Metaflumizone [analyte: RF-00007590-PAR]"
+    ]
+   },
+   {
+    "residue_id": 2306,
+    "definition": "Purpureocillium lilacinum strain 251 (former Paecilomyces lilacinus strain 251)",
+    "model": [
+     "Purpureocillium lilacinum strain 251 [analyte: -]"
+    ],
+    "rules": [
+     "Purpureocillium lilacinum strain 251 (former Paecilomyces lilacinus strain 251) [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 2309,
+    "definition": "Aureobasidium pullulans strains DSM 14940 and DSM 14941",
+    "model": [
+     "Aureobasidium pullulans strain DSM 14940 [analyte: -]",
+     "Aureobasidium pullulans strain DSM 14941 [analyte: -]"
+    ],
+    "rules": [
+     "Aureobasidium pullulans strains DSM 14940 and DSM 14941 [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 2332,
+    "definition": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+    "model": [
+     "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C8 [analyte: RF-00007495-PAR]",
+     "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C10 [analyte: RF-00007627-PAR]",
+     "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C12 [analyte: RF-00007489-PAR]"
+    ],
+    "rules": [
+     "Didecyldimethylammonium chloride [analyte: RF-00012336-PAR,RF-1078-002-PPP]"
+    ]
+   },
+   {
+    "residue_id": 2333,
+    "definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+    "model": [
+     "alkylbenzyldimethylammonium chloride C8 [analyte: RF-00003376-PAR]",
+     "alkylbenzyldimethylammonium chloride C10 [analyte: RF-1078-003-PPP]",
+     "alkylbenzyldimethylammonium chloride C12 [analyte: RF-1078-004-PPP]",
+     "alkylbenzyldimethylammonium chloride C14 [analyte: RF-1078-005-PPP]",
+     "alkylbenzyldimethylammonium chloride C16 [analyte: RF-1078-006-PPP]",
+     "alkylbenzyldimethylammonium chloride C18 [analyte: RF-1078-007-PPP]"
+    ],
+    "rules": [
+     "Benzalkonium chloride [analyte: RF-00002582-PAR,RF-00012321-PAR]"
+    ]
+   },
+   {
+    "residue_id": 2401,
+    "definition": "Trichoderma asperellum (formerly T. harzianum) strains ICC012, T25 and TV1",
+    "model": [
+     "Trichoderma asperellum strain ICC012 [analyte: -]",
+     "Trichoderma asperellum strain T25 [analyte: -]",
+     "Trichoderma asperellum strain TV1 [analyte: -]"
+    ],
+    "rules": [
+     "Trichoderma asperellum (formerly T. harzianum) strains ICC012, T25 and TV1 [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 2402,
+    "definition": "Trichoderma atroviride (formerly T. harzianum) strains IMI 206040 and T11",
+    "model": [
+     "Trichoderma atroviride strain IMI 206040 [analyte: -]",
+     "Trichoderma atroviride strain T11 [analyte: -]"
+    ],
+    "rules": [
+     "Trichoderma atroviride (formerly T. harzianum) strains IMI 206040 and T11 [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 2403,
+    "definition": "Trichoderma afroharzianum (Formerly Trichoderma harzianum) strain T-22",
+    "model": [
+     "Trichoderma afroharzianum strain T-22 [analyte: -]",
+     "Formerly Trichoderma harzianum [qualifier: -]"
+    ],
+    "rules": [
+     "Trichoderma afroharzianum (Formerly Trichoderma harzianum) strain T-22 [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 2448,
+    "definition": "FEN 560  (also called fenugreek or fenugreek seed powder)",
+    "model": [
+     "FEN 560 [analyte: -]"
+    ],
+    "rules": [
+     "FEN 560  (also called fenugreek or fenugreek seed powder) [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 2449,
+    "definition": "Methyl decanoate (CAS 110-42-9)",
+    "model": [
+     "Methyl decanoate [analyte: -]"
+    ],
+    "rules": [
+     "Methyl decanoate (CAS 110-42-9) [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 2450,
+    "definition": "Methyl octanoate (CAS 111-11-5)",
+    "model": [
+     "Methyl octanoate [analyte: -]"
+    ],
+    "rules": [
+     "Methyl octanoate (CAS 111-11-5) [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 2530,
+    "definition": "2,5-dichlorobenzoic acid methylester (sum of 2,5-dichlorobenzoic acid and its ester expressed as 2,5-dichlorobenzoic acid methylester)",
+    "model": [
+     "2,5-dichlorobenzoic acid [analyte: RF-00012387-PAR]",
+     "2,5-dichlorobenzoic acid methylester [analyte: RF-00001604-PAR]"
+    ],
+    "rules": [
+     "2,5-dichlorobenzoic acid [analyte: RF-00012387-PAR]",
+     "its ester [qualifier: -]"
+    ]
+   },
+   {
+    "residue_id": 2830,
+    "definition": "Sum of 1,4-dimethylnaphthalene and its metabolite M23 free and conjugated, expressed as 1,4-dimethylnaphthalene",
+    "model": [
+     "1,4-dimethylnaphthalene [analyte: RF-00004728-PAR]",
+     "1,4-dimethylnaphthalene metabolite M23 [analyte: -]",
+     "free and conjugated [qualifier: -]"
+    ],
+    "rules": [
+     "1,4-dimethylnaphthalene [analyte: RF-00004728-PAR]",
+     "M23 [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 3050,
+    "definition": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim",
+    "model": [
+     "Cycloxydim [analyte: RF-0106-002-PPP]",
+     "3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) [analyte: RF-00006227-PAR]",
+     "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) [analyte: RF-00006240-PAR]",
+     "derivatives thereof [qualifier: -]"
+    ],
+    "rules": [
+     "Cycloxydim [analyte: RF-0106-002-PPP]",
+     "degradation [group: -]",
+     "reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) [group: -]",
+     "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof [group: -]"
+    ]
+   },
+   {
+    "residue_id": 3231,
+    "definition": "Repellants: Sheep fat",
+    "model": [
+     "Repellants [analyte: -]"
+    ],
+    "rules": [
+     "Sheep fat [analyte: -]"
+    ]
+   },
+   {
+    "residue_id": 3850,
+    "definition": "Plant oils / Citronella oil",
+    "model": [
+     "Citronella oil [analyte: -]"
+    ],
+    "rules": [
+     "Plant oils / Citronella oil [analyte: -]"
+    ]
+   }
+  ]
+ },
+ "cases": [
+  {
+   "case": "the acid alone does not cover the acid and its methyl ester",
+   "residue_id": 2530,
+   "status": "partial",
+   "expected": "partial",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "acid plus methyl ester covers it",
+   "residue_id": 2530,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "BAC C8-C18 chain lengths cover benzalkonium chloride",
+   "residue_id": 2333,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "BAC 8 alone is part of benzalkonium chloride",
+   "residue_id": 2333,
+   "status": "partial",
+   "expected": "partial",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "DDAC C8, C10 and C12 cover didecyldimethylammonium chloride",
+   "residue_id": 2332,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "acetamiprid without IM-2-1",
+   "residue_id": 10,
+   "status": "partial",
+   "expected": "partial",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "aldicarb, its sulfoxide and sulfone",
+   "residue_id": 12,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "phorate still needs the oxon sulfone",
+   "residue_id": 179,
+   "status": "partial",
+   "expected": "partial",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "mevinphos E- and Z-isomer",
+   "residue_id": 161,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "fipronil + its sulfone",
+   "residue_id": 302,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "dichlorprop covers the included dichlorprop-P",
+   "residue_id": 272,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "kresoxim-methyl is not its metabolite BF-490-9",
+   "residue_id": 139,
+   "status": "not_covered",
+   "expected": "not_covered",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "BF-490-9 is the whole kresoxim-methyl exception",
+   "residue_id": 139,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "sethoxydim and clethodim: the degradation products are determined as sethoxydim, not measured apart",
+   "residue_id": 259,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "cycloxydim plus the two acids its products are determined as",
+   "residue_id": 3050,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "iprodione alone does not cover the 3,5-dichloroaniline metabolites",
+   "residue_id": 135,
+   "status": "undetermined",
+   "expected": "undetermined",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "cinidon-ethyl covers its E-isomer",
+   "residue_id": 59,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "carbetamide covers its S isomer",
+   "residue_id": 251,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "fluoxastrobin covers its Z-isomer",
+   "residue_id": 310,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "benthiavalicarb-isopropyl covers its RS enantiomer",
+   "residue_id": 3950,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "fluazifop covers all its isomers, fluazifop-P included",
+   "residue_id": 304,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "rules"
+  },
+  {
+   "case": "haloxyfop covers the R- and S-isomers at any ratio",
+   "residue_id": 322,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "guazatine is the sum of its components",
+   "residue_id": 321,
+   "status": "not_covered",
+   "expected": "complete",
+   "passed": false,
+   "parts_from": "model"
+  },
+  {
+   "case": "flonicamid, TFNA and TFNG",
+   "residue_id": 778,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "flonicamid alone misses TFNA and TFNG, which have codes",
+   "residue_id": 778,
+   "status": "partial",
+   "expected": "partial",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "fluvalinate (all isomers) is the fluvalinate residue",
+   "residue_id": 2655,
+   "status": "not_covered",
+   "expected": "complete",
+   "passed": false,
+   "parts_from": "model"
+  },
+  {
+   "case": "RH9090 measured is the free and conjugated RH9090 residue",
+   "residue_id": 166,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "fludioxonil plus the acid its metabolites are oxidized to",
+   "residue_id": 307,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "fludioxonil alone misses the acid, which has a code",
+   "residue_id": 307,
+   "status": "partial",
+   "expected": "partial",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "spirotetramat alone misses spirotetramat-enol",
+   "residue_id": 2750,
+   "status": "partial",
+   "expected": "partial",
+   "passed": true,
+   "parts_from": "model"
+  }
+ ]
+}

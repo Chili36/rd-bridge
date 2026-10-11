@@ -1,0 +1,8348 @@
+[
+ {
+  "code": "RF-00003018-PAR",
+  "name": "Milbemectin (sum of milbemycin A4 and milbemycin A3, expressed as milbemectin)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00002840-PAR",
+  "name": "2-cyclohexyl-4,6-dinitrophenol",
+  "pestClass": "AS",
+  "cas": "131-89-5"
+ },
+ {
+  "code": "RF-0119-001-PPP",
+  "name": "DDT (sum of p,p'-DDT, o,p'-DDT, p-p'-DDE and p,p'-TDE (DDD) expressed as DDT)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0236-004-PPP",
+  "name": "Heptachlor",
+  "pestClass": "AS",
+  "cas": "76-44-8"
+ },
+ {
+  "code": "RF-00000031-ADD",
+  "name": "Aluminium ammonium sulphate",
+  "pestClass": "AS",
+  "cas": "7784-25-0"
+ },
+ {
+  "code": "RF-00000180-ADD",
+  "name": "Magnesium hydroxide",
+  "pestClass": "AS",
+  "cas": "1309-42-8"
+ },
+ {
+  "code": "RF-00000288-ADD",
+  "name": "Sodium hydroxide",
+  "pestClass": "AS",
+  "cas": "1310-73-2"
+ },
+ {
+  "code": "RF-00003342-PAR",
+  "name": "Dinoseb (sum of dinoseb, its salts, dinoseb-acetate and binapacryl, expressed as dinoseb)",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00003327-PAR",
+  "name": "Bromoxynil and its salts, expressed as bromoxynil",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003338-PAR",
+  "name": "Cyprodinil (sum of cyprodinil and CGA 304075 (free and conjugated), expressed as cyprodinil)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003369-PAR",
+  "name": "Sum of bentazone, its salts and 6-hydroxy bentazone (free and conjugated), expressed as bentazone",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003376-PAR",
+  "name": "BAC 8",
+  "pestClass": "COMP",
+  "cas": null
+ },
+ {
+  "code": "RF-00003355-PAR",
+  "name": "Glufosinate",
+  "pestClass": "AS",
+  "cas": "51276-47-2"
+ },
+ {
+  "code": "RF-00000561-VET",
+  "name": "Flumequine",
+  "pestClass": "AS",
+  "cas": "42835-25-6"
+ },
+ {
+  "code": "RF-0719-001-PPP",
+  "name": "Flusulfamide",
+  "pestClass": "AS",
+  "cas": "106917-52-6"
+ },
+ {
+  "code": "RF-0728-001-PPP",
+  "name": "Furilazole",
+  "pestClass": "AS",
+  "cas": "121776-33-8"
+ },
+ {
+  "code": "RF-0756-001-PPP",
+  "name": "Isofenphos",
+  "pestClass": "AS",
+  "cas": "25311-71-1"
+ },
+ {
+  "code": "RF-0758-001-PPP",
+  "name": "Isofenphos-methyl",
+  "pestClass": "AS",
+  "cas": "99675-03-3"
+ },
+ {
+  "code": "RF-0766-001-PPP",
+  "name": "Isoxathion",
+  "pestClass": "AS",
+  "cas": "18854-01-8"
+ },
+ {
+  "code": "RF-0769-001-PPP",
+  "name": "Kadethrin",
+  "pestClass": "AS",
+  "cas": "58769-20-3"
+ },
+ {
+  "code": "RF-0770-001-PPP",
+  "name": "Karbutilate",
+  "pestClass": "AS",
+  "cas": "4849-32-5"
+ },
+ {
+  "code": "RF-0775-001-PPP",
+  "name": "Leptophos",
+  "pestClass": "AS",
+  "cas": "21609-90-5"
+ },
+ {
+  "code": "RF-0782-001-PPP",
+  "name": "Methazole",
+  "pestClass": "AS",
+  "cas": "20354-26-1"
+ },
+ {
+  "code": "RF-0798-001-PPP",
+  "name": "Monalide",
+  "pestClass": "AS",
+  "cas": "7287-36-7"
+ },
+ {
+  "code": "RF-0800-001-PPP",
+  "name": "Naled",
+  "pestClass": "AS",
+  "cas": "300-76-5"
+ },
+ {
+  "code": "RF-0860-001-PPP",
+  "name": "Promecarb",
+  "pestClass": "AS",
+  "cas": "2631-37-0"
+ },
+ {
+  "code": "RF-0938-001-PPP",
+  "name": "Thiophanate-Ethyl",
+  "pestClass": "AS",
+  "cas": "23564-06-9"
+ },
+ {
+  "code": "RF-0946-001-PPP",
+  "name": "Triamiphos",
+  "pestClass": "AS",
+  "cas": "1031-47-6"
+ },
+ {
+  "code": "RF-0947-001-PPP",
+  "name": "Triapenthenol",
+  "pestClass": "AS",
+  "cas": "76608-88-3"
+ },
+ {
+  "code": "RF-0954-001-PPP",
+  "name": "Tributyltin Oxide",
+  "pestClass": "RD",
+  "cas": "56-35-9"
+ },
+ {
+  "code": "RF-0959-001-PPP",
+  "name": "Trietazine",
+  "pestClass": "AS",
+  "cas": "1912-26-1"
+ },
+ {
+  "code": "RF-0962-001-PPP",
+  "name": "Trimethacarb",
+  "pestClass": "AS",
+  "cas": "12407-86-2"
+ },
+ {
+  "code": "RF-0987-001-PPP",
+  "name": "Brompyrazon",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0998-001-PPP",
+  "name": "Isobenzan",
+  "pestClass": "AS",
+  "cas": "297-78-9"
+ },
+ {
+  "code": "RF-1002-001-PPP",
+  "name": "Carbendazim and thiophanate-methyl, expressed as carbendazim",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0350-001-PPP",
+  "name": "Procymidone",
+  "pestClass": "AS",
+  "cas": "32809-16-8"
+ },
+ {
+  "code": "RF-0020-002-PPP",
+  "name": "Aldicarb",
+  "pestClass": "AS",
+  "cas": "116-06-3"
+ },
+ {
+  "code": "RF-0024-004-PPP",
+  "name": "Dimethylphenyl-N-methylformamidine, N-2,4-",
+  "pestClass": "COMP",
+  "cas": "33089-74-6"
+ },
+ {
+  "code": "RF-0041-003-PPP",
+  "name": "Benomyl",
+  "pestClass": "AS",
+  "cas": "17804-35-2"
+ },
+ {
+  "code": "RF-0128-002-PPP",
+  "name": "Diclofop",
+  "pestClass": "AS",
+  "cas": "40843-25-2"
+ },
+ {
+  "code": "RF-0128-003-PPP",
+  "name": "Diclofop-Methyl",
+  "pestClass": "COMP",
+  "cas": "51338-27-3"
+ },
+ {
+  "code": "RF-0139-002-PPP",
+  "name": "Omethoate",
+  "pestClass": "AS",
+  "cas": "1113-02-6"
+ },
+ {
+  "code": "RF-0291-002-PPP",
+  "name": "Methiocarb",
+  "pestClass": "AS",
+  "cas": "2032-65-7"
+ },
+ {
+  "code": "RF-0328-003-PPP",
+  "name": "Parathion-methyl",
+  "pestClass": "AS",
+  "cas": "298-00-0"
+ },
+ {
+  "code": "RF-0042-002-PPP",
+  "name": "Bentazone",
+  "pestClass": "AS",
+  "cas": "25057-89-0"
+ },
+ {
+  "code": "RF-0086-004-PPP",
+  "name": "Chlorpropham and 4-hydroxychlorpropham-O-sulphonic acid (4-HSA),expressed as chlorpropham",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0134-001-PPP",
+  "name": "Diflubenzuron",
+  "pestClass": "AS",
+  "cas": "35367-38-5"
+ },
+ {
+  "code": "RF-0338-002-PPP",
+  "name": "Phosmet",
+  "pestClass": "AS",
+  "cas": "732-11-6"
+ },
+ {
+  "code": "RF-0745-001-PPP",
+  "name": "Imazethapyr",
+  "pestClass": "AS",
+  "cas": "81335-77-5"
+ },
+ {
+  "code": "RF-0192-003-PPP",
+  "name": "Fipronil",
+  "pestClass": "AS",
+  "cas": "120068-37-3"
+ },
+ {
+  "code": "RF-0764-001-PPP",
+  "name": "Isoprothiolane",
+  "pestClass": "AS",
+  "cas": "50512-35-1"
+ },
+ {
+  "code": "RF-0715-001-PPP",
+  "name": "Flupyrsulfuron",
+  "pestClass": "AS",
+  "cas": "150315-10-9"
+ },
+ {
+  "code": "RF-00003386-PAR",
+  "name": "Benzovindiflupyr",
+  "pestClass": "AS",
+  "cas": "1072957-71-1"
+ },
+ {
+  "code": "RF-00003031-PAR",
+  "name": "Pyriofenone",
+  "pestClass": "AS",
+  "cas": "688046-61-9"
+ },
+ {
+  "code": "RF-00002607-PAR",
+  "name": "8-hydroxyquinoline (sum of 8-hydroxyquinoline and its salts, expressed as 8-hydroxyquinoline)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0460-001-PPP",
+  "name": "4-CPA",
+  "pestClass": "RD",
+  "cas": "122-88-3"
+ },
+ {
+  "code": "RF-0495-001-PPP",
+  "name": "Bensulide",
+  "pestClass": "AS",
+  "cas": "741-58-2"
+ },
+ {
+  "code": "RF-0496-001-PPP",
+  "name": "Bensultap",
+  "pestClass": "AS",
+  "cas": "17606-31-4"
+ },
+ {
+  "code": "RF-0497-001-PPP",
+  "name": "Bentaluron",
+  "pestClass": "AS",
+  "cas": "28956-64-1"
+ },
+ {
+  "code": "RF-0505-001-PPP",
+  "name": "Bioresmethrin",
+  "pestClass": "AS",
+  "cas": "28434-01-7"
+ },
+ {
+  "code": "RF-0508-001-PPP",
+  "name": "Blasticidin-S",
+  "pestClass": "AS",
+  "cas": "51775-28-1"
+ },
+ {
+  "code": "RF-0511-001-PPP",
+  "name": "Bromacil",
+  "pestClass": "AS",
+  "cas": "314-40-9"
+ },
+ {
+  "code": "RF-0539-001-PPP",
+  "name": "Chinomethionat",
+  "pestClass": "AS",
+  "cas": "2439-01-2"
+ },
+ {
+  "code": "RF-0545-001-PPP",
+  "name": "Chlordimeform",
+  "pestClass": "AS",
+  "cas": "6164-98-3"
+ },
+ {
+  "code": "RF-0549-001-PPP",
+  "name": "Chlorfluazuron",
+  "pestClass": "AS",
+  "cas": "71422-67-8"
+ },
+ {
+  "code": "RF-0572-001-PPP",
+  "name": "Coumatetralyl",
+  "pestClass": "AS",
+  "cas": "5836-29-3"
+ },
+ {
+  "code": "RF-0581-001-PPP",
+  "name": "Cycloprothrin",
+  "pestClass": "AS",
+  "cas": "63935-38-6"
+ },
+ {
+  "code": "RF-0596-001-PPP",
+  "name": "Diafenthiuron",
+  "pestClass": "AS",
+  "cas": "80060-09-9"
+ },
+ {
+  "code": "RF-0660-001-PPP",
+  "name": "Ethiofencarb",
+  "pestClass": "AS",
+  "cas": "29973-13-5"
+ },
+ {
+  "code": "RF-0678-001-PPP",
+  "name": "Fenothiocarb",
+  "pestClass": "AS",
+  "cas": "62850-32-2"
+ },
+ {
+  "code": "RF-0682-001-PPP",
+  "name": "Fenpiclonil",
+  "pestClass": "AS",
+  "cas": "74738-17-3"
+ },
+ {
+  "code": "RF-0689-001-PPP",
+  "name": "Fenuron",
+  "pestClass": "AS",
+  "cas": "101-42-8"
+ },
+ {
+  "code": "RF-0701-001-PPP",
+  "name": "Fluazuron",
+  "pestClass": "AS",
+  "cas": "86811-58-7"
+ },
+ {
+  "code": "RF-0029-001-PPP",
+  "name": "Atrazine",
+  "pestClass": "AS",
+  "cas": "1912-24-9"
+ },
+ {
+  "code": "RF-0032-001-PPP",
+  "name": "Azinphos-ethyl",
+  "pestClass": "AS",
+  "cas": "2642-71-9"
+ },
+ {
+  "code": "RF-0073-001-PPP",
+  "name": "Chlorbenside",
+  "pestClass": "AS",
+  "cas": "103-17-3"
+ },
+ {
+  "code": "RF-0123-001-PPP",
+  "name": "Diazinon",
+  "pestClass": "AS",
+  "cas": "333-41-5"
+ },
+ {
+  "code": "RF-0132-001-PPP",
+  "name": "Diethofencarb",
+  "pestClass": "AS",
+  "cas": "87130-20-9"
+ },
+ {
+  "code": "RF-0287-001-PPP",
+  "name": "Methabenzthiazuron",
+  "pestClass": "AS",
+  "cas": "18691-97-9"
+ },
+ {
+  "code": "RF-0302-001-PPP",
+  "name": "Mevinphos (sum of E- and Z-isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0327-001-PPP",
+  "name": "Parathion",
+  "pestClass": "AS",
+  "cas": "56-38-2"
+ },
+ {
+  "code": "RF-0330-001-PPP",
+  "name": "Pencycuron",
+  "pestClass": "AS",
+  "cas": "66063-05-6"
+ },
+ {
+  "code": "RF-0337-001-PPP",
+  "name": "Phosalone",
+  "pestClass": "AS",
+  "cas": "2310-17-0"
+ },
+ {
+  "code": "RF-0108-001-PPP",
+  "name": "Cyfluthrin (Cyfluthrin including other mixtures of constituent isomers (sum of isomers))",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0291-001-PPP",
+  "name": "Methiocarb (sum of methiocarb and methiocarb sulfoxide and sulfone, expressed as methiocarb)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0328-001-PPP",
+  "name": "Parathion-methyl (sum of Parathion-methyl and paraoxon-methyl expressed as Parathion-methyl)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0336-001-PPP",
+  "name": "Phorate (sum of phorate, its oxygen analogue and their sulfones expressed as phorate)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-1017-001-PPP",
+  "name": "Phosfolan",
+  "pestClass": "AS",
+  "cas": "947-02-4"
+ },
+ {
+  "code": "RF-1061-001-PPP",
+  "name": "2-Hydroxyethylphosphonic acid",
+  "pestClass": "AS",
+  "cas": "22987-21-9"
+ },
+ {
+  "code": "RF-00000319-NTR",
+  "name": "L-ascorbic acid",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0444-001-PPP",
+  "name": "Triforine",
+  "pestClass": "AS",
+  "cas": "26644-46-2"
+ },
+ {
+  "code": "RF-00002608-PAR",
+  "name": "Tembotrione metabolite M5 (Dihydroxy-tembotrione)",
+  "pestClass": "RD",
+  "cas": "912654-91-2"
+ },
+ {
+  "code": "RF-0042-001-PPP",
+  "name": "Bentazone (Sum of bentazone, its salts and 6-hydroxy (free and conjugated) and 8-hydroxy bentazone (free and conjugated), expressed as bentazone)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0225-001-PPP",
+  "name": "Fosetyl-Al (sum of fosetyl, phosphonic acid and their salts, expressed as fosetyl)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0300-001-PPP",
+  "name": "Metribuzin",
+  "pestClass": "AS",
+  "cas": "21087-64-9"
+ },
+ {
+  "code": "RF-0088-001-PPP",
+  "name": "Chlorpyrifos-methyl",
+  "pestClass": "AS",
+  "cas": "5598-13-0"
+ },
+ {
+  "code": "RF-0140-001-PPP",
+  "name": "Dimethomorph (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0404-001-PPP",
+  "name": "Tebufenozide",
+  "pestClass": "RD",
+  "cas": "112410-23-8"
+ },
+ {
+  "code": "RF-0329-001-PPP",
+  "name": "Penconazole (sum of constituent isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-1020-001-PPP",
+  "name": "Glyphosate",
+  "pestClass": "AS",
+  "cas": "1071-83-6"
+ },
+ {
+  "code": "RF-0633-001-PPP",
+  "name": "Dinotefuran",
+  "pestClass": "AS",
+  "cas": "165252-70-0"
+ },
+ {
+  "code": "RF-0135-001-PPP",
+  "name": "Diflufenican",
+  "pestClass": "AS",
+  "cas": "83164-33-4"
+ },
+ {
+  "code": "RF-0192-001-PPP",
+  "name": "Fipronil (sum fipronil + sulfone metabolite (MB46136) expressed as fipronil)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0013-001-PPP",
+  "name": "Acequinocyl",
+  "pestClass": "AS",
+  "cas": "57960-19-7"
+ },
+ {
+  "code": "RF-0528-001-PPP",
+  "name": "Cadusafos",
+  "pestClass": "AS",
+  "cas": "95465-99-9"
+ },
+ {
+  "code": "RF-0023-001-PPP",
+  "name": "Aminopyralid",
+  "pestClass": "AS",
+  "cas": "150114-71-9"
+ },
+ {
+  "code": "RF-0378-001-PPP",
+  "name": "Pyriproxyfen",
+  "pestClass": "AS",
+  "cas": "95737-68-1"
+ },
+ {
+  "code": "RF-00000051-NTR",
+  "name": "cholecalciferol",
+  "pestClass": null,
+  "cas": "67-97-0"
+ },
+ {
+  "code": "RF-1071-001-PPP",
+  "name": "Fluopyram",
+  "pestClass": "AS",
+  "cas": "658066-35-4"
+ },
+ {
+  "code": "RF-0175-001-PPP",
+  "name": "Fenazaquin",
+  "pestClass": "AS",
+  "cas": "120928-09-8"
+ },
+ {
+  "code": "RF-0706-001-PPP",
+  "name": "Flumetralin",
+  "pestClass": "AS",
+  "cas": "62924-70-3"
+ },
+ {
+  "code": "RF-0022-001-PPP",
+  "name": "Amidosulfuron",
+  "pestClass": "AS",
+  "cas": "120923-37-7"
+ },
+ {
+  "code": "RF-0157-001-PPP",
+  "name": "Epoxiconazole",
+  "pestClass": "AS",
+  "cas": "133855-98-8"
+ },
+ {
+  "code": "RF-0193-001-PPP",
+  "name": "Flazasulfuron",
+  "pestClass": "AS",
+  "cas": "104040-78-0"
+ },
+ {
+  "code": "RF-0195-001-PPP",
+  "name": "Florasulam",
+  "pestClass": "AS",
+  "cas": "145701-23-1"
+ },
+ {
+  "code": "RF-0199-001-PPP",
+  "name": "Flubendiamide",
+  "pestClass": "AS",
+  "cas": "272451-65-7"
+ },
+ {
+  "code": "RF-0250-001-PPP",
+  "name": "Imidacloprid",
+  "pestClass": "AS",
+  "cas": "138261-41-3"
+ },
+ {
+  "code": "RF-0256-001-PPP",
+  "name": "Iprovalicarb",
+  "pestClass": "AS",
+  "cas": "140923-17-7"
+ },
+ {
+  "code": "RF-0301-001-PPP",
+  "name": "Metsulfuron-methyl",
+  "pestClass": "AS",
+  "cas": "74223-64-6"
+ },
+ {
+  "code": "RF-00000022-PAR",
+  "name": "Fluazifop-P",
+  "pestClass": "AS",
+  "cas": "83066-88-0"
+ },
+ {
+  "code": "RF-00004538-PAR",
+  "name": "Formaldehyde",
+  "pestClass": "AS",
+  "cas": "50-00-0"
+ },
+ {
+  "code": "RF-00003357-PAR",
+  "name": "Mesotrione",
+  "pestClass": "AS",
+  "cas": "104206-82-8"
+ },
+ {
+  "code": "RF-00004655-PAR",
+  "name": "Abamectin (sum of avermectin B1a, avermectin B1b and delta-8,9 isomer of avermectin B1a, expressed as avermectin B1a)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004662-PAR",
+  "name": "Flupyradifurone",
+  "pestClass": "AS",
+  "cas": "951659-40-8"
+ },
+ {
+  "code": "RF-00007495-PAR",
+  "name": "DDAC-C08",
+  "pestClass": "COMP",
+  "cas": "5538-94-3"
+ },
+ {
+  "code": "RF-00007589-PAR",
+  "name": "Metaflumizone",
+  "pestClass": "AS",
+  "cas": "139968-49-3"
+ },
+ {
+  "code": "RF-00007954-PAR",
+  "name": "3,7,11-Trimethyldodeca-2,6,10-trien-1-ol",
+  "pestClass": "AS",
+  "cas": "4602-84-0"
+ },
+ {
+  "code": "RF-00011999-PAR",
+  "name": "Bacillus subtilis FMCH002",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012006-PAR",
+  "name": "Bacillus thuringiensis ssp. Aizawai ABTS-1857, GC-91",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012336-PAR",
+  "name": "Didecyldimethylammonium chloride",
+  "pestClass": null,
+  "cas": "7173-51-5"
+ },
+ {
+  "code": "RF-00001716-PAR",
+  "name": "Dodecyldimethylamine oxide",
+  "pestClass": null,
+  "cas": "1643-20-5"
+ },
+ {
+  "code": "RF-0629-001-PPP",
+  "name": "Dimexano",
+  "pestClass": "AS",
+  "cas": "1468-37-7"
+ },
+ {
+  "code": "RF-0671-001-PPP",
+  "name": "Fenaminosulf",
+  "pestClass": "AS",
+  "cas": "140-56-7"
+ },
+ {
+  "code": "RF-0695-001-PPP",
+  "name": "Flamprop-M-Methyl",
+  "pestClass": "COMP",
+  "cas": "63729-98-6"
+ },
+ {
+  "code": "RF-0714-001-PPP",
+  "name": "Flupoxam",
+  "pestClass": "AS",
+  "cas": "119126-15-7"
+ },
+ {
+  "code": "RF-0159-001-PPP",
+  "name": "Ethalfluralin",
+  "pestClass": "AS",
+  "cas": "55283-68-6"
+ },
+ {
+  "code": "RF-0343-001-PPP",
+  "name": "Picloram",
+  "pestClass": "AS",
+  "cas": "1918-02-1"
+ },
+ {
+  "code": "RF-1037-001-PPP",
+  "name": "Oxabetrinil",
+  "pestClass": "AS",
+  "cas": "74782-23-3"
+ },
+ {
+  "code": "RF-1043-001-PPP",
+  "name": "Warfarin",
+  "pestClass": "AS",
+  "cas": "81-81-2"
+ },
+ {
+  "code": "RF-00003683-PAR",
+  "name": "anethole",
+  "pestClass": "AS",
+  "cas": "4180-23-8"
+ },
+ {
+  "code": "RF-00005720-PAR",
+  "name": "Fluoxastrobin (sum of fluoxastrobin and its Z-isomer)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005776-PAR",
+  "name": "Sodium 5-nitroguaiacolate",
+  "pestClass": "AS",
+  "cas": "67233-85-6"
+ },
+ {
+  "code": "RF-00009395-PAR",
+  "name": "Tall oil crude",
+  "pestClass": "AS",
+  "cas": "8002-26-4"
+ },
+ {
+  "code": "RF-00008442-PAR",
+  "name": "Methylanthranilate",
+  "pestClass": "AS",
+  "cas": "134-20-3"
+ },
+ {
+  "code": "RF-00009913-PAR",
+  "name": "Sodium tetraborate",
+  "pestClass": "AS",
+  "cas": "1330-43-4"
+ },
+ {
+  "code": "RF-00010089-PAR",
+  "name": "Quinine hydrochloride",
+  "pestClass": "AS",
+  "cas": "130-89-2"
+ },
+ {
+  "code": "RF-00008949-PAR",
+  "name": "Oxathiapiprolin",
+  "pestClass": "AS",
+  "cas": "1003318-67-9"
+ },
+ {
+  "code": "RF-00008596-PAR",
+  "name": "Calcium carbide",
+  "pestClass": "AS",
+  "cas": "75-20-7"
+ },
+ {
+  "code": "RF-00009284-PAR",
+  "name": "Hexane",
+  "pestClass": "AS",
+  "cas": "110-54-3"
+ },
+ {
+  "code": "RF-00009360-PAR",
+  "name": "Mefentrifluconazole",
+  "pestClass": "AS",
+  "cas": "1417782-03-6"
+ },
+ {
+  "code": "RF-00012016-PAR",
+  "name": "BAS 684 H",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012019-PAR",
+  "name": "Fluindapyr",
+  "pestClass": "AS",
+  "cas": "1383809-87-7"
+ },
+ {
+  "code": "RF-00012035-PAR",
+  "name": "Oxpoconazole",
+  "pestClass": "AS",
+  "cas": "134074-64-9"
+ },
+ {
+  "code": "RF-00012373-PAR",
+  "name": "Papain",
+  "pestClass": "AS",
+  "cas": "9001-73-4"
+ },
+ {
+  "code": "RF-00012362-PAR",
+  "name": "Ethaboxam",
+  "pestClass": "AS",
+  "cas": "162650-77-3"
+ },
+ {
+  "code": "RF-00013472-PAR",
+  "name": "Hexythiazox (any ratio of constituent isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00013623-PAR",
+  "name": "Sodium carbonate",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00015700-PAR",
+  "name": "Phosphonic acid and its salts expressed as phosphonic acid",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00014494-PAR",
+  "name": "Bacillus thuringiensis RTI545",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014212-PAR",
+  "name": "Emamectin B1a and its salts, expressed as emamectin B1a (free base)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00014255-PAR",
+  "name": "Broflanilide",
+  "pestClass": "AS",
+  "cas": "1207727-04-5"
+ },
+ {
+  "code": "RF-00014604-PAR",
+  "name": "Bacillus thuringiensis subsp. Tenebrionis strain NB-176",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014605-PAR",
+  "name": "Bacillus thuringiensis subspecies israelensis strain AM65-52",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00015306-PAR",
+  "name": "Potassium permanganate",
+  "pestClass": "AS",
+  "cas": "7722-64-7"
+ },
+ {
+  "code": "RF-0608-001-PPP",
+  "name": "Dichloropropane, 1,2-",
+  "pestClass": "RD",
+  "cas": "78-87-5"
+ },
+ {
+  "code": "RF-0209-001-PPP",
+  "name": "Fluoride ion",
+  "pestClass": "RD",
+  "cas": "16984-48-8"
+ },
+ {
+  "code": "RF-0391-001-PPP",
+  "name": "Sodium tetrathiocarbonate",
+  "pestClass": "RD",
+  "cas": "7345-69-9"
+ },
+ {
+  "code": "RF-00004685-PAR",
+  "name": "Sum of THPI, 3-OH THPI and 5-OH THPI, expressed as captan",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005714-PAR",
+  "name": "Fluroxypyr (sum of fluroxypyr and its salts, expressed as fluroxypyr)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005717-PAR",
+  "name": "Triadimenol (any ratio of constituent isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005724-PAR",
+  "name": "Ethofumesate (Sum of ethofumesate, 2-keto–ethofumesate, open-ring-2-keto-ethofumesate and its conjugate, expressed as ethofumesate)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00010053-PAR",
+  "name": "Chlorophyllin a",
+  "pestClass": "AS",
+  "cas": "15611-43-5"
+ },
+ {
+  "code": "RF-00009022-PAR",
+  "name": "2-Propen-1-ol",
+  "pestClass": "AS",
+  "cas": "107-18-6"
+ },
+ {
+  "code": "RF-00008591-PAR",
+  "name": "Asulam Sodium",
+  "pestClass": "AS",
+  "cas": "2302-17-2"
+ },
+ {
+  "code": "RF-00012298-PAR",
+  "name": "EDTA",
+  "pestClass": "RD",
+  "cas": "139-33-3"
+ },
+ {
+  "code": "RF-00015730-PAR",
+  "name": "Choline hydrogen phosphonate",
+  "pestClass": "AS",
+  "cas": "947138-30-9"
+ },
+ {
+  "code": "RF-00015814-PAR",
+  "name": "Metarhizium pingshaense CF78",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00015743-PAR",
+  "name": "Metarhizium pingshaense CF69",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00016132-PAR",
+  "name": "Bacillus amyloliquefaciens AT-332",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00002835-PAR",
+  "name": "Prothiocarb",
+  "pestClass": "AS",
+  "cas": "19622-08-3"
+ },
+ {
+  "code": "RF-00002841-PAR",
+  "name": "Mexacarbate",
+  "pestClass": "AS",
+  "cas": "315-18-4"
+ },
+ {
+  "code": "RF-00001960-PAR",
+  "name": "2-Methylbut-3-en-2-ol",
+  "pestClass": "AS",
+  "cas": "115-18-4"
+ },
+ {
+  "code": "RF-00000083-ADD",
+  "name": "Calcium phosphates",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00000325-ADD",
+  "name": "Sulphuric acid",
+  "pestClass": "AS",
+  "cas": "7664-93-9"
+ },
+ {
+  "code": "RF-00000094-ADD",
+  "name": "Carbon dioxide",
+  "pestClass": "AS",
+  "cas": "124-38-9"
+ },
+ {
+  "code": "RF-0155-001-PPP",
+  "name": "Endosulfan (sum of alpha- and beta-isomers and endosulfan-sulphate expressed as endosulfan)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00000167-ADD",
+  "name": "Lactic acid",
+  "pestClass": "AS",
+  "cas": "50-21-5"
+ },
+ {
+  "code": "RF-00003322-PAR",
+  "name": "3-OH-carbofuran (free and conjugated) expressed as carbofuran",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003343-PAR",
+  "name": "Dinoterb (sum of dinoterb, its salts and esters, expressed as dinoterb)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003371-PAR",
+  "name": "Sum of pyrimethanil and 2-anilino-4.6-dimethylpyrimidine-5-ol, expressed as pyrimethanil",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0738-001-PPP",
+  "name": "Hexaflumuron",
+  "pestClass": "AS",
+  "cas": "86479-06-3"
+ },
+ {
+  "code": "RF-0754-001-PPP",
+  "name": "Isocarbophos",
+  "pestClass": "AS",
+  "cas": "24353-61-5"
+ },
+ {
+  "code": "RF-0774-001-PPP",
+  "name": "Lactofen",
+  "pestClass": "AS",
+  "cas": "77501-63-4"
+ },
+ {
+  "code": "RF-0794-001-PPP",
+  "name": "Metoxuron",
+  "pestClass": "AS",
+  "cas": "19937-59-8"
+ },
+ {
+  "code": "RF-0801-001-PPP",
+  "name": "Naphthalene",
+  "pestClass": "AS",
+  "cas": "91-20-3"
+ },
+ {
+  "code": "RF-0819-001-PPP",
+  "name": "Nuarimol",
+  "pestClass": "AS",
+  "cas": "63284-71-9"
+ },
+ {
+  "code": "RF-0821-001-PPP",
+  "name": "Ofurace",
+  "pestClass": "AS",
+  "cas": "58810-48-3"
+ },
+ {
+  "code": "RF-0840-001-PPP",
+  "name": "Pentanochlor",
+  "pestClass": "AS",
+  "cas": "2307-68-8"
+ },
+ {
+  "code": "RF-0856-001-PPP",
+  "name": "Primisulfuron-Methyl",
+  "pestClass": "COMP",
+  "cas": "86209-51-0"
+ },
+ {
+  "code": "RF-0942-001-PPP",
+  "name": "Tiocarbazil",
+  "pestClass": "AS",
+  "cas": "36756-79-3"
+ },
+ {
+  "code": "RF-0948-001-PPP",
+  "name": "Triazamate",
+  "pestClass": "AS",
+  "cas": "112143-82-5"
+ },
+ {
+  "code": "RF-0955-001-PPP",
+  "name": "Trichlamide",
+  "pestClass": "AS",
+  "cas": "70193-21-4"
+ },
+ {
+  "code": "RF-0960-001-PPP",
+  "name": "Trifloxysulfuron",
+  "pestClass": "AS",
+  "cas": "145099-21-4"
+ },
+ {
+  "code": "RF-0989-001-PPP",
+  "name": "Bromfenvinfos-methyl",
+  "pestClass": "COMP",
+  "cas": "13104-21-7"
+ },
+ {
+  "code": "RF-0218-001-PPP",
+  "name": "Flusilazole",
+  "pestClass": "AS",
+  "cas": "85509-19-9"
+ },
+ {
+  "code": "RF-0359-001-PPP",
+  "name": "Propineb (expressed as propilendiamine)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0450-003-PPP",
+  "name": "Vinclozolin",
+  "pestClass": "AS",
+  "cas": "50471-44-8"
+ },
+ {
+  "code": "RF-0024-003-PPP",
+  "name": "Dimethylphenylformamide, 2,4-",
+  "pestClass": "COMP",
+  "cas": "60397-77-5"
+ },
+ {
+  "code": "RF-0384-002-PPP",
+  "name": "Quizalofop-P",
+  "pestClass": "AS",
+  "cas": "94051-08-8"
+ },
+ {
+  "code": "RF-0126-002-PPP",
+  "name": "Dichlorprop",
+  "pestClass": "AS",
+  "cas": "120-36-5"
+ },
+ {
+  "code": "RF-0143-002-PPP",
+  "name": "Dinocap",
+  "pestClass": "AS",
+  "cas": "39300-45-3"
+ },
+ {
+  "code": "RF-0271-007-PPP",
+  "name": "MCPA-methyl",
+  "pestClass": "COMP",
+  "cas": "2436-73-9"
+ },
+ {
+  "code": "RF-1060-001-PPP",
+  "name": "Isofenphos-methyl-oxon",
+  "pestClass": "COMP",
+  "cas": "209663-42-3"
+ },
+ {
+  "code": "RF-00000248-NTR",
+  "name": "fatty acid 8:0 (caprylic acid)",
+  "pestClass": "AS",
+  "cas": "124-07-2"
+ },
+ {
+  "code": "RF-00001230-PAR",
+  "name": "Amidosulfuron (sum of amidosulfuron and desmethyl amidosulfuron, expressed as amidosulfuron)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0961-001-PPP",
+  "name": "Triflusulfuron-Methyl",
+  "pestClass": "COMP",
+  "cas": "126535-15-7"
+ },
+ {
+  "code": "RF-0436-001-PPP",
+  "name": "Triclopyr",
+  "pestClass": "AS",
+  "cas": "55335-06-3"
+ },
+ {
+  "code": "RF-00000030-PAR",
+  "name": "Spirotetramat (spirotetramat and its metabolite BYI08330-enol expressed as spirotetramat)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-1056-001-PPP",
+  "name": "Bixafen",
+  "pestClass": "AS",
+  "cas": "581809-46-3"
+ },
+ {
+  "code": "RF-0259-002-PPP",
+  "name": "Isoxaflutole",
+  "pestClass": "AS",
+  "cas": "141112-29-0"
+ },
+ {
+  "code": "RF-00001604-PAR",
+  "name": "2,5-Dichlorobenzoic acid methylester",
+  "pestClass": "AS",
+  "cas": "2905-69-3"
+ },
+ {
+  "code": "RF-0477-001-PPP",
+  "name": "Atrazine, 2-Hydroxy-",
+  "pestClass": "AS",
+  "cas": "2163-68-0"
+ },
+ {
+  "code": "RF-0482-001-PPP",
+  "name": "Azaconazole",
+  "pestClass": "AS",
+  "cas": "60207-31-0"
+ },
+ {
+  "code": "RF-0483-001-PPP",
+  "name": "Azafenidin",
+  "pestClass": "AS",
+  "cas": "68049-83-2"
+ },
+ {
+  "code": "RF-0487-001-PPP",
+  "name": "Benazolin",
+  "pestClass": "AS",
+  "cas": "3813-05-6"
+ },
+ {
+  "code": "RF-0500-001-PPP",
+  "name": "Benzoximate",
+  "pestClass": "AS",
+  "cas": "29104-30-1"
+ },
+ {
+  "code": "RF-0516-001-PPP",
+  "name": "Bromofenoxim",
+  "pestClass": "AS",
+  "cas": "13181-17-4"
+ },
+ {
+  "code": "RF-0538-001-PPP",
+  "name": "Carvone",
+  "pestClass": "AS",
+  "cas": "99-49-0"
+ },
+ {
+  "code": "RF-0542-001-PPP",
+  "name": "Chloramben-Methyl",
+  "pestClass": "COMP",
+  "cas": "7286-84-2"
+ },
+ {
+  "code": "RF-0558-001-PPP",
+  "name": "Chlorphonium",
+  "pestClass": "RD",
+  "cas": "115-78-6"
+ },
+ {
+  "code": "RF-0566-001-PPP",
+  "name": "Clofencet",
+  "pestClass": "AS",
+  "cas": "129025-54-3"
+ },
+ {
+  "code": "RF-0570-001-PPP",
+  "name": "Coumachlor",
+  "pestClass": "AS",
+  "cas": "81-82-3"
+ },
+ {
+  "code": "RF-0577-001-PPP",
+  "name": "Cyanofenphos",
+  "pestClass": "AS",
+  "cas": "13067-93-1"
+ },
+ {
+  "code": "RF-0587-001-PPP",
+  "name": "Cyphenothrin",
+  "pestClass": "AS",
+  "cas": "39515-40-7"
+ },
+ {
+  "code": "RF-0595-001-PPP",
+  "name": "Desmetryn",
+  "pestClass": "AS",
+  "cas": "1014-69-3"
+ },
+ {
+  "code": "RF-0622-001-PPP",
+  "name": "Dimefox",
+  "pestClass": "AS",
+  "cas": "115-26-4"
+ },
+ {
+  "code": "RF-0632-001-PPP",
+  "name": "Dinoseb Acetate",
+  "pestClass": "COMP",
+  "cas": "2813-95-8"
+ },
+ {
+  "code": "RF-0654-001-PPP",
+  "name": "EPN",
+  "pestClass": "AS",
+  "cas": "2104-64-5"
+ },
+ {
+  "code": "RF-0656-001-PPP",
+  "name": "Esprocarb",
+  "pestClass": "AS",
+  "cas": "85785-20-2"
+ },
+ {
+  "code": "RF-0670-001-PPP",
+  "name": "Famphur",
+  "pestClass": "AS",
+  "cas": "52-85-7"
+ },
+ {
+  "code": "RF-0676-001-PPP",
+  "name": "Fenfuram",
+  "pestClass": "AS",
+  "cas": "24691-80-3"
+ },
+ {
+  "code": "RF-1078-004-PPP",
+  "name": "BAC 12",
+  "pestClass": "COMP",
+  "cas": "139-07-1"
+ },
+ {
+  "code": "RF-1078-005-PPP",
+  "name": "BAC 14",
+  "pestClass": "COMP",
+  "cas": "139-08-2"
+ },
+ {
+  "code": "RF-1078-006-PPP",
+  "name": "BAC 16",
+  "pestClass": "COMP",
+  "cas": "122-18-9"
+ },
+ {
+  "code": "RF-0872-001-PPP",
+  "name": "Pyraclofos",
+  "pestClass": "AS",
+  "cas": "89784-60-1"
+ },
+ {
+  "code": "RF-0894-001-PPP",
+  "name": "Siduron",
+  "pestClass": "AS",
+  "cas": "1982-49-6"
+ },
+ {
+  "code": "RF-0912-001-PPP",
+  "name": "Terbacil",
+  "pestClass": "AS",
+  "cas": "5902-51-2"
+ },
+ {
+  "code": "RF-0916-001-PPP",
+  "name": "Terbumeton",
+  "pestClass": "AS",
+  "cas": "33693-04-8"
+ },
+ {
+  "code": "RF-0920-001-PPP",
+  "name": "Tetrachlorvinphos",
+  "pestClass": "AS",
+  "cas": "22248-79-9"
+ },
+ {
+  "code": "RF-0012-001-PPP",
+  "name": "Acephate",
+  "pestClass": "AS",
+  "cas": "30560-19-1"
+ },
+ {
+  "code": "RF-0019-001-PPP",
+  "name": "Alachlor",
+  "pestClass": "AS",
+  "cas": "15972-60-8"
+ },
+ {
+  "code": "RF-0074-001-PPP",
+  "name": "Chlorbufam",
+  "pestClass": "AS",
+  "cas": "1967-16-4"
+ },
+ {
+  "code": "RF-0076-001-PPP",
+  "name": "Chlordecone",
+  "pestClass": "AS",
+  "cas": "143-50-0"
+ },
+ {
+  "code": "RF-0091-001-PPP",
+  "name": "Chlorthiamid",
+  "pestClass": "AS",
+  "cas": "1918-13-4"
+ },
+ {
+  "code": "RF-0093-001-PPP",
+  "name": "Chlozolinate",
+  "pestClass": "AS",
+  "cas": "84332-86-5"
+ },
+ {
+  "code": "RF-0095-001-PPP",
+  "name": "Cinidon-ethyl (sum of cinidon ethyl and its E-isomer)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0129-001-PPP",
+  "name": "Dicloran",
+  "pestClass": "AS",
+  "cas": "99-30-9"
+ },
+ {
+  "code": "RF-0145-001-PPP",
+  "name": "Dinoterb",
+  "pestClass": "AS",
+  "cas": "1420-07-1"
+ },
+ {
+  "code": "RF-0164-001-PPP",
+  "name": "Ethoprophos",
+  "pestClass": "AS",
+  "cas": "13194-48-4"
+ },
+ {
+  "code": "RF-0213-001-PPP",
+  "name": "Fluquinconazole",
+  "pestClass": "AS",
+  "cas": "136426-54-5"
+ },
+ {
+  "code": "RF-0224-001-PPP",
+  "name": "Formothion",
+  "pestClass": "AS",
+  "cas": "2540-82-1"
+ },
+ {
+  "code": "RF-0285-001-PPP",
+  "name": "Metazachlor",
+  "pestClass": "AS",
+  "cas": "67129-08-2"
+ },
+ {
+  "code": "RF-0409-001-PPP",
+  "name": "Tembotrione",
+  "pestClass": "AS",
+  "cas": "335104-84-2"
+ },
+ {
+  "code": "RF-0020-001-PPP",
+  "name": "Aldicarb (sum of Aldicarb, its sulfoxide and its sulfone, expressed as Aldicarb)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0323-001-PPP",
+  "name": "Oxydemeton-methyl (sum of oxydemeton-methyl and demeton-S-methylsulfone expressed as oxydemeton-methyl)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0347-001-PPP",
+  "name": "Pirimicarb (sum of Pirimicarb and Desmethyl pirimicarb expressed as Pirimicarb)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0185-002-PPP",
+  "name": "Fenpropimorph carboxylic acid (BF 421-2) expressed as fenpropimorph",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0699-002-PPP",
+  "name": "Fluazifop-methyl",
+  "pestClass": "COMP",
+  "cas": "69335-90-6"
+ },
+ {
+  "code": "RF-1024-001-PPP",
+  "name": "Atraton",
+  "pestClass": "AS",
+  "cas": "1610-17-9"
+ },
+ {
+  "code": "RF-1026-001-PPP",
+  "name": "Carbanolate",
+  "pestClass": "AS",
+  "cas": "671-04-5"
+ },
+ {
+  "code": "RF-00000010-PAR",
+  "name": "Bixafen (sum of bixafen and desmethyl-bixafen, expressed as bixafen)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0424-001-PPP",
+  "name": "Tolclofos-methyl",
+  "pestClass": "AS",
+  "cas": "57018-04-9"
+ },
+ {
+  "code": "RF-0441-001-PPP",
+  "name": "Triflumuron",
+  "pestClass": "AS",
+  "cas": "64628-44-0"
+ },
+ {
+  "code": "RF-0426-001-PPP",
+  "name": "Topramezone",
+  "pestClass": "AS",
+  "cas": "210631-68-8"
+ },
+ {
+  "code": "RF-0046-001-PPP",
+  "name": "Bifenthrin (sum of isomers)",
+  "pestClass": "RD",
+  "cas": "82657-04-3"
+ },
+ {
+  "code": "RF-0160-001-PPP",
+  "name": "Ethephon",
+  "pestClass": "AS",
+  "cas": "16672-87-0"
+ },
+ {
+  "code": "RF-0348-001-PPP",
+  "name": "Pirimiphos-methyl",
+  "pestClass": "AS",
+  "cas": "29232-93-7"
+ },
+ {
+  "code": "RF-0137-002-PPP",
+  "name": "Dimethenamid including other mixtures of constituent isomers including dimethenamid-P (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0100-001-PPP",
+  "name": "Clopyralid",
+  "pestClass": "AS",
+  "cas": "1702-17-6"
+ },
+ {
+  "code": "RF-0365-001-PPP",
+  "name": "Proquinazid",
+  "pestClass": "AS",
+  "cas": "189278-12-4"
+ },
+ {
+  "code": "RF-0246-001-PPP",
+  "name": "Imazalil",
+  "pestClass": "AS",
+  "cas": "35554-44-0"
+ },
+ {
+  "code": "RF-0198-001-PPP",
+  "name": "Fluazinam",
+  "pestClass": "AS",
+  "cas": "79622-59-6"
+ },
+ {
+  "code": "RF-0407-001-PPP",
+  "name": "Teflubenzuron",
+  "pestClass": "AS",
+  "cas": "83121-18-0"
+ },
+ {
+  "code": "RF-0493-001-PPP",
+  "name": "Bensulfuron",
+  "pestClass": "AS",
+  "cas": "99283-01-9"
+ },
+ {
+  "code": "RF-0319-001-PPP",
+  "name": "Oxadixyl",
+  "pestClass": "AS",
+  "cas": "77732-09-3"
+ },
+ {
+  "code": "RF-0072-001-PPP",
+  "name": "Chlorantraniliprole",
+  "pestClass": "AS",
+  "cas": "500008-45-7"
+ },
+ {
+  "code": "RF-0206-001-PPP",
+  "name": "Flumioxazin",
+  "pestClass": "AS",
+  "cas": "103361-09-7"
+ },
+ {
+  "code": "RF-0381-001-PPP",
+  "name": "Quinmerac",
+  "pestClass": "AS",
+  "cas": "90717-03-6"
+ },
+ {
+  "code": "RF-0321-001-PPP",
+  "name": "Oxasulfuron",
+  "pestClass": "AS",
+  "cas": "144651-06-9"
+ },
+ {
+  "code": "RF-0386-001-PPP",
+  "name": "Rimsulfuron",
+  "pestClass": "AS",
+  "cas": "122931-48-0"
+ },
+ {
+  "code": "RF-0394-001-PPP",
+  "name": "Spirodiclofen",
+  "pestClass": "AS",
+  "cas": "148477-71-8"
+ },
+ {
+  "code": "RF-00004663-PAR",
+  "name": "Fluroxypyr (sum of fluroxypyr, its salts, its esters, and its conjugates, expressed as fluroxypyr)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004728-PAR",
+  "name": "1,4-Dimethylnaphthalene",
+  "pestClass": "AS",
+  "cas": "571-58-4"
+ },
+ {
+  "code": "RF-00007633-PAR",
+  "name": "2-Phenylphenol (sum of 2-phenylphenol and its conjugates, expressed as 2-phenylphenol)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00007634-PAR",
+  "name": "(3E) 3-decen-2-one",
+  "pestClass": "AS",
+  "cas": "18402-84-1"
+ },
+ {
+  "code": "RF-00005712-PAR",
+  "name": "Chloridazon (chloridazon-desphenyl, expressed as chloridazon)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005718-PAR",
+  "name": "CMBA (2-chloro-4-(methylsulfonyl)benzoic acid)",
+  "pestClass": "RD",
+  "cas": "53250-83-2"
+ },
+ {
+  "code": "RF-00005868-PAR",
+  "name": "De-ethyl-ethirimol",
+  "pestClass": null,
+  "cas": "4038-64-6"
+ },
+ {
+  "code": "RF-00007714-PAR",
+  "name": "Myrcenol",
+  "pestClass": "RD",
+  "cas": "543-39-5"
+ },
+ {
+  "code": "RF-00007749-PAR",
+  "name": "1-Decanol",
+  "pestClass": "AS",
+  "cas": "112-30-1"
+ },
+ {
+  "code": "RF-00008056-PAR",
+  "name": "1,3,5-Trioxane",
+  "pestClass": "RD",
+  "cas": "110-88-3"
+ },
+ {
+  "code": "RF-00012014-PAR",
+  "name": "Bacillus velezensis RTI301",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012009-PAR",
+  "name": "Bacillus thuringiensis ssp. Kurstaki EG 2348",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012288-PAR",
+  "name": "Betabaculovirus",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012803-PAR",
+  "name": "Pencycuron (sum of pencycuron and pencycuron-PB-amine, expressed as pencycuron)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00012801-PAR",
+  "name": "Myclobutanil (sum of constituent isomers)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00012874-PAR",
+  "name": "Carfentrazone-ethyl (sum of carfentrazone-ethyl and carfentrazone, expressed as carfentrazone-ethyl)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00002612-PAR",
+  "name": "Potassium tri-iodide",
+  "pestClass": "AS",
+  "cas": "12298-68-9"
+ },
+ {
+  "code": "RF-0639-001-PPP",
+  "name": "Disulfiram",
+  "pestClass": "AS",
+  "cas": "97-77-8"
+ },
+ {
+  "code": "RF-0652-001-PPP",
+  "name": "Endothal",
+  "pestClass": "RD",
+  "cas": "145-73-3"
+ },
+ {
+  "code": "RF-0659-001-PPP",
+  "name": "Ethidimuron",
+  "pestClass": "AS",
+  "cas": "30043-49-3"
+ },
+ {
+  "code": "RF-0665-001-PPP",
+  "name": "Ethoate-Methyl",
+  "pestClass": "AS",
+  "cas": "116-01-8"
+ },
+ {
+  "code": "RF-0675-001-PPP",
+  "name": "Fenfluthrin",
+  "pestClass": "AS",
+  "cas": "75867-00-4"
+ },
+ {
+  "code": "RF-0704-001-PPP",
+  "name": "Flufenprox",
+  "pestClass": "AS",
+  "cas": "107713-58-6"
+ },
+ {
+  "code": "RF-0712-001-PPP",
+  "name": "Fluoroimide",
+  "pestClass": "AS",
+  "cas": "41205-21-4"
+ },
+ {
+  "code": "RF-1078-001-PPP",
+  "name": "Quaternary Ammonium Compounds (QACs)",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0913-001-PPP",
+  "name": "Terbucarb",
+  "pestClass": "AS",
+  "cas": "1918-11-2"
+ },
+ {
+  "code": "RF-1033-001-PPP",
+  "name": "Hexachlorobutadiene",
+  "pestClass": "AS",
+  "cas": "87-68-3"
+ },
+ {
+  "code": "RF-1040-001-PPP",
+  "name": "Sulfallate",
+  "pestClass": "AS",
+  "cas": "95-06-7"
+ },
+ {
+  "code": "RF-0981-001-PPP",
+  "name": "Lime sulphur",
+  "pestClass": "AS",
+  "cas": "1344-81-6"
+ },
+ {
+  "code": "RF-00003742-PAR",
+  "name": "cinnamaldehyde",
+  "pestClass": "AS",
+  "cas": "104-55-2"
+ },
+ {
+  "code": "RF-00005719-PAR",
+  "name": "Phosphane and phosphide salts (sum of phosphane and phosphane generators (relevant phosphide salts), determined and expressed as phosphane)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00006322-PAR",
+  "name": "Oxine copper",
+  "pestClass": "AS",
+  "cas": "10380-28-6"
+ },
+ {
+  "code": "RF-00006266-PAR",
+  "name": "Tralopyril",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00006897-PAR",
+  "name": "L-Carvone",
+  "pestClass": "AS",
+  "cas": "6485-40-1"
+ },
+ {
+  "code": "RF-00010380-PAR",
+  "name": "Limestone",
+  "pestClass": "AS",
+  "cas": "1317-65-3"
+ },
+ {
+  "code": "RF-00010369-PAR",
+  "name": "Quartz sand",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00009184-PAR",
+  "name": "Ethyl formate",
+  "pestClass": "AS",
+  "cas": "109-94-4"
+ },
+ {
+  "code": "RF-00012018-PAR",
+  "name": "Cow Milk",
+  "pestClass": "AS",
+  "cas": "8049-98-7"
+ },
+ {
+  "code": "RF-00012023-PAR",
+  "name": "Propolis (Water soluble extract)",
+  "pestClass": "AS",
+  "cas": "85665-41-4"
+ },
+ {
+  "code": "RF-00011995-PAR",
+  "name": "8-Methyl-2-decanol propanoate",
+  "pestClass": "AS",
+  "cas": "81931-28-4"
+ },
+ {
+  "code": "RF-00012037-PAR",
+  "name": "Tiadinil",
+  "pestClass": "AS",
+  "cas": "223580-51-6"
+ },
+ {
+  "code": "RF-00012364-PAR",
+  "name": "Tioxazafen",
+  "pestClass": "AS",
+  "cas": "330459-31-9"
+ },
+ {
+  "code": "RF-00013463-PAR",
+  "name": "Tefluthrin (tefluthrin including other mixtures of constituent isomers (sum of isomers))",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00013630-PAR",
+  "name": "Novaluron (sum of constituent isomers)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00014499-PAR",
+  "name": "Silver iodide",
+  "pestClass": "AS",
+  "cas": "7783-96-2"
+ },
+ {
+  "code": "RF-00014207-PAR",
+  "name": "Quinmerac (sum of quinmerac and its metabolites BH 518-2 and BH 518-4 expressed as quinmerac)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00014211-PAR",
+  "name": "Valifenalate and valifenalate acid (IR5839)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00014208-PAR",
+  "name": "Sum of M4 and M6 (both free and conjugated), expressed as pinoxaden",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00015733-PAR",
+  "name": "Trifloxystrobin (sum of trifloxystrobin and its metabolite (E, E)-methoxyimino- {2-[1-(3-trifluoromethyl-phenyl)-ethylideneamino-oxymethyl]-phenyl}-acetic acid (CGA 321113) expressed as trifloxystrobin)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00009505-PAR",
+  "name": "Tall oil pitch",
+  "pestClass": "AS",
+  "cas": "8016-81-7"
+ },
+ {
+  "code": "RF-00016201-PAR",
+  "name": "Metarhizium brunneum BNL102",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00016351-PAR",
+  "name": "(Z)-9-Tricosene",
+  "pestClass": "AS",
+  "cas": "27519-02-4"
+ },
+ {
+  "code": "RF-00016226-PAR",
+  "name": "2-[8-chloro-4-(4-methoxyphenyl)-3-oxo-quinoxaline-2-carbonyl]cyclohexane-1,3-dione",
+  "pestClass": "AS",
+  "cas": "1342891-70-6"
+ },
+ {
+  "code": "RF-00002838-PAR",
+  "name": "Meptyldinocap",
+  "pestClass": "AS",
+  "cas": "131-72-6"
+ },
+ {
+  "code": "RF-0238-001-PPP",
+  "name": "Hexachlorocyclohexane (HCH), alpha-isomer",
+  "pestClass": "RD",
+  "cas": "319-84-6"
+ },
+ {
+  "code": "RF-0059-003-PPP",
+  "name": "Camphechlor (Sum of the three indicator compounds Parlar No 26, 50 and 62)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0075-005-PPP",
+  "name": "Chlordane (sum of cis- and trans-isomers and oxychlordane expressed as chlordane)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00000025-ORG",
+  "name": "4-Chloro,3-methylphenol",
+  "pestClass": "AS",
+  "cas": "59-50-7"
+ },
+ {
+  "code": "RF-00000028-ORG",
+  "name": "Meta-Cresol",
+  "pestClass": "AS",
+  "cas": "108-39-4"
+ },
+ {
+  "code": "RF-00003035-PAR",
+  "name": "Chlorpropham and 3-chloro-4-hydroxyaniline conjugates, expressed as chlorpropham",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00000543-VET",
+  "name": "Oxytetracycline",
+  "pestClass": "AS",
+  "cas": "79-57-2"
+ },
+ {
+  "code": "RF-00000033-ADD",
+  "name": "Aluminium silicate (Kaolin)",
+  "pestClass": "AS",
+  "cas": "1332-58-7"
+ },
+ {
+  "code": "RF-00000040-ADD",
+  "name": "Ammonium hydroxide",
+  "pestClass": "RD",
+  "cas": "1336-21-6"
+ },
+ {
+  "code": "RF-00000164-CHE",
+  "name": "Iron (Fe)",
+  "pestClass": "AS",
+  "cas": "7439-89-6"
+ },
+ {
+  "code": "RF-00000010-CHE",
+  "name": "Calcium oxide",
+  "pestClass": "AS",
+  "cas": "1305-78-8"
+ },
+ {
+  "code": "RF-00000208-ADD",
+  "name": "Paprika extract, capsanthin, capsorubin",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003362-PAR",
+  "name": "Penflufen",
+  "pestClass": "AS",
+  "cas": "494793-67-8"
+ },
+ {
+  "code": "RF-0453-001-PPP",
+  "name": "Dichlofluanid",
+  "pestClass": "AS",
+  "cas": "1085-98-9"
+ },
+ {
+  "code": "RF-0522-001-PPP",
+  "name": "Butocarboxim",
+  "pestClass": "AS",
+  "cas": "34681-10-2"
+ },
+ {
+  "code": "RF-0535-001-PPP",
+  "name": "Carbophenothion",
+  "pestClass": "AS",
+  "cas": "786-19-6"
+ },
+ {
+  "code": "RF-0668-001-PPP",
+  "name": "Etrimfos",
+  "pestClass": "AS",
+  "cas": "38260-54-7"
+ },
+ {
+  "code": "RF-0684-001-PPP",
+  "name": "Fenson",
+  "pestClass": "AS",
+  "cas": "80-38-6"
+ },
+ {
+  "code": "RF-0732-001-PPP",
+  "name": "Halfenprox",
+  "pestClass": "AS",
+  "cas": "111872-58-3"
+ },
+ {
+  "code": "RF-0733-001-PPP",
+  "name": "Halofenozide",
+  "pestClass": "AS",
+  "cas": "112226-61-6"
+ },
+ {
+  "code": "RF-0749-001-PPP",
+  "name": "Iminoctadine",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0760-001-PPP",
+  "name": "Isolane",
+  "pestClass": "AS",
+  "cas": "119-38-0"
+ },
+ {
+  "code": "RF-0791-001-PPP",
+  "name": "Metobromuron",
+  "pestClass": "AS",
+  "cas": "3060-89-7"
+ },
+ {
+  "code": "RF-0797-001-PPP",
+  "name": "Mirex",
+  "pestClass": "AS",
+  "cas": "2385-85-5"
+ },
+ {
+  "code": "RF-0799-001-PPP",
+  "name": "Nabam",
+  "pestClass": "AS",
+  "cas": "142-59-6"
+ },
+ {
+  "code": "RF-0813-001-PPP",
+  "name": "Nitrapyrin",
+  "pestClass": "AS",
+  "cas": "1929-82-4"
+ },
+ {
+  "code": "RF-0818-001-PPP",
+  "name": "Noviflumuron",
+  "pestClass": "AS",
+  "cas": "121451-02-3"
+ },
+ {
+  "code": "RF-0820-001-PPP",
+  "name": "Octhilinone",
+  "pestClass": "AS",
+  "cas": "26530-20-1"
+ },
+ {
+  "code": "RF-0847-001-PPP",
+  "name": "Piperalin",
+  "pestClass": "AS",
+  "cas": "3478-94-2"
+ },
+ {
+  "code": "RF-0851-001-PPP",
+  "name": "Pirimiphos-Ethyl",
+  "pestClass": "AS",
+  "cas": "23505-41-1"
+ },
+ {
+  "code": "RF-0936-001-PPP",
+  "name": "Thiometon",
+  "pestClass": "AS",
+  "cas": "640-15-3"
+ },
+ {
+  "code": "RF-0971-001-PPP",
+  "name": "XMC",
+  "pestClass": "AS",
+  "cas": "2655-14-3"
+ },
+ {
+  "code": "RF-0994-001-PPP",
+  "name": "Chlorfenethol",
+  "pestClass": "AS",
+  "cas": "80-06-8"
+ },
+ {
+  "code": "RF-0033-001-PPP",
+  "name": "Azinphos-methyl",
+  "pestClass": "AS",
+  "cas": "86-50-0"
+ },
+ {
+  "code": "RF-0052-001-PPP",
+  "name": "Bromopropylate",
+  "pestClass": "AS",
+  "cas": "18181-80-1"
+ },
+ {
+  "code": "RF-0060-001-PPP",
+  "name": "Captafol",
+  "pestClass": "AS",
+  "cas": "2425-06-1"
+ },
+ {
+  "code": "RF-0127-001-PPP",
+  "name": "Dichlorvos",
+  "pestClass": "AS",
+  "cas": "62-73-7"
+ },
+ {
+  "code": "RF-0180-001-PPP",
+  "name": "Fenitrothion",
+  "pestClass": "AS",
+  "cas": "122-14-5"
+ },
+ {
+  "code": "RF-0183-001-PPP",
+  "name": "Fenpropathrin",
+  "pestClass": "AS",
+  "cas": "39515-41-8"
+ },
+ {
+  "code": "RF-0204-001-PPP",
+  "name": "Flufenoxuron",
+  "pestClass": "AS",
+  "cas": "101463-69-8"
+ },
+ {
+  "code": "RF-0289-001-PPP",
+  "name": "Methamidophos",
+  "pestClass": "AS",
+  "cas": "10265-92-6"
+ },
+ {
+  "code": "RF-0311-001-PPP",
+  "name": "Nitrofen",
+  "pestClass": "AS",
+  "cas": "1836-75-5"
+ },
+ {
+  "code": "RF-0334-001-PPP",
+  "name": "Phenmedipham",
+  "pestClass": "AS",
+  "cas": "13684-63-4"
+ },
+ {
+  "code": "RF-0339-001-PPP",
+  "name": "Phosphamidon",
+  "pestClass": "AS",
+  "cas": "13171-21-6"
+ },
+ {
+  "code": "RF-0342-001-PPP",
+  "name": "Phoxim",
+  "pestClass": "AS",
+  "cas": "14816-18-3"
+ },
+ {
+  "code": "RF-0375-001-PPP",
+  "name": "Pyridaben",
+  "pestClass": "AS",
+  "cas": "96489-71-3"
+ },
+ {
+  "code": "RF-0428-003-PPP",
+  "name": "Triadimefon",
+  "pestClass": "AS",
+  "cas": "43121-43-3"
+ },
+ {
+  "code": "RF-0086-003-PPP",
+  "name": "Chlorpropham",
+  "pestClass": "AS",
+  "cas": "101-21-3"
+ },
+ {
+  "code": "RF-0112-001-PPP",
+  "name": "Cypermethrin (Cypermethrin including other mixtures of constituent isomers (sum of isomers))",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0187-001-PPP",
+  "name": "Fenthion (fenthion and its oxigen analogue, their sulfoxides and sulfone expressed as parent)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0235-004-PPP",
+  "name": "Haloxyfop",
+  "pestClass": "AS",
+  "cas": "69806-34-4"
+ },
+ {
+  "code": "RF-0323-004-PPP",
+  "name": "Oxydemeton-methyl",
+  "pestClass": "AS",
+  "cas": "301-12-2"
+ },
+ {
+  "code": "RF-0425-002-PPP",
+  "name": "Tolylfluanid",
+  "pestClass": "AS",
+  "cas": "731-27-1"
+ },
+ {
+  "code": "RF-0235-007-PPP",
+  "name": "Haloxyfop-P-methyl",
+  "pestClass": "COMP",
+  "cas": "72619-32-0"
+ },
+ {
+  "code": "RF-00000082-NTR",
+  "name": "ergocalciferol",
+  "pestClass": "AS",
+  "cas": "50-14-6"
+ },
+ {
+  "code": "RF-0432-001-PPP",
+  "name": "Triazophos",
+  "pestClass": "AS",
+  "cas": "24017-47-8"
+ },
+ {
+  "code": "RF-1078-002-PPP",
+  "name": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0265-001-PPP",
+  "name": "Lufenuron (any ratio of constituent isomers)",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0215-003-PPP",
+  "name": "Fluroxypyr",
+  "pestClass": "AS",
+  "cas": "69377-81-7"
+ },
+ {
+  "code": "RF-0194-002-PPP",
+  "name": "Flonicamid",
+  "pestClass": "AS",
+  "cas": "158062-67-0"
+ },
+ {
+  "code": "RF-0790-001-PPP",
+  "name": "Methyl-Isothiocyanate",
+  "pestClass": "AS",
+  "cas": "556-61-6"
+ },
+ {
+  "code": "RF-0972-001-PPP",
+  "name": "Zineb",
+  "pestClass": "AS",
+  "cas": "12122-67-7"
+ },
+ {
+  "code": "RF-0260-001-PPP",
+  "name": "Kresoxim-methyl",
+  "pestClass": "AS",
+  "cas": "143390-89-0"
+ },
+ {
+  "code": "RF-0403-001-PPP",
+  "name": "Tebuconazole",
+  "pestClass": "AS",
+  "cas": "107534-96-3"
+ },
+ {
+  "code": "RF-0139-003-PPP",
+  "name": "Dimethoate",
+  "pestClass": "AS",
+  "cas": "60-51-5"
+ },
+ {
+  "code": "RF-0221-001-PPP",
+  "name": "Folpet",
+  "pestClass": "AS",
+  "cas": "133-07-3"
+ },
+ {
+  "code": "RF-00000026-PAR",
+  "name": "Mefenpyr-diethyl",
+  "pestClass": "COMP",
+  "cas": "135590-91-9"
+ },
+ {
+  "code": "RF-00004816-PAR",
+  "name": "Saflufenacil",
+  "pestClass": "AS",
+  "cas": "372137-35-4"
+ },
+ {
+  "code": "RF-00002605-PAR",
+  "name": "2,4-DB (sum of 2,4-DB and its conjugates, expressed as 2,4-DB)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0462-001-PPP",
+  "name": "Alanycarb",
+  "pestClass": "AS",
+  "cas": "83130-01-2"
+ },
+ {
+  "code": "RF-0463-001-PPP",
+  "name": "Aldimorph",
+  "pestClass": "AS",
+  "cas": "91315-15-0"
+ },
+ {
+  "code": "RF-0473-001-PPP",
+  "name": "Ancymidol",
+  "pestClass": "AS",
+  "cas": "12771-68-5"
+ },
+ {
+  "code": "RF-0485-001-PPP",
+  "name": "Aziprotryne",
+  "pestClass": "AS",
+  "cas": "4658-28-0"
+ },
+ {
+  "code": "RF-0490-001-PPP",
+  "name": "Benfuresate",
+  "pestClass": "AS",
+  "cas": "68505-69-1"
+ },
+ {
+  "code": "RF-0540-001-PPP",
+  "name": "Chlomethoxyfen",
+  "pestClass": "AS",
+  "cas": "32861-85-1"
+ },
+ {
+  "code": "RF-0544-001-PPP",
+  "name": "Chlorbromuron",
+  "pestClass": "AS",
+  "cas": "13360-45-7"
+ },
+ {
+  "code": "RF-0547-001-PPP",
+  "name": "Chlorfenprop",
+  "pestClass": "AS",
+  "cas": "59604-11-4"
+ },
+ {
+  "code": "RF-0702-001-PPP",
+  "name": "Flubenzimine",
+  "pestClass": "AS",
+  "cas": "37893-02-0"
+ },
+ {
+  "code": "RF-0709-001-PPP",
+  "name": "Flumiclorac-Pentyl",
+  "pestClass": "AS",
+  "cas": "87546-18-7"
+ },
+ {
+  "code": "RF-0711-001-PPP",
+  "name": "Fluoroglycofen-Ethyl",
+  "pestClass": "COMP",
+  "cas": "77501-90-7"
+ },
+ {
+  "code": "RF-0867-001-PPP",
+  "name": "Propham",
+  "pestClass": "AS",
+  "cas": "122-42-9"
+ },
+ {
+  "code": "RF-1078-003-PPP",
+  "name": "BAC 10",
+  "pestClass": "COMP",
+  "cas": "965-32-2"
+ },
+ {
+  "code": "RF-0897-001-PPP",
+  "name": "Simeconazole",
+  "pestClass": "AS",
+  "cas": "149508-90-7"
+ },
+ {
+  "code": "RF-0909-001-PPP",
+  "name": "Tebuthiuron",
+  "pestClass": "AS",
+  "cas": "34014-18-1"
+ },
+ {
+  "code": "RF-0910-001-PPP",
+  "name": "Tecloftalam",
+  "pestClass": "AS",
+  "cas": "76280-91-6"
+ },
+ {
+  "code": "RF-0919-001-PPP",
+  "name": "Terbutryn",
+  "pestClass": "AS",
+  "cas": "886-50-0"
+ },
+ {
+  "code": "RF-0036-001-PPP",
+  "name": "Barban",
+  "pestClass": "AS",
+  "cas": "101-27-9"
+ },
+ {
+  "code": "RF-0050-001-PPP",
+  "name": "Bromide ion",
+  "pestClass": "RD",
+  "cas": "24959-67-9"
+ },
+ {
+  "code": "RF-0058-001-PPP",
+  "name": "Butylate",
+  "pestClass": "AS",
+  "cas": "2008-41-5"
+ },
+ {
+  "code": "RF-0079-001-PPP",
+  "name": "Chlorfenvinphos",
+  "pestClass": "AS",
+  "cas": "470-90-6"
+ },
+ {
+  "code": "RF-0166-001-PPP",
+  "name": "Ethoxysulfuron",
+  "pestClass": "AS",
+  "cas": "126801-58-9"
+ },
+ {
+  "code": "RF-0178-001-PPP",
+  "name": "Fenchlorphos (sum of fenchlorphos and fenchlorphos oxon expressed as fenchlorphos)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0277-001-PPP",
+  "name": "Mercury compounds (sum of mercury compounds expressed as mercury)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0296-001-PPP",
+  "name": "Methoxyfenozide",
+  "pestClass": "AS",
+  "cas": "161050-58-4"
+ },
+ {
+  "code": "RF-0376-001-PPP",
+  "name": "Pyridate (sum of pyridate, its hydrolysis product CL 9673 (6-chloro-4-hydroxy-3-phenylpyridazin) and hydrolysable conjugates of CL 9673 expressed as pyridate)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0149-001-PPP",
+  "name": "Disulfoton (sum of disulfoton, disulfoton sulfoxide and disulfoton sulfone expressed as disulfoton)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0273-001-PPP",
+  "name": "Mecoprop (sum of mecoprop-p and mecoprop expressed as mecoprop)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0649-001-PPP",
+  "name": "Emamectin B1a",
+  "pestClass": "RD",
+  "cas": "121124-29-6"
+ },
+ {
+  "code": "RF-1016-001-PPP",
+  "name": "Flurenol-butyl",
+  "pestClass": "COMP",
+  "cas": "2314-09-2"
+ },
+ {
+  "code": "RF-00000013-PAR",
+  "name": "Climbazole",
+  "pestClass": "AS",
+  "cas": "38083-17-9"
+ },
+ {
+  "code": "RF-0247-001-PPP",
+  "name": "Imazamox (sum of imazamox and its salts, expressed as imazamox)",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0868-001-PPP",
+  "name": "Prothioconazole: prothioconazole-desthio (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0223-001-PPP",
+  "name": "Formetanate: Sum of formetanate and its salts expressed as formetanate(hydrochloride)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0184-002-PPP",
+  "name": "Fenpropidin (sum of fenpropidin, 2-methyl-2-[4-(2-methyl-3- piperidin-1-yl-propyl)-phenyl]propionic acid, and their salts, expressed as fenpropidin)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0201-002-PPP",
+  "name": "Flucythrinate (flucythrinate including other mixtures of consitutent isomers (sum of isomers))",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0083-001-PPP",
+  "name": "Chloropicrin",
+  "pestClass": "AS",
+  "cas": "76-06-2"
+ },
+ {
+  "code": "RF-0286-001-PPP",
+  "name": "Metconazole (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0202-001-PPP",
+  "name": "Fludioxonil",
+  "pestClass": "AS",
+  "cas": "131341-86-1"
+ },
+ {
+  "code": "RF-0015-001-PPP",
+  "name": "Acetochlor",
+  "pestClass": "AS",
+  "cas": "34256-82-1"
+ },
+ {
+  "code": "RF-00000024-PAR",
+  "name": "Fluxapyroxad",
+  "pestClass": "AS",
+  "cas": "907204-31-3"
+ },
+ {
+  "code": "RF-0310-001-PPP",
+  "name": "Nicosulfuron",
+  "pestClass": "AS",
+  "cas": "111991-09-4"
+ },
+ {
+  "code": "RF-0470-001-PPP",
+  "name": "Amisulbrom",
+  "pestClass": "AS",
+  "cas": "348635-87-0"
+ },
+ {
+  "code": "RF-0563-001-PPP",
+  "name": "Cinmethylin",
+  "pestClass": "AS",
+  "cas": "87818-31-3"
+ },
+ {
+  "code": "RF-0876-001-PPP",
+  "name": "Pyridalyl",
+  "pestClass": "AS",
+  "cas": "179101-81-6"
+ },
+ {
+  "code": "RF-0248-001-PPP",
+  "name": "Imazaquin",
+  "pestClass": "AS",
+  "cas": "81335-37-7"
+ },
+ {
+  "code": "RF-0102-001-PPP",
+  "name": "Copper",
+  "pestClass": "AS",
+  "cas": "7440-50-8"
+ },
+ {
+  "code": "RF-0030-001-PPP",
+  "name": "Azadirachtin",
+  "pestClass": "AS",
+  "cas": "11141-17-6"
+ },
+ {
+  "code": "RF-00000048-NTR",
+  "name": "casein",
+  "pestClass": null,
+  "cas": "9000-71-9"
+ },
+ {
+  "code": "RF-00002596-PAR",
+  "name": "Bromadiolone",
+  "pestClass": "AS",
+  "cas": "28772-56-7"
+ },
+ {
+  "code": "RF-0177-001-PPP",
+  "name": "Fenbutatin oxide",
+  "pestClass": "AS",
+  "cas": "13356-08-6"
+ },
+ {
+  "code": "RF-0299-001-PPP",
+  "name": "Metrafenone",
+  "pestClass": "AS",
+  "cas": "220899-03-6"
+ },
+ {
+  "code": "RF-0333-001-PPP",
+  "name": "Pethoxamid",
+  "pestClass": "AS",
+  "cas": "106700-29-2"
+ },
+ {
+  "code": "RF-0356-001-PPP",
+  "name": "Propaquizafop",
+  "pestClass": "AS",
+  "cas": "111479-05-1"
+ },
+ {
+  "code": "RF-00007629-PAR",
+  "name": "Thiabendazole (sum of thiabendazole and 5-hydroxythiabendazole, expressed as thiabendazole)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00007489-PAR",
+  "name": "DDAC-C12",
+  "pestClass": "COMP",
+  "cas": "3401-74-9"
+ },
+ {
+  "code": "RF-00005728-PAR",
+  "name": "1-Naphthylacetamide and 1-naphthylacetic acid (sum of 1-naphthylacetamide and 1-naphthylacetic acid and its salts, expressed as 1-naphythlacetic acid)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00006668-PAR",
+  "name": "3-[(6-iodo-4-oxo-3-propyl-3,4-dihydroquinazolin-2-yl)oxy]propanoic acid",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00007588-PAR",
+  "name": "sum of chlorpyrifos-methyl and desmethyl chlorpyrifos-methyl, expressed as chlorpyrifos-methyl",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00008325-PAR",
+  "name": "4-Hydroxybenzoic acid",
+  "pestClass": "RD",
+  "cas": "99-96-7"
+ },
+ {
+  "code": "RF-00011515-PAR",
+  "name": "Bicyclopyrone (sum of bicyclopyrone and its structurally related metabolites determined as the sum of the common moieties (SYN503780) and (CSCD686480)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012005-PAR",
+  "name": "Bacillus thuringiensis ssp. Aizawai GC-91",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012008-PAR",
+  "name": "Bacillus thuringiensis ssp. Kurstaki ABTS 351",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014481-PAR",
+  "name": "Verticillium nonalfalfae Vert56",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014489-PAR",
+  "name": "Streptomyces lydicus WYEC 108",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014209-PAR",
+  "name": "M4 (free and conjugated), expressed as pinoxaden",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00001703-PAR",
+  "name": "Sea-algae extract",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0611-001-PPP",
+  "name": "Diclosulam",
+  "pestClass": "AS",
+  "cas": "145701-21-9"
+ },
+ {
+  "code": "RF-0674-001-PPP",
+  "name": "Fenclorim",
+  "pestClass": "AS",
+  "cas": "3740-92-9"
+ },
+ {
+  "code": "RF-0691-001-PPP",
+  "name": "Ferbam",
+  "pestClass": "AS",
+  "cas": "14484-64-1"
+ },
+ {
+  "code": "RF-0710-001-PPP",
+  "name": "Fluorodifen",
+  "pestClass": "AS",
+  "cas": "15457-05-3"
+ },
+ {
+  "code": "RF-0138-001-PPP",
+  "name": "Dimethipin",
+  "pestClass": "AS",
+  "cas": "55290-64-7"
+ },
+ {
+  "code": "RF-0312-001-PPP",
+  "name": "Norflurazon",
+  "pestClass": "AS",
+  "cas": "27314-13-2"
+ },
+ {
+  "code": "RF-0372-001-PPP",
+  "name": "Pyrasulfotole",
+  "pestClass": "AS",
+  "cas": "365400-11-9"
+ },
+ {
+  "code": "RF-0400-001-PPP",
+  "name": "Sulfuryl fluoride",
+  "pestClass": "AS",
+  "cas": "2699-79-8"
+ },
+ {
+  "code": "RF-1046-001-PPP",
+  "name": "Flamprop",
+  "pestClass": "AS",
+  "cas": "58667-63-3"
+ },
+ {
+  "code": "RF-1070-001-PPP",
+  "name": "Sum of flonicamid and TFNA-AM, expressed as flonicamid",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00001694-PAR",
+  "name": "Heptamaloxyloglucan",
+  "pestClass": "AS",
+  "cas": "870721-81-6"
+ },
+ {
+  "code": "RF-0205-001-PPP",
+  "name": "Flufenzin",
+  "pestClass": "AS",
+  "cas": "162320-67-4"
+ },
+ {
+  "code": "RF-00003591-PAR",
+  "name": "strychnine",
+  "pestClass": null,
+  "cas": "57-24-9"
+ },
+ {
+  "code": "RF-00004660-PAR",
+  "name": "Difluoroacetic acid (DFA)",
+  "pestClass": "RD",
+  "cas": "381-73-7"
+ },
+ {
+  "code": "RF-00005777-PAR",
+  "name": "Sodium o-nitrophenolate",
+  "pestClass": "AS",
+  "cas": "824-39-5"
+ },
+ {
+  "code": "RF-00005778-PAR",
+  "name": "Sodium p-nitrophenolate",
+  "pestClass": "AS",
+  "cas": "824-78-2"
+ },
+ {
+  "code": "RF-00009800-PAR",
+  "name": "Reynoutria sachalinensis extract",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00009593-PAR",
+  "name": "Z-13-hexadecen-11-yn-1-yl acetate",
+  "pestClass": "AS",
+  "cas": "78617-58-0"
+ },
+ {
+  "code": "RF-00008032-PAR",
+  "name": "Peroxyacetic acid",
+  "pestClass": "AS",
+  "cas": "79-21-0"
+ },
+ {
+  "code": "RF-00010250-PAR",
+  "name": "Citral",
+  "pestClass": "RD",
+  "cas": "5392-40-5"
+ },
+ {
+  "code": "RF-00008597-PAR",
+  "name": "Ammonium acetate",
+  "pestClass": "AS",
+  "cas": "631-61-8"
+ },
+ {
+  "code": "RF-00008987-PAR",
+  "name": "Laminarin",
+  "pestClass": "AS",
+  "cas": "9008-22-4"
+ },
+ {
+  "code": "RF-00009274-PAR",
+  "name": "Rescalure",
+  "pestClass": "AS",
+  "cas": "67601-06-3"
+ },
+ {
+  "code": "RF-00011996-PAR",
+  "name": "Afidopyropen",
+  "pestClass": "AS",
+  "cas": "915972-17-7"
+ },
+ {
+  "code": "RF-00012021-PAR",
+  "name": "Ipflufenoquin",
+  "pestClass": "AS",
+  "cas": "1314008-27-9"
+ },
+ {
+  "code": "RF-00012026-PAR",
+  "name": "Akanthomyces muscarius Ve6",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012867-PAR",
+  "name": "Metschnikowia fructicola NRRL Y-27328",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012896-PAR",
+  "name": "Dichloroctylisothiazolinon",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014572-PAR",
+  "name": "Pseudozyma flocculosa",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014543-PAR",
+  "name": "p-Chloronitrobenzene",
+  "pestClass": "AS",
+  "cas": "100-00-5"
+ },
+ {
+  "code": "RF-00009984-PAR",
+  "name": "D-tagatose",
+  "pestClass": "AS",
+  "cas": "87-81-0"
+ },
+ {
+  "code": "RF-00013155-PAR",
+  "name": "Metyltetraprole",
+  "pestClass": "AS",
+  "cas": "1472649-01-6"
+ },
+ {
+  "code": "RF-00013673-PAR",
+  "name": "Soaps, potassium",
+  "pestClass": "AS",
+  "cas": "8046-74-0"
+ },
+ {
+  "code": "RF-00014617-PAR",
+  "name": "Artemisia vulgaris, ext.",
+  "pestClass": "AS",
+  "cas": "84775-45-1"
+ },
+ {
+  "code": "RF-00015926-PAR",
+  "name": "Corn Oil",
+  "pestClass": "AS",
+  "cas": "8001-30-7"
+ },
+ {
+  "code": "RF-00016389-PAR",
+  "name": "4-(5-(3,5-dichloro-4-fluorophenyl)-5-(trifluoromethyl)-4,5-dihydro-1,2-oxazol-3-yl)-N-(2-ethyl-3-oxo-1,2-oxazolidin-4-yl)-2-methylbenzamide",
+  "pestClass": "AS",
+  "cas": "2061933-85-3"
+ },
+ {
+  "code": "RF-00016227-PAR",
+  "name": "(1S)-2,2-bis(4-fluorophenyl)-1-methylethyl N-{[3-(acetyloxy)-4-methoxy-2-pyridyl]carbonyl}-L-alaninate",
+  "pestClass": "AS",
+  "cas": "1961312-55-9"
+ },
+ {
+  "code": "RF-00000111-CHE",
+  "name": "Sulfur (S)",
+  "pestClass": "AS",
+  "cas": "7704-34-9"
+ },
+ {
+  "code": "RF-00003040-PAR",
+  "name": "Quassia",
+  "pestClass": "AS",
+  "cas": "68915-32-2"
+ },
+ {
+  "code": "RF-00003039-PAR",
+  "name": "Tepraloxydim (sum of tepraloxydim and its metabolites that can be hydrolysed either to the moiety 3-(tetrahydro-pyran-4-yl)-glutaric acid or to the moiety 3-hydroxy-(tetrahydro-pyran-4-yl)-glutaric acid, expressed as tepraloxydim)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00000071-ADD",
+  "name": "Calcium chloride",
+  "pestClass": "AS",
+  "cas": "10043-52-4"
+ },
+ {
+  "code": "RF-00000189-ADD",
+  "name": "Methyl p-hydroxybenzoate",
+  "pestClass": "AS",
+  "cas": "99-76-3"
+ },
+ {
+  "code": "RF-00000032-ADD",
+  "name": "Aluminium potassium sulphate",
+  "pestClass": "AS",
+  "cas": "7784-24-9"
+ },
+ {
+  "code": "RF-00000039-ADD",
+  "name": "Ammonium carbonates",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00000199-ADD",
+  "name": "Natamycin",
+  "pestClass": "AS",
+  "cas": "7681-93-8"
+ },
+ {
+  "code": "RF-0002-001-PPP",
+  "name": "1,2-dibromoethane (ethylene dibromide)",
+  "pestClass": "AS",
+  "cas": "106-93-4"
+ },
+ {
+  "code": "RF-0003-001-PPP",
+  "name": "1,2-dichloroethane (ethylene dichloride)",
+  "pestClass": "RD",
+  "cas": "107-06-2"
+ },
+ {
+  "code": "RF-0004-001-PPP",
+  "name": "1,3-dichloropropene",
+  "pestClass": "AS",
+  "cas": "542-75-6"
+ },
+ {
+  "code": "RF-00000019-ADD",
+  "name": "Acetic acid",
+  "pestClass": "AS",
+  "cas": "64-19-7"
+ },
+ {
+  "code": "RF-00000256-ADD",
+  "name": "Propionic acid",
+  "pestClass": "AS",
+  "cas": "79-09-4"
+ },
+ {
+  "code": "RF-00000327-ADD",
+  "name": "Talc",
+  "pestClass": "AS",
+  "cas": "14807-96-6"
+ },
+ {
+  "code": "RF-00003356-PAR",
+  "name": "Isouron",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00003339-PAR",
+  "name": "Daminozide",
+  "pestClass": "AS",
+  "cas": "1596-84-5"
+ },
+ {
+  "code": "RF-00003336-PAR",
+  "name": "Cyantraniliprole",
+  "pestClass": "AS",
+  "cas": "736994-63-1"
+ },
+ {
+  "code": "RF-00003344-PAR",
+  "name": "Metazachlor (Sum of metabolites 479M04, 479M08 and 479M16, expressed as metazachlor)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0251-001-PPP",
+  "name": "Indoxacarb (sum of indoxacarb and its R enantiomer)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00002611-PAR",
+  "name": "Metolachlor and S-metolachlor (metolachlor including other mixtures of constituent isomers including S-metolachlor (sum of isomers))",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0469-001-PPP",
+  "name": "Aminocarb",
+  "pestClass": "AS",
+  "cas": "2032-59-9"
+ },
+ {
+  "code": "RF-0471-001-PPP",
+  "name": "AMPA",
+  "pestClass": "COMP",
+  "cas": "1066-51-9"
+ },
+ {
+  "code": "RF-0484-001-PPP",
+  "name": "Azamethiphos",
+  "pestClass": "AS",
+  "cas": "35575-96-3"
+ },
+ {
+  "code": "RF-0491-001-PPP",
+  "name": "Benodanil",
+  "pestClass": "AS",
+  "cas": "15310-01-7"
+ },
+ {
+  "code": "RF-0515-001-PPP",
+  "name": "Bromocyclen",
+  "pestClass": "AS",
+  "cas": "1715-40-8"
+ },
+ {
+  "code": "RF-0520-001-PPP",
+  "name": "Butafenacil",
+  "pestClass": "AS",
+  "cas": "134605-64-4"
+ },
+ {
+  "code": "RF-0559-001-PPP",
+  "name": "Chlorthal",
+  "pestClass": "AS",
+  "cas": "2136-79-0"
+ },
+ {
+  "code": "RF-0600-001-PPP",
+  "name": "Dichlone",
+  "pestClass": "AS",
+  "cas": "117-80-6"
+ },
+ {
+  "code": "RF-0603-001-PPP",
+  "name": "Dichlorobenzene, 1,4-",
+  "pestClass": "RD",
+  "cas": "106-46-7"
+ },
+ {
+  "code": "RF-0607-001-PPP",
+  "name": "Dichlorophen",
+  "pestClass": "AS",
+  "cas": "97-23-4"
+ },
+ {
+  "code": "RF-0610-001-PPP",
+  "name": "Diclobutrazol",
+  "pestClass": "AS",
+  "cas": "75736-33-3"
+ },
+ {
+  "code": "RF-0612-001-PPP",
+  "name": "Dicrotophos",
+  "pestClass": "AS",
+  "cas": "141-66-2"
+ },
+ {
+  "code": "RF-0636-001-PPP",
+  "name": "Dioxacarb",
+  "pestClass": "AS",
+  "cas": "6988-21-2"
+ },
+ {
+  "code": "RF-0677-001-PPP",
+  "name": "Fenobucarb",
+  "pestClass": "AS",
+  "cas": "3766-81-2"
+ },
+ {
+  "code": "RF-0716-001-PPP",
+  "name": "Flurazole",
+  "pestClass": "AS",
+  "cas": "72850-64-7"
+ },
+ {
+  "code": "RF-0717-001-PPP",
+  "name": "Flurenol",
+  "pestClass": "AS",
+  "cas": "467-69-6"
+ },
+ {
+  "code": "RF-0718-001-PPP",
+  "name": "Fluridone",
+  "pestClass": "AS",
+  "cas": "59756-60-4"
+ },
+ {
+  "code": "RF-0726-001-PPP",
+  "name": "Fosthietan",
+  "pestClass": "AS",
+  "cas": "21548-32-3"
+ },
+ {
+  "code": "RF-0727-001-PPP",
+  "name": "Furalaxyl",
+  "pestClass": "AS",
+  "cas": "57646-30-7"
+ },
+ {
+  "code": "RF-0750-001-PPP",
+  "name": "Inabenfide",
+  "pestClass": "AS",
+  "cas": "82211-24-3"
+ },
+ {
+  "code": "RF-0762-001-PPP",
+  "name": "Isoprocarb",
+  "pestClass": "AS",
+  "cas": "2631-40-5"
+ },
+ {
+  "code": "RF-0763-001-PPP",
+  "name": "Isopropalin",
+  "pestClass": "AS",
+  "cas": "33820-53-0"
+ },
+ {
+  "code": "RF-0787-001-PPP",
+  "name": "Methothrin",
+  "pestClass": "AS",
+  "cas": "34388-29-9"
+ },
+ {
+  "code": "RF-0795-001-PPP",
+  "name": "Metsulfovax",
+  "pestClass": "AS",
+  "cas": "21452-18-6"
+ },
+ {
+  "code": "RF-0796-001-PPP",
+  "name": "Metsulfuron",
+  "pestClass": "AS",
+  "cas": "79510-48-8"
+ },
+ {
+  "code": "RF-0808-001-PPP",
+  "name": "Niclosamide",
+  "pestClass": "AS",
+  "cas": "50-65-7"
+ },
+ {
+  "code": "RF-0809-001-PPP",
+  "name": "Nicotine",
+  "pestClass": "AS",
+  "cas": "54-11-5"
+ },
+ {
+  "code": "RF-0822-001-PPP",
+  "name": "Orbencarb",
+  "pestClass": "AS",
+  "cas": "34622-58-7"
+ },
+ {
+  "code": "RF-0839-001-PPP",
+  "name": "Pentachlorophenol",
+  "pestClass": "AS",
+  "cas": "87-86-5"
+ },
+ {
+  "code": "RF-0842-001-PPP",
+  "name": "Permethrin (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0857-001-PPP",
+  "name": "Probenazole",
+  "pestClass": "AS",
+  "cas": "27605-76-1"
+ },
+ {
+  "code": "RF-0858-001-PPP",
+  "name": "Profluralin",
+  "pestClass": "AS",
+  "cas": "26399-36-0"
+ },
+ {
+  "code": "RF-0869-001-PPP",
+  "name": "Prothiofos",
+  "pestClass": "AS",
+  "cas": "34643-46-4"
+ },
+ {
+  "code": "RF-0885-001-PPP",
+  "name": "Quinclorac",
+  "pestClass": "AS",
+  "cas": "84087-01-4"
+ },
+ {
+  "code": "RF-0940-001-PPP",
+  "name": "Thiosultap",
+  "pestClass": "RD",
+  "cas": "98968-92-4"
+ },
+ {
+  "code": "RF-0945-001-PPP",
+  "name": "Transfluthrin",
+  "pestClass": "AS",
+  "cas": "118712-89-3"
+ },
+ {
+  "code": "RF-0956-001-PPP",
+  "name": "Trichlorobenzoic acid, 2,3,6-",
+  "pestClass": "RD",
+  "cas": "50-31-7"
+ },
+ {
+  "code": "RF-0957-001-PPP",
+  "name": "Trichloronat",
+  "pestClass": "AS",
+  "cas": "327-98-0"
+ },
+ {
+  "code": "RF-0067-001-PPP",
+  "name": "Carbon tetrachloride",
+  "pestClass": "AS",
+  "cas": "56-23-5"
+ },
+ {
+  "code": "RF-0068-001-PPP",
+  "name": "Carbosulfan",
+  "pestClass": "AS",
+  "cas": "55285-14-8"
+ },
+ {
+  "code": "RF-0077-001-PPP",
+  "name": "Chlorfenapyr",
+  "pestClass": "AS",
+  "cas": "122453-73-0"
+ },
+ {
+  "code": "RF-0153-001-PPP",
+  "name": "DNOC",
+  "pestClass": "AS",
+  "cas": "534-52-1"
+ },
+ {
+  "code": "RF-0165-001-PPP",
+  "name": "Ethoxyquin",
+  "pestClass": "AS",
+  "cas": "91-53-2"
+ },
+ {
+  "code": "RF-0227-001-PPP",
+  "name": "Fuberidazole",
+  "pestClass": "AS",
+  "cas": "3878-19-1"
+ },
+ {
+  "code": "RF-0252-001-PPP",
+  "name": "Iodosulfuron-methyl (iodosulfuron-methyl including salts, expressed as iodosulfuron-methyl)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0267-001-PPP",
+  "name": "Maleic hydrazide",
+  "pestClass": "AS",
+  "cas": "123-33-1"
+ },
+ {
+  "code": "RF-0272-001-PPP",
+  "name": "Mecarbam",
+  "pestClass": "AS",
+  "cas": "2595-54-2"
+ },
+ {
+  "code": "RF-0282-001-PPP",
+  "name": "Metaldehyde",
+  "pestClass": "AS",
+  "cas": "108-62-3"
+ },
+ {
+  "code": "RF-0284-001-PPP",
+  "name": "Metamitron",
+  "pestClass": "AS",
+  "cas": "41394-05-2"
+ },
+ {
+  "code": "RF-0288-001-PPP",
+  "name": "Methacrifos",
+  "pestClass": "AS",
+  "cas": "62610-77-9"
+ },
+ {
+  "code": "RF-0305-001-PPP",
+  "name": "Monocrotophos",
+  "pestClass": "AS",
+  "cas": "6923-22-4"
+ },
+ {
+  "code": "RF-0324-001-PPP",
+  "name": "Oxyfluorfen",
+  "pestClass": "AS",
+  "cas": "42874-03-3"
+ },
+ {
+  "code": "RF-0351-001-PPP",
+  "name": "Profenofos",
+  "pestClass": "AS",
+  "cas": "41198-08-7"
+ },
+ {
+  "code": "RF-0361-001-PPP",
+  "name": "Propoxur",
+  "pestClass": "AS",
+  "cas": "114-26-1"
+ },
+ {
+  "code": "RF-0373-001-PPP",
+  "name": "Pyrazophos",
+  "pestClass": "AS",
+  "cas": "13457-18-6"
+ },
+ {
+  "code": "RF-0380-001-PPP",
+  "name": "Quinalphos",
+  "pestClass": "AS",
+  "cas": "13593-03-8"
+ },
+ {
+  "code": "RF-0385-001-PPP",
+  "name": "Resmethrin (resmethrin including other mixtures of consituent isomers (sum of isomers))",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0415-001-PPP",
+  "name": "Tetradifon",
+  "pestClass": "AS",
+  "cas": "116-29-0"
+ },
+ {
+  "code": "RF-0420-001-PPP",
+  "name": "Thiobencarb",
+  "pestClass": "AS",
+  "cas": "28249-77-6"
+ },
+ {
+  "code": "RF-0024-001-PPP",
+  "name": "Amitraz (amitraz including the metabolites containing the 2,4 -dimethylaniline moiety expressed as amitraz)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0034-002-PPP",
+  "name": "Cyhexatin",
+  "pestClass": "AS",
+  "cas": "13121-70-5"
+ },
+ {
+  "code": "RF-0038-001-PPP",
+  "name": "Benalaxyl including other mixtures of constituent isomers including benalaxyl-M (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0096-001-PPP",
+  "name": "Clethodim (sum of Sethoxydim and Clethodim including degradation products calculated as Sethoxydim)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0271-002-PPP",
+  "name": "MCPB",
+  "pestClass": "AS",
+  "cas": "94-81-5"
+ },
+ {
+  "code": "RF-0293-002-PPP",
+  "name": "Thiodicarb",
+  "pestClass": "AS",
+  "cas": "59669-26-0"
+ },
+ {
+  "code": "RF-0293-003-PPP",
+  "name": "Methomyl",
+  "pestClass": "AS",
+  "cas": "16752-77-5"
+ },
+ {
+  "code": "RF-0336-003-PPP",
+  "name": "Phorate",
+  "pestClass": "AS",
+  "cas": "298-02-2"
+ },
+ {
+  "code": "RF-0098-002-PPP",
+  "name": "Clofentezine (sum of all compounds containing the 2-chlorobenzoyl moiety expressed as clofentezine)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0271-006-PPP",
+  "name": "MCPA, MCPB and MCPA thioethyl expressed as MCPA",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0687-001-PPP",
+  "name": "Fentin (fentin including its salts, expressed as triphenyltin cation)",
+  "pestClass": "RD",
+  "cas": "668-34-8"
+ },
+ {
+  "code": "RF-0018-001-PPP",
+  "name": "Acrinathrin",
+  "pestClass": "AS",
+  "cas": "101007-06-1"
+ },
+ {
+  "code": "RF-0397-001-PPP",
+  "name": "Spiroxamine (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0439-001-PPP",
+  "name": "Trifloxystrobin",
+  "pestClass": "AS",
+  "cas": "141517-21-7"
+ },
+ {
+  "code": "RF-0681-001-PPP",
+  "name": "Fenoxaprop-P-Ethyl",
+  "pestClass": "COMP",
+  "cas": "71283-80-2"
+ },
+ {
+  "code": "RF-0039-001-PPP",
+  "name": "Benfluralin",
+  "pestClass": "AS",
+  "cas": "1861-40-1"
+ },
+ {
+  "code": "RF-0114-001-PPP",
+  "name": "Cyprodinil",
+  "pestClass": "AS",
+  "cas": "121552-61-2"
+ },
+ {
+  "code": "RF-0393-001-PPP",
+  "name": "Spinosad (spinosad, sum of spinosyn A and spinosyn D)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0332-001-PPP",
+  "name": "Penoxsulam",
+  "pestClass": "AS",
+  "cas": "219714-96-2"
+ },
+ {
+  "code": "RF-00000300-NTR",
+  "name": "Gluten",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0098-001-PPP",
+  "name": "Clofentezine",
+  "pestClass": "AS",
+  "cas": "74115-24-5"
+ },
+ {
+  "code": "RF-0499-001-PPP",
+  "name": "Benzobicyclon",
+  "pestClass": "AS",
+  "cas": "156963-66-5"
+ },
+ {
+  "code": "RF-0234-001-PPP",
+  "name": "Halosulfuron methyl",
+  "pestClass": "AS",
+  "cas": "100784-20-1"
+ },
+ {
+  "code": "RF-0354-001-PPP",
+  "name": "Propamocarb (Sum of propamocarb and its salts, expressed as propamocarb)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0943-001-PPP",
+  "name": "Tolfenpyrad",
+  "pestClass": "AS",
+  "cas": "129558-76-5"
+ },
+ {
+  "code": "RF-0398-001-PPP",
+  "name": "Sulcotrione",
+  "pestClass": "AS",
+  "cas": "99105-77-8"
+ },
+ {
+  "code": "RF-00002610-PAR",
+  "name": "Fenpyrazamine",
+  "pestClass": "AS",
+  "cas": "473798-59-3"
+ },
+ {
+  "code": "RF-0169-001-PPP",
+  "name": "Etoxazole",
+  "pestClass": "AS",
+  "cas": "153233-91-1"
+ },
+ {
+  "code": "RF-0219-001-PPP",
+  "name": "Flutolanil",
+  "pestClass": "AS",
+  "cas": "66332-96-5"
+ },
+ {
+  "code": "RF-0006-001-PPP",
+  "name": "1-naphthylacetamide",
+  "pestClass": "AS",
+  "cas": "86-86-2"
+ },
+ {
+  "code": "RF-0056-001-PPP",
+  "name": "Buprofezin",
+  "pestClass": "AS",
+  "cas": "69327-76-0"
+ },
+ {
+  "code": "RF-0220-001-PPP",
+  "name": "Flutriafol",
+  "pestClass": "AS",
+  "cas": "76674-21-0"
+ },
+ {
+  "code": "RF-0257-001-PPP",
+  "name": "Isoproturon",
+  "pestClass": "AS",
+  "cas": "34123-59-6"
+ },
+ {
+  "code": "RF-0344-001-PPP",
+  "name": "Picolinafen",
+  "pestClass": "AS",
+  "cas": "137641-05-5"
+ },
+ {
+  "code": "RF-0369-001-PPP",
+  "name": "Pymetrozine",
+  "pestClass": "AS",
+  "cas": "123312-89-0"
+ },
+ {
+  "code": "RF-0371-001-PPP",
+  "name": "Pyraflufen-ethyl",
+  "pestClass": "AS",
+  "cas": "129630-19-9"
+ },
+ {
+  "code": "RF-0417-001-PPP",
+  "name": "Thiacloprid",
+  "pestClass": "AS",
+  "cas": "111988-49-9"
+ },
+ {
+  "code": "RF-0266-003-PPP",
+  "name": "Malathion",
+  "pestClass": "AS",
+  "cas": "121-75-5"
+ },
+ {
+  "code": "RF-0278-003-PPP",
+  "name": "Mesosulfuron-methyl",
+  "pestClass": "RD",
+  "cas": "208465-21-8"
+ },
+ {
+  "code": "RF-0037-001-PPP",
+  "name": "Beflubutamid",
+  "pestClass": "AS",
+  "cas": "113614-08-7"
+ },
+ {
+  "code": "RF-00003483-PAR",
+  "name": "Matrine",
+  "pestClass": "AS",
+  "cas": "519-02-8"
+ },
+ {
+  "code": "RF-00004681-PAR",
+  "name": "Captan (sum of captan and THPI, expressed as captan)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004913-PAR",
+  "name": "Thyme oil",
+  "pestClass": "AS",
+  "cas": "8007-46-3"
+ },
+ {
+  "code": "RF-00007493-PAR",
+  "name": "Triclosan",
+  "pestClass": null,
+  "cas": "3380-34-5"
+ },
+ {
+  "code": "RF-0488-001-PPP",
+  "name": "Benazolin-Ethyl",
+  "pestClass": "COMP",
+  "cas": "25059-80-7"
+ },
+ {
+  "code": "RF-0504-001-PPP",
+  "name": "Bioallethrin",
+  "pestClass": "AS",
+  "cas": "260359-57-7"
+ },
+ {
+  "code": "RF-0514-001-PPP",
+  "name": "Bromobutide",
+  "pestClass": "AS",
+  "cas": "74712-19-9"
+ },
+ {
+  "code": "RF-0521-001-PPP",
+  "name": "Butamifos",
+  "pestClass": "AS",
+  "cas": "36335-67-8"
+ },
+ {
+  "code": "RF-0543-001-PPP",
+  "name": "Chloraniformethan",
+  "pestClass": "AS",
+  "cas": "20856-57-9"
+ },
+ {
+  "code": "RF-0550-001-PPP",
+  "name": "Chlorflurenol",
+  "pestClass": "AS",
+  "cas": "2464-37-1"
+ },
+ {
+  "code": "RF-0551-001-PPP",
+  "name": "Chlorflurenol-Methyl",
+  "pestClass": "COMP",
+  "cas": "2536-31-4"
+ },
+ {
+  "code": "RF-0627-001-PPP",
+  "name": "Dimethylvinphos",
+  "pestClass": "AS",
+  "cas": "2274-67-1"
+ },
+ {
+  "code": "RF-0635-001-PPP",
+  "name": "Dioxabenzofos",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0863-001-PPP",
+  "name": "Propaphos",
+  "pestClass": "AS",
+  "cas": "7292-16-2"
+ },
+ {
+  "code": "RF-0888-001-PPP",
+  "name": "Rabenzazole",
+  "pestClass": "AS",
+  "cas": "40341-04-6"
+ },
+ {
+  "code": "RF-0906-001-PPP",
+  "name": "TCMTB",
+  "pestClass": "AS",
+  "cas": "21564-17-0"
+ },
+ {
+  "code": "RF-1023-001-PPP",
+  "name": "Allidochlor",
+  "pestClass": "AS",
+  "cas": "93-71-0"
+ },
+ {
+  "code": "RF-1027-001-PPP",
+  "name": "Chloranil",
+  "pestClass": "AS",
+  "cas": "118-75-2"
+ },
+ {
+  "code": "RF-0445-001-PPP",
+  "name": "Trimethyl-sulfonium cation, resulting from the use of glyphosate",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00001606-PAR",
+  "name": "Sintofen",
+  "pestClass": "AS",
+  "cas": "130561-48-7"
+ },
+ {
+  "code": "RF-00003707-PAR",
+  "name": "2-undecanone",
+  "pestClass": "AS",
+  "cas": "112-12-9"
+ },
+ {
+  "code": "RF-00004656-PAR",
+  "name": "Benthiavalicarb (Benthiavalicarb-isopropyl(KIF-230 R-L) and its enantiomer (KIF-230 S-D) and its diastereomers(KIF-230 S-L and KIF-230 R-D), expressed as benthiavalicarb-isopropyl)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005727-PAR",
+  "name": "Chlormequat (sum of chlormequat and its salts, expressed as chlormequat-chloride)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005730-PAR",
+  "name": "Fluazifop-P (sum of all the constituent isomers of fluazifop, its esters and its conjugates, expressed as fluazifop)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00011590-PAR",
+  "name": "Carbon monoxide",
+  "pestClass": "AS",
+  "cas": "630-08-0"
+ },
+ {
+  "code": "RF-00012386-PAR",
+  "name": "2,5-dichlorobenzoic acid methylester (sum of 2,5-dichlorobenzoic acid and its ester expressed as 2,5-dichlorobenzoic acid methylester)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012804-PAR",
+  "name": "pencycuron-PB-amine",
+  "pestClass": null,
+  "cas": "66063-15-8"
+ },
+ {
+  "code": "RF-00013471-PAR",
+  "name": "Aminopyralid (sum of aminopyralid, its salts and its conjugates, expressed as aminopyralid)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00014213-PAR",
+  "name": "Pyrifluquinazon",
+  "pestClass": "AS",
+  "cas": "337458-27-2"
+ },
+ {
+  "code": "RF-00014552-PAR",
+  "name": "Imiprothrin",
+  "pestClass": null,
+  "cas": "72963-72-5"
+ },
+ {
+  "code": "RF-00001410-PAR",
+  "name": "Paraffin oils with carbon chain lengths C18-C30",
+  "pestClass": "RD",
+  "cas": "8012-95-1"
+ },
+ {
+  "code": "RF-00001608-PAR",
+  "name": "Pepper Dust Extraction Residue",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0592-001-PPP",
+  "name": "Demephion-O",
+  "pestClass": "AS",
+  "cas": "682-80-4"
+ },
+ {
+  "code": "RF-0593-001-PPP",
+  "name": "Demephion-S",
+  "pestClass": "AS",
+  "cas": "2587-90-8"
+ },
+ {
+  "code": "RF-0601-001-PPP",
+  "name": "Dichlormid",
+  "pestClass": "AS",
+  "cas": "37764-25-3"
+ },
+ {
+  "code": "RF-0615-001-PPP",
+  "name": "Diethatyl",
+  "pestClass": "AS",
+  "cas": "38725-95-0"
+ },
+ {
+  "code": "RF-0621-001-PPP",
+  "name": "Dikegulac",
+  "pestClass": "AS",
+  "cas": "18467-77-1"
+ },
+ {
+  "code": "RF-0626-001-PPP",
+  "name": "Dimethirimol",
+  "pestClass": "AS",
+  "cas": "5221-53-4"
+ },
+ {
+  "code": "RF-0631-001-PPP",
+  "name": "Dinobuton",
+  "pestClass": "AS",
+  "cas": "973-21-7"
+ },
+ {
+  "code": "RF-0688-001-PPP",
+  "name": "Fentrazamide",
+  "pestClass": "AS",
+  "cas": "158237-07-1"
+ },
+ {
+  "code": "RF-0696-001-PPP",
+  "name": "Flocoumafen",
+  "pestClass": "AS",
+  "cas": "90035-08-8"
+ },
+ {
+  "code": "RF-0245-001-PPP",
+  "name": "Hymexazol",
+  "pestClass": "AS",
+  "cas": "10004-44-1"
+ },
+ {
+  "code": "RF-0316-001-PPP",
+  "name": "Oryzalin",
+  "pestClass": "AS",
+  "cas": "19044-88-3"
+ },
+ {
+  "code": "RF-0326-001-PPP",
+  "name": "Paraquat",
+  "pestClass": "AS",
+  "cas": "4685-14-7"
+ },
+ {
+  "code": "RF-0167-001-PPP",
+  "name": "Ethylene oxide (sum of ethylene oxide and 2-chloro-ethanol expressed as ethylene oxide)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-1022-001-PPP",
+  "name": "Demeton-S",
+  "pestClass": "AS",
+  "cas": "126-75-0"
+ },
+ {
+  "code": "RF-1041-001-PPP",
+  "name": "Trichlophenidine",
+  "pestClass": "AS",
+  "cas": "53720-80-2"
+ },
+ {
+  "code": "RF-0259-001-PPP",
+  "name": "Isoxaflutole (sum of isoxaflutole and its diketonitrile-metabolite, expressed as isoxaflutole)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0360-001-PPP",
+  "name": "Propisochlor",
+  "pestClass": "AS",
+  "cas": "86763-47-5"
+ },
+ {
+  "code": "RF-00005723-PAR",
+  "name": "Fenpyroximate (metabolite M-3, expressed as fenpyroximate)",
+  "pestClass": "RD",
+  "cas": "111812-58-9"
+ },
+ {
+  "code": "RF-00005725-PAR",
+  "name": "Diquat (sum of diquat and its salts, expressed as diquat)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005781-PAR",
+  "name": "Sodium silver thiosulfate",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00006311-PAR",
+  "name": "Methanoic acid",
+  "pestClass": "AS",
+  "cas": "64-18-6"
+ },
+ {
+  "code": "RF-00008138-PAR",
+  "name": "3-Methylbutyric acid",
+  "pestClass": "AS",
+  "cas": "503-74-2"
+ },
+ {
+  "code": "RF-00008156-PAR",
+  "name": "Choline chloride",
+  "pestClass": "AS",
+  "cas": "67-48-1"
+ },
+ {
+  "code": "RF-00010786-PAR",
+  "name": "Isoflucypram",
+  "pestClass": "AS",
+  "cas": "1255734-28-1"
+ },
+ {
+  "code": "RF-00009932-PAR",
+  "name": "5-Chloro-2-methyl-2H-isothiazol-3-one",
+  "pestClass": null,
+  "cas": "26172-55-4"
+ },
+ {
+  "code": "RF-00010022-PAR",
+  "name": "Mercurous chloride",
+  "pestClass": "AS",
+  "cas": "10112-91-1"
+ },
+ {
+  "code": "RF-00008601-PAR",
+  "name": "Maltodextrin",
+  "pestClass": "AS",
+  "cas": "9050-36-6"
+ },
+ {
+  "code": "RF-00008904-PAR",
+  "name": "Flutianil",
+  "pestClass": "AS",
+  "cas": "958647-10-4"
+ },
+ {
+  "code": "RF-00012032-PAR",
+  "name": "Prochloraz (sum of prochloraz, BTS 44595 (M201-04) and BTS 44596 (M201-03), expressed as prochloraz)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012044-PAR",
+  "name": "Carbetamide (sum of carbetamide and its S isomer)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012868-PAR",
+  "name": "Pseudomonas sp. strain DSMZ 13134",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00013315-PAR",
+  "name": "Cycloheximide",
+  "pestClass": "AS",
+  "cas": "66-81-9"
+ },
+ {
+  "code": "RF-00015352-PAR",
+  "name": "Solvent-refined (severe) light and heavy paraffinic petroleum oil",
+  "pestClass": "AS",
+  "cas": "64741-88-4"
+ },
+ {
+  "code": "RF-00014256-PAR",
+  "name": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00014599-PAR",
+  "name": "Beauveria bassiana strain NPP111B005",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014532-PAR",
+  "name": "Sum of metobromuron and 4-bromophenylurea, expressed as metobromuron",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00014627-PAR",
+  "name": "Savory, Satureja montana, ext.",
+  "pestClass": "AS",
+  "cas": "90106-57-3"
+ },
+ {
+  "code": "RF-00014630-PAR",
+  "name": "Residues of petroleum oil",
+  "pestClass": "AS",
+  "cas": "92062-35-6"
+ },
+ {
+  "code": "RF-00015858-PAR",
+  "name": "Lysate of Willaertia magna C2c Mak",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00016223-PAR",
+  "name": "Dimpropyridaz",
+  "pestClass": "AS",
+  "cas": "1403615-77-9"
+ },
+ {
+  "code": "RF-0021-003-PPP",
+  "name": "Dieldrin",
+  "pestClass": "AS",
+  "cas": "60-57-1"
+ },
+ {
+  "code": "RF-00000081-CHE",
+  "name": "Nitrogen (N)",
+  "pestClass": "RD",
+  "cas": "7727-37-9"
+ },
+ {
+  "code": "RF-00000042-ADD",
+  "name": "Ammonium sulphate",
+  "pestClass": "AS",
+  "cas": "7783-20-2"
+ },
+ {
+  "code": "RF-00000297-ADD",
+  "name": "Sodium propionate",
+  "pestClass": "AS",
+  "cas": "137-40-6"
+ },
+ {
+  "code": "RF-00000052-ADD",
+  "name": "Benzoic acid",
+  "pestClass": "AS",
+  "cas": "65-85-0"
+ },
+ {
+  "code": "RF-00000151-ADD",
+  "name": "Hexamethylene tetramine",
+  "pestClass": "AS",
+  "cas": "100-97-0"
+ },
+ {
+  "code": "RF-00003364-PAR",
+  "name": "N-oxide propamocarb",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003374-PAR",
+  "name": "Carbofuran (sum of carbofuran (including any carbofuran generated from carbosulfan, benfuracarb or furathiocarb) and 3-OH carbofuran expressed as carbofuran)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003378-PAR",
+  "name": "Cyhalofop-butyl",
+  "pestClass": "AS",
+  "cas": "122008-85-9"
+ },
+ {
+  "code": "RF-0468-001-PPP",
+  "name": "Amidithion",
+  "pestClass": "AS",
+  "cas": "919-76-6"
+ },
+ {
+  "code": "RF-0576-001-PPP",
+  "name": "Cyanazine",
+  "pestClass": "RD",
+  "cas": "21725-46-2"
+ },
+ {
+  "code": "RF-0597-001-PPP",
+  "name": "Dialifos",
+  "pestClass": "AS",
+  "cas": "10311-84-9"
+ },
+ {
+  "code": "RF-0640-001-PPP",
+  "name": "Ditalimfos",
+  "pestClass": "AS",
+  "cas": "5131-24-8"
+ },
+ {
+  "code": "RF-0713-001-PPP",
+  "name": "Fluotrimazole",
+  "pestClass": "AS",
+  "cas": "31251-03-3"
+ },
+ {
+  "code": "RF-0734-001-PPP",
+  "name": "Halosulfuron",
+  "pestClass": "AS",
+  "cas": "135397-30-7"
+ },
+ {
+  "code": "RF-0751-001-PPP",
+  "name": "Iprobenfos",
+  "pestClass": "AS",
+  "cas": "26087-47-8"
+ },
+ {
+  "code": "RF-0771-001-PPP",
+  "name": "Karetazan",
+  "pestClass": "AS",
+  "cas": "81051-65-2"
+ },
+ {
+  "code": "RF-0772-001-PPP",
+  "name": "Kasugamycin",
+  "pestClass": "AS",
+  "cas": "6980-18-3"
+ },
+ {
+  "code": "RF-0778-001-PPP",
+  "name": "Mefluidide",
+  "pestClass": "AS",
+  "cas": "53780-34-0"
+ },
+ {
+  "code": "RF-0781-001-PPP",
+  "name": "Merphos",
+  "pestClass": "AS",
+  "cas": "150-50-5"
+ },
+ {
+  "code": "RF-0783-001-PPP",
+  "name": "Methfuroxam",
+  "pestClass": "AS",
+  "cas": "28730-17-8"
+ },
+ {
+  "code": "RF-0789-001-PPP",
+  "name": "Methyldymron",
+  "pestClass": "AS",
+  "cas": "42609-73-4"
+ },
+ {
+  "code": "RF-0792-001-PPP",
+  "name": "Metolcarb",
+  "pestClass": "AS",
+  "cas": "1129-41-5"
+ },
+ {
+  "code": "RF-0811-001-PPP",
+  "name": "Nithiazine",
+  "pestClass": "AS",
+  "cas": "58842-20-9"
+ },
+ {
+  "code": "RF-0836-001-PPP",
+  "name": "Penfluron",
+  "pestClass": "AS",
+  "cas": "35367-31-8"
+ },
+ {
+  "code": "RF-0846-001-PPP",
+  "name": "Phenthoate",
+  "pestClass": "AS",
+  "cas": "2597-03-7"
+ },
+ {
+  "code": "RF-0849-001-PPP",
+  "name": "Piperophos",
+  "pestClass": "AS",
+  "cas": "24151-93-7"
+ },
+ {
+  "code": "RF-0855-001-PPP",
+  "name": "Primisulfuron",
+  "pestClass": "AS",
+  "cas": "113036-87-6"
+ },
+ {
+  "code": "RF-0862-001-PPP",
+  "name": "Prometryn",
+  "pestClass": "AS",
+  "cas": "7287-19-6"
+ },
+ {
+  "code": "RF-0891-001-PPP",
+  "name": "Sebuthylazine",
+  "pestClass": "AS",
+  "cas": "7286-69-3"
+ },
+ {
+  "code": "RF-0898-001-PPP",
+  "name": "Simetryn",
+  "pestClass": "AS",
+  "cas": "1014-70-6"
+ },
+ {
+  "code": "RF-0911-001-PPP",
+  "name": "Temephos",
+  "pestClass": "AS",
+  "cas": "3383-96-8"
+ },
+ {
+  "code": "RF-0923-001-PPP",
+  "name": "Tetrasul",
+  "pestClass": "AS",
+  "cas": "2227-13-6"
+ },
+ {
+  "code": "RF-0970-001-PPP",
+  "name": "Vernolate",
+  "pestClass": "AS",
+  "cas": "1929-77-7"
+ },
+ {
+  "code": "RF-0028-001-PPP",
+  "name": "Asulam",
+  "pestClass": "RD",
+  "cas": "3337-71-1"
+ },
+ {
+  "code": "RF-0045-001-PPP",
+  "name": "Bifenox",
+  "pestClass": "AS",
+  "cas": "42576-02-3"
+ },
+ {
+  "code": "RF-0051-001-PPP",
+  "name": "Bromophos-ethyl",
+  "pestClass": "AS",
+  "cas": "4824-78-6"
+ },
+ {
+  "code": "RF-0085-001-PPP",
+  "name": "Chloroxuron",
+  "pestClass": "AS",
+  "cas": "1982-47-4"
+ },
+ {
+  "code": "RF-0105-001-PPP",
+  "name": "Cyclanilide",
+  "pestClass": "AS",
+  "cas": "113136-77-9"
+ },
+ {
+  "code": "RF-0121-001-PPP",
+  "name": "Desmedipham",
+  "pestClass": "AS",
+  "cas": "13684-56-5"
+ },
+ {
+  "code": "RF-0125-001-PPP",
+  "name": "Dichlobenil",
+  "pestClass": "AS",
+  "cas": "1194-65-6"
+ },
+ {
+  "code": "RF-0154-001-PPP",
+  "name": "Dodine",
+  "pestClass": "AS",
+  "cas": "2439-10-3"
+ },
+ {
+  "code": "RF-0170-001-PPP",
+  "name": "Etridiazole",
+  "pestClass": "AS",
+  "cas": "2593-15-9"
+ },
+ {
+  "code": "RF-0171-001-PPP",
+  "name": "Famoxadone",
+  "pestClass": "AS",
+  "cas": "131807-57-3"
+ },
+ {
+  "code": "RF-0174-001-PPP",
+  "name": "Fenarimol",
+  "pestClass": "AS",
+  "cas": "60168-88-9"
+ },
+ {
+  "code": "RF-0237-001-PPP",
+  "name": "Hexachlorobenzene",
+  "pestClass": "AS",
+  "cas": "118-74-1"
+ },
+ {
+  "code": "RF-0295-001-PPP",
+  "name": "Methoxychlor",
+  "pestClass": "AS",
+  "cas": "72-43-5"
+ },
+ {
+  "code": "RF-0331-001-PPP",
+  "name": "Pendimethalin",
+  "pestClass": "AS",
+  "cas": "40487-42-1"
+ },
+ {
+  "code": "RF-0357-001-PPP",
+  "name": "Propargite",
+  "pestClass": "AS",
+  "cas": "2312-35-8"
+ },
+ {
+  "code": "RF-0366-001-PPP",
+  "name": "Prosulfocarb",
+  "pestClass": "AS",
+  "cas": "52888-80-9"
+ },
+ {
+  "code": "RF-0406-001-PPP",
+  "name": "Tecnazene",
+  "pestClass": "AS",
+  "cas": "117-18-0"
+ },
+ {
+  "code": "RF-0410-001-PPP",
+  "name": "TEPP",
+  "pestClass": "AS",
+  "cas": "107-49-3"
+ },
+ {
+  "code": "RF-0112-004-PPP",
+  "name": "Cypermethrin",
+  "pestClass": "AS",
+  "cas": "52315-07-8"
+ },
+ {
+  "code": "RF-0151-005-PPP",
+  "name": "Carbon disulphide",
+  "pestClass": "AS",
+  "cas": "75-15-0"
+ },
+ {
+  "code": "RF-0173-001-PPP",
+  "name": "Fenamiphos (sum of fenamiphos and its sulphoxide and sulphone expressed as fenamiphos)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0383-002-PPP",
+  "name": "Quintozene",
+  "pestClass": "AS",
+  "cas": "82-68-8"
+ },
+ {
+  "code": "RF-1019-001-PPP",
+  "name": "Pyracarbolid",
+  "pestClass": "AS",
+  "cas": "24691-76-7"
+ },
+ {
+  "code": "RF-1069-001-PPP",
+  "name": "Fenchlorazole",
+  "pestClass": "AS",
+  "cas": "103112-36-3"
+ },
+ {
+  "code": "RF-1059-001-PPP",
+  "name": "Fosetyl",
+  "pestClass": "AS",
+  "cas": "15845-66-6"
+ },
+ {
+  "code": "RF-0433-001-PPP",
+  "name": "Triazoxide",
+  "pestClass": "AS",
+  "cas": "72459-58-6"
+ },
+ {
+  "code": "RF-0435-001-PPP",
+  "name": "Trichlorfon",
+  "pestClass": "AS",
+  "cas": "52-68-6"
+ },
+ {
+  "code": "RF-0418-001-PPP",
+  "name": "Thiamethoxam",
+  "pestClass": "AS",
+  "cas": "153719-23-4"
+ },
+ {
+  "code": "RF-0768-001-PPP",
+  "name": "Iodofenphos",
+  "pestClass": "AS",
+  "cas": "18181-70-9"
+ },
+ {
+  "code": "RF-0010-001-PPP",
+  "name": "2,4-D (sum of 2,4-D, its salts, its esters and its conjugates, expressed as 2,4-D)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0262-001-PPP",
+  "name": "Lenacil",
+  "pestClass": "AS",
+  "cas": "2164-08-1"
+ },
+ {
+  "code": "RF-0070-003-PPP",
+  "name": "Carfentrazone-ethyl",
+  "pestClass": "AS",
+  "cas": "128639-02-1"
+ },
+ {
+  "code": "RF-00001688-PAR",
+  "name": "Formetanate hydrochloride",
+  "pestClass": "COMP",
+  "cas": "23422-53-9"
+ },
+ {
+  "code": "RF-0370-001-PPP",
+  "name": "Pyraclostrobin",
+  "pestClass": "AS",
+  "cas": "175013-18-0"
+ },
+ {
+  "code": "RF-0152-002-PPP",
+  "name": "Diuron",
+  "pestClass": "AS",
+  "cas": "330-54-1"
+ },
+ {
+  "code": "RF-0035-001-PPP",
+  "name": "Azoxystrobin",
+  "pestClass": "AS",
+  "cas": "131860-33-8"
+ },
+ {
+  "code": "RF-0941-001-PPP",
+  "name": "Thymol",
+  "pestClass": "AS",
+  "cas": "89-83-8"
+ },
+ {
+  "code": "RF-0887-002-PPP",
+  "name": "Quizalofop-P-ethyl",
+  "pestClass": "AS",
+  "cas": "100646-51-3"
+ },
+ {
+  "code": "RF-0452-001-PPP",
+  "name": "Zoxamide",
+  "pestClass": "AS",
+  "cas": "156052-68-5"
+ },
+ {
+  "code": "RF-0413-001-PPP",
+  "name": "Terbuthylazine",
+  "pestClass": "AS",
+  "cas": "5915-41-3"
+ },
+ {
+  "code": "RF-00002609-PAR",
+  "name": "Penthiopyrad",
+  "pestClass": "AS",
+  "cas": "183675-82-3"
+ },
+ {
+  "code": "RF-0411-001-PPP",
+  "name": "Tepraloxydim",
+  "pestClass": "AS",
+  "cas": "149979-41-9"
+ },
+ {
+  "code": "RF-0859-001-PPP",
+  "name": "Profoxydim",
+  "pestClass": "AS",
+  "cas": "139001-49-3"
+ },
+ {
+  "code": "RF-0181-001-PPP",
+  "name": "Fenoxaprop-P",
+  "pestClass": "AS",
+  "cas": "113158-40-0"
+ },
+ {
+  "code": "RF-0112-003-PPP",
+  "name": "Beta-cypermethrin",
+  "pestClass": "AS",
+  "cas": "65731-84-2"
+ },
+ {
+  "code": "RF-0049-001-PPP",
+  "name": "Boscalid",
+  "pestClass": "RD",
+  "cas": "188425-85-6"
+ },
+ {
+  "code": "RF-1055-001-PPP",
+  "name": "Ametoctradin",
+  "pestClass": "AS",
+  "cas": "865318-97-4"
+ },
+ {
+  "code": "RF-1057-001-PPP",
+  "name": "Valifenalate",
+  "pestClass": "AS",
+  "cas": "283159-90-0"
+ },
+ {
+  "code": "RF-0048-001-PPP",
+  "name": "Bitertanol (sum of isomers)",
+  "pestClass": "AS",
+  "cas": "55179-31-2"
+ },
+ {
+  "code": "RF-0255-001-PPP",
+  "name": "Iprodione",
+  "pestClass": "AS",
+  "cas": "36734-19-7"
+ },
+ {
+  "code": "RF-0355-001-PPP",
+  "name": "Propanil",
+  "pestClass": "AS",
+  "cas": "709-98-8"
+ },
+ {
+  "code": "RF-00004687-PAR",
+  "name": "Folpet (sum of folpet and phthalimide, expressed as folpet)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00002592-PAR",
+  "name": "Demeton-O-methyl",
+  "pestClass": "AS",
+  "cas": "867-27-6"
+ },
+ {
+  "code": "RF-0492-001-PPP",
+  "name": "Benoxacor",
+  "pestClass": "AS",
+  "cas": "98730-04-2"
+ },
+ {
+  "code": "RF-0555-001-PPP",
+  "name": "Chlornitrofen",
+  "pestClass": "AS",
+  "cas": "1836-77-7"
+ },
+ {
+  "code": "RF-0589-001-PPP",
+  "name": "Cyprofuram",
+  "pestClass": "AS",
+  "cas": "69581-33-5"
+ },
+ {
+  "code": "RF-0870-001-PPP",
+  "name": "Prothoate",
+  "pestClass": "AS",
+  "cas": "2275-18-5"
+ },
+ {
+  "code": "RF-0879-001-PPP",
+  "name": "Pyriftalid",
+  "pestClass": "AS",
+  "cas": "135186-78-6"
+ },
+ {
+  "code": "RF-0882-001-PPP",
+  "name": "Pyrithiobac",
+  "pestClass": "RD",
+  "cas": "123342-93-8"
+ },
+ {
+  "code": "RF-0890-001-PPP",
+  "name": "Schradan",
+  "pestClass": "AS",
+  "cas": "152-16-9"
+ },
+ {
+  "code": "RF-0908-001-PPP",
+  "name": "Tebutam",
+  "pestClass": "AS",
+  "cas": "35256-85-0"
+ },
+ {
+  "code": "RF-0927-001-PPP",
+  "name": "Thiazafluron",
+  "pestClass": "AS",
+  "cas": "25366-23-8"
+ },
+ {
+  "code": "RF-0930-001-PPP",
+  "name": "Thifensulfuron",
+  "pestClass": "AS",
+  "cas": "79277-67-1"
+ },
+ {
+  "code": "RF-0017-001-PPP",
+  "name": "Aclonifen",
+  "pestClass": "AS",
+  "cas": "74070-46-5"
+ },
+ {
+  "code": "RF-0026-001-PPP",
+  "name": "Anilazine",
+  "pestClass": "AS",
+  "cas": "101-05-3"
+ },
+ {
+  "code": "RF-0027-001-PPP",
+  "name": "Aramite",
+  "pestClass": "AS",
+  "cas": "140-57-8"
+ },
+ {
+  "code": "RF-0071-001-PPP",
+  "name": "Cartap",
+  "pestClass": "AS",
+  "cas": "15263-53-3"
+ },
+ {
+  "code": "RF-0243-001-PPP",
+  "name": "Hydrogen cyanide (cyanides expressed as hydrogen cyanide)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-1062-001-PPP",
+  "name": "6-Benzyladenine",
+  "pestClass": "AS",
+  "cas": "1214-39-7"
+ },
+ {
+  "code": "RF-0232-001-PPP",
+  "name": "Glufosinate (sum of glufosinate isomers, its salts and its metabolites 3-[hydroxy(methyl)phosphinoyl]propionic acid (MPP) and N-acetyl-glufosinate (NAG), expressed as glufosinate)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00007627-PAR",
+  "name": "DDAC-C10",
+  "pestClass": "COMP",
+  "cas": null
+ },
+ {
+  "code": "RF-00005721-PAR",
+  "name": "Mepiquat (sum of mepiquat and its salts, expressed as mepiquat chloride)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00008039-PAR",
+  "name": "Dimethyl sulfide",
+  "pestClass": "AS",
+  "cas": "75-18-3"
+ },
+ {
+  "code": "RF-00007693-PAR",
+  "name": "Terpinolene",
+  "pestClass": "AS",
+  "cas": "586-62-9"
+ },
+ {
+  "code": "RF-00012011-PAR",
+  "name": "Bacillus thuringiensis ssp. Kurstaki SA 11",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00011997-PAR",
+  "name": "Bacillus paralicheniformis FMCH001",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012370-PAR",
+  "name": "Denatonium benzoate (sum of denatonium and its salts, expressed as denatonium benzoate)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012875-PAR",
+  "name": "Sum of diclofop-methyl, diclofop acid and its salts, expressed as diclofop-methyl (sum of isomers)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00013469-PAR",
+  "name": "Pythium oligandrum B301",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00013608-PAR",
+  "name": "Tetraconazole (sum of constituent isomers)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00013767-PAR",
+  "name": "Beauveria bassiana R444",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014492-PAR",
+  "name": "Papiliotrema terrestris PT22AV",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0609-001-PPP",
+  "name": "Dichlozoline",
+  "pestClass": "AS",
+  "cas": "24201-58-9"
+ },
+ {
+  "code": "RF-0628-001-PPP",
+  "name": "Dimetilan",
+  "pestClass": "AS",
+  "cas": "644-64-4"
+ },
+ {
+  "code": "RF-0708-001-PPP",
+  "name": "Flumiclorac",
+  "pestClass": "AS",
+  "cas": "87547-04-4"
+ },
+ {
+  "code": "RF-0150-001-PPP",
+  "name": "Dithianon",
+  "pestClass": "AS",
+  "cas": "3347-22-6"
+ },
+ {
+  "code": "RF-0158-001-PPP",
+  "name": "EPTC (ethyl dipropylthiocarbamate)",
+  "pestClass": "RD",
+  "cas": "759-94-4"
+ },
+ {
+  "code": "RF-0276-001-PPP",
+  "name": "Meptyldinocap (sum of 2,4 DNOPC and 2,4 DNOP expressed as meptyldinocap)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0363-001-PPP",
+  "name": "Propyl-3-t-butylphenoxyacetate",
+  "pestClass": "AS",
+  "cas": "66227-09-6"
+ },
+ {
+  "code": "RF-0117-001-PPP",
+  "name": "Daminozide (sum of daminozide and 1,1-dimethyl-hydrazine (UDHM), expressed as daminozide)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0352-001-PPP",
+  "name": "Prohexadione (prohexadione (acid) and its salts expressed as prohexadione-calcium)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0271-004-PPP",
+  "name": "MCPA and MCPB (MCPA, MCPB including their salts, esters and conjugates expressed as MCPA)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0216-001-PPP",
+  "name": "Flurprimidol",
+  "pestClass": "AS",
+  "cas": "56425-91-3"
+ },
+ {
+  "code": "RF-00004664-PAR",
+  "name": "Guazatine (guazatine acetate, sum of components)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004666-PAR",
+  "name": "Halauxifen-methyl (sum of halauxifen-methyl and X11393729 (halauxifen), expressed as halauxifen-methyl)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005713-PAR",
+  "name": "Tralkoxydim (sum of the constituent isomers of tralkoxydim)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005715-PAR",
+  "name": "Sum of boscalid and its hydroxy metabolite 2-chloro-N-(4′-chloro-5-hydroxybiphenyl-2-yl)nicotinamide (free and conjugated) expressed as boscalid",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005771-PAR",
+  "name": "Calcium phosphide",
+  "pestClass": "AS",
+  "cas": "1305-99-3"
+ },
+ {
+  "code": "RF-00007594-PAR",
+  "name": "Ferric pyrophosphate",
+  "pestClass": "AS",
+  "cas": "10058-44-3"
+ },
+ {
+  "code": "RF-00008425-PAR",
+  "name": "Phthalide",
+  "pestClass": "AS",
+  "cas": "87-41-2"
+ },
+ {
+  "code": "RF-00008451-PAR",
+  "name": "p-Tolyl acetate",
+  "pestClass": "RD",
+  "cas": "140-39-6"
+ },
+ {
+  "code": "RF-00008085-PAR",
+  "name": "sec-Butylamine",
+  "pestClass": "RD",
+  "cas": "13952-84-6"
+ },
+ {
+  "code": "RF-00008040-PAR",
+  "name": "Dimethyl disulfide",
+  "pestClass": "AS",
+  "cas": "624-92-0"
+ },
+ {
+  "code": "RF-00009989-PAR",
+  "name": "2-Methyl-4-isothiazolin-3-one",
+  "pestClass": null,
+  "cas": "2682-20-4"
+ },
+ {
+  "code": "RF-00009238-PAR",
+  "name": "1-Methyl-3-trifluoromethyl-1H-pyrazole-4-carboxamide",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00011591-PAR",
+  "name": "Fluensulfone",
+  "pestClass": "AS",
+  "cas": "318290-98-1"
+ },
+ {
+  "code": "RF-00012022-PAR",
+  "name": "Pentapotassium bis(peroxymonosulphate) bis(sulphate)",
+  "pestClass": "AS",
+  "cas": "70693-62-8"
+ },
+ {
+  "code": "RF-00012015-PAR",
+  "name": "Allium cepa extract",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00013243-PAR",
+  "name": "Essential oil from the flowers of Cananga odorata (Lam.) Hook.f. and Thomson (ylang ylang oil)",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00013741-PAR",
+  "name": "Yucca schidigera, ext.",
+  "pestClass": "AS",
+  "cas": "223749-05-1"
+ },
+ {
+  "code": "RF-00013414-PAR",
+  "name": "Fluazaindolizine",
+  "pestClass": "AS",
+  "cas": "1254304-22-7"
+ },
+ {
+  "code": "RF-00015695-PAR",
+  "name": "Sum of metalaxyl (sum of enantiomers) and metabolites (free + conjugated) M3 (N- (2,6-dimethylphenyl)-N-(hydroxyacetyl)alanine methyl ester) and M8 (N-(2-hydroxymethyl-6- methylphenyl)-N-(methoxyacetyl)alanine methyl ester (sum of enantiomers), expressed as metalaxyl",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00014206-PAR",
+  "name": "Sum of 1,4-dimethylnaphthalene and its metabolite M23 free and conjugated, expressed as 1,4-dimethylnaphthalene",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00015325-PAR",
+  "name": "Cinnamomum cassia oil",
+  "pestClass": "AS",
+  "cas": "8007-80-5"
+ },
+ {
+  "code": "RF-00014535-PAR",
+  "name": "Purpureocillium lilacinum strain PL11",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00016148-PAR",
+  "name": "Cryptophlebia peltastica Nucleopolyhedrovirus, strain South Africa",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00013672-PAR",
+  "name": "Ozone",
+  "pestClass": "AS",
+  "cas": "10028-15-6"
+ },
+ {
+  "code": "RF-00015731-PAR",
+  "name": "Fluoxapiprolin",
+  "pestClass": "AS",
+  "cas": "1360819-11-9"
+ },
+ {
+  "code": "RF-00003017-PAR",
+  "name": "Fenvalerate (sum of fenvalerate (any ratio of constituent isomers including esfenvalerate) and CPIA (chlorophenyl isovaleric acid), expressed as fenvalerate)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0021-001-PPP",
+  "name": "Aldrin and Dieldrin (Aldrin and dieldrin combined expressed as dieldrin)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00000035-ADD",
+  "name": "Aluminium sulphate",
+  "pestClass": "AS",
+  "cas": "10043-01-3"
+ },
+ {
+  "code": "RF-0263-001-PPP",
+  "name": "Lindane (Gamma-isomer of hexachlorocyclohexane (HCH))",
+  "pestClass": "AS",
+  "cas": "58-89-9"
+ },
+ {
+  "code": "RF-00003033-PAR",
+  "name": "Bifenazate (sum of bifenazate plus bifenazate-diazene expressed as bifenazate)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00000307-VET",
+  "name": "Thiourea",
+  "pestClass": "AS",
+  "cas": "62-56-6"
+ },
+ {
+  "code": "RF-00003340-PAR",
+  "name": "Demeton-O",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00003345-PAR",
+  "name": "Metazachlor (sum of metazachlor and its metabolites containing the 2,6-dimethylaniline moiety, expressed as metazachlor)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003365-PAR",
+  "name": "Pymetrozine, 6-hydroxymethylpymetrozine and its phosphate conjugate, expressed as pymetrozine",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003352-PAR",
+  "name": "Fludioxonil (sum of fludioxonil and its metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid expressed as fludioxonil)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003368-PAR",
+  "name": "Spirotetramat",
+  "pestClass": "AS",
+  "cas": "203313-25-1"
+ },
+ {
+  "code": "RF-00002888-PAR",
+  "name": "Crystal Violet",
+  "pestClass": "AS",
+  "cas": "548-62-9"
+ },
+ {
+  "code": "RF-0464-001-PPP",
+  "name": "Allethrin",
+  "pestClass": "AS",
+  "cas": "584-79-2"
+ },
+ {
+  "code": "RF-0467-001-PPP",
+  "name": "Ametryn",
+  "pestClass": "AS",
+  "cas": "834-12-8"
+ },
+ {
+  "code": "RF-0583-001-PPP",
+  "name": "Cycluron",
+  "pestClass": "AS",
+  "cas": "2163-69-1"
+ },
+ {
+  "code": "RF-0613-001-PPP",
+  "name": "Dicyclanil",
+  "pestClass": "AS",
+  "cas": "112636-83-6"
+ },
+ {
+  "code": "RF-0645-001-PPP",
+  "name": "Dodemorph",
+  "pestClass": "AS",
+  "cas": "1593-77-7"
+ },
+ {
+  "code": "RF-0647-001-PPP",
+  "name": "Edifenphos",
+  "pestClass": "AS",
+  "cas": "17109-49-8"
+ },
+ {
+  "code": "RF-0724-001-PPP",
+  "name": "Fonofos",
+  "pestClass": "AS",
+  "cas": "944-22-9"
+ },
+ {
+  "code": "RF-0725-001-PPP",
+  "name": "Fosamine",
+  "pestClass": "AS",
+  "cas": "59682-52-9"
+ },
+ {
+  "code": "RF-0739-001-PPP",
+  "name": "Hexazinone",
+  "pestClass": "AS",
+  "cas": "51235-04-2"
+ },
+ {
+  "code": "RF-0740-001-PPP",
+  "name": "Hydramethylnon",
+  "pestClass": "AS",
+  "cas": "67485-29-4"
+ },
+ {
+  "code": "RF-0746-001-PPP",
+  "name": "Imibenconazole",
+  "pestClass": "AS",
+  "cas": "86598-92-7"
+ },
+ {
+  "code": "RF-0761-001-PPP",
+  "name": "Isomethiozin",
+  "pestClass": "AS",
+  "cas": "57052-04-7"
+ },
+ {
+  "code": "RF-0786-001-PPP",
+  "name": "Methoprotryne",
+  "pestClass": "AS",
+  "cas": "841-06-5"
+ },
+ {
+  "code": "RF-0815-001-PPP",
+  "name": "Nitrothal-Isopropyl",
+  "pestClass": "AS",
+  "cas": "10552-74-6"
+ },
+ {
+  "code": "RF-0844-001-PPP",
+  "name": "Phenkapton",
+  "pestClass": "AS",
+  "cas": "2275-14-1"
+ },
+ {
+  "code": "RF-0852-001-PPP",
+  "name": "Polyoxin B",
+  "pestClass": "RD",
+  "cas": "19396-06-6"
+ },
+ {
+  "code": "RF-0864-001-PPP",
+  "name": "Propazine",
+  "pestClass": "AS",
+  "cas": "139-40-2"
+ },
+ {
+  "code": "RF-1078-007-PPP",
+  "name": "BAC 18",
+  "pestClass": "COMP",
+  "cas": null
+ },
+ {
+  "code": "RF-0893-001-PPP",
+  "name": "Secbumeton",
+  "pestClass": "AS",
+  "cas": "26259-45-0"
+ },
+ {
+  "code": "RF-0905-001-PPP",
+  "name": "Sulprofos",
+  "pestClass": "AS",
+  "cas": "35400-43-2"
+ },
+ {
+  "code": "RF-0922-001-PPP",
+  "name": "Tetramethrin",
+  "pestClass": "AS",
+  "cas": "7696-12-0"
+ },
+ {
+  "code": "RF-0929-001-PPP",
+  "name": "Thidiazuron",
+  "pestClass": "AS",
+  "cas": "51707-55-2"
+ },
+ {
+  "code": "RF-0937-001-PPP",
+  "name": "Thionazin",
+  "pestClass": "AS",
+  "cas": "297-97-2"
+ },
+ {
+  "code": "RF-0007-001-PPP",
+  "name": "1-naphthylacetic acid",
+  "pestClass": "AS",
+  "cas": "86-87-3"
+ },
+ {
+  "code": "RF-0055-001-PPP",
+  "name": "Bupirimate",
+  "pestClass": "AS",
+  "cas": "41483-43-6"
+ },
+ {
+  "code": "RF-0059-001-PPP",
+  "name": "Camphechlor (Toxaphene)",
+  "pestClass": "RD",
+  "cas": "8001-35-2"
+ },
+ {
+  "code": "RF-0069-001-PPP",
+  "name": "Carboxin",
+  "pestClass": "AS",
+  "cas": "5234-68-4"
+ },
+ {
+  "code": "RF-0082-001-PPP",
+  "name": "Chlorobenzilate",
+  "pestClass": "AS",
+  "cas": "510-15-6"
+ },
+ {
+  "code": "RF-0084-001-PPP",
+  "name": "Chlorothalonil",
+  "pestClass": "AS",
+  "cas": "1897-45-6"
+ },
+ {
+  "code": "RF-0097-001-PPP",
+  "name": "Clodinafop and its S-isomers, expressed as clodinafop",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0685-002-PPP",
+  "name": "Fensulfothion",
+  "pestClass": "AS",
+  "cas": "115-90-2"
+ },
+ {
+  "code": "RF-0207-001-PPP",
+  "name": "Fluometuron",
+  "pestClass": "AS",
+  "cas": "2164-17-2"
+ },
+ {
+  "code": "RF-0258-001-PPP",
+  "name": "Isoxaben",
+  "pestClass": "AS",
+  "cas": "82558-50-7"
+ },
+ {
+  "code": "RF-0264-001-PPP",
+  "name": "Linuron",
+  "pestClass": "AS",
+  "cas": "330-55-2"
+ },
+ {
+  "code": "RF-0307-001-PPP",
+  "name": "Monuron",
+  "pestClass": "AS",
+  "cas": "150-68-5"
+ },
+ {
+  "code": "RF-0317-001-PPP",
+  "name": "Oxadiargyl",
+  "pestClass": "AS",
+  "cas": "39807-15-3"
+ },
+ {
+  "code": "RF-0374-001-PPP",
+  "name": "Pyrethrins",
+  "pestClass": "AS",
+  "cas": "8003-34-7"
+ },
+ {
+  "code": "RF-0149-002-PPP",
+  "name": "Disulfoton",
+  "pestClass": "AS",
+  "cas": "298-04-4"
+ },
+ {
+  "code": "RF-0215-002-PPP",
+  "name": "Fluroxypyr-Meptyl",
+  "pestClass": "COMP",
+  "cas": "81406-37-3"
+ },
+ {
+  "code": "RF-0235-002-PPP",
+  "name": "Haloxyfop-Methyl",
+  "pestClass": "COMP",
+  "cas": "69806-40-2"
+ },
+ {
+  "code": "RF-0271-005-PPP",
+  "name": "MCPA",
+  "pestClass": "AS",
+  "cas": "94-74-6"
+ },
+ {
+  "code": "RF-0384-004-PPP",
+  "name": "Quizalofop",
+  "pestClass": "AS",
+  "cas": "76578-12-6"
+ },
+ {
+  "code": "RF-0218-002-PPP",
+  "name": "Flusilazole (sum of flusilazole and its metabolite IN-F7321 ([bis-(4-fluorophenyl)methyl]silanol) expressed as flusilazole)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0178-002-PPP",
+  "name": "Fenchlorphos",
+  "pestClass": "AS",
+  "cas": "299-84-3"
+ },
+ {
+  "code": "RF-1025-001-PPP",
+  "name": "Bufencarb",
+  "pestClass": "AS",
+  "cas": "8065-36-9"
+ },
+ {
+  "code": "RF-00000023-PAR",
+  "name": "Fluopyram (sum fluopyram and fluopyram-benzamide (M25) expressed as fluopyram)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0440-001-PPP",
+  "name": "Triflumizole Triflumizole and metabolite FM-6-1(N-(4-chloro-2-trifluoromethylphenyl)-n-propoxyacetamidine), expressed as Triflumizole",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0442-001-PPP",
+  "name": "Trifluralin",
+  "pestClass": "AS",
+  "cas": "1582-09-8"
+ },
+ {
+  "code": "RF-0122-001-PPP",
+  "name": "Di-allate (sum of isomers)",
+  "pestClass": "AS",
+  "cas": "2303-16-4"
+ },
+ {
+  "code": "RF-00000012-PAR",
+  "name": "SDS-3701 (4-hydroxy-2,5,6- trichloroisophthalonitrile)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0446-001-PPP",
+  "name": "Trinexapac (sum of trinexapac (acid) and its salts, expressed as trinexapac)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0358-001-PPP",
+  "name": "Propiconazole (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0644-001-PPP",
+  "name": "Dimethylaminosulfotoluidide (DMST)",
+  "pestClass": "RD",
+  "cas": "66840-71-9"
+ },
+ {
+  "code": "RF-0186-001-PPP",
+  "name": "Fenpyroximate",
+  "pestClass": "AS",
+  "cas": "134098-61-6"
+ },
+ {
+  "code": "RF-0584-001-PPP",
+  "name": "Cyhalothrin",
+  "pestClass": "AS",
+  "cas": "68085-85-8"
+ },
+ {
+  "code": "RF-0061-001-PPP",
+  "name": "Captan",
+  "pestClass": "AS",
+  "cas": "133-06-2"
+ },
+ {
+  "code": "RF-0260-002-PPP",
+  "name": "Kresoxim methyl (BF-490-9 (2-[2-(4-hydroxy-2-methylphenoxymethyl)phenyl]-2-methoxy-iminoacetic acid), expressed as parent)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0107-001-PPP",
+  "name": "Cyflufenamid (sum of cyflufenamid (Z-isomer) and its E-isomer, expressed as cyflufenamid)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0883-001-PPP",
+  "name": "Pyroxsulam",
+  "pestClass": "AS",
+  "cas": "422556-08-9"
+ },
+ {
+  "code": "RF-0507-001-PPP",
+  "name": "Bispyribac (sum of bispyribac, its salts and its esters, expressed as bispyribac)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0040-001-PPP",
+  "name": "Benfuracarb",
+  "pestClass": "AS",
+  "cas": "82560-54-1"
+ },
+ {
+  "code": "RF-0094-001-PPP",
+  "name": "Chromafenozide",
+  "pestClass": "AS",
+  "cas": "143807-66-3"
+ },
+ {
+  "code": "RF-0099-001-PPP",
+  "name": "Clomazone",
+  "pestClass": "AS",
+  "cas": "81777-89-1"
+ },
+ {
+  "code": "RF-0254-001-PPP",
+  "name": "Ipconazole",
+  "pestClass": "AS",
+  "cas": "125225-28-7"
+ },
+ {
+  "code": "RF-0065-003-PPP",
+  "name": "Carbofuran",
+  "pestClass": "AS",
+  "cas": "1563-66-2"
+ },
+ {
+  "code": "RF-0448-001-PPP",
+  "name": "Tritosulfuron",
+  "pestClass": "AS",
+  "cas": "142469-14-5"
+ },
+ {
+  "code": "RF-0101-001-PPP",
+  "name": "Clothianidin",
+  "pestClass": "AS",
+  "cas": "210880-92-5"
+ },
+ {
+  "code": "RF-0208-001-PPP",
+  "name": "Fluopicolide",
+  "pestClass": "AS",
+  "cas": "239110-15-7"
+ },
+ {
+  "code": "RF-0298-001-PPP",
+  "name": "Metosulam",
+  "pestClass": "AS",
+  "cas": "139528-85-1"
+ },
+ {
+  "code": "RF-0367-001-PPP",
+  "name": "Prosulfuron",
+  "pestClass": "AS",
+  "cas": "94125-34-5"
+ },
+ {
+  "code": "RF-0389-001-PPP",
+  "name": "Silthiofam",
+  "pestClass": "AS",
+  "cas": "175217-20-6"
+ },
+ {
+  "code": "RF-0399-001-PPP",
+  "name": "Sulfosulfuron",
+  "pestClass": "AS",
+  "cas": "141776-32-1"
+ },
+ {
+  "code": "RF-0235-006-PPP",
+  "name": "Haloxyfop-P",
+  "pestClass": "AS",
+  "cas": "95977-29-0"
+ },
+ {
+  "code": "RF-0126-003-PPP",
+  "name": "Dichlorprop-p",
+  "pestClass": "AS",
+  "cas": "15165-67-0"
+ },
+ {
+  "code": "RF-0440-002-PPP",
+  "name": "Triflumizole",
+  "pestClass": "AS",
+  "cas": "68694-11-1"
+ },
+ {
+  "code": "RF-0434-001-PPP",
+  "name": "Tribenuron-methyl",
+  "pestClass": "RD",
+  "cas": "101200-48-0"
+ },
+ {
+  "code": "RF-00004679-PAR",
+  "name": "Sulfoxaflor (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004671-PAR",
+  "name": "Mandestrobin",
+  "pestClass": "AS",
+  "cas": "173662-97-0"
+ },
+ {
+  "code": "RF-00004758-PAR",
+  "name": "Tricalcium phosphate",
+  "pestClass": "AS",
+  "cas": "7758-87-4"
+ },
+ {
+  "code": "RF-00004850-PAR",
+  "name": "Isopropyl alcohol",
+  "pestClass": "RD",
+  "cas": "67-63-0"
+ },
+ {
+  "code": "RF-0480-001-PPP",
+  "name": "Atrazine, Desethyl-Desisopropyl-",
+  "pestClass": "AS",
+  "cas": "3397-62-4"
+ },
+ {
+  "code": "RF-0503-001-PPP",
+  "name": "Benzthiazuron",
+  "pestClass": "AS",
+  "cas": "1929-88-0"
+ },
+ {
+  "code": "RF-0529-001-PPP",
+  "name": "Cafenstrole",
+  "pestClass": "AS",
+  "cas": "125306-83-4"
+ },
+ {
+  "code": "RF-0537-001-PPP",
+  "name": "Carpropamid",
+  "pestClass": "RD",
+  "cas": "104030-54-8"
+ },
+ {
+  "code": "RF-0553-001-PPP",
+  "name": "Chlorimuron-Ethyl",
+  "pestClass": "RD",
+  "cas": "90982-32-4"
+ },
+ {
+  "code": "RF-0573-001-PPP",
+  "name": "Crimidine",
+  "pestClass": "AS",
+  "cas": "535-89-7"
+ },
+ {
+  "code": "RF-0580-001-PPP",
+  "name": "Cycloate",
+  "pestClass": "AS",
+  "cas": "1134-23-2"
+ },
+ {
+  "code": "RF-0582-001-PPP",
+  "name": "Cyclosulfamuron",
+  "pestClass": "AS",
+  "cas": "136849-15-5"
+ },
+ {
+  "code": "RF-0614-001-PPP",
+  "name": "Dienochlor",
+  "pestClass": "AS",
+  "cas": "2227-17-0"
+ },
+ {
+  "code": "RF-0618-001-PPP",
+  "name": "Difenoxuron",
+  "pestClass": "AS",
+  "cas": "14214-32-5"
+ },
+ {
+  "code": "RF-0634-001-PPP",
+  "name": "Diofenolan",
+  "pestClass": "AS",
+  "cas": "63837-33-2"
+ },
+ {
+  "code": "RF-0637-001-PPP",
+  "name": "Diphacinone",
+  "pestClass": "AS",
+  "cas": "82-66-6"
+ },
+ {
+  "code": "RF-0683-001-PPP",
+  "name": "Fenridazon",
+  "pestClass": "AS",
+  "cas": "68254-10-4"
+ },
+ {
+  "code": "RF-0707-001-PPP",
+  "name": "Flumetsulam",
+  "pestClass": "AS",
+  "cas": "98967-40-9"
+ },
+ {
+  "code": "RF-0880-001-PPP",
+  "name": "Pyrimidifen",
+  "pestClass": "AS",
+  "cas": "105779-78-0"
+ },
+ {
+  "code": "RF-0968-001-PPP",
+  "name": "Validamycin",
+  "pestClass": "AS",
+  "cas": "37248-47-8"
+ },
+ {
+  "code": "RF-0210-001-PPP",
+  "name": "Fluoroglycofene",
+  "pestClass": "AS",
+  "cas": "77501-60-1"
+ },
+ {
+  "code": "RF-0233-001-PPP",
+  "name": "Guazatine",
+  "pestClass": "AS",
+  "cas": "13516-27-3"
+ },
+ {
+  "code": "RF-1015-001-PPP",
+  "name": "Cloethocarb",
+  "pestClass": "AS",
+  "cas": "51487-69-5"
+ },
+ {
+  "code": "RF-1039-001-PPP",
+  "name": "Pyridinitril",
+  "pestClass": "AS",
+  "cas": "1086-02-8"
+ },
+ {
+  "code": "RF-1045-001-PPP",
+  "name": "Demeton",
+  "pestClass": "AS",
+  "cas": "8065-48-3"
+ },
+ {
+  "code": "RF-1047-001-PPP",
+  "name": "Flamprop-isopropyl",
+  "pestClass": "COMP",
+  "cas": "52756-22-6"
+ },
+ {
+  "code": "RF-0005-001-PPP",
+  "name": "1-methylcyclopropene",
+  "pestClass": "AS",
+  "cas": "3100-04-7"
+ },
+ {
+  "code": "RF-0315-001-PPP",
+  "name": "Orthosulfamuron",
+  "pestClass": "AS",
+  "cas": "213464-77-8"
+ },
+ {
+  "code": "RF-00007630-PAR",
+  "name": "Thiabendazole (sum of thiabendazole, 5-hydroxythiabendazole and its sulfate conjugate, expressed as thiabendazole)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005711-PAR",
+  "name": "2-amino-4-methoxy-6-(trifluormethyl)-1,3,5-triazine (AMTT), resulting from the use of tritosulfuron",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005783-PAR",
+  "name": "Potassium phosphonates",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00005784-PAR",
+  "name": "Orange oil",
+  "pestClass": "AS",
+  "cas": "8026-46-8"
+ },
+ {
+  "code": "RF-00007584-PAR",
+  "name": "Halauxifen-methyl",
+  "pestClass": "AS",
+  "cas": "943831-98-9"
+ },
+ {
+  "code": "RF-00010739-PAR",
+  "name": "Soybean oil",
+  "pestClass": "RD",
+  "cas": "8001-22-7"
+ },
+ {
+  "code": "RF-00011559-PAR",
+  "name": "Carboxin (carboxin plus its metabolites carboxin sulfoxide and oxycarboxin (carboxin sulfone), expressed as carboxin)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00010416-PAR",
+  "name": "Florpyrauxifen-benzyl",
+  "pestClass": "AS",
+  "cas": "1390661-72-9"
+ },
+ {
+  "code": "RF-00008121-PAR",
+  "name": "4-Amino-butyric acid",
+  "pestClass": "AS",
+  "cas": "56-12-2"
+ },
+ {
+  "code": "RF-00008107-PAR",
+  "name": "2-Methylpropionic acid",
+  "pestClass": "AS",
+  "cas": "79-31-2"
+ },
+ {
+  "code": "RF-00010068-PAR",
+  "name": "Chlorine dioxide",
+  "pestClass": "AS",
+  "cas": "10049-04-4"
+ },
+ {
+  "code": "RF-00009487-PAR",
+  "name": "Tolpyralate",
+  "pestClass": "AS",
+  "cas": "1101132-67-5"
+ },
+ {
+  "code": "RF-00011592-PAR",
+  "name": "Indaziflam",
+  "pestClass": "AS",
+  "cas": "950782-86-2"
+ },
+ {
+  "code": "RF-00011610-PAR",
+  "name": "Lavandulyl senecioate",
+  "pestClass": "AS",
+  "cas": "23960-07-8"
+ },
+ {
+  "code": "RF-00012001-PAR",
+  "name": "Bacillus subtilis RTI477",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012291-PAR",
+  "name": "Sum of cyflufenamid (Z-isomer), its E-isomer and metabolite 149-F1, expressed as cyflufenamid",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012034-PAR",
+  "name": "Orysastrobin",
+  "pestClass": "AS",
+  "cas": "248593-16-0"
+ },
+ {
+  "code": "RF-00012036-PAR",
+  "name": "Pefurazoate",
+  "pestClass": "AS",
+  "cas": "101903-30-4"
+ },
+ {
+  "code": "RF-00012363-PAR",
+  "name": "Pyriminostrobin",
+  "pestClass": "AS",
+  "cas": "1257598-43-8"
+ },
+ {
+  "code": "RF-00012800-PAR",
+  "name": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00012871-PAR",
+  "name": "Spirotetramat-enol expressed as spirotetramat",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00013247-PAR",
+  "name": "Spinetoram (sum of spinetoram-J and spinetoram-L)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00014602-PAR",
+  "name": "Beauveria bassiana strain IMI389521",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00004682-PAR",
+  "name": "Sum of dichlorprop (including dichlorprop-P) and its salts, expressed as dichlorprop",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004684-PAR",
+  "name": "Sum of haloxyfop, its salts and conjugates expressed as haloxyfop (sum of the R- and S- isomers at any ratio)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004659-PAR",
+  "name": "Dichlorprop (Sum of dichlorprop (including dichlorprop-P), its salts, esters and conjugates, expressed as dichlorprop)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005722-PAR",
+  "name": "Fluoxastrobin (sum of fluoxastrobin, its Z-isomer and its metabolite 6-(2-chlorophenoxy)-5-fluoro-4-pyrimidinol, expressed as fluoxastrobin)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00006994-PAR",
+  "name": "Trichloracetic acid",
+  "pestClass": "RD",
+  "cas": "76-03-9"
+ },
+ {
+  "code": "RF-00008321-PAR",
+  "name": "1,2-Benzisothiazolin-3-one",
+  "pestClass": null,
+  "cas": "2634-33-5"
+ },
+ {
+  "code": "RF-00011519-PAR",
+  "name": "Triflumezopyrim",
+  "pestClass": "RD",
+  "cas": "1263133-33-0"
+ },
+ {
+  "code": "RF-00011882-PAR",
+  "name": "Quizalofop (sum of quizalofop, its salts, its esters (including propaquizafop) and its conjugates, expressed as quizalofop (any ratio of constituent isomers))",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012047-PAR",
+  "name": "Mandipropamid (any ratio of constituent isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00016211-PAR",
+  "name": "Trichoderma harzianum T78",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00016216-PAR",
+  "name": "Metarhizium pingshaense CF62",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00003022-PAR",
+  "name": "3,5,6-TCP",
+  "pestClass": null,
+  "cas": "6515-38-4"
+ },
+ {
+  "code": "RF-0021-002-PPP",
+  "name": "Aldrin",
+  "pestClass": "AS",
+  "cas": "309-00-2"
+ },
+ {
+  "code": "RF-00000248-ADD",
+  "name": "Potassium sorbate",
+  "pestClass": "AS",
+  "cas": "24634-61-5"
+ },
+ {
+  "code": "RF-00000171-ADD",
+  "name": "Lecithins",
+  "pestClass": "AS",
+  "cas": "8002-43-5"
+ },
+ {
+  "code": "RF-00000277-ADD",
+  "name": "Sodium aluminium silicate",
+  "pestClass": "AS",
+  "cas": "12003-51-9"
+ },
+ {
+  "code": "RF-00000291-ADD",
+  "name": "Sodium metabisulphite",
+  "pestClass": "AS",
+  "cas": "7681-57-4"
+ },
+ {
+  "code": "RF-00000104-CHE",
+  "name": "Urea",
+  "pestClass": "AS",
+  "cas": "57-13-6"
+ },
+ {
+  "code": "RF-0014-001-PPP",
+  "name": "Acetamiprid",
+  "pestClass": "AS",
+  "cas": "135410-20-7"
+ },
+ {
+  "code": "RF-00003041-PAR",
+  "name": "2,4,5-T (sum of 2,4,5-T, its salts and esters, expressed as 2,4,5-T)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0184-001-PPP",
+  "name": "Fenpropidin (sum of fenpropidin and its salts, expressed as fenpropidin)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0699-001-PPP",
+  "name": "Fluazifop-Butyl",
+  "pestClass": "COMP",
+  "cas": "69806-50-4"
+ },
+ {
+  "code": "RF-0722-001-PPP",
+  "name": "Fluxofenim",
+  "pestClass": "AS",
+  "cas": "88485-37-4"
+ },
+ {
+  "code": "RF-0723-001-PPP",
+  "name": "Fomesafen",
+  "pestClass": "AS",
+  "cas": "72178-02-0"
+ },
+ {
+  "code": "RF-0731-001-PPP",
+  "name": "Glyphosate-Trimesium",
+  "pestClass": "COMP",
+  "cas": "81591-81-3"
+ },
+ {
+  "code": "RF-0737-001-PPP",
+  "name": "Heptenophos",
+  "pestClass": "AS",
+  "cas": "23560-59-0"
+ },
+ {
+  "code": "RF-0765-001-PPP",
+  "name": "Isoxadifen-ethyl",
+  "pestClass": "AS",
+  "cas": "163520-33-0"
+ },
+ {
+  "code": "RF-0776-001-PPP",
+  "name": "Mefenacet",
+  "pestClass": "AS",
+  "cas": "73250-68-7"
+ },
+ {
+  "code": "RF-0779-001-PPP",
+  "name": "Mephosfolan",
+  "pestClass": "AS",
+  "cas": "950-10-7"
+ },
+ {
+  "code": "RF-0793-001-PPP",
+  "name": "Metominostrobin",
+  "pestClass": "AS",
+  "cas": "133408-50-1"
+ },
+ {
+  "code": "RF-0810-001-PPP",
+  "name": "Nitenpyram",
+  "pestClass": "AS",
+  "cas": "150824-47-8"
+ },
+ {
+  "code": "RF-0825-001-PPP",
+  "name": "Oxaziclomefone",
+  "pestClass": "AS",
+  "cas": "153197-14-9"
+ },
+ {
+  "code": "RF-0835-001-PPP",
+  "name": "Pebulate",
+  "pestClass": "AS",
+  "cas": "1114-71-2"
+ },
+ {
+  "code": "RF-0853-001-PPP",
+  "name": "Prallethrin",
+  "pestClass": "AS",
+  "cas": "23031-36-9"
+ },
+ {
+  "code": "RF-0932-001-PPP",
+  "name": "Thiocyclam",
+  "pestClass": "AS",
+  "cas": "31895-21-3"
+ },
+ {
+  "code": "RF-0939-001-PPP",
+  "name": "Thioquinox",
+  "pestClass": "AS",
+  "cas": "93-75-4"
+ },
+ {
+  "code": "RF-0967-001-PPP",
+  "name": "Uniconazole",
+  "pestClass": "AS",
+  "cas": "83657-22-1"
+ },
+ {
+  "code": "RF-0974-001-PPP",
+  "name": "Tribufos (s,s,s-tributyl-phosphorotrithioate)",
+  "pestClass": "AS",
+  "cas": "78-48-8"
+ },
+ {
+  "code": "RF-0364-001-PPP",
+  "name": "Propyzamide",
+  "pestClass": "AS",
+  "cas": "23950-58-5"
+ },
+ {
+  "code": "RF-0024-002-PPP",
+  "name": "Amitraz",
+  "pestClass": "AS",
+  "cas": "33089-61-1"
+ },
+ {
+  "code": "RF-0422-001-PPP",
+  "name": "Thiophanate-methyl",
+  "pestClass": "AS",
+  "cas": "23564-05-8"
+ },
+ {
+  "code": "RF-0803-001-PPP",
+  "name": "2-Naphthyloxyacetic acid",
+  "pestClass": "AS",
+  "cas": "120-23-0"
+ },
+ {
+  "code": "RF-0744-001-PPP",
+  "name": "Imazapyr",
+  "pestClass": "AS",
+  "cas": "81334-34-1"
+ },
+ {
+  "code": "RF-0743-001-PPP",
+  "name": "Imazapic",
+  "pestClass": "AS",
+  "cas": "104098-48-8"
+ },
+ {
+  "code": "RF-00004429-PAR",
+  "name": "alpha-pinene",
+  "pestClass": "AS",
+  "cas": "80-56-8"
+ },
+ {
+  "code": "RF-00003341-PAR",
+  "name": "Demeton-O-sulfoxide",
+  "pestClass": "COMP",
+  "cas": null
+ },
+ {
+  "code": "RF-00003353-PAR",
+  "name": "Flutolanil (flutolanil and metabolites containing the 2-trifluoromethylbenzoic acid moiety, expressed as flutolanil)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003367-PAR",
+  "name": "Pyraflufen-ethyl (sum of pyraflufen-ethyl and pyraflufen, expressed as pyraflufen-ethyl)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003375-PAR",
+  "name": "Sum of iprodione and all metabolites containing the 3,5-dichloroaniline moiety expressed as iprodione",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0458-001-PPP",
+  "name": "2,4,5-TP",
+  "pestClass": "RD",
+  "cas": "93-72-1"
+ },
+ {
+  "code": "RF-0475-001-PPP",
+  "name": "Anthraquinone",
+  "pestClass": "RD",
+  "cas": "84-65-1"
+ },
+ {
+  "code": "RF-0502-001-PPP",
+  "name": "Benzoylprop-Ethyl",
+  "pestClass": "COMP",
+  "cas": "22212-55-1"
+ },
+ {
+  "code": "RF-0513-001-PPP",
+  "name": "Bromfenvinfos",
+  "pestClass": "AS",
+  "cas": "33399-00-7"
+ },
+ {
+  "code": "RF-0517-001-PPP",
+  "name": "Bromophos",
+  "pestClass": "AS",
+  "cas": "2104-96-3"
+ },
+ {
+  "code": "RF-0519-001-PPP",
+  "name": "Butachlor",
+  "pestClass": "AS",
+  "cas": "23184-66-9"
+ },
+ {
+  "code": "RF-0541-001-PPP",
+  "name": "Chloramben",
+  "pestClass": "AS",
+  "cas": "133-90-4"
+ },
+ {
+  "code": "RF-0546-001-PPP",
+  "name": "Chlorethoxyfos",
+  "pestClass": "AS",
+  "cas": "54593-83-8"
+ },
+ {
+  "code": "RF-0548-001-PPP",
+  "name": "Chlorfenprop-Methyl",
+  "pestClass": "COMP",
+  "cas": "14437-17-3"
+ },
+ {
+  "code": "RF-0554-001-PPP",
+  "name": "Chlormephos",
+  "pestClass": "AS",
+  "cas": "24934-91-6"
+ },
+ {
+  "code": "RF-0571-001-PPP",
+  "name": "Coumaphos",
+  "pestClass": "AS",
+  "cas": "56-72-4"
+ },
+ {
+  "code": "RF-0578-001-PPP",
+  "name": "Cyanophos",
+  "pestClass": "AS",
+  "cas": "2636-26-2"
+ },
+ {
+  "code": "RF-0599-001-PPP",
+  "name": "Dichlofenthion",
+  "pestClass": "AS",
+  "cas": "97-17-6"
+ },
+ {
+  "code": "RF-0638-001-PPP",
+  "name": "Diphenamid",
+  "pestClass": "AS",
+  "cas": "957-51-7"
+ },
+ {
+  "code": "RF-0641-001-PPP",
+  "name": "Dithiopyr",
+  "pestClass": "AS",
+  "cas": "97886-45-8"
+ },
+ {
+  "code": "RF-0657-001-PPP",
+  "name": "Etaconazole",
+  "pestClass": "AS",
+  "cas": "60207-93-4"
+ },
+ {
+  "code": "RF-0705-001-PPP",
+  "name": "Flumethrin",
+  "pestClass": "AS",
+  "cas": "69770-45-2"
+ },
+ {
+  "code": "RF-0861-001-PPP",
+  "name": "Prometon",
+  "pestClass": "AS",
+  "cas": "1610-18-0"
+ },
+ {
+  "code": "RF-0866-001-PPP",
+  "name": "Propetamphos",
+  "pestClass": "AS",
+  "cas": "31218-83-4"
+ },
+ {
+  "code": "RF-0877-001-PPP",
+  "name": "Pyridaphenthion",
+  "pestClass": "AS",
+  "cas": "119-12-0"
+ },
+ {
+  "code": "RF-0887-001-PPP",
+  "name": "Quizalofop-Ethyl",
+  "pestClass": "COMP",
+  "cas": "76578-14-8"
+ },
+ {
+  "code": "RF-0008-001-PPP",
+  "name": "2,4-DB (sum of 2,4-DB, its salts, its esters and its conjugates, expressed as 2,4-DB)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0047-001-PPP",
+  "name": "Binapacryl",
+  "pestClass": "AS",
+  "cas": "485-31-4"
+ },
+ {
+  "code": "RF-0057-001-PPP",
+  "name": "Butralin",
+  "pestClass": "AS",
+  "cas": "33629-47-9"
+ },
+ {
+  "code": "RF-0062-001-PPP",
+  "name": "Carbaryl",
+  "pestClass": "AS",
+  "cas": "63-25-2"
+ },
+ {
+  "code": "RF-0078-001-PPP",
+  "name": "Chlorfenson",
+  "pestClass": "AS",
+  "cas": "80-33-1"
+ },
+ {
+  "code": "RF-0089-001-PPP",
+  "name": "Chlorsulfuron",
+  "pestClass": "AS",
+  "cas": "64902-72-3"
+ },
+ {
+  "code": "RF-0111-001-PPP",
+  "name": "Cymoxanil",
+  "pestClass": "AS",
+  "cas": "57966-95-7"
+ },
+ {
+  "code": "RF-0115-001-PPP",
+  "name": "Cyromazine",
+  "pestClass": "AS",
+  "cas": "66215-27-8"
+ },
+ {
+  "code": "RF-0143-001-PPP",
+  "name": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0147-001-PPP",
+  "name": "Diphenylamine",
+  "pestClass": "AS",
+  "cas": "122-39-4"
+ },
+ {
+  "code": "RF-0182-001-PPP",
+  "name": "Fenoxycarb",
+  "pestClass": "AS",
+  "cas": "72490-01-8"
+ },
+ {
+  "code": "RF-0200-001-PPP",
+  "name": "Flucycloxuron",
+  "pestClass": "AS",
+  "cas": "94050-52-9"
+ },
+ {
+  "code": "RF-0241-001-PPP",
+  "name": "Hexaconazole",
+  "pestClass": "AS",
+  "cas": "79983-71-4"
+ },
+ {
+  "code": "RF-0304-001-PPP",
+  "name": "Molinate",
+  "pestClass": "AS",
+  "cas": "2212-67-1"
+ },
+ {
+  "code": "RF-0318-001-PPP",
+  "name": "Oxadiazon",
+  "pestClass": "AS",
+  "cas": "19666-30-9"
+ },
+ {
+  "code": "RF-0322-001-PPP",
+  "name": "Oxycarboxin",
+  "pestClass": "AS",
+  "cas": "5259-88-1"
+ },
+ {
+  "code": "RF-0379-001-PPP",
+  "name": "Pyroquilon",
+  "pestClass": "AS",
+  "cas": "57369-32-1"
+ },
+ {
+  "code": "RF-0387-001-PPP",
+  "name": "Rotenone",
+  "pestClass": "AS",
+  "cas": "83-79-4"
+ },
+ {
+  "code": "RF-0390-001-PPP",
+  "name": "Simazine",
+  "pestClass": "AS",
+  "cas": "122-34-9"
+ },
+ {
+  "code": "RF-0419-001-PPP",
+  "name": "Thifensulfuron-methyl",
+  "pestClass": "AS",
+  "cas": "79277-27-3"
+ },
+ {
+  "code": "RF-0167-003-PPP",
+  "name": "Ethylene oxide",
+  "pestClass": "AS",
+  "cas": "75-21-8"
+ },
+ {
+  "code": "RF-0266-001-PPP",
+  "name": "Malathion (sum of malathion and malaoxon expressed as malathion)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0271-001-PPP",
+  "name": "MCPA, Butotyl-",
+  "pestClass": "COMP",
+  "cas": "19480-43-4"
+ },
+ {
+  "code": "RF-0323-003-PPP",
+  "name": "Demeton-S-Methylsulfone",
+  "pestClass": "COMP",
+  "cas": "17040-19-6"
+ },
+ {
+  "code": "RF-0412-002-PPP",
+  "name": "Terbufos",
+  "pestClass": "AS",
+  "cas": "13071-79-9"
+ },
+ {
+  "code": "RF-0376-002-PPP",
+  "name": "Pyridate",
+  "pestClass": "AS",
+  "cas": "55512-33-9"
+ },
+ {
+  "code": "RF-00000038-NTR",
+  "name": "caffeine",
+  "pestClass": "AS",
+  "cas": "58-08-2"
+ },
+ {
+  "code": "RF-00000025-PAR",
+  "name": "Isopyrazam",
+  "pestClass": "AS",
+  "cas": "881685-58-1"
+ },
+ {
+  "code": "RF-0430-001-PPP",
+  "name": "Tri-allate",
+  "pestClass": "AS",
+  "cas": "2303-17-5"
+ },
+ {
+  "code": "RF-0146-001-PPP",
+  "name": "Dioxathion (sum of isomers)",
+  "pestClass": "AS",
+  "cas": "78-34-2"
+ },
+ {
+  "code": "RF-0362-001-PPP",
+  "name": "Propoxycarbazone (propoxycarbazone, its salts and 2-hydroxy-propoxy-propoxycarbazone, calculated as propoxycarbazone)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0114-002-PPP",
+  "name": "Cyprodinil (sum of cyprodinil and CGA 304075 (free), expressed as cyprodinil)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-1006-001-PPP",
+  "name": "Spiroxamine carboxylic acid metabolite M06, expressed as spiroxamine (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0092-001-PPP",
+  "name": "Chlorotoluron",
+  "pestClass": "AS",
+  "cas": "15545-48-9"
+ },
+ {
+  "code": "RF-0320-001-PPP",
+  "name": "Oxamyl",
+  "pestClass": "AS",
+  "cas": "23135-22-0"
+ },
+ {
+  "code": "RF-0087-001-PPP",
+  "name": "Chlorpyrifos",
+  "pestClass": "AS",
+  "cas": "2921-88-2"
+ },
+ {
+  "code": "RF-0124-001-PPP",
+  "name": "Dicamba",
+  "pestClass": "AS",
+  "cas": "1918-00-9"
+ },
+ {
+  "code": "RF-0133-001-PPP",
+  "name": "Difenoconazole",
+  "pestClass": "AS",
+  "cas": "119446-68-3"
+ },
+ {
+  "code": "RF-0377-001-PPP",
+  "name": "Pyrimethanil",
+  "pestClass": "AS",
+  "cas": "53112-28-0"
+ },
+ {
+  "code": "RF-0349-002-PPP",
+  "name": "Prochloraz",
+  "pestClass": "AS",
+  "cas": "67747-09-5"
+ },
+ {
+  "code": "RF-0142-001-PPP",
+  "name": "Diniconazole (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-1004-001-PPP",
+  "name": "Lambda-cyhalothrin (includes gamma-cyhalothrin) (sum of R,S and S,R isomers)",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0698-001-PPP",
+  "name": "Fluazifop",
+  "pestClass": "AS",
+  "cas": "69335-91-7"
+ },
+ {
+  "code": "RF-0226-001-PPP",
+  "name": "Fosthiazate",
+  "pestClass": "AS",
+  "cas": "98886-44-3"
+ },
+ {
+  "code": "RF-00000007-NTR",
+  "name": "Ethanol",
+  "pestClass": "AS",
+  "cas": "64-17-5"
+ },
+ {
+  "code": "RF-0203-001-PPP",
+  "name": "Flufenacet (sum of all compounds containing the N fluorophenyl-N-isopropyl moiety expressed as flufenacet)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0690-006-PPP",
+  "name": "Fenvalerate (any ratio of constituent isomers (RR, SS, RS and SR) including esfenvalerate)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0104-001-PPP",
+  "name": "Cyazofamid",
+  "pestClass": "AS",
+  "cas": "120116-88-3"
+ },
+ {
+  "code": "RF-0658-001-PPP",
+  "name": "Ethametsulfuron-Methyl",
+  "pestClass": "AS",
+  "cas": "97780-06-8"
+ },
+ {
+  "code": "RF-0103-001-PPP",
+  "name": "Cyanamide including salts expressed as cyanamide",
+  "pestClass": "RD",
+  "cas": "420-04-2"
+ },
+ {
+  "code": "RF-0141-001-PPP",
+  "name": "Dimoxystrobin",
+  "pestClass": "AS",
+  "cas": "149961-52-4"
+ },
+ {
+  "code": "RF-0395-001-PPP",
+  "name": "Spiromesifen",
+  "pestClass": "AS",
+  "cas": "283594-90-1"
+ },
+ {
+  "code": "RF-0354-003-PPP",
+  "name": "N-desmethyl propamocarb",
+  "pestClass": "RD",
+  "cas": "1392231-41-2"
+ },
+ {
+  "code": "RF-0212-001-PPP",
+  "name": "Flupyrsulfuron-methyl",
+  "pestClass": "RD",
+  "cas": "144740-54-5"
+ },
+ {
+  "code": "RF-0211-001-PPP",
+  "name": "Fluoxastrobin",
+  "pestClass": "AS",
+  "cas": "361377-29-9"
+ },
+ {
+  "code": "RF-0382-001-PPP",
+  "name": "Quinoxyfen",
+  "pestClass": "AS",
+  "cas": "124495-18-7"
+ },
+ {
+  "code": "RF-0347-002-PPP",
+  "name": "Pirimicarb",
+  "pestClass": "AS",
+  "cas": "23103-98-2"
+ },
+ {
+  "code": "RF-0106-002-PPP",
+  "name": "Cycloxydim",
+  "pestClass": "AS",
+  "cas": "101205-02-1"
+ },
+ {
+  "code": "RF-0197-002-PPP",
+  "name": "Fluazifop-P-butyl",
+  "pestClass": "COMP",
+  "cas": "79241-46-6"
+ },
+ {
+  "code": "RF-0274-002-PPP",
+  "name": "Mepanipyrim",
+  "pestClass": "AS",
+  "cas": "110235-47-7"
+ },
+ {
+  "code": "RF-0431-001-PPP",
+  "name": "Triasulfuron",
+  "pestClass": "RD",
+  "cas": "82097-50-5"
+ },
+ {
+  "code": "RF-00000059-NTR",
+  "name": "L-cysteine",
+  "pestClass": "AS",
+  "cas": "52-90-4"
+ },
+ {
+  "code": "RF-00004688-PAR",
+  "name": "Phthalimide, expressed as folpet",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004827-PAR",
+  "name": "24-Epibrassinolide",
+  "pestClass": "AS",
+  "cas": "78821-43-9"
+ },
+ {
+  "code": "RF-00007586-PAR",
+  "name": "Fenpropidin",
+  "pestClass": "AS",
+  "cas": "67306-00-7"
+ },
+ {
+  "code": "RF-00009154-PAR",
+  "name": "AMPA-N-acetyl",
+  "pestClass": "COMP",
+  "cas": "57637-97-5"
+ },
+ {
+  "code": "RF-0617-001-PPP",
+  "name": "Difenacoum",
+  "pestClass": "AS",
+  "cas": "56073-07-5"
+ },
+ {
+  "code": "RF-0619-001-PPP",
+  "name": "Difenzoquat",
+  "pestClass": "AS",
+  "cas": "49866-87-7"
+ },
+ {
+  "code": "RF-0646-001-PPP",
+  "name": "Drazoxolon",
+  "pestClass": "AS",
+  "cas": "5707-69-7"
+ },
+ {
+  "code": "RF-0667-001-PPP",
+  "name": "Etobenzanid",
+  "pestClass": "AS",
+  "cas": "79540-50-4"
+ },
+ {
+  "code": "RF-0672-001-PPP",
+  "name": "Fenazaflor",
+  "pestClass": "AS",
+  "cas": "14255-88-0"
+ },
+ {
+  "code": "RF-0679-001-PPP",
+  "name": "Fenoxanil",
+  "pestClass": "AS",
+  "cas": "115852-48-7"
+ },
+ {
+  "code": "RF-0697-001-PPP",
+  "name": "Fluacrypyrim",
+  "pestClass": "AS",
+  "cas": "229977-93-9"
+ },
+ {
+  "code": "RF-0700-001-PPP",
+  "name": "Fluazolate",
+  "pestClass": "AS",
+  "cas": "174514-07-9"
+ },
+ {
+  "code": "RF-0907-001-PPP",
+  "name": "Tebupirimphos",
+  "pestClass": "AS",
+  "cas": "96182-53-5"
+ },
+ {
+  "code": "RF-0928-001-PPP",
+  "name": "Thiazopyr",
+  "pestClass": "AS",
+  "cas": "117718-60-2"
+ },
+ {
+  "code": "RF-0230-001-PPP",
+  "name": "Gibberellic acid",
+  "pestClass": "AS",
+  "cas": "77-06-5"
+ },
+ {
+  "code": "RF-1035-001-PPP",
+  "name": "Isonoruron",
+  "pestClass": "AS",
+  "cas": "28805-78-9"
+ },
+ {
+  "code": "RF-1049-001-PPP",
+  "name": "Isoxadifen",
+  "pestClass": "AS",
+  "cas": "209866-92-2"
+ },
+ {
+  "code": "RF-1063-001-PPP",
+  "name": "Diphenyl sulfone",
+  "pestClass": "AS",
+  "cas": "127-63-9"
+ },
+ {
+  "code": "RF-00001414-PAR",
+  "name": "Grape seed extract",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00002593-PAR",
+  "name": "Thiencarbazone-methyl",
+  "pestClass": "AS",
+  "cas": "317815-83-1"
+ },
+ {
+  "code": "RF-00002580-PAR",
+  "name": "Hydrolysed proteins",
+  "pestClass": "AS",
+  "cas": "9015-54-7"
+ },
+ {
+  "code": "RF-00004266-PAR",
+  "name": "delta 3-carene",
+  "pestClass": "AS",
+  "cas": "13466-78-9"
+ },
+ {
+  "code": "RF-00003744-PAR",
+  "name": "indole-3-acetic acid",
+  "pestClass": "RD",
+  "cas": "87-51-4"
+ },
+ {
+  "code": "RF-00004676-PAR",
+  "name": "Pyribencarb",
+  "pestClass": "AS",
+  "cas": "799247-52-2"
+ },
+ {
+  "code": "RF-00004668-PAR",
+  "name": "Indolylbutyric acid",
+  "pestClass": "AS",
+  "cas": "133-32-4"
+ },
+ {
+  "code": "RF-00005782-PAR",
+  "name": "S-abscisic acid",
+  "pestClass": "AS",
+  "cas": "21293-29-8"
+ },
+ {
+  "code": "RF-00009781-PAR",
+  "name": "Terpenoid blend QRD 460",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00008038-PAR",
+  "name": "Ethanethiol",
+  "pestClass": "AS",
+  "cas": "75-08-1"
+ },
+ {
+  "code": "RF-00008133-PAR",
+  "name": "Valeric acid",
+  "pestClass": "AS",
+  "cas": "109-52-4"
+ },
+ {
+  "code": "RF-00010219-PAR",
+  "name": "Nerolidol",
+  "pestClass": "AS",
+  "cas": "7212-44-4"
+ },
+ {
+  "code": "RF-00010235-PAR",
+  "name": "Ethylene",
+  "pestClass": "AS",
+  "cas": "74-85-1"
+ },
+ {
+  "code": "RF-00010217-PAR",
+  "name": "Fenpicoxamid",
+  "pestClass": "AS",
+  "cas": "517875-34-2"
+ },
+ {
+  "code": "RF-00008598-PAR",
+  "name": "Potassium hydrogen carbonate",
+  "pestClass": "AS",
+  "cas": "298-14-6"
+ },
+ {
+  "code": "RF-00008893-PAR",
+  "name": "Z,Z,Z,Z-7,13,16,19-docosatetraen-1-yl isobutyrate",
+  "pestClass": "AS",
+  "cas": "135459-81-3"
+ },
+ {
+  "code": "RF-00008948-PAR",
+  "name": "Cyclaniliprole",
+  "pestClass": "AS",
+  "cas": "1031756-98-5"
+ },
+ {
+  "code": "RF-00009486-PAR",
+  "name": "Pydiflumetofen",
+  "pestClass": "AS",
+  "cas": "1228284-64-7"
+ },
+ {
+  "code": "RF-00009174-PAR",
+  "name": "Sodium chloride",
+  "pestClass": "AS",
+  "cas": "7647-14-5"
+ },
+ {
+  "code": "RF-00011505-PAR",
+  "name": "Preparation of essential oil from oregano (Origanum vulgare L.), essential oil  from caraway seed (Carum carvi L.) and carvacrol, methyl salicylate and L-menthol (Biomin DC-C)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00011518-PAR",
+  "name": "bone oil",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012000-PAR",
+  "name": "Bacillus subtilis IAB/BS03",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012010-PAR",
+  "name": "Bacillus thuringiensis ssp. Kurstaki PB 54",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012012-PAR",
+  "name": "Bacillus thuringiensis ssp. Kurstaki SA 12",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00011998-PAR",
+  "name": "Sum of imazalil and metabolite FK-772 (any ratio of constituent isomers), expressed as imazalil",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012029-PAR",
+  "name": "Swinglea glutinosa extract",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012046-PAR",
+  "name": "Imazalil (any ratio of constituent isomers)",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012033-PAR",
+  "name": "Isotianil",
+  "pestClass": "AS",
+  "cas": "224049-04-1"
+ },
+ {
+  "code": "RF-00012028-PAR",
+  "name": "Grape cane tannins",
+  "pestClass": "AS",
+  "cas": "84929-27-1"
+ },
+ {
+  "code": "RF-00012321-PAR",
+  "name": "Benzalkonium chloride",
+  "pestClass": null,
+  "cas": "63449-41-2"
+ },
+ {
+  "code": "RF-00012802-PAR",
+  "name": "Napropamide (sum of isomers)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00012866-PAR",
+  "name": "Bacillus pumilus QST 2808",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014144-PAR",
+  "name": "Aminocyclopyrachlor",
+  "pestClass": "AS",
+  "cas": "858956-08-8"
+ },
+ {
+  "code": "RF-00013671-PAR",
+  "name": "Glyoxal",
+  "pestClass": "AS",
+  "cas": "107-22-2"
+ },
+ {
+  "code": "RF-00014473-PAR",
+  "name": "Trichoderma atroviride 77B",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014652-PAR",
+  "name": "Gelatins",
+  "pestClass": "AS",
+  "cas": "9000-70-8"
+ },
+ {
+  "code": "RF-00014600-PAR",
+  "name": "Beauveria bassiana 203",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014542-PAR",
+  "name": "Ethylene Chlorobromide",
+  "pestClass": "AS",
+  "cas": "107-04-0"
+ },
+ {
+  "code": "RF-0353-001-PPP",
+  "name": "Propachlor: oxalinic derivate of propachlor, expressed as propachlor",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005726-PAR",
+  "name": "Sodium 5-nitroguaiacolate, sodium o-nitrophenolate and sodium p-nitrophenolate (Sum of sodium 5-nitroguaiacolate, sodium o-nitrophenolate and sodium p-nitrophenolate, expressed as sodium 5-nitroguaiacolate)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005716-PAR",
+  "name": "Triflusulfuron (6-(2,2,2-trifluoroethoxy)-1,3,5-triazine-2,4-diamine (IN-M7222))",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00011521-PAR",
+  "name": "X12326349 expressed as fenpicoxamid",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00011881-PAR",
+  "name": "Flurochloridone (sum of cis- and trans- isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012045-PAR",
+  "name": "Fenbuconazole (sum of constituent enantiomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00013459-PAR",
+  "name": "Methylisothiocyanate (resulting from the use of dazomet or metam)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00014257-PAR",
+  "name": "Cyflumetofen (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00014619-PAR",
+  "name": "Paraffin Oil",
+  "pestClass": "AS",
+  "cas": "64742-55-8"
+ },
+ {
+  "code": "RF-00014623-PAR",
+  "name": "Quassia amara, ext.",
+  "pestClass": "AS",
+  "cas": "84604-10-4"
+ },
+ {
+  "code": "RF-00016204-PAR",
+  "name": "Trichoderma afroharzianum Th2RI99",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00016347-PAR",
+  "name": "Distillates (petroleum), solvent-dewaxed heavy paraffinic",
+  "pestClass": "AS",
+  "cas": "64742-65-0"
+ },
+ {
+  "code": "RF-00016362-PAR",
+  "name": "Picloram, free and conjugated, expressed as picloram",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00016363-PAR",
+  "name": "Zoxamide (sum of constituent isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00002190-PAR",
+  "name": "3-Methylbut-3-en-1-ol",
+  "pestClass": "AS",
+  "cas": "763-32-6"
+ },
+ {
+  "code": "RF-0899-001-PPP",
+  "name": "Streptomycin",
+  "pestClass": "AS",
+  "cas": "57-92-1"
+ },
+ {
+  "code": "RF-0239-002-PPP",
+  "name": "Hexachlorocyclohexane (HCH), beta-isomer",
+  "pestClass": "RD",
+  "cas": "319-85-7"
+ },
+ {
+  "code": "RF-0075-001-PPP",
+  "name": "Chlordane (sum of cis- and trans-chlordane)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0236-001-PPP",
+  "name": "Heptachlor (sum of heptachlor and heptachlor epoxide expressed as heptachlor)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00000056-ADD",
+  "name": "Boric acid",
+  "pestClass": "AS",
+  "cas": "11113-50-1"
+ },
+ {
+  "code": "RF-00000079-ADD",
+  "name": "Calcium hydroxide",
+  "pestClass": "AS",
+  "cas": "1305-62-0"
+ },
+ {
+  "code": "RF-00000084-ADD",
+  "name": "Calcium propionate",
+  "pestClass": "AS",
+  "cas": "4075-81-4"
+ },
+ {
+  "code": "RF-00000015-CHE",
+  "name": "Chlorates",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00000069-ADD",
+  "name": "Calcium carbonate",
+  "pestClass": "AS",
+  "cas": "471-34-1"
+ },
+ {
+  "code": "RF-00000212-ADD",
+  "name": "Phosphoric acid",
+  "pestClass": "AS",
+  "cas": "7664-38-2"
+ },
+ {
+  "code": "RF-00003326-PAR",
+  "name": "Acetamiprid (sum of acetamiprid and N-desmethyl-acetamiprid (IM-2-1), expressed as acetamiprid)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003334-PAR",
+  "name": "CGA 304075 (Phenol, 4-[(4-cyclopropyl-6-methyl-2-pyrimidinyl) amino]-)",
+  "pestClass": "COMP",
+  "cas": "195157-66-5"
+ },
+ {
+  "code": "RF-00003351-PAR",
+  "name": "Acibenzolar-S-methyl (sum of acibenzolar-S-methyl and acibenzolar acid (free and conjugated), expressed as acibenzolar-S-methyl)",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00003370-PAR",
+  "name": "Sum of pyrimethanil and 2-(4-hydroxyanilino)-4.6-dimethylpyrimidine, expressed as pyrimethanil",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00003037-PAR",
+  "name": "Tebuconazole (sum of tebuconazole, hydroxy-tebuconazole, and their conjugates, expressed as tebuconazole)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-1064-001-PPP",
+  "name": "4,4'-Dichlorodiphenyl sulfone",
+  "pestClass": "AS",
+  "cas": "80-07-9"
+ },
+ {
+  "code": "RF-0525-001-PPP",
+  "name": "Butoxycarboxim",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0729-001-PPP",
+  "name": "Furmecyclox",
+  "pestClass": "AS",
+  "cas": "60568-05-0"
+ },
+ {
+  "code": "RF-0752-001-PPP",
+  "name": "Isazofos",
+  "pestClass": "AS",
+  "cas": "42509-80-8"
+ },
+ {
+  "code": "RF-0753-001-PPP",
+  "name": "Isocarbamid",
+  "pestClass": "AS",
+  "cas": "30979-48-7"
+ },
+ {
+  "code": "RF-0755-001-PPP",
+  "name": "Isodrin",
+  "pestClass": "AS",
+  "cas": "465-73-6"
+ },
+ {
+  "code": "RF-0773-001-PPP",
+  "name": "Kelevan",
+  "pestClass": "AS",
+  "cas": "4234-79-1"
+ },
+ {
+  "code": "RF-0780-001-PPP",
+  "name": "Mepronil",
+  "pestClass": "AS",
+  "cas": "55814-41-0"
+ },
+ {
+  "code": "RF-0804-001-PPP",
+  "name": "Naptalam",
+  "pestClass": "AS",
+  "cas": "132-66-1"
+ },
+ {
+  "code": "RF-0805-001-PPP",
+  "name": "Neburon",
+  "pestClass": "AS",
+  "cas": "555-37-3"
+ },
+ {
+  "code": "RF-0812-001-PPP",
+  "name": "Nitralin",
+  "pestClass": "AS",
+  "cas": "4726-14-1"
+ },
+ {
+  "code": "RF-0817-001-PPP",
+  "name": "Noruron",
+  "pestClass": "AS",
+  "cas": "18530-56-8"
+ },
+ {
+  "code": "RF-0823-001-PPP",
+  "name": "2-phenylphenol",
+  "pestClass": "RD",
+  "cas": "90-43-7"
+ },
+ {
+  "code": "RF-0841-001-PPP",
+  "name": "Perfluidone",
+  "pestClass": "AS",
+  "cas": "37924-13-3"
+ },
+ {
+  "code": "RF-0854-001-PPP",
+  "name": "Pretilachlor",
+  "pestClass": "AS",
+  "cas": "51218-49-6"
+ },
+ {
+  "code": "RF-0933-001-PPP",
+  "name": "Thiofanox",
+  "pestClass": "AS",
+  "cas": "39196-18-4"
+ },
+ {
+  "code": "RF-0944-001-PPP",
+  "name": "Tralomethrin",
+  "pestClass": "AS",
+  "cas": "66841-25-6"
+ },
+ {
+  "code": "RF-0958-001-PPP",
+  "name": "Tridiphane",
+  "pestClass": "AS",
+  "cas": "58138-08-2"
+ },
+ {
+  "code": "RF-0969-001-PPP",
+  "name": "Vamidothion",
+  "pestClass": "AS",
+  "cas": "2275-23-2"
+ },
+ {
+  "code": "RF-0990-001-PPP",
+  "name": "2,2,2-Trichloro-1-(3,4-dichlorophenyl)ethyl acetate",
+  "pestClass": "AS",
+  "cas": "21757-82-4"
+ },
+ {
+  "code": "RF-1003-001-PPP",
+  "name": "Vinclozolin, iprodione, procymidone, sum of compounds and all metabolites containing the 3,5-dichloroaniline moiety expressed as 3,5 dichloroaniline",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0594-002-PPP",
+  "name": "Demeton-S-Methyl",
+  "pestClass": "AS",
+  "cas": "919-86-8"
+ },
+ {
+  "code": "RF-0416-001-PPP",
+  "name": "Thiabendazole",
+  "pestClass": "AS",
+  "cas": "148-79-8"
+ },
+ {
+  "code": "RF-0034-003-PPP",
+  "name": "Azocyclotin",
+  "pestClass": "AS",
+  "cas": "41083-11-8"
+ },
+ {
+  "code": "RF-0041-002-PPP",
+  "name": "Carbendazim",
+  "pestClass": "AS",
+  "cas": "10605-21-7"
+ },
+ {
+  "code": "RF-0096-003-PPP",
+  "name": "Sethoxydim",
+  "pestClass": "AS",
+  "cas": "74051-80-2"
+ },
+ {
+  "code": "RF-0187-006-PPP",
+  "name": "Fenthion",
+  "pestClass": "AS",
+  "cas": "55-38-9"
+ },
+ {
+  "code": "RF-0223-002-PPP",
+  "name": "Formetanate",
+  "pestClass": "AS",
+  "cas": "22259-30-9"
+ },
+ {
+  "code": "RF-0423-001-PPP",
+  "name": "Thiram (expressed as thiram)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0185-001-PPP",
+  "name": "Fenpropimorph (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0451-001-PPP",
+  "name": "Ziram",
+  "pestClass": "AS",
+  "cas": "137-30-4"
+ },
+ {
+  "code": "RF-0362-002-PPP",
+  "name": "Propoxycarbazone",
+  "pestClass": "AS",
+  "cas": "145026-81-9"
+ },
+ {
+  "code": "RF-0096-005-PPP",
+  "name": "Clethodim",
+  "pestClass": "AS",
+  "cas": "99129-21-2"
+ },
+ {
+  "code": "RF-00000010-MCG",
+  "name": "Bacillus pumilus",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0845-001-PPP",
+  "name": "Phenol",
+  "pestClass": "RD",
+  "cas": "108-95-2"
+ },
+ {
+  "code": "RF-0788-001-PPP",
+  "name": "Methyl bromide",
+  "pestClass": "AS",
+  "cas": "74-83-9"
+ },
+ {
+  "code": "RF-0231-001-PPP",
+  "name": "Glufosinate-ammonium",
+  "pestClass": "COMP",
+  "cas": "77182-82-2"
+ },
+ {
+  "code": "RF-00002606-PAR",
+  "name": "Ametoctradin, metabolite 4-(7-amino-5-ethyl [1,2,4]triazolo, [1,5-a]pyrimidin-6-yl) butanoic acid (M650F01) and metabolite 6-(7-amino-5-ethyl [1,2,4]triazolo [1,5-a]pyrimidin-6-yl) hexanoic acid (M650F06), expressed as ametoctradin",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0130-001-PPP",
+  "name": "Dicofol (sum of p, p' and o,p' isomers)",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-0134-002-PPP",
+  "name": "Diflubenzuron (sum of Diflubenzuron and 4-chlorophenylurea expressed as Diflubenzuron)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00001664-PAR",
+  "name": "Epoxidised soybean oil",
+  "pestClass": "AS",
+  "cas": "8013-07-8"
+ },
+ {
+  "code": "RF-00002584-PAR",
+  "name": "3,4-dichloraniline",
+  "pestClass": "AS",
+  "cas": "95-76-1"
+ },
+ {
+  "code": "RF-00002585-PAR",
+  "name": "MCPA-thioethyl",
+  "pestClass": "COMP",
+  "cas": "25319-90-8"
+ },
+ {
+  "code": "RF-0461-001-PPP",
+  "name": "Acifluorfen",
+  "pestClass": "AS",
+  "cas": "50594-66-6"
+ },
+ {
+  "code": "RF-0465-001-PPP",
+  "name": "Alloxydim",
+  "pestClass": "AS",
+  "cas": "55634-91-8"
+ },
+ {
+  "code": "RF-0472-001-PPP",
+  "name": "Ampropylfos",
+  "pestClass": "AS",
+  "cas": "16606-64-7"
+ },
+ {
+  "code": "RF-0474-001-PPP",
+  "name": "Anilofos",
+  "pestClass": "AS",
+  "cas": "64249-01-0"
+ },
+ {
+  "code": "RF-0489-001-PPP",
+  "name": "Bendiocarb",
+  "pestClass": "AS",
+  "cas": "22781-23-3"
+ },
+ {
+  "code": "RF-0501-001-PPP",
+  "name": "Benzoylprop",
+  "pestClass": "AS",
+  "cas": "22212-56-2"
+ },
+ {
+  "code": "RF-0506-001-PPP",
+  "name": "Biphenyl",
+  "pestClass": "AS",
+  "cas": "92-52-4"
+ },
+ {
+  "code": "RF-0510-001-PPP",
+  "name": "Brodifacoum",
+  "pestClass": "AS",
+  "cas": "56073-10-0"
+ },
+ {
+  "code": "RF-0512-001-PPP",
+  "name": "Bromethalin",
+  "pestClass": "AS",
+  "cas": "63333-35-7"
+ },
+ {
+  "code": "RF-0518-001-PPP",
+  "name": "Bronopol",
+  "pestClass": "AS",
+  "cas": "52-51-7"
+ },
+ {
+  "code": "RF-0526-001-PPP",
+  "name": "Butroxydim",
+  "pestClass": "AS",
+  "cas": "138164-12-2"
+ },
+ {
+  "code": "RF-0527-001-PPP",
+  "name": "Buturon",
+  "pestClass": "AS",
+  "cas": "3766-60-7"
+ },
+ {
+  "code": "RF-0556-001-PPP",
+  "name": "Chloroneb",
+  "pestClass": "AS",
+  "cas": "2675-77-6"
+ },
+ {
+  "code": "RF-0557-001-PPP",
+  "name": "Chloropropylate",
+  "pestClass": "AS",
+  "cas": "5836-10-2"
+ },
+ {
+  "code": "RF-0561-001-PPP",
+  "name": "Chlorthiophos",
+  "pestClass": "AS",
+  "cas": "60238-56-4"
+ },
+ {
+  "code": "RF-0564-001-PPP",
+  "name": "Cinosulfuron",
+  "pestClass": "AS",
+  "cas": "94593-91-6"
+ },
+ {
+  "code": "RF-0574-001-PPP",
+  "name": "Crotoxyphos",
+  "pestClass": "AS",
+  "cas": "7700-17-6"
+ },
+ {
+  "code": "RF-0575-001-PPP",
+  "name": "Crufomate",
+  "pestClass": "AS",
+  "cas": "299-86-5"
+ },
+ {
+  "code": "RF-0579-001-PPP",
+  "name": "Cybutryne",
+  "pestClass": "AS",
+  "cas": "28159-98-0"
+ },
+ {
+  "code": "RF-0590-001-PPP",
+  "name": "Cythioate",
+  "pestClass": "AS",
+  "cas": "115-93-5"
+ },
+ {
+  "code": "RF-0620-001-PPP",
+  "name": "Diflufenzopyr",
+  "pestClass": "AS",
+  "cas": "109293-97-2"
+ },
+ {
+  "code": "RF-0623-001-PPP",
+  "name": "Dimefuron",
+  "pestClass": "AS",
+  "cas": "34205-21-5"
+ },
+ {
+  "code": "RF-0624-001-PPP",
+  "name": "Dimepiperate",
+  "pestClass": "AS",
+  "cas": "61432-55-1"
+ },
+ {
+  "code": "RF-0651-001-PPP",
+  "name": "Empenthrin",
+  "pestClass": "AS",
+  "cas": "54406-48-3"
+ },
+ {
+  "code": "RF-0680-001-PPP",
+  "name": "Fenoxaprop",
+  "pestClass": "AS",
+  "cas": "95617-09-7"
+ },
+ {
+  "code": "RF-0878-001-PPP",
+  "name": "Pyrifenox",
+  "pestClass": "AS",
+  "cas": "88283-41-4"
+ },
+ {
+  "code": "RF-0886-001-PPP",
+  "name": "Quinoclamine",
+  "pestClass": "AS",
+  "cas": "2797-51-5"
+ },
+ {
+  "code": "RF-0901-001-PPP",
+  "name": "Sulfentrazone",
+  "pestClass": "AS",
+  "cas": "122836-35-5"
+ },
+ {
+  "code": "RF-0903-001-PPP",
+  "name": "Sulfotep",
+  "pestClass": "AS",
+  "cas": "3689-24-5"
+ },
+ {
+  "code": "RF-0009-001-PPP",
+  "name": "2,4,5-T",
+  "pestClass": "AS",
+  "cas": "93-76-5"
+ },
+ {
+  "code": "RF-0025-001-PPP",
+  "name": "Amitrole",
+  "pestClass": "AS",
+  "cas": "61-82-5"
+ },
+ {
+  "code": "RF-0054-001-PPP",
+  "name": "Bromuconazole (sum of diasteroisomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0080-001-PPP",
+  "name": "Chloridazon",
+  "pestClass": "AS",
+  "cas": "1698-60-8"
+ },
+ {
+  "code": "RF-0090-001-PPP",
+  "name": "Chlorthal-dimethyl",
+  "pestClass": "AS",
+  "cas": "1861-32-1"
+ },
+ {
+  "code": "RF-0156-001-PPP",
+  "name": "Endrin",
+  "pestClass": "AS",
+  "cas": "72-20-8"
+ },
+ {
+  "code": "RF-0161-001-PPP",
+  "name": "Ethion",
+  "pestClass": "AS",
+  "cas": "563-12-2"
+ },
+ {
+  "code": "RF-0162-001-PPP",
+  "name": "Ethirimol",
+  "pestClass": "AS",
+  "cas": "23947-60-6"
+ },
+ {
+  "code": "RF-0168-001-PPP",
+  "name": "Etofenprox",
+  "pestClass": "AS",
+  "cas": "80844-07-1"
+ },
+ {
+  "code": "RF-0179-001-PPP",
+  "name": "Fenhexamid",
+  "pestClass": "AS",
+  "cas": "126833-17-8"
+ },
+ {
+  "code": "RF-0196-001-PPP",
+  "name": "Forchlorfenuron",
+  "pestClass": "AS",
+  "cas": "68157-60-8"
+ },
+ {
+  "code": "RF-0228-001-PPP",
+  "name": "Furathiocarb",
+  "pestClass": "AS",
+  "cas": "65907-30-4"
+ },
+ {
+  "code": "RF-0280-001-PPP",
+  "name": "Metaflumizone (sum of E- and Z- isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0290-001-PPP",
+  "name": "Methidathion",
+  "pestClass": "AS",
+  "cas": "950-37-8"
+ },
+ {
+  "code": "RF-0306-001-PPP",
+  "name": "Monolinuron",
+  "pestClass": "AS",
+  "cas": "1746-81-2"
+ },
+ {
+  "code": "RF-0034-001-PPP",
+  "name": "Azocyclotin and Cyhexatin (sum of azocyclotin and cyhexatin expressed as cyhexatin)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0041-001-PPP",
+  "name": "Carbendazim and benomyl (sum of benomyl and carbendazim expressed as carbendazim)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0383-001-PPP",
+  "name": "Quintozene (sum of quintozene and pentachloro-aniline expressed as quintozene)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0364-002-PPP",
+  "name": "Propyzamide (sum of propyzamide and all metabolites containing the 3,5-dichlorobenzoic acid fraction expressed as propyzamide)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0253-003-PPP",
+  "name": "Ioxynil octanoate",
+  "pestClass": "COMP",
+  "cas": "3861-47-0"
+ },
+ {
+  "code": "RF-1048-001-PPP",
+  "name": "Flamprop-methyl",
+  "pestClass": "COMP",
+  "cas": "52756-25-9"
+ },
+ {
+  "code": "RF-00000015-PAR",
+  "name": "Cyenopyrafen",
+  "pestClass": "AS",
+  "cas": "560121-52-0"
+ },
+ {
+  "code": "RF-0425-001-PPP",
+  "name": "Tolylfluanid (Sum of tolylfluanid and dimethylaminosulfotoluidide expressed as tolylfluanid)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0437-001-PPP",
+  "name": "Tricyclazole",
+  "pestClass": "AS",
+  "cas": "41814-78-2"
+ },
+ {
+  "code": "RF-0438-001-PPP",
+  "name": "Tridemorph",
+  "pestClass": "AS",
+  "cas": "24602-86-6"
+ },
+ {
+  "code": "RF-00002582-PAR",
+  "name": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0011-003-PPP",
+  "name": "Avermectin B1a",
+  "pestClass": "RD",
+  "cas": "65195-55-3"
+ },
+ {
+  "code": "RF-0447-001-PPP",
+  "name": "Triticonazole",
+  "pestClass": "AS",
+  "cas": "138182-18-0"
+ },
+ {
+  "code": "RF-0136-001-PPP",
+  "name": "Dimethachlor",
+  "pestClass": "AS",
+  "cas": "50563-36-5"
+ },
+ {
+  "code": "RF-0120-001-PPP",
+  "name": "Deltamethrin (cis-deltamethrin)",
+  "pestClass": "RD",
+  "cas": "52918-63-5"
+ },
+ {
+  "code": "RF-0335-001-PPP",
+  "name": "Phenothrin (phenothrin including other mixtures of constituent isomers (sum of isomers))",
+  "pestClass": "AS",
+  "cas": "26002-80-2"
+ },
+ {
+  "code": "RF-0281-001-PPP",
+  "name": "Metalaxyl and metalaxyl-M (metalaxyl including other mixtures of constituent isomers including metalaxyl-M (sum of isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-0494-001-PPP",
+  "name": "Bensulfuron-Methyl",
+  "pestClass": "RD",
+  "cas": "83055-99-6"
+ },
+ {
+  "code": "RF-0405-001-PPP",
+  "name": "Tebufenpyrad",
+  "pestClass": "AS",
+  "cas": "119168-77-3"
+ },
+ {
+  "code": "RF-0044-001-PPP",
+  "name": "Bifenazate",
+  "pestClass": "AS",
+  "cas": "149877-41-8"
+ },
+ {
+  "code": "RF-0664-001-PPP",
+  "name": "Ethiprole",
+  "pestClass": "AS",
+  "cas": "181587-01-9"
+ },
+ {
+  "code": "RF-0031-001-PPP",
+  "name": "Azimsulfuron",
+  "pestClass": "AS",
+  "cas": "120162-55-2"
+ },
+ {
+  "code": "RF-0113-001-PPP",
+  "name": "Cyproconazole",
+  "pestClass": "AS",
+  "cas": "94361-06-5"
+ },
+ {
+  "code": "RF-0172-001-PPP",
+  "name": "Fenamidone",
+  "pestClass": "AS",
+  "cas": "161326-34-7"
+ },
+ {
+  "code": "RF-0217-001-PPP",
+  "name": "Flurtamone",
+  "pestClass": "AS",
+  "cas": "96525-23-4"
+ },
+ {
+  "code": "RF-0222-001-PPP",
+  "name": "Foramsulfuron",
+  "pestClass": "AS",
+  "cas": "173159-57-4"
+ },
+ {
+  "code": "RF-0249-001-PPP",
+  "name": "Imazosulfuron",
+  "pestClass": "AS",
+  "cas": "122548-33-8"
+ },
+ {
+  "code": "RF-0345-001-PPP",
+  "name": "Picoxystrobin",
+  "pestClass": "AS",
+  "cas": "117428-22-5"
+ },
+ {
+  "code": "RF-0874-001-PPP",
+  "name": "Piributicarb",
+  "pestClass": "AS",
+  "cas": "88678-67-5"
+ },
+ {
+  "code": "RF-00004653-PAR",
+  "name": "505M09, expressed as dimoxystrobin",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004683-PAR",
+  "name": "Flonicamid (sum of flonicamid, TFNA and TFNG expressed as flonicamid)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005729-PAR",
+  "name": "Chloridazon (sum of chloridazon and chloridazon-desphenyl, expressed as chloridazon)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00005797-PAR",
+  "name": "2-dodecyl-3-hydroxy-1,4-naphthoquinone",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00011560-PAR",
+  "name": "Ioxynil (sum of ioxynil and its salts, expressed as ioxynil)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00010939-PAR",
+  "name": "Oxymatrine",
+  "pestClass": null,
+  "cas": "16837-52-8"
+ },
+ {
+  "code": "RF-00011514-PAR",
+  "name": "Bicyclopyrone",
+  "pestClass": "AS",
+  "cas": "352010-68-5"
+ },
+ {
+  "code": "RF-00011800-PAR",
+  "name": "Aspergillus flavus MUCL 54911",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012004-PAR",
+  "name": "Bacillus thuringiensis ssp. Aizawai ABTS-1857",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00001825-PAR",
+  "name": "Trimethylamine hydrochloride",
+  "pestClass": "AS",
+  "cas": "593-81-7"
+ },
+ {
+  "code": "RF-0591-001-PPP",
+  "name": "Daimuron",
+  "pestClass": "AS",
+  "cas": "42609-52-9"
+ },
+ {
+  "code": "RF-0625-001-PPP",
+  "name": "Dimethametryn",
+  "pestClass": "AS",
+  "cas": "22936-75-0"
+ },
+ {
+  "code": "RF-0630-001-PPP",
+  "name": "Dinitramine",
+  "pestClass": "AS",
+  "cas": "29091-05-2"
+ },
+ {
+  "code": "RF-0694-001-PPP",
+  "name": "Flamprop-M-Isopropyl",
+  "pestClass": "COMP",
+  "cas": "63782-90-1"
+ },
+ {
+  "code": "RF-0703-001-PPP",
+  "name": "Fluchloralin",
+  "pestClass": "AS",
+  "cas": "33245-39-5"
+ },
+ {
+  "code": "RF-0873-001-PPP",
+  "name": "Pyrazoxyfen",
+  "pestClass": "AS",
+  "cas": "71561-11-0"
+ },
+ {
+  "code": "RF-0895-001-PPP",
+  "name": "Silafluofen",
+  "pestClass": "AS",
+  "cas": "105024-66-6"
+ },
+ {
+  "code": "RF-0924-001-PPP",
+  "name": "Thenylchlor",
+  "pestClass": "AS",
+  "cas": "96491-05-3"
+ },
+ {
+  "code": "RF-0931-001-PPP",
+  "name": "Thifluzamide",
+  "pestClass": "AS",
+  "cas": "130000-40-7"
+ },
+ {
+  "code": "RF-0116-001-PPP",
+  "name": "Dalapon",
+  "pestClass": "AS",
+  "cas": "75-99-0"
+ },
+ {
+  "code": "RF-0229-001-PPP",
+  "name": "Furconazole",
+  "pestClass": "AS",
+  "cas": "112839-33-5"
+ },
+ {
+  "code": "RF-0294-001-PPP",
+  "name": "Methoprene",
+  "pestClass": "AS",
+  "cas": "40596-69-8"
+ },
+ {
+  "code": "RF-0681-002-PPP",
+  "name": "Fenoxaprop-ethyl",
+  "pestClass": "COMP",
+  "cas": "66441-23-4"
+ },
+ {
+  "code": "RF-1030-001-PPP",
+  "name": "Dipropetryn",
+  "pestClass": "AS",
+  "cas": "4147-51-7"
+ },
+ {
+  "code": "RF-1042-001-PPP",
+  "name": "Trifenmorph",
+  "pestClass": "AS",
+  "cas": "1420-06-0"
+ },
+ {
+  "code": "RF-1009-001-PPP",
+  "name": "Furfural",
+  "pestClass": "AS",
+  "cas": "98-01-1"
+ },
+ {
+  "code": "RF-00004667-PAR",
+  "name": "Haloxyfop (Sum of haloxyfop, its esters, salts and conjugates expressed as haloxyfop (sum of the R- and S- isomers at any ratio))",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00007608-PAR",
+  "name": "DDAC-C14  (Alkyl-quaternary ammonium salts with alkyl chain lengths of C14)",
+  "pestClass": "COMP",
+  "cas": null
+ },
+ {
+  "code": "RF-00006326-PAR",
+  "name": "Trifluoroacetic acid",
+  "pestClass": null,
+  "cas": "76-05-1"
+ },
+ {
+  "code": "RF-00005775-PAR",
+  "name": "Sodium hypochlorite",
+  "pestClass": "AS",
+  "cas": "7681-52-9"
+ },
+ {
+  "code": "RF-00007585-PAR",
+  "name": "Isofetamid",
+  "pestClass": "AS",
+  "cas": "875915-78-9"
+ },
+ {
+  "code": "RF-00008405-PAR",
+  "name": "Ethyl hexanoate",
+  "pestClass": null,
+  "cas": "123-66-0"
+ },
+ {
+  "code": "RF-00008184-PAR",
+  "name": "Glutaraldehyde",
+  "pestClass": "AS",
+  "cas": "111-30-8"
+ },
+ {
+  "code": "RF-00010264-PAR",
+  "name": "Napropamide-M",
+  "pestClass": "AS",
+  "cas": "41643-35-0"
+ },
+ {
+  "code": "RF-00012017-PAR",
+  "name": "Bixlozone",
+  "pestClass": "AS",
+  "cas": "81777-95-9"
+ },
+ {
+  "code": "RF-00012024-PAR",
+  "name": "Willow bark and stem extract",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012020-PAR",
+  "name": "Inpyrfluxam (S-2399)",
+  "pestClass": "AS",
+  "cas": "1352994-67-2"
+ },
+ {
+  "code": "RF-00012293-PAR",
+  "name": "Tembotrione (Sum of parent tembotrione (AE 0172747) and its metabolite M5 (4,6-dihydroxy tembotrione), expressed as tembotrione)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012027-PAR",
+  "name": "Beauveria bassiana GHA",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00012869-PAR",
+  "name": "Sedaxane (sum of isomers)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00012870-PAR",
+  "name": "Penflufen (sum of isomers)",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00012873-PAR",
+  "name": "Bacillus amyloliquefaciens AH2",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00013778-PAR",
+  "name": "Metarhizium brunneum Cb15-III",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00013779-PAR",
+  "name": "Beauveria bassiana BOV1",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00013000-PAR",
+  "name": "Sum of terbuthylazine and desethyl-terbuthylazine, expressed as terbuthylazine",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00012898-PAR",
+  "name": "Sum of Proquinazid and metabolite (3-[(6-iodo-4-oxo-3-propyl-3,4-dihydroquinazolin-2-yl)oxy]propanoic acid (IN-MU210)) expressed as proquinazid",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00013161-PAR",
+  "name": "Betabaculovirus phoperculellae",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014603-PAR",
+  "name": "Beauveria bassiana strain 147",
+  "pestClass": "AS",
+  "cas": null
+ },
+ {
+  "code": "RF-00014544-PAR",
+  "name": "Tetrachlorethane",
+  "pestClass": "AS",
+  "cas": "79-34-5"
+ },
+ {
+  "code": "RF-0151-001-PPP",
+  "name": "Dithiocarbamates (Dithiocarbamates expressed as CS2, including Maneb, Mancozeb, Metiram, Propineb, Thiram and Ziram)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00004817-PAR",
+  "name": "Saflufenacil (sum of saflufenacil, M800H11 and M800H35, expressed as saflufenacil)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00012043-PAR",
+  "name": "Paclobutrazol (sum of constituent isomers)",
+  "pestClass": "RD",
+  "cas": null
+ },
+ {
+  "code": "RF-00013218-PAR",
+  "name": "Lemon, ext.",
+  "pestClass": "AS",
+  "cas": "84929-31-7"
+ },
+ {
+  "code": "RF-00013001-PAR",
+  "name": "Free and conjugated forms of alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090) expressed as myclobutanil",
+  "pestClass": null,
+  "cas": null
+ },
+ {
+  "code": "RF-00015328-PAR",
+  "name": "Sodium dodecyl sulphate (Sodium lauryl sulfate)",
+  "pestClass": "AS",
+  "cas": "151-21-3"
+ },
+ {
+  "code": "RF-00014766-PAR",
+  "name": "Alpha-Lactalbumin",
+  "pestClass": "AS",
+  "cas": "9051-29-0"
+ },
+ {
+  "code": "RF-00016206-PAR",
+  "name": "Bacillus nakamurai F727",
+  "pestClass": "AS",
+  "cas": null
+ }
+]

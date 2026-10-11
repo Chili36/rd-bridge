@@ -1,0 +1,36 @@
+# Downloads public EFSA/Zenodo monitoring files; stores only aggregate output.
+# Can be run manually on main in the Actions tab after publication.
+name: Validate 2024 reporting (SE + FR)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [validation/monitoring-2024]
+    paths:
+      - scripts/validate_monitoring.py
+      - tests/test_validate_monitoring.py
+      - .github/workflows/validate.yml
+
+permissions:
+  contents: read
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Offline unit tests
+        run: python -m unittest discover -s tests -t .
+      - name: Compare to EFSA 2024 reporting published on Zenodo
+        run: python -m scripts.validate_monitoring --countries SE FR --output reports/monitoring_2024.json
+      - name: Preserve aggregate results
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitoring-2024-aggregates
+          path: reports/monitoring_2024.json

@@ -1,0 +1,78 @@
+# Ask the model (rd_bridge.model_parts) to read new or changed definitions into components,
+# rebuild the map, compare with the rule parser, and open a PR with the result.
+# Runs only when started by hand on main; never on pull requests, so forks never see the key.
+name: Model readings
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Model that reads the definitions"
+        type: choice
+        options: [claude-haiku-5-5, claude-sonnet-5-5]
+        default: claude-haiku-5-5
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: model-readings
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash  # explicit bash runs with -o pipefail: a failing step piped into tee fails the job
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -t .
+
+      - name: Rebuild the map from the current data
+        run: python -m rd_bridge.match  # the model step reads the definitions from this map
+
+      - name: Read definitions with the model
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RD_BRIDGE_MODEL: ${{ inputs.model }}
+        run: python -m rd_bridge.model_parts | tee parts.txt
+
+      - name: Rebuild the map with the readings and compare
+        env:
+          RD_BRIDGE_MODEL: ${{ inputs.model }}  # the cache is read only for the model that made it
+        run: |
+          python -m rd_bridge.match | tee match.txt
+          # exit 3: acceptance cases fail, reported in the PR; any other failure stops the job
+          status=0
+          python -m rd_bridge.compare_parts > comparison.md || status=$?
+          if [ "$status" != 0 ] && [ "$status" != 3 ]; then exit "$status"; fi
+          echo "cases_exit=$status" >> "$GITHUB_ENV"
+
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="model/readings-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add data/
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Model readings, ${{ inputs.model }} (run ${{ github.run_id }})"
+          git push origin "$branch"
+          {
+            echo "Model readings by ${{ inputs.model }}, workflow run ${{ github.run_id }}."
+            if [ "$cases_exit" != "0" ]; then echo; echo "**Some acceptance cases fail: see below.**"; fi
+            echo; echo '```'; cat parts.txt match.txt; echo '```'; echo
+            cat comparison.md
+          } > body.md
+          gh pr create --base main --head "$branch" --title "Model readings, ${{ inputs.model }} (run ${{ github.run_id }})" --body-file body.md

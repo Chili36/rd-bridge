@@ -1,0 +1,791 @@
+{
+  "purpose": "Reference-map recognition and concordance with accepted 2024 reporting, not proof of correctness",
+  "definition_snapshot": "current (2026-10-11)",
+  "baseline_commit": "d2d1b12ab49df9ee534c4cead132d7b2e9d9e716",
+  "before_map_residues": 684,
+  "after_map_residues": 684,
+  "countries": {
+    "SE": {
+      "source": {
+        "zenodo_record": 20036095,
+        "doi": "10.5281/zenodo.20036095",
+        "file": "MOPER_ALL_DATA_SSD2_2024_SE.ZIP",
+        "bytes": 12876997,
+        "md5": "b9fd815d12be742426e697139a631a73"
+      },
+      "counts": {
+        "total_reporting_rows": 393998,
+        "rows_with_param_code": 393998,
+        "whole_judgeable": 225636,
+        "whole_agreement": 218450,
+        "whole_disagreement": 7186,
+        "previously_unmapped_now_recognized": 53889,
+        "whole_not_judgeable": 665,
+        "full_definition_P005A_judgeable": 43220,
+        "full_definition_P005A_agreement": 43130,
+        "full_definition_P005A_disagreement": 90,
+        "full_definition_P005A_agreement_fraction": 0.99791763,
+        "all_param_types_candidate_agreement_fraction": 0.96815225
+      },
+      "parameter_type_breakdown": {
+        "all": {
+          "N_A": 314690,
+          "P002A": 24164,
+          "P005A": 44378,
+          "P004A": 10766
+        },
+        "whole_code_candidates": {
+          "N_A": 164636,
+          "P002A": 8241,
+          "P005A": 43340,
+          "P004A": 10084
+        },
+        "compared": {
+          "N_A": 164171,
+          "P002A": 8241,
+          "P005A": 43220,
+          "P004A": 10004
+        },
+        "agreed": {
+          "N_A": 163374,
+          "P005A": 43130,
+          "P002A": 1942,
+          "P004A": 10004
+        },
+        "disagreed": {
+          "P002A": 6299,
+          "N_A": 797,
+          "P005A": 90
+        }
+      },
+      "recognized_before": {
+        "whole": 226301,
+        "unmapped": 98383,
+        "component": 68255,
+        "ambiguous": 1059
+      },
+      "recognized_after": {
+        "whole": 226301,
+        "no_residue_definition": 48076,
+        "unmapped": 44494,
+        "component": 72311,
+        "qualifier": 729,
+        "ambiguous": 2087
+      },
+      "new_no_definition_param_codes": [
+        [
+          "RF-0517-001-PPP",
+          1055
+        ],
+        [
+          "RF-0484-001-PPP",
+          910
+        ],
+        [
+          "RF-0668-001-PPP",
+          629
+        ],
+        [
+          "RF-0869-001-PPP",
+          629
+        ],
+        [
+          "RF-0453-001-PPP",
+          629
+        ],
+        [
+          "RF-0576-001-PPP",
+          629
+        ],
+        [
+          "RF-0756-001-PPP",
+          629
+        ],
+        [
+          "RF-0758-001-PPP",
+          629
+        ],
+        [
+          "RF-0754-001-PPP",
+          629
+        ],
+        [
+          "RF-0762-001-PPP",
+          629
+        ],
+        [
+          "RF-0922-001-PPP",
+          629
+        ],
+        [
+          "RF-0654-001-PPP",
+          629
+        ],
+        [
+          "RF-0612-001-PPP",
+          629
+        ],
+        [
+          "RF-0857-001-PPP",
+          614
+        ],
+        [
+          "RF-00009487-PAR",
+          614
+        ],
+        [
+          "RF-0594-002-PPP",
+          614
+        ],
+        [
+          "RF-0936-001-PPP",
+          614
+        ],
+        [
+          "RF-0793-001-PPP",
+          614
+        ],
+        [
+          "RF-00009486-PAR",
+          614
+        ],
+        [
+          "RF-0677-001-PPP",
+          612
+        ],
+        [
+          "RF-0943-001-PPP",
+          612
+        ],
+        [
+          "RF-0739-001-PPP",
+          576
+        ],
+        [
+          "RF-0877-001-PPP",
+          529
+        ],
+        [
+          "RF-0878-001-PPP",
+          529
+        ],
+        [
+          "RF-0535-001-PPP",
+          529
+        ],
+        [
+          "RF-0923-001-PPP",
+          529
+        ],
+        [
+          "RF-0969-001-PPP",
+          529
+        ],
+        [
+          "RF-0595-001-PPP",
+          529
+        ],
+        [
+          "RF-0597-001-PPP",
+          529
+        ],
+        [
+          "RF-0937-001-PPP",
+          529
+        ]
+      ],
+      "full_definition_P005A_disagreements": [
+        {
+          "residue": "Fluopyram (R)",
+          "reported": "RF-1071-001-PPP",
+          "expected_current": "RF-00000023-PAR",
+          "param_type": "P005A",
+          "rows": 15
+        },
+        {
+          "residue": "Flusilazole (R)(F)",
+          "reported": "RF-0218-001-PPP",
+          "expected_current": "RF-0218-002-PPP",
+          "param_type": "P005A",
+          "rows": 15
+        },
+        {
+          "residue": "Metalaxyl and metalaxyl-M (metalaxyl including other mixtures of constituent isomers including metalaxyl-M (sum of isomers))(R)",
+          "reported": "RF-0281-001-PPP",
+          "expected_current": "RF-00015695-PAR",
+          "param_type": "P005A",
+          "rows": 15
+        },
+        {
+          "residue": "Procymidone (R)",
+          "reported": "RF-0350-001-PPP",
+          "expected_current": "RF-1003-001-PPP",
+          "param_type": "P005A",
+          "rows": 15
+        },
+        {
+          "residue": "Tebuconazole (R)",
+          "reported": "RF-0403-001-PPP",
+          "expected_current": "RF-00003037-PAR",
+          "param_type": "P005A",
+          "rows": 15
+        },
+        {
+          "residue": "Thiophanate-methyl (R)",
+          "reported": "RF-0422-001-PPP",
+          "expected_current": "RF-1002-001-PPP",
+          "param_type": "P005A",
+          "rows": 15
+        }
+      ],
+      "whole_disagreements_top": [
+        {
+          "residue": "Captan (Sum of captan and THPI, expressed as captan)(R)",
+          "reported": "RF-0061-001-PPP",
+          "expected_current": "RF-00004681-PAR",
+          "param_type": "P002A",
+          "rows": 651
+        },
+        {
+          "residue": "Tolylfluanid (Sum of tolylfluanid and dimethylaminosulfotoluidide expressed as tolylfluanid)(R)(F)",
+          "reported": "RF-0644-001-PPP",
+          "expected_current": "RF-0425-001-PPP",
+          "param_type": "P002A",
+          "rows": 619
+        },
+        {
+          "residue": "Abamectin (sum of avermectin B1a, avermectin B1b and delta-8,9 isomer of avermectin B1a, expressed as avermectin B1a)(R)(F)",
+          "reported": "RF-0011-003-PPP",
+          "expected_current": "RF-00004655-PAR",
+          "param_type": "P002A",
+          "rows": 619
+        },
+        {
+          "residue": "Pencycuron (sum of pencycuron and pencycuron-PB-amine, expressed as pencycuron)(R)(F)(A)",
+          "reported": "RF-0330-001-PPP",
+          "expected_current": "RF-00012803-PAR",
+          "param_type": "N_A",
+          "rows": 619
+        },
+        {
+          "residue": "Triflumizole: Triflumizole and metabolite FM-6-1(N-(4-chloro-2-trifluoromethylphenyl)-n-propoxyacetamidine), expressed as Triflumizole(R)(F)",
+          "reported": "RF-0440-002-PPP",
+          "expected_current": "RF-0440-001-PPP",
+          "param_type": "P002A",
+          "rows": 530
+        },
+        {
+          "residue": "Thiophanate-methyl (R)",
+          "reported": "RF-0422-001-PPP",
+          "expected_current": "RF-1002-001-PPP",
+          "param_type": "P002A",
+          "rows": 427
+        },
+        {
+          "residue": "Procymidone (R)",
+          "reported": "RF-0350-001-PPP",
+          "expected_current": "RF-1003-001-PPP",
+          "param_type": "P002A",
+          "rows": 380
+        },
+        {
+          "residue": "Tebuconazole (R)",
+          "reported": "RF-0403-001-PPP",
+          "expected_current": "RF-00003037-PAR",
+          "param_type": "P002A",
+          "rows": 380
+        },
+        {
+          "residue": "Iprodione (R)",
+          "reported": "RF-0255-001-PPP",
+          "expected_current": "RF-00003375-PAR",
+          "param_type": "P002A",
+          "rows": 380
+        },
+        {
+          "residue": "Metalaxyl and metalaxyl-M (metalaxyl including other mixtures of constituent isomers including metalaxyl-M (sum of isomers))(R)",
+          "reported": "RF-0281-001-PPP",
+          "expected_current": "RF-00015695-PAR",
+          "param_type": "P002A",
+          "rows": 380
+        },
+        {
+          "residue": "Flusilazole (R)(F)",
+          "reported": "RF-0218-001-PPP",
+          "expected_current": "RF-0218-002-PPP",
+          "param_type": "P002A",
+          "rows": 380
+        },
+        {
+          "residue": "Bixafen(R)(F)",
+          "reported": "RF-1056-001-PPP",
+          "expected_current": "RF-00000010-PAR",
+          "param_type": "P002A",
+          "rows": 367
+        },
+        {
+          "residue": "Fluopyram (R)",
+          "reported": "RF-1071-001-PPP",
+          "expected_current": "RF-00000023-PAR",
+          "param_type": "P002A",
+          "rows": 352
+        },
+        {
+          "residue": "Boscalid (R)(F)",
+          "reported": "RF-0049-001-PPP",
+          "expected_current": "RF-00005715-PAR",
+          "param_type": "P002A",
+          "rows": 321
+        },
+        {
+          "residue": "Chlorpropham(R)",
+          "reported": "RF-0086-003-PPP",
+          "expected_current": "RF-0086-004-PPP",
+          "param_type": "P002A",
+          "rows": 272
+        },
+        {
+          "residue": "Chlorpropham(R)",
+          "reported": "RF-0086-003-PPP",
+          "expected_current": "RF-00003035-PAR",
+          "param_type": "P002A",
+          "rows": 108
+        },
+        {
+          "residue": "Chlorpyrifos-methyl (R)(F)",
+          "reported": "RF-0088-001-PPP",
+          "expected_current": "RF-00007588-PAR",
+          "param_type": "P002A",
+          "rows": 87
+        },
+        {
+          "residue": "Triflumizole: Triflumizole and metabolite FM-6-1(N-(4-chloro-2-trifluoromethylphenyl)-n-propoxyacetamidine), expressed as Triflumizole(R)(F)",
+          "reported": "RF-0440-002-PPP",
+          "expected_current": "RF-0440-001-PPP",
+          "param_type": "N_A",
+          "rows": 72
+        },
+        {
+          "residue": "2-phenylphenol (sum of 2-phenylphenol and its conjugates, expressed as 2-phenylphenol)(R)(F)",
+          "reported": "RF-0823-001-PPP",
+          "expected_current": "RF-00007633-PAR",
+          "param_type": "P002A",
+          "rows": 31
+        },
+        {
+          "residue": "Carfentrazone-ethyl (sum of carfentrazone-ethyl and carfentrazone, expressed as carfentrazone-ethyl)(R)",
+          "reported": "RF-0070-003-PPP",
+          "expected_current": "RF-00012874-PAR",
+          "param_type": "N_A",
+          "rows": 16
+        },
+        {
+          "residue": "Saflufenacil (sum of saflufenacil, M800H11 and M800H35, expressed as saflufenacil)(R)",
+          "reported": "RF-00004816-PAR",
+          "expected_current": "RF-00004817-PAR",
+          "param_type": "P002A",
+          "rows": 15
+        },
+        {
+          "residue": "Tebuconazole (R)",
+          "reported": "RF-0403-001-PPP",
+          "expected_current": "RF-00003037-PAR",
+          "param_type": "N_A",
+          "rows": 15
+        },
+        {
+          "residue": "Thiophanate-methyl (R)",
+          "reported": "RF-0422-001-PPP",
+          "expected_current": "RF-1002-001-PPP",
+          "param_type": "N_A",
+          "rows": 15
+        },
+        {
+          "residue": "Iprodione (R)",
+          "reported": "RF-0255-001-PPP",
+          "expected_current": "RF-00003375-PAR",
+          "param_type": "N_A",
+          "rows": 15
+        },
+        {
+          "residue": "Metalaxyl and metalaxyl-M (metalaxyl including other mixtures of constituent isomers including metalaxyl-M (sum of isomers))(R)",
+          "reported": "RF-0281-001-PPP",
+          "expected_current": "RF-00015695-PAR",
+          "param_type": "N_A",
+          "rows": 15
+        },
+        {
+          "residue": "Flusilazole (R)(F)",
+          "reported": "RF-0218-001-PPP",
+          "expected_current": "RF-0218-002-PPP",
+          "param_type": "N_A",
+          "rows": 15
+        },
+        {
+          "residue": "Chlorpropham(R)",
+          "reported": "RF-0086-003-PPP",
+          "expected_current": "RF-00003035-PAR",
+          "param_type": "N_A",
+          "rows": 15
+        },
+        {
+          "residue": "Tebuconazole (R)",
+          "reported": "RF-0403-001-PPP",
+          "expected_current": "RF-00003037-PAR",
+          "param_type": "P005A",
+          "rows": 15
+        },
+        {
+          "residue": "Thiophanate-methyl (R)",
+          "reported": "RF-0422-001-PPP",
+          "expected_current": "RF-1002-001-PPP",
+          "param_type": "P005A",
+          "rows": 15
+        },
+        {
+          "residue": "Flusilazole (R)(F)",
+          "reported": "RF-0218-001-PPP",
+          "expected_current": "RF-0218-002-PPP",
+          "param_type": "P005A",
+          "rows": 15
+        }
+      ],
+      "limitations": [
+        "The reported PARAM code itself identifies candidate residue(s); this is not an independent accuracy estimate.",
+        "paramType is stratified: only P005A declares a fully analysed residue definition; P004A is a subset sum, P002A is an individual part, N_A has unknown coverage. The all-param-types agreement figure is diagnostic only.",
+        "Only reported whole-residue codes uniquely attributable to a current residue and food codes with interpretable facets are compared for agreement.",
+        "Reported parts are recognized as parts and are not judged as complete whole-residue reports.",
+        "The reference map contains current definitions; 2024 reports may legitimately use definitions applicable on sampling dates.",
+        "Accepted reporting agreement is not proof of correctness; no MRL compliance assessment is performed."
+      ]
+    },
+    "FR": {
+      "source": {
+        "zenodo_record": 20034822,
+        "doi": "10.5281/zenodo.20034822",
+        "file": "MOPER_ALL_DATA_SSD2_2024_FR.ZIP",
+        "bytes": 73607030,
+        "md5": "f5ac9b7491aa2439086d7ef9ddcbba36"
+      },
+      "counts": {
+        "total_reporting_rows": 2164910,
+        "rows_with_param_code": 2164910,
+        "whole_judgeable": 1469820,
+        "whole_agreement": 1448390,
+        "previously_unmapped_now_recognized": 140351,
+        "whole_disagreement": 21430,
+        "whole_not_judgeable": 12774,
+        "whole_unmapped_food_facets": 24482,
+        "full_definition_P005A_judgeable": 1367110,
+        "full_definition_P005A_agreement": 1366940,
+        "full_definition_P005A_disagreement": 170,
+        "full_definition_P005A_agreement_fraction": 0.99987565,
+        "all_param_types_candidate_agreement_fraction": 0.98541998
+      },
+      "parameter_type_breakdown": {
+        "all": {
+          "P005A": 1559471,
+          "P002A": 523087,
+          "P004A": 82352
+        },
+        "whole_code_candidates": {
+          "P005A": 1400485,
+          "P002A": 29754,
+          "P004A": 76837
+        },
+        "compared": {
+          "P005A": 1367110,
+          "P002A": 28504,
+          "P004A": 74206
+        },
+        "agreed": {
+          "P005A": 1366940,
+          "P002A": 7244,
+          "P004A": 74206
+        },
+        "disagreed": {
+          "P002A": 21260,
+          "P005A": 170
+        }
+      },
+      "recognized_before": {
+        "whole": 1507076,
+        "component": 412164,
+        "unmapped": 245670
+      },
+      "recognized_after": {
+        "whole": 1507076,
+        "component": 412164,
+        "unmapped": 105319,
+        "no_residue_definition": 140351
+      },
+      "new_no_definition_param_codes": [
+        [
+          "RF-0794-001-PPP",
+          5515
+        ],
+        [
+          "RF-0919-001-PPP",
+          5515
+        ],
+        [
+          "RF-0922-001-PPP",
+          5515
+        ],
+        [
+          "RF-0623-001-PPP",
+          5515
+        ],
+        [
+          "RF-0549-001-PPP",
+          5515
+        ],
+        [
+          "RF-0903-001-PPP",
+          5515
+        ],
+        [
+          "RF-0576-001-PPP",
+          5515
+        ],
+        [
+          "RF-0511-001-PPP",
+          5515
+        ],
+        [
+          "RF-0738-001-PPP",
+          5515
+        ],
+        [
+          "RF-0739-001-PPP",
+          5515
+        ],
+        [
+          "RF-0862-001-PPP",
+          5515
+        ],
+        [
+          "RF-0467-001-PPP",
+          5515
+        ],
+        [
+          "RF-0754-001-PPP",
+          5515
+        ],
+        [
+          "RF-0677-001-PPP",
+          5511
+        ],
+        [
+          "RF-0758-001-PPP",
+          5511
+        ],
+        [
+          "RF-0869-001-PPP",
+          5511
+        ],
+        [
+          "RF-0724-001-PPP",
+          5481
+        ],
+        [
+          "RF-0654-001-PPP",
+          5481
+        ],
+        [
+          "RF-0453-001-PPP",
+          5481
+        ],
+        [
+          "RF-0936-001-PPP",
+          3355
+        ],
+        [
+          "RF-0943-001-PPP",
+          3355
+        ],
+        [
+          "RF-0810-001-PPP",
+          3355
+        ],
+        [
+          "RF-0751-001-PPP",
+          3355
+        ],
+        [
+          "RF-0489-001-PPP",
+          3355
+        ],
+        [
+          "RF-0776-001-PPP",
+          3355
+        ],
+        [
+          "RF-0504-001-PPP",
+          3355
+        ],
+        [
+          "RF-0877-001-PPP",
+          3355
+        ],
+        [
+          "RF-0762-001-PPP",
+          3355
+        ],
+        [
+          "RF-0596-001-PPP",
+          3325
+        ],
+        [
+          "RF-00009486-PAR",
+          2160
+        ]
+      ],
+      "full_definition_P005A_disagreements": [
+        {
+          "residue": "Diflubenzuron (R)(F)",
+          "reported": "RF-0134-001-PPP",
+          "expected_current": "RF-0134-002-PPP",
+          "param_type": "P005A",
+          "rows": 36
+        },
+        {
+          "residue": "Ethirimol(R)(F)(A)",
+          "reported": "RF-0162-001-PPP",
+          "expected_current": "RF-00005868-PAR",
+          "param_type": "P005A",
+          "rows": 36
+        },
+        {
+          "residue": "Procymidone (R)",
+          "reported": "RF-0350-001-PPP",
+          "expected_current": "RF-1003-001-PPP",
+          "param_type": "P005A",
+          "rows": 36
+        },
+        {
+          "residue": "Thiophanate-methyl (R)",
+          "reported": "RF-0422-001-PPP",
+          "expected_current": "RF-1002-001-PPP",
+          "param_type": "P005A",
+          "rows": 36
+        },
+        {
+          "residue": "Chlorpyrifos-methyl (R)(F)",
+          "reported": "RF-00007588-PAR",
+          "expected_current": "RF-0088-001-PPP",
+          "param_type": "P005A",
+          "rows": 13
+        },
+        {
+          "residue": "Clofentezine (R)",
+          "reported": "RF-0098-002-PPP",
+          "expected_current": "RF-0098-001-PPP",
+          "param_type": "P005A",
+          "rows": 13
+        }
+      ],
+      "whole_disagreements_top": [
+        {
+          "residue": "Abamectin (sum of avermectin B1a, avermectin B1b and delta-8,9 isomer of avermectin B1a, expressed as avermectin B1a)(R)(F)",
+          "reported": "RF-0011-003-PPP",
+          "expected_current": "RF-00004655-PAR",
+          "param_type": "P002A",
+          "rows": 5219
+        },
+        {
+          "residue": "Tolylfluanid (Sum of tolylfluanid and dimethylaminosulfotoluidide expressed as tolylfluanid)(R)(F)",
+          "reported": "RF-0644-001-PPP",
+          "expected_current": "RF-0425-001-PPP",
+          "param_type": "P002A",
+          "rows": 5219
+        },
+        {
+          "residue": "Pencycuron (sum of pencycuron and pencycuron-PB-amine, expressed as pencycuron)(R)(F)(A)",
+          "reported": "RF-0330-001-PPP",
+          "expected_current": "RF-00012803-PAR",
+          "param_type": "P002A",
+          "rows": 5183
+        },
+        {
+          "residue": "Captan (Sum of captan and THPI, expressed as captan)(R)",
+          "reported": "RF-0061-001-PPP",
+          "expected_current": "RF-00004681-PAR",
+          "param_type": "P002A",
+          "rows": 5131
+        },
+        {
+          "residue": "Chlorpyrifos-methyl (R)(F)",
+          "reported": "RF-0088-001-PPP",
+          "expected_current": "RF-00007588-PAR",
+          "param_type": "P002A",
+          "rows": 471
+        },
+        {
+          "residue": "Diflubenzuron (R)(F)",
+          "reported": "RF-0134-001-PPP",
+          "expected_current": "RF-0134-002-PPP",
+          "param_type": "P005A",
+          "rows": 36
+        },
+        {
+          "residue": "Ethirimol(R)(F)(A)",
+          "reported": "RF-0162-001-PPP",
+          "expected_current": "RF-00005868-PAR",
+          "param_type": "P005A",
+          "rows": 36
+        },
+        {
+          "residue": "Procymidone (R)",
+          "reported": "RF-0350-001-PPP",
+          "expected_current": "RF-1003-001-PPP",
+          "param_type": "P005A",
+          "rows": 36
+        },
+        {
+          "residue": "Thiophanate-methyl (R)",
+          "reported": "RF-0422-001-PPP",
+          "expected_current": "RF-1002-001-PPP",
+          "param_type": "P005A",
+          "rows": 36
+        },
+        {
+          "residue": "Diflubenzuron (R)(F)",
+          "reported": "RF-0134-001-PPP",
+          "expected_current": "RF-0134-002-PPP",
+          "param_type": "P002A",
+          "rows": 32
+        },
+        {
+          "residue": "Clofentezine (R)",
+          "reported": "RF-0098-002-PPP",
+          "expected_current": "RF-0098-001-PPP",
+          "param_type": "P005A",
+          "rows": 13
+        },
+        {
+          "residue": "Chlorpyrifos-methyl (R)(F)",
+          "reported": "RF-00007588-PAR",
+          "expected_current": "RF-0088-001-PPP",
+          "param_type": "P005A",
+          "rows": 13
+        },
+        {
+          "residue": "Fenvalerate (any ratio of constituent isomers (RR, SS, RS & SR) including esfenvalerate)(R)(F)",
+          "reported": "RF-0690-006-PPP",
+          "expected_current": "RF-00003017-PAR",
+          "param_type": "P002A",
+          "rows": 5
+        }
+      ],
+      "limitations": [
+        "The reported PARAM code itself identifies candidate residue(s); this is not an independent accuracy estimate.",
+        "paramType is stratified: only P005A declares a fully analysed residue definition; P004A is a subset sum, P002A is an individual part, N_A has unknown coverage. The all-param-types agreement figure is diagnostic only.",
+        "Only reported whole-residue codes uniquely attributable to a current residue and food codes with interpretable facets are compared for agreement.",
+        "Reported parts are recognized as parts and are not judged as complete whole-residue reports.",
+        "The reference map contains current definitions; 2024 reports may legitimately use definitions applicable on sampling dates.",
+        "Accepted reporting agreement is not proof of correctness; no MRL compliance assessment is performed."
+      ]
+    }
+  }
+}

@@ -1,0 +1,832 @@
+[
+ {
+  "residue_id": 1,
+  "definition": "1,1-dichloro-2,2-bis(4-ethylphenyl)ethane",
+  "method": "none"
+ },
+ {
+  "residue_id": 26,
+  "definition": "Sum of bentazone, its salts and 6-hydroxy (free and conjugated), expressed as bentazone",
+  "method": "near"
+ },
+ {
+  "residue_id": 53,
+  "definition": "2,5,6-trichloro-4-hydroxyphtalonitrile (SDS-3701)",
+  "method": "alias"
+ },
+ {
+  "residue_id": 57,
+  "definition": "sum of chlorpyrifos-methyl and desmethyl chlorpyrifos-methyl",
+  "method": "compound_set"
+ },
+ {
+  "residue_id": 81,
+  "definition": "Diquat",
+  "method": "none"
+ },
+ {
+  "residue_id": 105,
+  "definition": "Fenvalerate (any ratio of constituent isomers (RR, SS, RS & SR) including esfenvalerate)",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 109,
+  "definition": "Flucythrinate (flucythrinate including other mixtures of constituent isomers (sum of isomers))",
+  "method": "near"
+ },
+ {
+  "residue_id": 111,
+  "definition": "Flumioxazine",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 115,
+  "definition": "Folpet (sum of folpet and phtalimide, expressed as folpet)",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 115,
+  "definition": "Phtalimide, expressed as folpet",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 133,
+  "definition": "Iodosulfuron-methyl (sum of iodosulfuron-methyl and its salts, expressed as iodosulfuron-methyl)",
+  "method": "compound_set"
+ },
+ {
+  "residue_id": 139,
+  "definition": "kresoxim methyl (BF-490-9, expressed as parent)",
+  "method": "none"
+ },
+ {
+  "residue_id": 191,
+  "definition": "Propoxycarbazone (propoxycarbazone, its salts and 2-hydroxypropoxycarbazone expressed as propoxycarbazone)",
+  "method": "none"
+ },
+ {
+  "residue_id": 192,
+  "definition": "Sum of propyzamide and all metabolites containing the 3,5-dichlorobenzoic acid moiety, expressed as propyzamide",
+  "method": "near"
+ },
+ {
+  "residue_id": 215,
+  "definition": "Dimethylaminosulfotoluidide",
+  "method": "alias"
+ },
+ {
+  "residue_id": 260,
+  "definition": "Clodinafop and its S-isomers and their salts, expressed as clodinafop",
+  "method": "none"
+ },
+ {
+  "residue_id": 284,
+  "definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
+  "method": "none"
+ },
+ {
+  "residue_id": 301,
+  "definition": "Fenpyroximate (metabolite M-3, expressed as fenpyroximate (F))",
+  "method": "compound_set"
+ },
+ {
+  "residue_id": 332,
+  "definition": "Metam (see methylisothiocyanate)",
+  "method": "none"
+ },
+ {
+  "residue_id": 377,
+  "definition": "Sulphur",
+  "method": "none"
+ },
+ {
+  "residue_id": 389,
+  "definition": "Thiobencarb (4-chlorobenzyl methyl sulfone)",
+  "method": "none"
+ },
+ {
+  "residue_id": 399,
+  "definition": "1,4-Diaminobutane  (aka Putrescine)",
+  "method": "none"
+ },
+ {
+  "residue_id": 402,
+  "definition": "Aluminium silicate  (aka kaolin)",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 404,
+  "definition": "Ampelomyces quisqualis strain AQ10",
+  "method": "none"
+ },
+ {
+  "residue_id": 405,
+  "definition": "Bacillus amyloliquefaciens (formerly subtilis) str. QST 713",
+  "method": "none"
+ },
+ {
+  "residue_id": 409,
+  "definition": "Coniothyrium minitans strain CON/M/91-08 (DSM 9660)",
+  "method": "none"
+ },
+ {
+  "residue_id": 411,
+  "definition": "Extract from Tea tree",
+  "method": "none"
+ },
+ {
+  "residue_id": 412,
+  "definition": "Fatty acids / Lauric acid",
+  "method": "none"
+ },
+ {
+  "residue_id": 413,
+  "definition": "Fatty acids C7-C20",
+  "method": "none"
+ },
+ {
+  "residue_id": 414,
+  "definition": "Fatty acids:  fatty acid methyl ester",
+  "method": "none"
+ },
+ {
+  "residue_id": 415,
+  "definition": "Fatty acids:  Heptanoic acid",
+  "method": "none"
+ },
+ {
+  "residue_id": 416,
+  "definition": "Fatty acids:  Octanoic acid",
+  "method": "none"
+ },
+ {
+  "residue_id": 417,
+  "definition": "Fatty acids: Decanoic acid",
+  "method": "none"
+ },
+ {
+  "residue_id": 418,
+  "definition": "Fatty acids: Oleic acid incl ethyloleate",
+  "method": "none"
+ },
+ {
+  "residue_id": 419,
+  "definition": "Fatty acids: Pelargonic acid",
+  "method": "none"
+ },
+ {
+  "residue_id": 420,
+  "definition": "Fatty alcohols/aliphatic alcohols",
+  "method": "none"
+ },
+ {
+  "residue_id": 421,
+  "definition": "Ferric phosphate (Iron (III) phosphate)",
+  "method": "none"
+ },
+ {
+  "residue_id": 422,
+  "definition": "Ferric sulphate (Iron (III) sulphate)",
+  "method": "none"
+ },
+ {
+  "residue_id": 423,
+  "definition": "Ferrous sulphate (Iron (II) sulphate)",
+  "method": "none"
+ },
+ {
+  "residue_id": 424,
+  "definition": "Folic acid",
+  "method": "none"
+ },
+ {
+  "residue_id": 425,
+  "definition": "Garlic extract",
+  "method": "none"
+ },
+ {
+  "residue_id": 426,
+  "definition": "Gibberellin",
+  "method": "none"
+ },
+ {
+  "residue_id": 427,
+  "definition": "Gliocladium catenulatum strain J1446",
+  "method": "none"
+ },
+ {
+  "residue_id": 428,
+  "definition": "Kieselguhr  (aka diatomaceous earth)",
+  "method": "none"
+ },
+ {
+  "residue_id": 433,
+  "definition": "Isaria fumosorosea Apopka strain 97 (formely Paecilomyces fumosoroseus)",
+  "method": "none"
+ },
+ {
+  "residue_id": 434,
+  "definition": "Pepper",
+  "method": "none"
+ },
+ {
+  "residue_id": 435,
+  "definition": "Plant oils / Citronellol",
+  "method": "none"
+ },
+ {
+  "residue_id": 436,
+  "definition": "Plant oils / Clove oil Eugenol",
+  "method": "none"
+ },
+ {
+  "residue_id": 437,
+  "definition": "Plant oils / Rapeseed oil",
+  "method": "none"
+ },
+ {
+  "residue_id": 438,
+  "definition": "Plant oils / Spearmint oil",
+  "method": "none"
+ },
+ {
+  "residue_id": 440,
+  "definition": "Potassium Iodide",
+  "method": "none"
+ },
+ {
+  "residue_id": 441,
+  "definition": "Potassium Thiocyanate",
+  "method": "none"
+ },
+ {
+  "residue_id": 442,
+  "definition": "Pseudomonas chlororaphis strain MA342",
+  "method": "none"
+ },
+ {
+  "residue_id": 444,
+  "definition": "Repellants: Blood meal",
+  "method": "none"
+ },
+ {
+  "residue_id": 448,
+  "definition": "Seaweed extracts",
+  "method": "none"
+ },
+ {
+  "residue_id": 784,
+  "definition": "Flurprimidole",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 810,
+  "definition": "Topramezone (BAS 670H)",
+  "method": "alias"
+ },
+ {
+  "residue_id": 2276,
+  "definition": "sum of fluopyram and fluopyram-benzamide (M25) expressed as fluopyram",
+  "method": "compound_set"
+ },
+ {
+  "residue_id": 2304,
+  "definition": "Adoxophyes orana GV strain BV-0001",
+  "method": "none"
+ },
+ {
+  "residue_id": 2306,
+  "definition": "Purpureocillium lilacinum strain 251 (former Paecilomyces lilacinus strain 251)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2307,
+  "definition": "Spodoptera exigua nuclear polyhedrosis virus",
+  "method": "none"
+ },
+ {
+  "residue_id": 2308,
+  "definition": "Zucchini Yellow Mosaik Virus, weak strain",
+  "method": "none"
+ },
+ {
+  "residue_id": 2309,
+  "definition": "Aureobasidium pullulans strains DSM 14940 and DSM 14941",
+  "method": "none"
+ },
+ {
+  "residue_id": 2347,
+  "definition": "Paraffin oil (CAS 64742-54-7)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2348,
+  "definition": "Petroleum oils (CAS 92062-35-6)",
+  "method": "cas"
+ },
+ {
+  "residue_id": 2352,
+  "definition": "Indolylacetic acid",
+  "method": "none"
+ },
+ {
+  "residue_id": 2355,
+  "definition": "Phlebiopsis gigantea",
+  "method": "none"
+ },
+ {
+  "residue_id": 2356,
+  "definition": "Paecilomyces fumosoroseus strain FE 9901",
+  "method": "none"
+ },
+ {
+  "residue_id": 2357,
+  "definition": "Spodoptera littoralis nucleopolyhedrovirus",
+  "method": "none"
+ },
+ {
+  "residue_id": 2358,
+  "definition": "Bacillus firmus I-1582",
+  "method": "none"
+ },
+ {
+  "residue_id": 2361,
+  "definition": "Helicoverpa armigera nucleopolyhedrovirus",
+  "method": "none"
+ },
+ {
+  "residue_id": 2367,
+  "definition": "Akanthomyces muscarius Ve6 (formerly Lecanicillium muscarium strain Ve6)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2368,
+  "definition": "Chitosan hydrochloride",
+  "method": "none"
+ },
+ {
+  "residue_id": 2369,
+  "definition": "Equisetum arvense L.",
+  "method": "none"
+ },
+ {
+  "residue_id": 2378,
+  "definition": "Chlorate",
+  "method": "near"
+ },
+ {
+  "residue_id": 2398,
+  "definition": "Trichoderma polysporum strain IMI 206039",
+  "method": "none"
+ },
+ {
+  "residue_id": 2399,
+  "definition": "Geraniol",
+  "method": "none"
+ },
+ {
+  "residue_id": 2400,
+  "definition": "Sucrose",
+  "method": "none"
+ },
+ {
+  "residue_id": 2401,
+  "definition": "Trichoderma asperellum (formerly T. harzianum) strains ICC012, T25 and TV1",
+  "method": "none"
+ },
+ {
+  "residue_id": 2402,
+  "definition": "Trichoderma atroviride (formerly T. harzianum) strains IMI 206040 and T11",
+  "method": "none"
+ },
+ {
+  "residue_id": 2403,
+  "definition": "Trichoderma afroharzianum (Formerly Trichoderma harzianum) strain T-22",
+  "method": "none"
+ },
+ {
+  "residue_id": 2404,
+  "definition": "Trichoderma gamsii (formerly T. viride) strain ICC080",
+  "method": "none"
+ },
+ {
+  "residue_id": 2405,
+  "definition": "Trichoderma asperellum (strain T34)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2406,
+  "definition": "Trichoderma atroviride strain I-1237",
+  "method": "none"
+ },
+ {
+  "residue_id": 2408,
+  "definition": "Capric acid",
+  "method": "none"
+ },
+ {
+  "residue_id": 2409,
+  "definition": "Paraffin oil (CAS 64742-46-7)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2410,
+  "definition": "Paraffin oil (CAS 72623-86-0)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2411,
+  "definition": "Paraffin oil (CAS 8042-47-5)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2412,
+  "definition": "Paraffin oil (CAS 97862-82-3)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2418,
+  "definition": "3-decen-2-one",
+  "method": "near"
+ },
+ {
+  "residue_id": 2422,
+  "definition": "Cydia pomonella Granulovirus (CpGV)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2424,
+  "definition": "Sodium hydrogen carbonate",
+  "method": "none"
+ },
+ {
+  "residue_id": 2426,
+  "definition": "Beauveria bassiana strain ATCC 74040",
+  "method": "none"
+ },
+ {
+  "residue_id": 2427,
+  "definition": "Beauveria bassiana strain GHA",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 2428,
+  "definition": "Cerevisane",
+  "method": "none"
+ },
+ {
+  "residue_id": 2429,
+  "definition": "COS-OGA",
+  "method": "none"
+ },
+ {
+  "residue_id": 2432,
+  "definition": "Salix spp. cortex",
+  "method": "none"
+ },
+ {
+  "residue_id": 2433,
+  "definition": "Vinegar",
+  "method": "none"
+ },
+ {
+  "residue_id": 2434,
+  "definition": "Fructose",
+  "method": "none"
+ },
+ {
+  "residue_id": 2435,
+  "definition": "Pepino mosaic virus strain CH2 isolate 1906",
+  "method": "none"
+ },
+ {
+  "residue_id": 2436,
+  "definition": "Verticillium albo-atrum isolate WCS850",
+  "method": "none"
+ },
+ {
+  "residue_id": 2437,
+  "definition": "Bacillus amyloliquefaciens subsp. plantarum strain D747",
+  "method": "none"
+ },
+ {
+  "residue_id": 2446,
+  "definition": "Streptomyces K61 (formerly S.griseoviridis)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2447,
+  "definition": "Candida oleophila strain O",
+  "method": "none"
+ },
+ {
+  "residue_id": 2448,
+  "definition": "FEN 560  (also called fenugreek or fenugreek seed powder)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2449,
+  "definition": "Methyl decanoate (CAS 110-42-9)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2450,
+  "definition": "Methyl octanoate (CAS 111-11-5)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2464,
+  "definition": "Trichoderma atroviride strain SC1",
+  "method": "none"
+ },
+ {
+  "residue_id": 2472,
+  "definition": "Diammonium phosphate",
+  "method": "none"
+ },
+ {
+  "residue_id": 2473,
+  "definition": "Saccharomyces cerevisiae strain LAS02",
+  "method": "none"
+ },
+ {
+  "residue_id": 2474,
+  "definition": "Whey",
+  "method": "none"
+ },
+ {
+  "residue_id": 2477,
+  "definition": "Sunflower oil",
+  "method": "none"
+ },
+ {
+  "residue_id": 2479,
+  "definition": "Mild Pepino Mosaic Virus isolate VC1",
+  "method": "none"
+ },
+ {
+  "residue_id": 2480,
+  "definition": "Mild Pepino Mosaic Virus isolate VX1",
+  "method": "none"
+ },
+ {
+  "residue_id": 2493,
+  "definition": "Clayed charcoal",
+  "method": "none"
+ },
+ {
+  "residue_id": 2494,
+  "definition": "Urtica spp.",
+  "method": "none"
+ },
+ {
+  "residue_id": 2495,
+  "definition": "Hydrogen peroxide",
+  "method": "none"
+ },
+ {
+  "residue_id": 2498,
+  "definition": "Bacillus amyloliquefaciens strain FZB24",
+  "method": "none"
+ },
+ {
+  "residue_id": 2499,
+  "definition": "Bacillus amyloliquefaciens strain MBI 600",
+  "method": "none"
+ },
+ {
+  "residue_id": 2506,
+  "definition": "Beer",
+  "method": "none"
+ },
+ {
+  "residue_id": 2509,
+  "definition": "mustard seeds powder",
+  "method": "none"
+ },
+ {
+  "residue_id": 2514,
+  "definition": "Pasteuria nishizawae Pn1",
+  "method": "none"
+ },
+ {
+  "residue_id": 2516,
+  "definition": "Talc E553B",
+  "method": "alias"
+ },
+ {
+  "residue_id": 2536,
+  "definition": "Bicyclopyrone (sum of bicyclopyrone and its structurally related metabolites determined as the sum of the common moieties 2-(2- methoxyethoxymethyl)-6-(trifluoromethyl) pyridine-3-carboxylic acid (SYN503780) and (2-(2-hydroxyethoxymethyl)-6- (trifluoromethyl)pyridine-3-carboxylic acid (CSCD686480), expressed as bicyclopyrone)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2538,
+  "definition": "Metschnikowia fructicola strain NRRL Y-27328",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 2540,
+  "definition": "ABE-IT 56",
+  "method": "none"
+ },
+ {
+  "residue_id": 2541,
+  "definition": "Beauveria bassiana PPRI 5339",
+  "method": "none"
+ },
+ {
+  "residue_id": 2543,
+  "definition": "Clonostachys rosea strain J1446 (formerly Gliocladium catenulatum strain J1446)",
+  "method": "none"
+ },
+ {
+  "residue_id": 2544,
+  "definition": "Onion oil",
+  "method": "none"
+ },
+ {
+  "residue_id": 2552,
+  "definition": "Bacillus subtilis strain IAB/BS03",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 2631,
+  "definition": "Desethyl ethirimol",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 2632,
+  "definition": "Desethyl ethirimol",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 2651,
+  "definition": "Allium cepa L. bulb extract",
+  "method": "none"
+ },
+ {
+  "residue_id": 2750,
+  "definition": "Spirotetramat and spirotetramat-enol (sum of), expressed as spirotetramat",
+  "method": "none"
+ },
+ {
+  "residue_id": 2770,
+  "definition": "Aqueous extract from the germinated seeds of sweet Lupinus albus",
+  "method": "none"
+ },
+ {
+  "residue_id": 2810,
+  "definition": "Pepino Mosaic Virus, CH2 strain, mild isolate Abp2",
+  "method": "none"
+ },
+ {
+  "residue_id": 2811,
+  "definition": "Pepino Mosaic Virus, EU strain, mild isolate Abp1",
+  "method": "none"
+ },
+ {
+  "residue_id": 2950,
+  "definition": "Spodoptera exigua multicapsid nucleopolyhedrovirus (SeMNPV) isolate BV-0004",
+  "method": "none"
+ },
+ {
+  "residue_id": 3030,
+  "definition": "1-methyl-3-(trifluoromethyl)-1H-pyrazole-4-carboxamide (PAM)",
+  "method": "alias"
+ },
+ {
+  "residue_id": 3050,
+  "definition": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim",
+  "method": "near"
+ },
+ {
+  "residue_id": 3230,
+  "definition": "Repellants: Fish oil",
+  "method": "none"
+ },
+ {
+  "residue_id": 3231,
+  "definition": "Repellants: Sheep fat",
+  "method": "none"
+ },
+ {
+  "residue_id": 3350,
+  "definition": "Straight Chain Lepidopteran Pheromones (SCLP)",
+  "method": "none"
+ },
+ {
+  "residue_id": 3351,
+  "definition": "Metarhizium brunneum strain Ma 43",
+  "method": "none"
+ },
+ {
+  "residue_id": 3390,
+  "definition": "the sum of trifloxystrobin and its metabolite (E, E)-methoxyimino- {2-[1-(3-trifluoromethyl-phenyl)-ethylideneamino-oxymethyl]-phenyl}-acetic acid (CGA 321113) expressed as trifloxystrobin",
+  "method": "compound_set"
+ },
+ {
+  "residue_id": 3430,
+  "definition": "Phosphonic acid",
+  "method": "none"
+ },
+ {
+  "residue_id": 3510,
+  "definition": "Purpureocillium lilacinum PL11",
+  "method": "spelling"
+ },
+ {
+  "residue_id": 3511,
+  "definition": "Bacillus amyloliquefaciens strain IT-45",
+  "method": "none"
+ },
+ {
+  "residue_id": 3530,
+  "definition": "Pythium oligandrum strain M1",
+  "method": "none"
+ },
+ {
+  "residue_id": 3531,
+  "definition": "Trichoderma atroviride strain AGR2",
+  "method": "none"
+ },
+ {
+  "residue_id": 3532,
+  "definition": "Trichoderma atroviride strain AT10",
+  "method": "none"
+ },
+ {
+  "residue_id": 3534,
+  "definition": "Fat distillation residues",
+  "method": "none"
+ },
+ {
+  "residue_id": 3671,
+  "definition": "Chitosan",
+  "method": "none"
+ },
+ {
+  "residue_id": 3810,
+  "definition": "Sum of ethephon free and conjugates, expressed as ethephon",
+  "method": "none"
+ },
+ {
+  "residue_id": 3830,
+  "definition": "Repellants: Tall oil",
+  "method": "none"
+ },
+ {
+  "residue_id": 3850,
+  "definition": "Plant oils / Citronella oil",
+  "method": "none"
+ },
+ {
+  "residue_id": 3870,
+  "definition": "Ipconazole (sum of constituent isomers)",
+  "method": "none"
+ },
+ {
+  "residue_id": 3910,
+  "definition": "Methyl nonyl ketone",
+  "method": "none"
+ },
+ {
+  "residue_id": 3950,
+  "definition": "Benthiavalicarb-isopropyl (sum of benthiavalicarb-isopropyl (KIF 230 R-L) and its RS enantiomer (KIF 230-S-D))",
+  "method": "none"
+ },
+ {
+  "residue_id": 4050,
+  "definition": "Total copper",
+  "method": "none"
+ },
+ {
+  "residue_id": 4110,
+  "definition": "Elemental iron",
+  "method": "none"
+ },
+ {
+  "residue_id": 4151,
+  "definition": "Allium fistulosum, processed",
+  "method": "none"
+ },
+ {
+  "residue_id": 4152,
+  "definition": "Lysate of Willaertia magna",
+  "method": "none"
+ },
+ {
+  "residue_id": 4153,
+  "definition": "Onobrychis viciifolia (sainfoin) dried pellets",
+  "method": "none"
+ },
+ {
+  "residue_id": 4154,
+  "definition": "Magnesium hydroxide E528",
+  "method": "alias"
+ },
+ {
+  "residue_id": 4155,
+  "definition": "Vitis vinifera L. seed extract (grape seed extract)",
+  "method": "none"
+ }
+]

@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.venv/
+*.ecf
+
+# Local credentials and runtime configuration (never commit secrets)
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+*credentials*.json
+
+# Local output and operating-system files
+.DS_Store
+.coverage
+.pytest_cache/
+*.zip
