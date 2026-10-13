@@ -1,0 +1,125 @@
+# Fetch complete DG SANTE sources, rebuild the reference, and propose updated
+# data via PR. Latest-published RD is presumed applicable unless evidence says
+# otherwise; missing application dates never block the refresh.
+name: Update EU reference data
+
+on:
+  workflow_dispatch:
+  # Run when this workflow is introduced or revised on main, including this merge.
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/eu_sources.yml
+  schedule:
+    - cron: '0 6 * * 1'  # Mondays 06:00 UTC
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: eu-reference-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test the fetch and mapping code
+        run: python -m unittest discover -s tests -t .
+      - name: Download full EU source records and update reference inputs
+        run: python -m rd_bridge.eu_refresh --report eu-refresh-report.md
+      - name: Rebuild PARAM mappings from refreshed data
+        run: python -m rd_bridge.match | tee rebuild.txt
+      - name: Read new or changed definitions with the model
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        shell: bash
+        run: |
+          status=0
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            python -m rd_bridge.model_parts > model-log.txt 2>&1 || status=$?
+          else
+            echo "No model API key: existing cached readings/rule parser retained." > model-log.txt
+          fi
+          cat model-log.txt
+          echo "model_exit=$status" >> "$GITHUB_ENV"
+          # A transient model error must not hide successfully fetched EU updates.
+      - name: Rebuild map and report acceptance cases
+        shell: bash
+        run: |
+          python -m rd_bridge.match | tee rebuild-after-model.txt
+          status=0
+          python -m rd_bridge.compare_parts > comparison.md || status=$?
+          echo "cases_exit=$status" >> "$GITHUB_ENV"
+          cat comparison.md
+          if [ "$status" != "0" ] && [ "$status" != "3" ]; then exit "$status"; fi
+      - name: Test the proposed updated data
+        shell: bash
+        run: |
+          status=0
+          python -m unittest discover -s tests -t . > unit-tests.txt 2>&1 || status=$?
+          cat unit-tests.txt
+          echo "updated_tests_exit=$status" >> "$GITHUB_ENV"
+          # Test regressions are included in the PR rather than hiding source changes.
+      - name: Preserve review details
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu-reference-review
+          path: |
+            eu-refresh-report.md
+            rebuild.txt
+            rebuild-after-model.txt
+            comparison.md
+            model-log.txt
+            unit-tests.txt
+          if-no-files-found: ignore
+      - name: Open pull request for updated EU reference data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "EU data and derived reference are unchanged."
+            exit 0
+          fi
+          branch="data/eu-reference-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git commit -m "Refresh EU residue/PARAM reference (run ${{ github.run_id }})"
+          git push origin "$branch"
+          {
+            echo "## EU reference refresh"
+            echo
+            echo "Latest EU-published RD is presumed applicable unless contrary "
+            echo "application-date evidence is known; missing dates do not block "
+            echo "this update. The PR proposes full source snapshots, current "
+            echo "reference inputs, and a rebuilt PARAM map."
+            echo
+            echo "**Post-refresh unit tests exit:** $updated_tests_exit"
+            echo "**Model reading exit:** $model_exit"
+            echo "**Acceptance cases exit:** $cases_exit (3 means existing/new cases failed)"
+            echo
+            cat eu-refresh-report.md
+            echo
+            echo "## Model readings"
+            echo '~~~'
+            cat model-log.txt
+            echo '~~~'
+            echo
+            echo "## Acceptance checks"
+            cat comparison.md
+          } > pr-body.md
+          gh pr create --base main --head "$branch" \
+            --title "Update EU residue reference (run ${{ github.run_id }})" \
+            --body-file pr-body.md
