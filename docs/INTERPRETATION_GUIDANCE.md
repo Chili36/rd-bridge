@@ -132,9 +132,12 @@ There is now also an **active, general guidance-aware model reader**:
   [Model readings workflow](../.github/workflows/model.yml) now use the guided
   model for **new or changed** definitions. A separate, deliberately initiated
   [full migration workflow](../.github/workflows/full_guided_migration.yml)
-  reinterprets **all** existing EU definitions in 16 bounded shards and
-  proposes replacing the old model interpretations in one PR. Previous
-  readings remain available for audit and rollback. This migration **does
+  reinterprets **all** existing EU definitions in 16 bounded shards.
+  After all existing unit tests, acceptance scenarios and whole-RD PARAM
+  consistency checks pass, it creates an evidence PR and merges the complete
+  cache automatically. If a regression is found, the proposal remains open
+  with the results so the actual issue can be corrected. Previous readings
+  remain available for audit and rollback. This migration **does
   not wait for a manually or independently reviewed dataset**, which is not
   available. Routine incremental runs remain capped at 40 calls.
 
