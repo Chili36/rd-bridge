@@ -1,8 +1,10 @@
 {
  "source": {
   "catalogue": "PARAM",
-  "valid_from": "2026-06-22T17:30:06",
-  "version": "17.6"
+  "source_format": "EFSA Catalogue Browser XLSX",
+  "source_sha256": "bed02cc4e499474245f4899f17604880c1de00dd6e06df605dd3f27edf50b2fb",
+  "valid_from": "2026-09-11",
+  "version": "17.8"
  },
  "terms": {
   "RF-00000001-ADD": {
@@ -4174,7 +4176,7 @@
    "reportable": true
   },
   "RF-00007587-PAR": {
-   "cas": "104273-73-6",
+   "cas": "143294-89-7",
    "name": "Trinexapac",
    "param_parent": "RF-0446-001-PPP",
    "pest_class": [
@@ -7025,6 +7027,9 @@
   "RF-00014619-PAR": {
    "cas": "64742-55-8",
    "name": "Paraffin Oil",
+   "other_names": [
+    "Distillates (petroleum), hydrotreated light paraffinic"
+   ],
    "param_parent": "RF-00000001-PPP",
    "pest_class": [
     "AS"

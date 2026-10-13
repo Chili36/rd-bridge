@@ -101,10 +101,13 @@ Python 3.10+; the core mapping uses the standard library. Some source extraction
 ```bash
 python -m rd_bridge.fetch_residues          # EU pesticide residue definitions
 python -m rd_bridge.fetch_active_substances # EU active-substance index
-python -m rd_bridge.fetch_param              # EFSA PARAM data
+python -m rd_bridge.fetch_param              # openefsa ECF, only if >= committed version
+python -m rd_bridge.fetch_param PARAM_17.8.xlsx # Catalogue Browser Excel export
 python -m rd_bridge.match                    # rebuild the primary JSON reference
 python -m unittest discover -s tests -t .    # regression tests
 ```
+
+The committed PARAM reference is **17.8** (11 September 2026), extracted from a maintainer-supplied EFSA Catalogue Browser Excel file. Its SHA-256 is recorded in `data/param_components.json`. The raw workbook is not redistributed; both derived JSON files are reproducible with `python -m rd_bridge.fetch_param PARAM_17.8.xlsx`. This command refuses to overwrite a newer committed catalogue with an older ECF export. The weekly EU-source workflow uses the committed PARAM data and does not independently fetch a PARAM release.
 
 Model-assisted interpretation is source-informed: all existing EU RD texts are being reinterpreted using selected OECD/EU/EFSA guidance in the model prompt, while the original Haiku cache is retained for comparison and rollback. New/changed definitions use the same evidence-backed reader. PARAM linking remains deterministic and reviewable. See [how the mapping works](docs/MAPPING_METHOD.md), [the active guidance rules](data/interpretation_guidance.json) and [the interpretation method](docs/INTERPRETATION_GUIDANCE.md).
 
