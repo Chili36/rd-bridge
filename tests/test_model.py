@@ -333,6 +333,12 @@ class CompareTest(unittest.TestCase):
         self.assertIn("BAC C8-C18 chain lengths cover benzalkonium chloride", failed)
         self.assertNotIn("aldicarb, its sulfoxide and sulfone", failed)
 
+    def test_committed_reference_passes_all_current_acceptance_cases(self):
+        with (ROOT / "data" / "residue_param_map.json").open(encoding="utf-8") as fh:
+            rows = json.load(fh)
+        failing = [c for c in compare_parts.cases(rows) if not c["passed"]]
+        self.assertEqual(failing, [], "Acceptance cases must be reviewed before release")
+
 
 if __name__ == "__main__":
     unittest.main()
