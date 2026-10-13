@@ -99,13 +99,15 @@ def compare(rows: list, index: components.ComponentIndex) -> dict:
     counts, agreement, differences, model_links = collections.Counter(), collections.Counter(), [], []
     for r in rows:
         for entry in [r["default"], *r["exceptions"]]:
-            if entry.get("parts_from") != "model":
+            if entry.get("parts_from") not in ("model", "guided_model"):
                 counts["rules_only"] += 1  # retained key for compatible statistics
                 if entry.get("parts_from") == "legal_guidance":
                     counts["legal_guidance"] += 1
                 if entry.get("model_reading_lost"):
                     counts["model_not_used"] += 1
                 continue
+            if entry.get("parts_from") == "guided_model":
+                counts["guided_model"] += 1
             for p in entry["components"]:
                 if "model_agrees" in p:
                     agreement["agree" if p["model_agrees"] else "disagree"] += 1
@@ -141,7 +143,8 @@ def cases(rows: list) -> list:
 def markdown(result: dict) -> str:
     c, a = result["comparison"]["counts"], result["comparison"]["agreement"]
     read = c.get("same", 0) + c.get("different", 0)
-    lines = [f"Definitions selected from the model: {read}; "
+    lines = [f"Definitions selected from the model: {read} "
+             f"(guidance-backed: {c.get('guided_model', 0)}); "
              f"not selected from the model: {c.get('rules_only', 0)} "
              f"(source-verified legal guidance: {c.get('legal_guidance', 0)}). "
              f"Compared model/rule agreements: {c.get('same', 0)}, "
