@@ -109,8 +109,8 @@ def classify(diff: dict, entry: dict) -> dict:
                   "entry and EFSA catalogue—not a vote.")
     elif group_difference or analyte_count(diff["model"]) != analyte_count(diff["rules"]):
         category = "component_scope_conflict"
-        reason = ("The readings disagree whether a separately relevant "
-                  "unbounded group of residues is part of the definition.")
+        reason = ("The readings disagree about component enumeration or "
+                  "whether a distinct group is included in the definition.")
     elif not left and not right:
         category = "unlinked_component_identity"
         reason = ("Neither reading establishes a component PARAM link. "
