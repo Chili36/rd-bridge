@@ -45,6 +45,8 @@ the code of every chemical that a laboratory might measure separately.
 
 ## Interpreting and linking the parts
 
+The [source-grounded interpretation hierarchy](INTERPRETATION_GUIDANCE.md) distinguishes binding EU wording, OECD principles for defining residues, EFSA's **2026** reporting guidance and the versioned PARAM catalogue. Source-backed cases can override a contradictory model interpretation only with recorded legal evidence and regression tests. The original cached model reading is retained for audit.
+
 A definition can name substances, groups or qualifiers. Each element in
 `components` is tagged with its role and an evidence method. Typical methods:
 
@@ -127,7 +129,8 @@ python -m rd_bridge.fetch_active_substances  # additional active-substances sour
 python -m rd_bridge.fetch_param               # EFSA PARAM catalogue extract
 python -m rd_bridge.model_parts               # optional; requires ANTHROPIC_API_KEY
 python -m rd_bridge.match                     # primary reference JSON
-python -m rd_bridge.compare_parts             # comparison of optional model readings
+python -m rd_bridge.compare_parts             # current component comparison + acceptance
+python -m rd_bridge.guidance_audit            # source-based audit of the frozen 40 disagreements
 python -m unittest discover -s tests -t .     # offline unit tests
 python -m scripts.portable_validation --countries SE FR  # public 2024 Zenodo validation
 ```
@@ -136,10 +139,13 @@ python -m scripts.portable_validation --countries SE FR  # public 2024 Zenodo va
 extract from EFSA's Zenodo package (requires pandas to read SAS-related data).
 It is **not** required to regenerate EU residue-definition → PARAM links.
 
-The committed reference describes only the **current** definitions, not those
-in effect on historical sampling dates. Updating source data is currently
-manual. For measured comparison with accepted 2024 reporting and known
-methodological limitations, see [the SE/FR validation report](../reports/monitoring_2024.md).
+The committed reference uses the **latest EU-published** definitions by default,
+presuming they apply unless specific evidence establishes otherwise. It does not
+resolve which historical RD applied on a sampling date. The
+[EU reference update workflow](EU_SOURCE_REFRESH.md) refreshes sources weekly
+and proposes changes through a pull request. For measured comparison with
+accepted 2024 reporting and known methodological limitations, see
+[the SE/FR validation report](../reports/monitoring_2024.md).
 The separately collected active-substances index can indicate
 `no_residue_definition` where the EU API explicitly gives the default MRL;
 it never supplies an invented specific residue definition.
