@@ -16,7 +16,7 @@ import os
 import re
 import sys
 
-from rd_bridge import components, compounds, evidence_parts, footnotes, guidance, model_parts, qualifier_parts
+from rd_bridge import components, compounds, evidence_parts, footnotes, guidance, guided_model_parts, model_parts, qualifier_parts
 
 FOOTNOTE_MARKERS = re.compile(r"\s*(\((R|F|A|\+|\+\+|\*|)\)\s*)+$")
 NEAR_CUTOFF = 0.9
@@ -158,7 +158,17 @@ def build(residues: list, terms: list, parts=None, readings=None) -> list:
                     # the model's reading may add links but never lose one the rules made
                     definition["model_reading_lost"] = sorted(lost)
                 else:
-                    definition["components"], definition["parts_from"] = model, "model"
+                    from_guidance = reading.get("prompt_variant") == guided_model_parts.PROMPT_VERSION
+                    definition["components"] = model
+                    definition["parts_from"] = "guided_model" if from_guidance else "model"
+                    if from_guidance:
+                        # References document which SOURCE PRINCIPLES the model saw.
+                        # They do not certify that the model's reading is correct.
+                        definition["model_guidance"] = {
+                            "prompt_variant": reading["prompt_variant"],
+                            "guidance_ids": reading["guidance_ids"],
+                            "guidance_version": reading["guidance_version"],
+                        }
             # For a named chemical mixture, published EFSA constituent evidence
             # can be stronger than the short EU API text and model's one-part reading.
             # Only explicit, catalogue-verified cases are overridden.
@@ -210,6 +220,11 @@ def main() -> None:
     comp_path = sys.argv[3] if len(sys.argv) > 3 else "data/param_components.json"
     parts = components.ComponentIndex.load(comp_path) if os.path.exists(comp_path) else None
     readings = model_parts.load() if parts is not None else {}
+    if parts is not None:
+        # New/changed definitions can be read with a versioned evidence-backed
+        # prompt. Old Haiku cache stays intact; only independently cached guided
+        # readings supersede entries with the same exact EU definition.
+        readings.update(guided_model_parts.load())
     rows = build(residues, terms, parts, readings)
     links = [r["default"] for r in rows] + [x for r in rows for x in r["exceptions"]]
     unmatched = [{"residue_id": r["residue_id"], "definition": d["definition"], "method": d["method"]}

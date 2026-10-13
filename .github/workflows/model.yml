@@ -1,4 +1,4 @@
-# Ask the model (rd_bridge.model_parts) to read new or changed definitions into components,
+# Ask a guidance-aware model to read new or explicitly selected definitions into components,
 # rebuild the map, compare with the rule parser, and open a PR with the result.
 # Runs only when started by hand on main; never on pull requests, so forks never see the key.
 name: Model readings
@@ -11,6 +11,15 @@ on:
         type: choice
         options: [claude-haiku-5-5, claude-sonnet-5-5]
         default: claude-haiku-5-5
+      scope:
+        description: "Read only new/changed RDs, or explicitly selected RD IDs"
+        type: choice
+        options: [new, selected]
+        default: new
+      residue_ids:
+        description: "Comma-separated RD IDs, only when scope=selected"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -40,11 +49,22 @@ jobs:
       - name: Rebuild the map from the current data
         run: python -m rd_bridge.match  # the model step reads the definitions from this map
 
-      - name: Read definitions with the model
+      - name: Read definitions with source-backed guidance
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RD_BRIDGE_MODEL: ${{ inputs.model }}
-        run: python -m rd_bridge.model_parts | tee parts.txt
+          READ_SCOPE: ${{ inputs.scope }}
+          READ_IDS: ${{ inputs.residue_ids }}
+        run: |
+          if [ "$READ_SCOPE" = "selected" ]; then
+            if [ -z "$READ_IDS" ]; then
+              echo "::error::residue_ids are required for selected scope"
+              exit 1
+            fi
+            python -m rd_bridge.guided_model_parts --scope selected --ids "$READ_IDS" --max-calls 40 | tee parts.txt
+          else
+            python -m rd_bridge.guided_model_parts --scope new --max-calls 40 | tee parts.txt
+          fi
 
       - name: Rebuild the map with the readings and compare
         env:
@@ -70,7 +90,7 @@ jobs:
           git commit -m "Model readings, ${{ inputs.model }} (run ${{ github.run_id }})"
           git push origin "$branch"
           {
-            echo "Model readings by ${{ inputs.model }}, workflow run ${{ github.run_id }}."
+            echo "Guidance-informed model readings by ${{ inputs.model }}, scope ${{ inputs.scope }}, workflow run ${{ github.run_id }}. Source principles: data/interpretation_guidance.json. No automatic merge."
             if [ "$cases_exit" != "0" ]; then echo; echo "**Some acceptance cases fail: see below.**"; fi
             echo; echo '```'; cat parts.txt match.txt; echo '```'; echo
             cat comparison.md

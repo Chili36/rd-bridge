@@ -106,7 +106,7 @@ python -m rd_bridge.match                    # rebuild the primary JSON referenc
 python -m unittest discover -s tests -t .    # regression tests
 ```
 
-Model-assisted reading of definition text is optional and cached in `data/model_parts.json`; link evidence remains visible. See [how the mapping works](docs/MAPPING_METHOD.md) and [the source-grounded interpretation rules](docs/INTERPRETATION_GUIDANCE.md) for legal wording, component interpretation, matching evidence and reproducibility.
+Model-assisted interpretation is source-informed: new or changed RD texts are read with selected OECD/EU/EFSA guidance included in the model prompt, and new readings are cached separately from earlier Haiku results. PARAM linking remains deterministic and reviewable. See [how the mapping works](docs/MAPPING_METHOD.md), [the active guidance rules](data/interpretation_guidance.json) and [the interpretation method](docs/INTERPRETATION_GUIDANCE.md).
 
 ### Scope and limits
 
