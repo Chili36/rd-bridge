@@ -106,7 +106,7 @@ python -m rd_bridge.match                    # rebuild the primary JSON referenc
 python -m unittest discover -s tests -t .    # regression tests
 ```
 
-Model-assisted interpretation is source-informed: new or changed RD texts are read with selected OECD/EU/EFSA guidance included in the model prompt, and new readings are cached separately from earlier Haiku results. PARAM linking remains deterministic and reviewable. See [how the mapping works](docs/MAPPING_METHOD.md), [the active guidance rules](data/interpretation_guidance.json) and [the interpretation method](docs/INTERPRETATION_GUIDANCE.md).
+Model-assisted interpretation is source-informed: all existing EU RD texts are being reinterpreted using selected OECD/EU/EFSA guidance in the model prompt, while the original Haiku cache is retained for comparison and rollback. New/changed definitions use the same evidence-backed reader. PARAM linking remains deterministic and reviewable. See [how the mapping works](docs/MAPPING_METHOD.md), [the active guidance rules](data/interpretation_guidance.json) and [the interpretation method](docs/INTERPRETATION_GUIDANCE.md).
 
 ### Scope and limits
 
