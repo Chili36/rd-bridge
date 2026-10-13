@@ -1,0 +1,94 @@
+# Bounded evidence-backed experiment. The output is a REVIEW PR, never
+# a modification to existing interpreted data or whole-RD PARAM links.
+name: Evaluate guidance-backed interpretation
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/guidance_eval.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: guidance-pilot
+  cancel-in-progress: false
+
+jobs:
+  evaluate:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline regression tests
+        run: python -m unittest discover -s tests -t .
+      - name: Check Haiku model access, no generation
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        shell: bash
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY missing"
+            exit 1
+          fi
+          code=$(curl --silent --show-error --max-time 30 \
+            --output /dev/null --write-out '%{http_code}' \
+            --header "x-api-key: $ANTHROPIC_API_KEY" \
+            --header "anthropic-version: 2023-06-01" \
+            https://api.anthropic.com/v1/models/claude-haiku-5-5)
+          if [ "$code" != 200 ]; then
+            echo "::error::Haiku API access HTTP $code"
+            exit 1
+          fi
+      - name: Compare 12 fixed gold cases and 3 exploratory readings
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        run: python -m rd_bridge.guidance_eval --limit 15
+      - name: Preserve evaluation logs and outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rd-guidance-evaluation
+          path: |
+            reports/guidance_model_evaluation.json
+            reports/guidance_model_evaluation.md
+          if-no-files-found: ignore
+      - name: Open evidence review pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          git add reports/guidance_model_evaluation.json reports/guidance_model_evaluation.md
+          if git diff --cached --quiet; then
+            echo "No changes to evaluation report."
+            exit 0
+          fi
+          branch="evaluation/guidance-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git commit -m "Record live guidance-vs-baseline evaluation (run ${{ github.run_id }})"
+          git push origin "$branch"
+          {
+            echo "## Guidance is part of the model prompt"
+            echo
+            echo "The 15-model-call experiment compares new guided readings to"
+            echo "previously cached unguided Haiku readings. The 12 explicit"
+            echo "EU-text checks are a **targeted regression probe**, not a"
+            echo "population-wide accuracy estimate. The other 3 are exploratory."
+            echo
+            echo "**No model results or PARAM mappings are promoted automatically.**"
+            echo
+            cat reports/guidance_model_evaluation.md
+          } > review.md
+          gh pr create --base main --head "$branch" \
+            --title "Review guidance-aware interpretation pilot (run ${{ github.run_id }})" \
+            --body-file review.md
