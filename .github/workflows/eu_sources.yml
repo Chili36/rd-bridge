@@ -5,6 +5,11 @@ name: Update EU reference data
 
 on:
   workflow_dispatch:
+  # Run when this workflow is introduced or revised on main, including this merge.
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/eu_sources.yml
   schedule:
     - cron: '0 6 * * 1'  # Mondays 06:00 UTC
 
