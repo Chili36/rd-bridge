@@ -339,6 +339,14 @@ class CompareTest(unittest.TestCase):
         failing = [c for c in compare_parts.cases(rows) if not c["passed"]]
         self.assertEqual(failing, [], "Acceptance cases must be reviewed before release")
 
+    def test_saved_acceptance_snapshot_matches_current_recomputed_cases(self):
+        with (ROOT / "data" / "residue_param_map.json").open(encoding="utf-8") as fh:
+            rows = json.load(fh)
+        with (ROOT / "data" / "parts_comparison.json").open(encoding="utf-8") as fh:
+            snapshot = json.load(fh)
+        self.assertEqual(snapshot["cases"], compare_parts.cases(rows),
+                         "Regenerate parts_comparison.json after acceptance cases change")
+
 
 if __name__ == "__main__":
     unittest.main()
