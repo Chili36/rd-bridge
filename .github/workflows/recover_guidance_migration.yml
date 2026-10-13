@@ -4,10 +4,8 @@ name: Recover complete RD guidance migration
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/recover_guidance_migration.yml
+  # Historical recovery only. The first job already generated PR #21; future
+  # retries operate on that preserved cache, not on 765 fresh requests.
 
 permissions:
   actions: read
@@ -58,12 +56,16 @@ jobs:
         env:
           RD_BRIDGE_MODEL: claude-haiku-5-5
         run: python -m rd_bridge.guided_migration merge --shard-dir shards
-      - name: Rebuild PARAM map and describe all component changes
+      - name: Rebuild PARAM map and automatically repair acceptance regressions
         env:
           RD_BRIDGE_MODEL: claude-haiku-5-5
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         shell: bash
         run: |
           cp data/residue_param_map.json old-reference-map.json
+          python -m rd_bridge.match
+          python -m rd_bridge.auto_repair \
+            --baseline old-reference-map.json --max-rounds 2 --max-calls 12
           python -m rd_bridge.match
           status=0
           python -m rd_bridge.compare_parts > guided-comparison.md || status=$?
@@ -92,6 +94,7 @@ jobs:
             data/parts_comparison.json
             reports/full_guidance_migration.json
             reports/full_guidance_migration.md
+            reports/automatic_interpretation_repair.json
             reports/guidance_audit.json
             reports/guidance_audit.md
             guided-comparison.md
@@ -105,7 +108,7 @@ jobs:
         run: |
           git add data/guided_model_parts.json data/residue_param_map.json \
             data/parts_comparison.json reports/full_guidance_migration.md \
-            reports/full_guidance_migration.json \
+            reports/full_guidance_migration.json reports/automatic_interpretation_repair.json \
             reports/guidance_audit.json reports/guidance_audit.md
           if git diff --cached --quiet; then
             echo "No change; migration already incorporated."

@@ -159,14 +159,18 @@ def build(residues: list, terms: list, parts=None, readings=None) -> list:
                     definition["model_reading_lost"] = sorted(lost)
                 else:
                     from_guidance = reading.get("prompt_variant") == guided_model_parts.PROMPT_VERSION
-                    literal = reading.get("interpretation_source") == "exact_EU_literal_fallback"
+                    origin = reading.get("interpretation_source")
+                    literal = origin == "exact_EU_literal_fallback"
+                    retained = origin == "legacy_retained_after_regression"
                     definition["components"] = model
                     definition["parts_from"] = ("source_literal_fallback" if literal
+                                                else "legacy_regression_fallback" if retained
                                                 else "guided_model" if from_guidance else "model")
                     if from_guidance:
-                        # Guidance provenance does not certify model correctness.
-                        # An exact-source fallback after refusals MUST NOT be
-                        # represented as a new model interpretation.
+                        # The same source-backed prompt and validated cache may
+                        # contain a targeted Sonnet repair or a clearly marked
+                        # retained legacy reading. Never call either original
+                        # source-literal or legacy fallback a new model output.
                         definition["model_guidance"] = {
                             "prompt_variant": reading["prompt_variant"],
                             "guidance_ids": reading["guidance_ids"],
@@ -174,8 +178,9 @@ def build(residues: list, terms: list, parts=None, readings=None) -> list:
                         }
                         if reading.get("model_used"):
                             definition["model_guidance"]["model_used"] = reading["model_used"]
-                        if literal:
-                            definition["model_guidance"]["interpretation_source"] = "exact_EU_literal_fallback"
+                        if origin:
+                            definition["model_guidance"]["interpretation_source"] = origin
+                        if literal or retained or reading.get("requires_followup"):
                             definition["model_guidance"]["requires_followup"] = True
             # For a named chemical mixture, published EFSA constituent evidence
             # can be stronger than the short EU API text and model's one-part reading.

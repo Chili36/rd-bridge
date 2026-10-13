@@ -1,0 +1,183 @@
+# Close the loop: diagnose, repair and adopt a completed guidance migration.
+# Reuses all 765 previously generated results from PR #21. No gold-standard
+# corpus and no bulk model rerun. Source text and existing regression cases are
+# unchanged: only affected readings are retried with a bounded Sonnet budget.
+name: Auto-repair guided RD migration
+
+on:
+  workflow_dispatch:
+    inputs:
+      candidate_branch:
+        description: "Existing branch containing guidance-based interpretations to repair"
+        type: string
+        default: "model/complete-guidance-recovery-38471733089"
+  # Start the first automated repair immediately when installed on main.
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/auto_repair_guidance.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: guidance-validation-repair
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify starting reference and versioned guidance
+        run: |
+          python -m unittest discover -s tests -t .
+          cp data/residue_param_map.json old-reference-map.json
+
+      - name: Retrieve existing guidance-based interpretations (PR 21 initially)
+        shell: bash
+        env:
+          CANDIDATE_BRANCH: ${{ inputs.candidate_branch || 'model/complete-guidance-recovery-38471733089' }}
+        run: |
+          # The existing PR contains all Haiku/Sonnet outputs. No need to
+          # regenerate them: only the actual failed cases are retried.
+          case "$CANDIDATE_BRANCH" in
+            model/*) ;;
+            *) echo "::error::Candidate must be a model/* branch"; exit 1 ;;
+          esac
+          git fetch --no-tags origin "refs/heads/$CANDIDATE_BRANCH"
+          git show FETCH_HEAD:data/guided_model_parts.json > data/guided_model_parts.json
+          python - <<'PY'
+          from rd_bridge import guided_model_parts, components
+          import json
+          cache = guided_model_parts.load()
+          rows = json.load(open('old-reference-map.json', encoding='utf-8'))
+          expected = guided_model_parts.contexts(rows, components.ComponentIndex.load())
+          assert len(cache) == len(expected) == 765, (len(cache), len(expected))
+          assert set(cache) == set(expected)
+          assert all(guided_model_parts.valid(cache[t], t, expected[t]) for t in cache)
+          print(f'Recovered all {len(cache)} guided readings without bulk model calls.')
+          PY
+
+      - name: Automatically repair only failed interpretations and retain safe previous answers
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        shell: bash
+        run: |
+          python -m rd_bridge.match
+          python -m rd_bridge.auto_repair \
+            --baseline old-reference-map.json \
+            --max-rounds 2 --max-calls 12 \
+            --report reports/automatic_interpretation_repair.json
+          # Independently rebuild after the cache mutation. Only the input
+          # model answers change, never original EU definitions or whole links.
+          python -m rd_bridge.match
+
+      - name: Check acceptance cases and create complete PARAM change report
+        env:
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        shell: bash
+        run: |
+          code=0
+          python -m rd_bridge.compare_parts > acceptance.md || code=$?
+          cat acceptance.md
+          echo "acceptance_exit=$code" >> "$GITHUB_ENV"
+          if [ "$code" != "0" ] && [ "$code" != "3" ]; then exit "$code"; fi
+          python -m rd_bridge.guidance_audit
+          python -m rd_bridge.guided_migration report --baseline old-reference-map.json
+          python - <<'PY'
+          import json
+          info = json.load(open('reports/automatic_interpretation_repair.json'))
+          assert info['final_passed'] == info['final_total'] == 34
+          report = json.load(open('reports/full_guidance_migration.json'))
+          assert report['guided_readings'] == 765
+          print("Validated full coverage, preserved whole-RD PARAM codes, and 34/34 known cases")
+          PY
+
+      - name: Run all tests against auto-repaired replacement
+        shell: bash
+        env:
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        run: |
+          code=0
+          python -m unittest discover -s tests -t . > migration-tests.txt 2>&1 || code=$?
+          tail -n 75 migration-tests.txt
+          echo "unit_tests_exit=$code" >> "$GITHUB_ENV"
+
+      - name: Keep complete repair data even if adoption is blocked
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auto-repaired-rd-guidance
+          path: |
+            data/guided_model_parts.json
+            data/residue_param_map.json
+            data/parts_comparison.json
+            reports/automatic_interpretation_repair.json
+            reports/full_guidance_migration.json
+            reports/full_guidance_migration.md
+            reports/guidance_audit.json
+            reports/guidance_audit.md
+            acceptance.md
+            migration-tests.txt
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Commit and adopt automatically when measurable checks pass
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          git add data/guided_model_parts.json data/residue_param_map.json \
+            data/parts_comparison.json reports/automatic_interpretation_repair.json \
+            reports/full_guidance_migration.json reports/full_guidance_migration.md \
+            reports/guidance_audit.json reports/guidance_audit.md
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          branch="model/guidance-auto-repaired-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git commit -m "Adopt fully reinterpreted RDs after automated targeted validation and repair"
+          git push origin "$branch"
+          {
+            echo "## Full guided RD interpretation: automatically repaired"
+            echo
+            echo "All 765 unique definitions were retrieved from PR #21 without"
+            echo "repeated bulk model calls. Only failed cases were retried."
+            echo
+            echo "**No manually reviewed gold-standard dataset was required.**"
+            echo "**Existing test expectations and source definitions were not changed.**"
+            echo
+            echo "Acceptance exit: $acceptance_exit"
+            echo "Unit test exit: $unit_tests_exit"
+            echo
+            echo "## Targeted repair attempts"
+            echo '~~~json'
+            cat reports/automatic_interpretation_repair.json
+            echo '~~~'
+            echo
+            sed -n '1,80p' reports/full_guidance_migration.md
+          } > pr-body.md
+          url=$(gh pr create --base main --head "$branch" \
+            --title "Adopt 765 guided RDs after automated regression repair (run ${{ github.run_id }})" \
+            --body-file pr-body.md)
+          echo "Automated repair evidence: $url"
+          if [ "$acceptance_exit" = "0" ] && [ "$unit_tests_exit" = "0" ]; then
+            gh pr merge "$url" --squash --delete-branch \
+              --subject "Adopt guidance-backed RD interpretations after automatic fixes"
+            gh pr close 21 --comment "Superseded by $url. The automated repair workflow kept all 765 readings and addressed the known regressions without needing an external reference dataset." || true
+            echo "Reinterpreted reference adopted on main."
+          else
+            echo "::warning::Tests indicate an unresolved concrete regression. Results saved in $url."
+          fi
