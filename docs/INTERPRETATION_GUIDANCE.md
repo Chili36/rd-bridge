@@ -130,9 +130,13 @@ There is now also an **active, general guidance-aware model reader**:
   apply case-specific authoritative overrides.
 - The weekly [EU source refresh](EU_SOURCE_REFRESH.md) and manual
   [Model readings workflow](../.github/workflows/model.yml) now use the guided
-  model for **new or changed** definitions, never bulk-regenerating the old
-  cache by default. They refuse more than 40 paid calls per run, and submit
-  results for review in a pull request.
+  model for **new or changed** definitions. A separate, deliberately initiated
+  [full migration workflow](../.github/workflows/full_guided_migration.yml)
+  reinterprets **all** existing EU definitions in 16 bounded shards and
+  proposes replacing the old model interpretations in one PR. Previous
+  readings remain available for audit and rollback. This migration **does
+  not wait for a manually or independently reviewed dataset**, which is not
+  available. Routine incremental runs remain capped at 40 calls.
 
 There is **no unsupervised ingestion of arbitrary PDFs** into the model.
 This is a compact, provenance-controlled guidance index. OECD 2009
