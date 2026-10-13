@@ -157,8 +157,15 @@ def stage(approved_dir: Path, out_dir: Path, report: Path, get_page=get_json) ->
 
     check_size("pesticide-residues", residues, old_residues)
     check_size("active-substances", projected_active, old_active)
+    # Compare only the approved schema: new API fields must be retained and
+    # reviewed, not reported as deletion+addition of every existing residue.
+    approved_fields = {key for row in old_residues for key in row}
+    equivalent_residues = [
+        {key: row[key] for key in approved_fields if key in row}
+        for row in residues
+    ]
     baseline = {
-        "residues": row_diff(old_residues, residues),
+        "residues": row_diff(old_residues, equivalent_residues),
         "active_substances": row_diff(old_active, projected_active),
     }
     manifest = {
