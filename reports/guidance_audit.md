@@ -2,7 +2,7 @@
 
 The 40-item baseline is frozen. **Disagreement is not proof that either parser or model is wrong.** Evidence from the EU legal definition takes precedence over model agreement.
 
-Cases: **40**. Review statuses: {"requires_source_review":33,"source_verified":1,"wording_only":6}.
+Cases: **40**. Review statuses: {'requires_source_review': 33, 'source_verified': 1, 'wording_only': 6}.
 
 EFSA's current reporting guidance is 2026; the 2019 pesticide-only guidance is OBSOLETE and is listed only for its historical worked examples.
 
