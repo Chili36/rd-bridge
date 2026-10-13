@@ -135,6 +135,31 @@ def date_fields(rows: list) -> dict:
             for key in keys}
 
 
+def possible_future_dates(rows: list, as_of: date = None) -> list:
+    """Detect dates worth investigating, not a legal determination.
+
+    No record is rejected solely for having a date-like field. The latest RD
+    remains the default until the field's legal semantics are established.
+    """
+    as_of = as_of or datetime.now(timezone.utc).date()
+    fields = ("application_date", "pesticide_residue_application_date")
+    found = []
+    for row in rows:
+        for field in fields:
+            value = row.get(field)
+            if not isinstance(value, str) or not re.match(r"^\d{4}-\d{2}-\d{2}(?:$|T)", value):
+                continue
+            try:
+                parsed = date.fromisoformat(value[:10])
+            except ValueError:
+                continue
+            if parsed > as_of:
+                found.append({"residue_id": row.get("pesticide_residue_id"),
+                              "residue_name": row.get("pesticide_residue_name"),
+                              "field": field, "date": str(parsed)})
+    return sorted(found, key=canonical)
+
+
 def source_info(url: str, rows: list, pages: int) -> dict:
     keys = sorted({key for row in rows for key in row})
     digest = hashlib.sha256(("\n".join(map(canonical, rows))).encode("utf-8")).hexdigest()
@@ -174,6 +199,7 @@ def stage(approved_dir: Path, out_dir: Path, report: Path, get_page=get_json) ->
         "description": "Full-field EU snapshots and proposed latest-version reference update.",
         "api_version": "v3.0",
         "applicability_policy": "presume_latest_applicable_unless_known_future_date",
+        "possible_future_application_dates": possible_future_dates(residues),
         "source": {
             "residues": source_info(RESIDUES_API, residues, residue_pages),
             "active_substances": source_info(ACTIVE_API, active, active_pages),
@@ -222,6 +248,21 @@ def stage(approved_dir: Path, out_dir: Path, report: Path, get_page=get_json) ->
         for key, details in dates.items():
             lines.append(f"- `{key}`: {details['present']} non-empty values; "
                          f"examples: {', '.join(details['examples']) or '(none)'}")
+        lines.append("")
+    candidates = manifest["possible_future_application_dates"]
+    if candidates:
+        lines += ["## Possible future application dates", "",
+                  f"{len(candidates)} source record(s) have a date in the future "
+                  "under a field that may be an application date. They are NOT "
+                  "automatically excluded; confirm that the date applies to this "
+                  "RD before deciding which version is currently applicable.", ""]
+        lines += [
+            f"- residue {x['residue_id']}: {x['residue_name']} "
+            f"({x['field']} = {x['date']})"
+            for x in candidates[:50]
+        ]
+        if len(candidates) > 50:
+            lines.append(f"- ... and {len(candidates) - 50} more in the manifest")
         lines.append("")
     lines += [
         "## Review notes",
