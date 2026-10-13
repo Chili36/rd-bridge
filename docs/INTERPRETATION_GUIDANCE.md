@@ -130,9 +130,16 @@ There is now also an **active, general guidance-aware model reader**:
   apply case-specific authoritative overrides.
 - The weekly [EU source refresh](EU_SOURCE_REFRESH.md) and manual
   [Model readings workflow](../.github/workflows/model.yml) now use the guided
-  model for **new or changed** definitions, never bulk-regenerating the old
-  cache by default. They refuse more than 40 paid calls per run, and submit
-  results for review in a pull request.
+  model for **new or changed** definitions. A separate, deliberately initiated
+  [full migration workflow](../.github/workflows/full_guided_migration.yml)
+  reinterprets **all** existing EU definitions in 16 bounded shards.
+  After all existing unit tests, acceptance scenarios and whole-RD PARAM
+  consistency checks pass, it creates an evidence PR and merges the complete
+  cache automatically. If a regression is found, the proposal remains open
+  with the results so the actual issue can be corrected. Previous readings
+  remain available for audit and rollback. This migration **does
+  not wait for a manually or independently reviewed dataset**, which is not
+  available. Routine incremental runs remain capped at 40 calls.
 
 There is **no unsupervised ingestion of arbitrary PDFs** into the model.
 This is a compact, provenance-controlled guidance index. OECD 2009
@@ -161,8 +168,14 @@ python -m rd_bridge.guided_model_parts --scope selected --ids 253,301 --max-call
 The evaluation only creates `reports/guidance_model_evaluation.{json,md}`;
 it does **not** overwrite the primary map. The model workflow and EU refresh
 create review PRs rather than automatically merging changes.
-Small preselected tests **cannot establish overall accuracy**; an independent,
-larger human-reviewed benchmark is still needed.
+Small preselected tests **cannot establish overall accuracy**. Because no
+independently reviewed reference corpus can be obtained, such a corpus is
+**not a release gate**. Instead, the complete guidance-based reinterpretation
+uses the published EU definition, explicit OECD/EFSA principles, EFSA PARAM
+consistency tests, fixed regression examples, and a complete audit of every
+changed component. Corrections are incorporated incrementally as evidence
+becomes available. A missing external benchmark will never block replacing
+the cached model interpretations.
 
 Changes to source evidence, legal wording, commodity scope or EFSA
 catalogue version must be checked and tested when rebuilding.
