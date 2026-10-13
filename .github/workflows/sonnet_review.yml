@@ -29,6 +29,24 @@ jobs:
           python-version: '3.12'
       - name: Run offline regression tests
         run: python -m unittest discover -s tests -t .
+      - name: Check Sonnet model access without generating tokens
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        shell: bash
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY repository secret is missing"
+            exit 1
+          fi
+          http_status=$(curl --silent --show-error --max-time 30 \
+            --output /dev/null --write-out '%{http_code}' \
+            --header "x-api-key: $ANTHROPIC_API_KEY" \
+            --header "anthropic-version: 2023-06-01" \
+            https://api.anthropic.com/v1/models/claude-sonnet-5-5)
+          if [ "$http_status" != "200" ]; then
+            echo "::error::Sonnet access unavailable (HTTP $http_status)"
+            exit 1
+          fi
       - name: Blind Sonnet review (12 bounded cases)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
