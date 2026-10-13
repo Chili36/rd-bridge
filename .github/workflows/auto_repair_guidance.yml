@@ -6,6 +6,11 @@ name: Auto-repair guided RD migration
 
 on:
   workflow_dispatch:
+    inputs:
+      candidate_branch:
+        description: "Existing branch containing guidance-based interpretations to repair"
+        type: string
+        default: "model/complete-guidance-recovery-38471733089"
   # Start the first automated repair immediately when installed on main.
   push:
     branches: [main]
@@ -36,13 +41,18 @@ jobs:
           python -m unittest discover -s tests -t .
           cp data/residue_param_map.json old-reference-map.json
 
-      - name: Retrieve already completed 765 interpretations from PR 21
+      - name: Retrieve existing guidance-based interpretations (PR 21 initially)
         shell: bash
+        env:
+          CANDIDATE_BRANCH: ${{ inputs.candidate_branch || 'model/complete-guidance-recovery-38471733089' }}
         run: |
-          # PR 21 contains the combined Haiku/Sonnet outputs. We need no
-          # fresh API calls except for the entries failing known tests.
-          git fetch --no-tags origin \
-            refs/heads/model/complete-guidance-recovery-38471733089
+          # The existing PR contains all Haiku/Sonnet outputs. No need to
+          # regenerate them: only the actual failed cases are retried.
+          case "$CANDIDATE_BRANCH" in
+            model/*) ;;
+            *) echo "::error::Candidate must be a model/* branch"; exit 1 ;;
+          esac
+          git fetch --no-tags origin "refs/heads/$CANDIDATE_BRANCH"
           git show FETCH_HEAD:data/guided_model_parts.json > data/guided_model_parts.json
           python - <<'PY'
           from rd_bridge import guided_model_parts, components
@@ -166,7 +176,7 @@ jobs:
           if [ "$acceptance_exit" = "0" ] && [ "$unit_tests_exit" = "0" ]; then
             gh pr merge "$url" --squash --delete-branch \
               --subject "Adopt guidance-backed RD interpretations after automatic fixes"
-            gh pr close 21 --comment "Superseded by $url. The automated repair workflow kept all 765 readings and addressed the known regressions without needing an external reference dataset."
+            gh pr close 21 --comment "Superseded by $url. The automated repair workflow kept all 765 readings and addressed the known regressions without needing an external reference dataset." || true
             echo "Reinterpreted reference adopted on main."
           else
             echo "::warning::Tests indicate an unresolved concrete regression. Results saved in $url."
