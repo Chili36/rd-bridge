@@ -152,9 +152,8 @@ class Resolver:
         out.update(
             residue_id=residue["residue_id"], residue_name=residue["name"],
             applicability={
-                "status": "unverified",
-                "reason": "No legally verified application date is available for this "
-                          "source snapshot; a newer published definition may not yet apply.",
+                "status": "presumed_applicable",
+                "basis": "Latest EU-published residue definition unless a later application date is known.",
             },
         )
         exceptions = residue["exceptions"]
