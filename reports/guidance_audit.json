@@ -1,0 +1,1411 @@
+{
+  "purpose": "Source-grounded audit of original model-versus-parser disagreements, not model accuracy.",
+  "source_snapshot": "2026-10-13",
+  "param_catalogue_version": "17.6",
+  "method": "exact legal-source correction > explicit EU naming evidence > unresolved",
+  "source_hierarchy": {
+    "specific_legislation": {
+      "title": "Commission Regulation (EU) 2023/710, Annex V, chloridazon (R) footnote",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0710",
+      "role": "binding EU definition and commodity exception"
+    },
+    "current_efsa_reporting": {
+      "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+      "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+      "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+    },
+    "oecd_scope_context": {
+      "title": "OECD Guidance Document on the Definition of Residue (2009)",
+      "url": "https://doi.org/10.1787/66ca5caa-en",
+      "role": "principles and examples for enforcement/risk-assessment definitions"
+    },
+    "historical_efsa_examples_not_current": {
+      "title": "EFSA 2019 pesticide-residue reporting guidance, section 5.5, examples 14-16",
+      "url": "https://doi.org/10.2903/j.efsa.2019.5655",
+      "role": "historic P005A/P004A/P002A illustrations; document is obsolete"
+    }
+  },
+  "total_original_differences": 40,
+  "by_category": {
+    "component_code_conflict": 12,
+    "component_scope_conflict": 8,
+    "legal_source_resolved": 1,
+    "naming_or_qualifier_difference": 4,
+    "source_wording_resolved": 6,
+    "unlinked_component_identity": 9
+  },
+  "by_status": {
+    "requires_source_review": 33,
+    "source_verified": 1,
+    "wording_only": 6
+  },
+  "findings": [
+    {
+      "residue_id": 60,
+      "definition": "Sum of all compounds containing the 2-chlorobenzoyl moiety expressed as clofentezine",
+      "whole_rd_param_codes": [
+        "RF-0098-002-PPP"
+      ],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "all compounds containing the 2-chlorobenzoyl moiety [group: -]"
+      ],
+      "parser_reading": [
+        "compounds containing the 2-chlorobenzoyl moiety [group: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "unlinked_component_identity",
+      "review_status": "requires_source_review",
+      "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
+      "evidence": {
+        "EU_definition": "Sum of all compounds containing the 2-chlorobenzoyl moiety expressed as clofentezine",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 139,
+      "definition": "kresoxim methyl (BF-490-9, expressed as parent)",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [
+        "RF-0260-002-PPP"
+      ],
+      "parser_component_codes": [],
+      "model_reading": [
+        "kresoxim methyl (BF-490-9) [analyte: RF-0260-002-PPP]"
+      ],
+      "parser_reading": [
+        "BF-490-9 [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "kresoxim methyl (BF-490-9, expressed as parent)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 166,
+      "definition": "free and conjugated forms of alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090), expressed as myclobutanil",
+      "whole_rd_param_codes": [
+        "RF-00013001-PAR"
+      ],
+      "model_component_codes": [
+        "RF-1005-001-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-00013001-PAR"
+      ],
+      "model_reading": [
+        "alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090) [analyte: RF-1005-001-PPP]"
+      ],
+      "parser_reading": [
+        "forms of alpha-(3-hydroxybutyl) - alpha-(4-chloro-phenyl) - 1H-1,2,4-triazole-1-propanenitrile (RH9090) [analyte: RF-00013001-PAR]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "free and conjugated forms of alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090), expressed as myclobutanil",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 185,
+      "definition": "Vinclozolin, iprodione, procymidone, sum of compounds and all metabolites containing the 3,5-dichloroaniline moiety expressed as 3,5 dichloroaniline",
+      "whole_rd_param_codes": [
+        "RF-1003-001-PPP"
+      ],
+      "model_component_codes": [
+        "RF-0255-001-PPP",
+        "RF-0350-001-PPP",
+        "RF-0450-003-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-0255-001-PPP",
+        "RF-0350-001-PPP",
+        "RF-0450-003-PPP"
+      ],
+      "model_reading": [
+        "Vinclozolin [analyte: RF-0450-003-PPP]",
+        "iprodione [analyte: RF-0255-001-PPP]",
+        "procymidone [analyte: RF-0350-001-PPP]",
+        "all metabolites containing the 3,5-dichloroaniline moiety [group: -]"
+      ],
+      "parser_reading": [
+        "Vinclozolin [analyte: RF-0450-003-PPP]",
+        "iprodione [analyte: RF-0255-001-PPP]",
+        "procymidone [analyte: RF-0350-001-PPP]",
+        "compounds [group: -]",
+        "metabolites containing the 3,5-dichloroaniline moiety [group: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "naming_or_qualifier_difference",
+      "review_status": "requires_source_review",
+      "resolution": "Linked component codes agree, but wording, qualifiers or component structure differ. Review before calling it harmless.",
+      "evidence": {
+        "EU_definition": "Vinclozolin, iprodione, procymidone, sum of compounds and all metabolites containing the 3,5-dichloroaniline moiety expressed as 3,5 dichloroaniline",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 253,
+      "definition": "Chloridazon (chloridazon-desphenyl, expressed as chloridazon)",
+      "whole_rd_param_codes": [
+        "RF-00005712-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00006186-PAR",
+        "RF-0080-001-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-00006186-PAR"
+      ],
+      "model_reading": [
+        "chloridazon [analyte: RF-0080-001-PPP]",
+        "chloridazon-desphenyl [analyte: RF-00006186-PAR]"
+      ],
+      "parser_reading": [
+        "chloridazon-desphenyl [analyte: RF-00006186-PAR]"
+      ],
+      "current_parts_from": "legal_guidance",
+      "category": "legal_source_resolved",
+      "review_status": "source_verified",
+      "resolution": "The legally defined exception names chloridazon-desphenyl as the measured component, with chloridazon as expression basis.",
+      "evidence": {
+        "rule_id": "EU-2023-710-CHLORIDAZON-R",
+        "reason": "The animal-product exception names only chloridazon-desphenyl; chloridazon is the expression basis, not a second analyte.",
+        "source": [
+          {
+            "title": "Commission Regulation (EU) 2023/710, Annex V, chloridazon (R) footnote",
+            "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0710",
+            "role": "binding EU definition and commodity exception"
+          },
+          {
+            "title": "OECD Guidance Document on the Definition of Residue (2009)",
+            "url": "https://doi.org/10.1787/66ca5caa-en",
+            "role": "principles and examples for enforcement/risk-assessment definitions"
+          }
+        ],
+        "expression_basis": "chloridazon",
+        "measurement_component": "chloridazon-desphenyl"
+      }
+    },
+    {
+      "residue_id": 259,
+      "definition": "Clethodim (sum of Sethoxydim and Clethodim including degradation products calculated as Sethoxydim)",
+      "whole_rd_param_codes": [
+        "RF-0096-001-PPP"
+      ],
+      "model_component_codes": [
+        "RF-0096-003-PPP",
+        "RF-0096-005-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-0096-003-PPP",
+        "RF-0096-005-PPP"
+      ],
+      "model_reading": [
+        "Sethoxydim [analyte: RF-0096-003-PPP]",
+        "Clethodim [analyte: RF-0096-005-PPP]",
+        "degradation products [qualifier: -]"
+      ],
+      "parser_reading": [
+        "Sethoxydim [analyte: RF-0096-003-PPP]",
+        "Clethodim [analyte: RF-0096-005-PPP]",
+        "degradation products [group: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_scope_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "evidence": {
+        "EU_definition": "Clethodim (sum of Sethoxydim and Clethodim including degradation products calculated as Sethoxydim)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 284,
+      "definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [
+        "RF-00002838-PAR",
+        "RF-0143-002-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-0143-002-PPP"
+      ],
+      "model_reading": [
+        "Dinocap [analyte: RF-0143-002-PPP]",
+        "sum of dinocap isomers [qualifier: -]",
+        "their corresponding phenols [qualifier: -]",
+        "meptyldinocap [analyte: RF-00002838-PAR]",
+        "meptyldinocap corresponding phenol [analyte: -]"
+      ],
+      "parser_reading": [
+        "dinocap [analyte: RF-0143-002-PPP]",
+        "corresponding phenols [group: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 301,
+      "definition": "Fenpyroximate (metabolite M-3, expressed as fenpyroximate (F))",
+      "whole_rd_param_codes": [
+        "RF-00005723-PAR"
+      ],
+      "model_component_codes": [
+        "RF-0186-001-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-00005723-PAR"
+      ],
+      "model_reading": [
+        "fenpyroximate [analyte: RF-0186-001-PPP]",
+        "fenpyroximate metabolite M-3 [analyte: -]"
+      ],
+      "parser_reading": [
+        "M-3 [analyte: RF-00005723-PAR]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "Fenpyroximate (metabolite M-3, expressed as fenpyroximate (F))",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 307,
+      "definition": "sum of fludioxonil and its metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid, expressed as fludioxonil",
+      "whole_rd_param_codes": [
+        "RF-00003352-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00004643-PAR",
+        "RF-0202-001-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-0202-001-PPP"
+      ],
+      "model_reading": [
+        "fludioxonil [analyte: RF-0202-001-PPP]",
+        "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid [analyte: RF-00004643-PAR]"
+      ],
+      "parser_reading": [
+        "fludioxonil [analyte: RF-0202-001-PPP]",
+        "metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid [group: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "sum of fludioxonil and its metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid, expressed as fludioxonil",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 312,
+      "definition": "Flurochloridone (sum of cis- and trans- isomers)",
+      "whole_rd_param_codes": [
+        "RF-00011881-PAR"
+      ],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "flurochloridone cis-isomer [analyte: -]",
+        "flurochloridone trans-isomer [analyte: -]"
+      ],
+      "parser_reading": [
+        "cis-Flurochloridone [analyte: -]",
+        "trans-Flurochloridone [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "unlinked_component_identity",
+      "review_status": "requires_source_review",
+      "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
+      "evidence": {
+        "EU_definition": "Flurochloridone (sum of cis- and trans- isomers)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 321,
+      "definition": "Guazatine (guazatine acetate, sum of components)",
+      "whole_rd_param_codes": [
+        "RF-00004664-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00004664-PAR"
+      ],
+      "parser_component_codes": [],
+      "model_reading": [
+        "guazatine acetate [analyte: RF-00004664-PAR]"
+      ],
+      "parser_reading": [
+        "guazatine acetate [analyte: -]",
+        "components [group: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "Guazatine (guazatine acetate, sum of components)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 332,
+      "definition": "Metam (see methylisothiocyanate)",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Metam [analyte: -]"
+      ],
+      "parser_reading": [
+        "Metam (see methylisothiocyanate) [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "unlinked_component_identity",
+      "review_status": "requires_source_review",
+      "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
+      "evidence": {
+        "EU_definition": "Metam (see methylisothiocyanate)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 354,
+      "definition": "Phosphane and phosphide salts (sum of phosphane and phosphane generators (relevant phosphide salts), determined and expressed as phosphane)",
+      "whole_rd_param_codes": [
+        "RF-00005719-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00005719-PAR"
+      ],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Phosphane and phosphide salts [analyte: RF-00005719-PAR]"
+      ],
+      "parser_reading": [
+        "phosphane [analyte: -]",
+        "phosphane generators (relevant phosphide salts) [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "Phosphane and phosphide salts (sum of phosphane and phosphane generators (relevant phosphide salts), determined and expressed as phosphane)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 370,
+      "definition": "Quizalofop (sum of quizalofop, its salts, its esters (including propaquizafop) and its conjugates, expressed as quizalofop (any ratio of constituent isomers))",
+      "whole_rd_param_codes": [
+        "RF-00011882-PAR"
+      ],
+      "model_component_codes": [
+        "RF-0356-001-PPP",
+        "RF-0384-004-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-0356-001-PPP",
+        "RF-0384-004-PPP"
+      ],
+      "model_reading": [
+        "quizalofop [analyte: RF-0384-004-PPP]",
+        "its salts [qualifier: -]",
+        "its esters [qualifier: -]",
+        "propaquizafop [analyte: RF-0356-001-PPP]",
+        "its conjugates [qualifier: -]",
+        "any ratio of constituent isomers [qualifier: -]"
+      ],
+      "parser_reading": [
+        "quizalofop [analyte: RF-0384-004-PPP]",
+        "its salts [qualifier: -]",
+        "its esters (including propaquizafop) [qualifier: -]",
+        "propaquizafop [analyte: RF-0356-001-PPP]",
+        "its conjugates [qualifier: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "naming_or_qualifier_difference",
+      "review_status": "requires_source_review",
+      "resolution": "Linked component codes agree, but wording, qualifiers or component structure differ. Review before calling it harmless.",
+      "evidence": {
+        "EU_definition": "Quizalofop (sum of quizalofop, its salts, its esters (including propaquizafop) and its conjugates, expressed as quizalofop (any ratio of constituent isomers))",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 399,
+      "definition": "1,4-Diaminobutane  (aka Putrescine)",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "1,4-Diaminobutane [analyte: -]",
+        "Putrescine [analyte: -]"
+      ],
+      "parser_reading": [
+        "1,4-Diaminobutane  (aka Putrescine) [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "source_wording_resolved",
+      "review_status": "wording_only",
+      "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
+      "evidence": {
+        "source": "EU Pesticides Database, exact quoted definition",
+        "text": "1,4-Diaminobutane  (aka Putrescine)"
+      }
+    },
+    {
+      "residue_id": 412,
+      "definition": "Fatty acids / Lauric acid",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Fatty acids [group: -]",
+        "Lauric acid [analyte: -]"
+      ],
+      "parser_reading": [
+        "Fatty acids / Lauric acid [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_scope_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "evidence": {
+        "EU_definition": "Fatty acids / Lauric acid",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 413,
+      "definition": "Fatty acids C7-C20",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Fatty acids C7 [analyte: -]",
+        "Fatty acids C8 [analyte: -]",
+        "Fatty acids C9 [analyte: -]",
+        "Fatty acids C10 [analyte: -]",
+        "Fatty acids C11 [analyte: -]",
+        "Fatty acids C12 [analyte: -]",
+        "Fatty acids C13 [analyte: -]",
+        "Fatty acids C14 [analyte: -]",
+        "Fatty acids C15 [analyte: -]",
+        "Fatty acids C16 [analyte: -]",
+        "Fatty acids C17 [analyte: -]",
+        "Fatty acids C18 [analyte: -]",
+        "Fatty acids C19 [analyte: -]",
+        "Fatty acids C20 [analyte: -]"
+      ],
+      "parser_reading": [
+        "Fatty acids C7-C20 [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_scope_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "evidence": {
+        "EU_definition": "Fatty acids C7-C20",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 418,
+      "definition": "Fatty acids: Oleic acid incl ethyloleate",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Oleic acid [analyte: -]",
+        "ethyloleate [analyte: -]"
+      ],
+      "parser_reading": [
+        "Oleic acid incl ethyloleate [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_scope_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "evidence": {
+        "EU_definition": "Fatty acids: Oleic acid incl ethyloleate",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 422,
+      "definition": "Ferric sulphate (Iron (III) sulphate)",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Ferric sulphate [analyte: -]",
+        "Iron (III) sulphate [qualifier: -]"
+      ],
+      "parser_reading": [
+        "Ferric sulphate (Iron (III) sulphate) [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "unlinked_component_identity",
+      "review_status": "requires_source_review",
+      "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
+      "evidence": {
+        "EU_definition": "Ferric sulphate (Iron (III) sulphate)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 435,
+      "definition": "Plant oils / Citronellol",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Citronellol [analyte: -]"
+      ],
+      "parser_reading": [
+        "Plant oils / Citronellol [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "unlinked_component_identity",
+      "review_status": "requires_source_review",
+      "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
+      "evidence": {
+        "EU_definition": "Plant oils / Citronellol",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 436,
+      "definition": "Plant oils / Clove oil Eugenol",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Eugenol [analyte: -]"
+      ],
+      "parser_reading": [
+        "Plant oils / Clove oil Eugenol [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "unlinked_component_identity",
+      "review_status": "requires_source_review",
+      "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
+      "evidence": {
+        "EU_definition": "Plant oils / Clove oil Eugenol",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 438,
+      "definition": "Plant oils / Spearmint oil",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Spearmint oil [analyte: -]"
+      ],
+      "parser_reading": [
+        "Plant oils / Spearmint oil [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "unlinked_component_identity",
+      "review_status": "requires_source_review",
+      "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
+      "evidence": {
+        "EU_definition": "Plant oils / Spearmint oil",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 776,
+      "definition": "sum of cyflufenamid (Z-isomer), its E-isomer and metabolite 149-F1, expressed as cyflufenamid",
+      "whole_rd_param_codes": [
+        "RF-00012291-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00012292-PAR"
+      ],
+      "parser_component_codes": [
+        "RF-00012292-PAR"
+      ],
+      "model_reading": [
+        "cyflufenamid Z-isomer [analyte: -]",
+        "cyflufenamid E-isomer [analyte: -]",
+        "149-F1 [analyte: RF-00012292-PAR]"
+      ],
+      "parser_reading": [
+        "cyflufenamid [analyte: -]",
+        "its E-isomer [qualifier: -]",
+        "149-F1 [analyte: RF-00012292-PAR]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_scope_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "evidence": {
+        "EU_definition": "sum of cyflufenamid (Z-isomer), its E-isomer and metabolite 149-F1, expressed as cyflufenamid",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 778,
+      "definition": "Flonicamid (sum of flonicamid, TFNA and TFNG expressed as flonicamid)",
+      "whole_rd_param_codes": [
+        "RF-00004683-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00003348-PAR",
+        "RF-00003349-PAR",
+        "RF-0194-002-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-0194-002-PPP"
+      ],
+      "model_reading": [
+        "flonicamid [analyte: RF-0194-002-PPP]",
+        "TFNA [analyte: RF-00003348-PAR]",
+        "TFNG [analyte: RF-00003349-PAR]"
+      ],
+      "parser_reading": [
+        "flonicamid [analyte: RF-0194-002-PPP]",
+        "TFNA [analyte: -]",
+        "TFNG [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "Flonicamid (sum of flonicamid, TFNA and TFNG expressed as flonicamid)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 793,
+      "definition": "Metaflumizone (sum of E- and Z- isomers)",
+      "whole_rd_param_codes": [
+        "RF-0280-001-PPP"
+      ],
+      "model_component_codes": [
+        "RF-00007590-PAR"
+      ],
+      "parser_component_codes": [
+        "RF-00007590-PAR"
+      ],
+      "model_reading": [
+        "Metaflumizone E-isomer [analyte: -]",
+        "Metaflumizone Z-isomer [analyte: RF-00007590-PAR]"
+      ],
+      "parser_reading": [
+        "E-Metaflumizone [analyte: -]",
+        "Z-Metaflumizone [analyte: RF-00007590-PAR]"
+      ],
+      "current_parts_from": "model",
+      "category": "naming_or_qualifier_difference",
+      "review_status": "requires_source_review",
+      "resolution": "Linked component codes agree, but wording, qualifiers or component structure differ. Review before calling it harmless.",
+      "evidence": {
+        "EU_definition": "Metaflumizone (sum of E- and Z- isomers)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 2306,
+      "definition": "Purpureocillium lilacinum strain 251 (former Paecilomyces lilacinus strain 251)",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Purpureocillium lilacinum strain 251 [analyte: -]"
+      ],
+      "parser_reading": [
+        "Purpureocillium lilacinum strain 251 (former Paecilomyces lilacinus strain 251) [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "source_wording_resolved",
+      "review_status": "wording_only",
+      "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
+      "evidence": {
+        "source": "EU Pesticides Database, exact quoted definition",
+        "text": "Purpureocillium lilacinum strain 251 (former Paecilomyces lilacinus strain 251)"
+      }
+    },
+    {
+      "residue_id": 2309,
+      "definition": "Aureobasidium pullulans strains DSM 14940 and DSM 14941",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Aureobasidium pullulans strain DSM 14940 [analyte: -]",
+        "Aureobasidium pullulans strain DSM 14941 [analyte: -]"
+      ],
+      "parser_reading": [
+        "Aureobasidium pullulans strains DSM 14940 and DSM 14941 [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_scope_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "evidence": {
+        "EU_definition": "Aureobasidium pullulans strains DSM 14940 and DSM 14941",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 2332,
+      "definition": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+      "whole_rd_param_codes": [
+        "RF-1078-002-PPP"
+      ],
+      "model_component_codes": [
+        "RF-00007489-PAR",
+        "RF-00007495-PAR",
+        "RF-00007627-PAR"
+      ],
+      "parser_component_codes": [
+        "RF-00012336-PAR",
+        "RF-1078-002-PPP"
+      ],
+      "model_reading": [
+        "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C8 [analyte: RF-00007495-PAR]",
+        "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C10 [analyte: RF-00007627-PAR]",
+        "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C12 [analyte: RF-00007489-PAR]"
+      ],
+      "parser_reading": [
+        "Didecyldimethylammonium chloride [analyte: RF-00012336-PAR,RF-1078-002-PPP]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 2333,
+      "definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+      "whole_rd_param_codes": [
+        "RF-00002582-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00003376-PAR",
+        "RF-1078-003-PPP",
+        "RF-1078-004-PPP",
+        "RF-1078-005-PPP",
+        "RF-1078-006-PPP",
+        "RF-1078-007-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-00002582-PAR",
+        "RF-00012321-PAR"
+      ],
+      "model_reading": [
+        "alkylbenzyldimethylammonium chloride C8 [analyte: RF-00003376-PAR]",
+        "alkylbenzyldimethylammonium chloride C10 [analyte: RF-1078-003-PPP]",
+        "alkylbenzyldimethylammonium chloride C12 [analyte: RF-1078-004-PPP]",
+        "alkylbenzyldimethylammonium chloride C14 [analyte: RF-1078-005-PPP]",
+        "alkylbenzyldimethylammonium chloride C16 [analyte: RF-1078-006-PPP]",
+        "alkylbenzyldimethylammonium chloride C18 [analyte: RF-1078-007-PPP]"
+      ],
+      "parser_reading": [
+        "Benzalkonium chloride [analyte: RF-00002582-PAR,RF-00012321-PAR]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 2401,
+      "definition": "Trichoderma asperellum (formerly T. harzianum) strains ICC012, T25 and TV1",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Trichoderma asperellum strain ICC012 [analyte: -]",
+        "Trichoderma asperellum strain T25 [analyte: -]",
+        "Trichoderma asperellum strain TV1 [analyte: -]"
+      ],
+      "parser_reading": [
+        "Trichoderma asperellum (formerly T. harzianum) strains ICC012, T25 and TV1 [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_scope_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "evidence": {
+        "EU_definition": "Trichoderma asperellum (formerly T. harzianum) strains ICC012, T25 and TV1",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 2402,
+      "definition": "Trichoderma atroviride (formerly T. harzianum) strains IMI 206040 and T11",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Trichoderma atroviride strain IMI 206040 [analyte: -]",
+        "Trichoderma atroviride strain T11 [analyte: -]"
+      ],
+      "parser_reading": [
+        "Trichoderma atroviride (formerly T. harzianum) strains IMI 206040 and T11 [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_scope_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "evidence": {
+        "EU_definition": "Trichoderma atroviride (formerly T. harzianum) strains IMI 206040 and T11",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 2403,
+      "definition": "Trichoderma afroharzianum (Formerly Trichoderma harzianum) strain T-22",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Trichoderma afroharzianum strain T-22 [analyte: -]",
+        "Formerly Trichoderma harzianum [qualifier: -]"
+      ],
+      "parser_reading": [
+        "Trichoderma afroharzianum (Formerly Trichoderma harzianum) strain T-22 [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "source_wording_resolved",
+      "review_status": "wording_only",
+      "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
+      "evidence": {
+        "source": "EU Pesticides Database, exact quoted definition",
+        "text": "Trichoderma afroharzianum (Formerly Trichoderma harzianum) strain T-22"
+      }
+    },
+    {
+      "residue_id": 2448,
+      "definition": "FEN 560  (also called fenugreek or fenugreek seed powder)",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "FEN 560 [analyte: -]"
+      ],
+      "parser_reading": [
+        "FEN 560  (also called fenugreek or fenugreek seed powder) [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "source_wording_resolved",
+      "review_status": "wording_only",
+      "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
+      "evidence": {
+        "source": "EU Pesticides Database, exact quoted definition",
+        "text": "FEN 560  (also called fenugreek or fenugreek seed powder)"
+      }
+    },
+    {
+      "residue_id": 2449,
+      "definition": "Methyl decanoate (CAS 110-42-9)",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Methyl decanoate [analyte: -]"
+      ],
+      "parser_reading": [
+        "Methyl decanoate (CAS 110-42-9) [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "source_wording_resolved",
+      "review_status": "wording_only",
+      "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
+      "evidence": {
+        "source": "EU Pesticides Database, exact quoted definition",
+        "text": "Methyl decanoate (CAS 110-42-9)"
+      }
+    },
+    {
+      "residue_id": 2450,
+      "definition": "Methyl octanoate (CAS 111-11-5)",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Methyl octanoate [analyte: -]"
+      ],
+      "parser_reading": [
+        "Methyl octanoate (CAS 111-11-5) [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "source_wording_resolved",
+      "review_status": "wording_only",
+      "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
+      "evidence": {
+        "source": "EU Pesticides Database, exact quoted definition",
+        "text": "Methyl octanoate (CAS 111-11-5)"
+      }
+    },
+    {
+      "residue_id": 2530,
+      "definition": "2,5-dichlorobenzoic acid methylester (sum of 2,5-dichlorobenzoic acid and its ester expressed as 2,5-dichlorobenzoic acid methylester)",
+      "whole_rd_param_codes": [
+        "RF-00012386-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00001604-PAR",
+        "RF-00012387-PAR"
+      ],
+      "parser_component_codes": [
+        "RF-00012387-PAR"
+      ],
+      "model_reading": [
+        "2,5-dichlorobenzoic acid [analyte: RF-00012387-PAR]",
+        "2,5-dichlorobenzoic acid methylester [analyte: RF-00001604-PAR]"
+      ],
+      "parser_reading": [
+        "2,5-dichlorobenzoic acid [analyte: RF-00012387-PAR]",
+        "its ester [qualifier: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "2,5-dichlorobenzoic acid methylester (sum of 2,5-dichlorobenzoic acid and its ester expressed as 2,5-dichlorobenzoic acid methylester)",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 2830,
+      "definition": "Sum of 1,4-dimethylnaphthalene and its metabolite M23 free and conjugated, expressed as 1,4-dimethylnaphthalene",
+      "whole_rd_param_codes": [
+        "RF-00014206-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00004728-PAR"
+      ],
+      "parser_component_codes": [
+        "RF-00004728-PAR"
+      ],
+      "model_reading": [
+        "1,4-dimethylnaphthalene [analyte: RF-00004728-PAR]",
+        "1,4-dimethylnaphthalene metabolite M23 [analyte: -]",
+        "free and conjugated [qualifier: -]"
+      ],
+      "parser_reading": [
+        "1,4-dimethylnaphthalene [analyte: RF-00004728-PAR]",
+        "M23 [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "naming_or_qualifier_difference",
+      "review_status": "requires_source_review",
+      "resolution": "Linked component codes agree, but wording, qualifiers or component structure differ. Review before calling it harmless.",
+      "evidence": {
+        "EU_definition": "Sum of 1,4-dimethylnaphthalene and its metabolite M23 free and conjugated, expressed as 1,4-dimethylnaphthalene",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 3050,
+      "definition": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim",
+      "whole_rd_param_codes": [
+        "RF-00014256-PAR"
+      ],
+      "model_component_codes": [
+        "RF-00006227-PAR",
+        "RF-00006240-PAR",
+        "RF-0106-002-PPP"
+      ],
+      "parser_component_codes": [
+        "RF-0106-002-PPP"
+      ],
+      "model_reading": [
+        "Cycloxydim [analyte: RF-0106-002-PPP]",
+        "3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) [analyte: RF-00006227-PAR]",
+        "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) [analyte: RF-00006240-PAR]",
+        "derivatives thereof [qualifier: -]"
+      ],
+      "parser_reading": [
+        "Cycloxydim [analyte: RF-0106-002-PPP]",
+        "degradation [group: -]",
+        "reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) [group: -]",
+        "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof [group: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "component_code_conflict",
+      "review_status": "requires_source_review",
+      "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
+      "evidence": {
+        "EU_definition": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 3231,
+      "definition": "Repellants: Sheep fat",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Repellants [analyte: -]"
+      ],
+      "parser_reading": [
+        "Sheep fat [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "unlinked_component_identity",
+      "review_status": "requires_source_review",
+      "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
+      "evidence": {
+        "EU_definition": "Repellants: Sheep fat",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    },
+    {
+      "residue_id": 3850,
+      "definition": "Plant oils / Citronella oil",
+      "whole_rd_param_codes": [],
+      "model_component_codes": [],
+      "parser_component_codes": [],
+      "model_reading": [
+        "Citronella oil [analyte: -]"
+      ],
+      "parser_reading": [
+        "Plant oils / Citronella oil [analyte: -]"
+      ],
+      "current_parts_from": "model",
+      "category": "unlinked_component_identity",
+      "review_status": "requires_source_review",
+      "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
+      "evidence": {
+        "EU_definition": "Plant oils / Citronella oil",
+        "efsa_param_guidance": {
+          "title": "EFSA Chemical monitoring reporting guidance: 2026 data collection",
+          "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+          "role": "current SSD2/PARAM reporting guidance; not a grammar for every RD"
+        },
+        "oecd_context_not_binding_rule": {
+          "title": "OECD Guidance Document on the Definition of Residue (2009)",
+          "url": "https://doi.org/10.1787/66ca5caa-en",
+          "role": "principles and examples for enforcement/risk-assessment definitions"
+        }
+      }
+    }
+  ]
+}
