@@ -17,7 +17,8 @@ class ResolverTest(unittest.TestCase):
 
     def check(self, code, substance, scope, param):
         out = self.r.resolve(code, substance)
-        self.assertEqual((out["status"], out["scope"], out["param_codes"]), ("resolved", scope, [param]), out)\n        self.assertEqual(out["applicability"]["status"], "unverified")
+        self.assertEqual((out["status"], out["scope"], out["param_codes"]), ("resolved", scope, [param]), out)
+        self.assertEqual(out["applicability"]["status"], "unverified")
         return out
 
     def test_readme_examples(self):
