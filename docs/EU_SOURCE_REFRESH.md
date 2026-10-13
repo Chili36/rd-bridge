@@ -1,98 +1,88 @@
-# EU source updates and legal application dates
+# Updating the EU residue reference
 
-## Two different questions
+## Applicability policy
 
-1. **What has the EU published?** The DG SANTE API can provide a current
-   source snapshot of residue records and active substances.
-2. **Which residue definition applies to a product on a particular date?**
-   This is a legal interpretation question. A record's version number, a
-   publication date, and a retrieval timestamp cannot answer it by themselves.
+**Use the latest EU-published residue definition as the currently applicable
+definition unless we have specific evidence to the contrary.**
 
-The [Commission's pesticide MRL Q&A](https://food.ec.europa.eu/plants/pesticides/maximum-residue-levels/qas-pesticides_en)
-distinguishes publication, entry into force, application date and transitional
-provisions. A later-published definition may not yet apply. MRL provisions,
-commodity exceptions and dates must be verified against their legal sources.
+A missing application date does **not** mean an RD is invalid, and it does not
+block a refresh. In resolver output, `applicability.status = "presumed_applicable"`
+documents this working assumption; `status = "resolved"` remains a successful
+PARAM lookup. No general "unverified" state is returned for missing dates.
 
-**Do not use the latest record ID/version as evidence of legal applicability.**
-Until that work is implemented, the `rd_bridge.resolve` lookup reports
-`applicability.status = "unverified"`. Its `status = "resolved"` only
-indicates that the *mapped source definition* has a PARAM link.
+If a source shows a future application date, that is a reason to investigate
+**that particular revision** and retain the earlier applicable version.
+Publication, entry into force and application can differ, as the
+[European Commission's MRL Q&A](https://food.ec.europa.eu/plants/pesticides/maximum-residue-levels/qas-pesticides_en)
+explains. The legal relationship of an MRL date to an RD may be
+commodity-dependent; the date's meaning must be established before changing
+selection. Missing or ambiguous dates are not a reason to reject the latest RD.
 
-## How the new source workflow works
+Historical `as-of` selection is not implemented; see [issue #6](https://github.com/Chili36/rd-bridge/issues/6).
+The current data are a latest-version reference, not a historical legal archive.
 
-[Update EU source snapshots](../.github/workflows/eu_sources.yml) runs weekly
-(Mondays 06:00 UTC) and on demand. It uses two endpoints, pinned to
-`api-version=v3.0`:
+## Weekly and manual updates
 
-- `pesticide-residues` with `pesticide_residue_lg=EN`.
-- `active-substances`.
+[Update EU reference data](../.github/workflows/eu_sources.yml) runs each
+Monday 06:00 UTC, or on demand. It:
 
-It paginates to completion, retains **every response field and original row**
-(including duplicate records), and stages:
+1. Fetches **every page and every field** returned by the DG SANTE v3
+   `pesticide-residues` (English) and `active-substances` APIs.
+2. Checks API response structure, pagination completeness and suspicious drops
+   in record counts. A broken/empty API does not overwrite working data.
+3. Saves the full raw source snapshots under `data/eu_sources/`, with a
+   manifest containing source URLs, record/field counts, checksums and possible
+   date fields. Duplicate source records are preserved in these snapshots.
+4. Updates `data/residues_en.json` with the complete new residue records and
+   `data/active_substances.json` with the existing resolver-compatible
+   five-field index. All original active-substance fields remain in the
+   full-source snapshot.
+5. Rebuilds `data/residue_param_map.json`, uses cached/model readings when
+   available (requests new readings if configured), compares interpretation
+   results and runs unit tests.
+6. Opens a **normal pull request**, containing the proposed updated inputs,
+   derived mapping and a report with changes, possible future dates and
+   test results. It never auto-merges.
 
-- `data/eu_sources/residues_full.json`
-- `data/eu_sources/active_substances_full.json`
-- `data/eu_sources/manifest.json` (source URLs, field names, counts, pages,
-  candidate date fields and SHA-256 checksums)
+The default is to **propose the refreshed source and mapping**. Application
+dates do not need to be verified before the PR can be created or merged.
+When specific evidence shows that a future RD is not yet applicable, review
+that individual case before merging the proposed version.
 
-It also uploads a Markdown review report as a workflow artifact. If source data
-have changed, it opens a **draft PR**. The first run produces the initial
-unapproved full-field snapshots; subsequent runs show diffs.
+Possible future-date records are listed in the refresh report whenever fields
+such as `application_date` have future values. Field names alone are not
+proof of legal applicability; these candidates are surfaced for investigation,
+not used to reject an entire refresh.
 
-A broken API, missing required fields, incomplete pagination, empty results or
-an implausibly large drop in row counts **fails without updating snapshots**.
-Date-like field names and example values are reported for investigation; they
-are **not automatically treated as legal application dates**. Schema additions
-are preserved, never filtered out.
-
-This workflow intentionally **does not update** `data/residues_en.json`,
-`data/active_substances.json`, `data/residue_param_map.json` or model caches.
-It therefore cannot activate a newly published but not-yet-applicable
-definition by accident.
-
-Run the same checks locally (Python 3.10+; standard library only):
+To test locally (Python 3.10+; standard library):
 
 ```bash
 python -m unittest discover -s tests -t .
 python -m rd_bridge.eu_refresh --report eu-refresh-report.md
+python -m rd_bridge.match
+python -m rd_bridge.compare_parts
 ```
 
-## What is and is not meant by “all EU data”
+The comparison command intentionally returns exit status 3 when acceptance
+cases fail. The workflow still creates the PR and includes that result.
 
-The new snapshots preserve **all raw fields** from the two endpoints that the
-project currently uses. They are not a copy of the entire EU Pesticides
-Database. There are separate EU API endpoints for MRL values, product
-associations and downloadable MRL datasets. These may be required for legal
-dates and historical interpretations; they have **not** yet been integrated
-or independently schema-validated here.
+## Data coverage and known limits
 
-The previously committed residue snapshot contains only eight fields and no
-date field; the five-field `data/active_substances.json` is a deliberate
-projection, **not** a complete active-substance source. The full-field
-snapshot prevents further loss of attributes once a successful new fetch is
-possible.
+The project currently downloads **all fields from its two existing DG SANTE
+endpoints**; this is not a copy of every table in the EU Pesticides Database.
+Separate EU endpoints cover MRL values, product associations and MRL downloads.
+These may be needed for authoritative application dates and transitions, and
+are not integrated yet.
 
-## Requirements before promoting staged data
+Our prior October 2026 residue snapshot contains eight fields and **no date
+field**. The historical `active_substances.json` contains only five projected
+fields. This refresh preserves new fields rather than discarding information
+that may be useful for later date-aware interpretation.
 
-1. Determine and document the authoritative *application date* source and
-   whether it refers to an entire RD, an MRL/product combination, or an
-   individual legal act. Preserve legal references, amendments and transitional
-   provisions. A field with a promising name alone is insufficient.
-2. Represent historical and prospective versions without discarding older
-   definitions. For a requested date, only select a definition when the source
-   establishes it is applicable for that date and commodity; otherwise return
-   an **undetermined** state rather than choosing the largest version number.
-3. Compare proposed source revisions with the approved source, including
-   removed rows and altered footnote/product exceptions. Independently
-   examine prospective records and any legal ambiguities.
-4. In a separate reviewed change, promote the verified source into the
-   approved inputs, rebuild the PARAM map and model readings, and review
-   regression tests and acceptance failures. Maintain a reproducible source
-   snapshot and provenance.
+[DG SANTE API documentation](https://developer.datalake.sante.service.ec.europa.eu/docs)
+recommends pinning and reviewing API versions rather than automatically
+following breaking changes. We pin `api-version=v3.0` and review new fields.
 
-The [DG SANTE developer documentation](https://developer.datalake.sante.service.ec.europa.eu/docs)
-recommends explicitly pinning an API version. Changes to API versions need a
-separate schema review.
-
-**No automated workflow may silently promote a newer version of an RD as the
-legally applicable one based solely on the API's record order or version.**
+**Operating rule:** Assume the latest EU RD is applicable until specific
+information establishes otherwise. Review those exceptions, not every
+un-dated definition.
