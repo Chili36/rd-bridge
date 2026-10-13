@@ -1,0 +1,73 @@
+# Stage full, raw DG SANTE API records for review; never overwrite the approved
+# residue/PARAM mapping just because an EU record is the latest published version.
+name: Update EU source snapshots
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'  # Mondays 06:00 UTC
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: eu-source-snapshots
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Offline regression tests
+        run: python -m unittest discover -s tests -t .
+      - name: Fetch, validate and stage full EU source responses
+        run: python -m rd_bridge.eu_refresh --report eu-refresh-report.md
+      - name: Preserve the source review report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eu-source-review-report
+          path: eu-refresh-report.md
+          if-no-files-found: ignore
+      - name: Propose unapproved source snapshots for review
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          # Don't generate weekly duplicate PRs while the previous one awaits review.
+          existing=$(gh pr list --state open --json headRefName \
+            --jq '[.[] | select(.headRefName | startswith("data/eu-source-"))] | length')
+          if [ "$existing" -gt 0 ]; then
+            echo "An EU source review PR is already open. Report preserved as artifact."
+            exit 0
+          fi
+          git add data/eu_sources/
+          if git diff --cached --quiet; then
+            echo "Full source snapshots unchanged; no pull request needed."
+            exit 0
+          fi
+          branch="data/eu-source-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git commit -m "Stage full EU source snapshots (run ${{ github.run_id }})"
+          git push origin "$branch"
+          {
+            echo "## Candidate data only — legal effective dates NOT confirmed"
+            echo
+            echo "This PR stages all fields returned by the EU pesticide-residues and"
+            echo "active-substances endpoints; it does not update the approved mapping."
+            echo "Human review is required before any promotion to the resolver."
+            echo
+            cat eu-refresh-report.md
+          } > pr-body.md
+          gh pr create --draft --base main --head "$branch" \
+            --title "Review EU source snapshots (run ${{ github.run_id }})" \
+            --body-file pr-body.md
