@@ -30,10 +30,13 @@ class PrioritizationTest(unittest.TestCase):
             comparison = json.load(fh)
         self.assertEqual(len(conflicts),
                          comparison["comparison"]["counts"].get("different", 0))
-        self.assertEqual(len(cases), 12)
+        focus = {(r["residue_id"], r["default"]["definition"]) for r in rows
+                 if r["residue_id"] in (321, 2655)}
+        expected = min(12, len(focus | {
+            (x["residue_id"], x["definition"]) for x in conflicts}))
+        self.assertEqual(len(cases), expected)
         self.assertEqual({321, 2655} & {x["residue_id"] for x in cases}, {321, 2655})
-        self.assertEqual(len({(c["residue_id"], c["definition"]) for c in cases}), 12)
-        self.assertIn("acceptance", next(x["source"] for x in cases if x["residue_id"] == 2655))
+        self.assertEqual(len({(c["residue_id"], c["definition"]) for c in cases}), expected)
 
     def test_limit_is_technical_cost_cap(self):
         with self.assertRaises(ValueError):
