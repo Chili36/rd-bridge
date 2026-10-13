@@ -16,7 +16,7 @@ Supporting sources play different roles:
 | [OECD, Guidance Document on the Definition of Residue, revised 2009](https://doi.org/10.1787/66ca5caa-en) | Distinguishes residues for MRL enforcement and dietary risk assessment; explains marker compounds, chemical conversions and expression bases (especially scenarios 1–5 and 11) | Supporting principles, **not EU legislation** |
 | [EFSA, Chemical monitoring reporting guidance: 2026 data collection](https://doi.org/10.2903/sp.efsa.2026.EN-9911) | Current guidance for SSD2/PARAM reporting, legal-definition codes and parts | Current reporting guidance |
 | [EFSA, Reporting data on pesticide residues (2018 data collection, published 2019), §5.5](https://doi.org/10.2903/j.efsa.2019.5655) | Helpful historical examples of P005A (full definition), P004A (subset) and P002A (individual part) | **Obsolete**; not current normative guidance |
-| [EFSA PARAM 17.6](https://github.com/openefsa/efsa-catalogues) | Identity and hierarchy of whole residue and component codes | Versioned reference catalogue, not a definition of legal scope |
+| [EFSA PARAM 17.8](https://github.com/openefsa/efsa-catalogues) | Identity and hierarchy of whole residue and component codes | Versioned reference catalogue, not a definition of legal scope |
 
 **Interpret the source first. Map the interpreted whole residue and its actual
 parts second.** A PARAM code for a whole definition is not automatically a code

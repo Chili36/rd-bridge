@@ -37,7 +37,7 @@ Monday 06:00 UTC, or on demand. It:
    `data/active_substances.json` with the existing resolver-compatible
    five-field index. All original active-substance fields remain in the
    full-source snapshot.
-5. Rebuilds `data/residue_param_map.json`, uses cached/model readings when
+5. Uses the **committed EFSA PARAM 17.8** source snapshot (not an unversioned or potentially older ECF download) and rebuilds `data/residue_param_map.json`, uses cached/model readings when
    available (requests new readings if configured), compares interpretation
    results and runs unit tests.
 6. Opens a **normal pull request**, containing the proposed updated inputs,
@@ -86,3 +86,7 @@ following breaking changes. We pin `api-version=v3.0` and review new fields.
 **Operating rule:** Assume the latest EU RD is applicable until specific
 information establishes otherwise. Review those exceptions, not every
 un-dated definition.
+
+## PARAM catalogue version
+
+The PARAM input is currently version **17.8** (valid from 2026-09-11), imported from an EFSA Catalogue Browser Excel export. Its SHA-256 is recorded in `data/param_components.json`. The original workbook is intentionally not committed. To import an updated official export, run `python -m rd_bridge.fetch_param PARAM_17.8.xlsx` locally, then regenerate the residue map and run the regression suite. The default remote ECF fetch refuses to downgrade this version.

@@ -31,6 +31,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Check pinned EFSA PARAM catalogue before rebuilding
+        run: |
+          python - <<'PY'
+          import json
+          source = json.load(open('data/param_components.json', encoding='utf-8'))['source']
+          version = tuple(int(p) for p in source['version'].split('.'))
+          if version < (17, 8):
+              raise SystemExit('Refusing to rebuild with PARAM older than the imported 17.8 snapshot')
+          print(f"EFSA PARAM {source['version']} ({source['valid_from']})")
+          PY
       - name: Test the fetch and mapping code
         run: python -m unittest discover -s tests -t .
       - name: Download full EU source records and update reference inputs
