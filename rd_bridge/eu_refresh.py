@@ -1,16 +1,18 @@
-"""Stage complete DG SANTE API responses without promoting them to the reference map.
+"""Fetch DG SANTE source records and propose an updated reference dataset.
 
-The existing data/residues_en.json and data/active_substances.json are approved
-inputs to the mapping pipeline. A newly published residue is NOT necessarily
-legally applicable yet. This module leaves those inputs untouched and opens
-reviewable, full-field source snapshots instead.
+The most recent EU-published RD is presumed applicable unless specific
+evidence establishes a future application date. Unknown dates do NOT block
+refreshing the mapping. Changes are committed only via a reviewed PR.
+
+Raw API rows keep every field; active-substances also gets a compatibility
+projection for the existing resolver.
 
 Usage:
     python -m rd_bridge.eu_refresh --report eu-refresh-report.md
 """
 import argparse
 import collections
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 import hashlib
 import json
 from pathlib import Path
@@ -80,10 +82,10 @@ def fetch_pages(url: str, required: tuple, get_page=get_json, max_pages=MAX_PAGE
 
 
 def project_active_substances(raw: list) -> list:
-    """Existing resolver's five-field index; only used to compare with baseline.
+    """Five-field compatibility index consumed by the existing resolver.
 
-    The *full* input rows, including duplicates and future fields, are always
-    retained independently in the staged snapshot.
+    The full EU records, including duplicates and future fields, are also
+    retained as independent raw snapshots.
     """
     projected, seen = [], set()
     for row in raw:
@@ -169,29 +171,32 @@ def stage(approved_dir: Path, out_dir: Path, report: Path, get_page=get_json) ->
         "active_substances": row_diff(old_active, projected_active),
     }
     manifest = {
-        "description": "Full-field, unapproved EU source snapshots; not legal as-of data.",
+        "description": "Full-field EU snapshots and proposed latest-version reference update.",
         "api_version": "v3.0",
-        "legal_applicability": "unverified",
+        "applicability_policy": "presume_latest_applicable_unless_known_future_date",
         "source": {
             "residues": source_info(RESIDUES_API, residues, residue_pages),
             "active_substances": source_info(ACTIVE_API, active, active_pages),
         },
     }
-    # Raw response rows are stored with all original keys. Never put the reduced
-    # five-field active-substance projection in place of this raw dataset.
+    # Preserve all original fields separately, while proposing usable updates to
+    # the existing mapping inputs. These are branch changes, not changes to main:
+    # the workflow opens a pull request, and does not auto-merge.
     save_json(out_dir / "residues_full.json", residues)
     save_json(out_dir / "active_substances_full.json", active)
     save_json(out_dir / "manifest.json", manifest)
+    save_json(approved_dir / "residues_en.json", residues)
+    save_json(approved_dir / "active_substances.json", projected_active)
 
     lines = [
         "# DG SANTE source snapshot review",
         "",
         f"Fetched (UTC): {datetime.now(timezone.utc).isoformat(timespec='seconds')}",
         "",
-        "**Candidate snapshots only.** No approved reference mapping or resolver "
-        "input was modified. Publication date, effective date and application "
-        "date are not interchangeable. The legal applicability of a definition "
-        "remains **unverified**.",
+        "**Proposed update:** use the latest EU-published definitions as "
+        "applicable by default, unless there is evidence of a future application "
+        "date. Missing date information does not block a reference update. "
+        "Historical date-specific lookup is not implemented.",
         "",
         "| API | Full raw rows | Pages | Approved baseline rows | Added rows* | Removed rows* |",
         "| --- | ---: | ---: | ---: | ---: | ---: |",
@@ -219,17 +224,17 @@ def stage(approved_dir: Path, out_dir: Path, report: Path, get_page=get_json) ->
                          f"examples: {', '.join(details['examples']) or '(none)'}")
         lines.append("")
     lines += [
-        "## Required review before promoting data",
+        "## Review notes",
         "",
-        "1. Verify all returned fields and changes, including new/removed records.",
-        "2. Establish which source and legal act provides the **application date** "
-        "for each residue definition and commodity exception. This endpoint "
-        "may not provide it; MRL APIs or the applicable Regulations may be needed.",
-        "3. Check future-dated and transitional provisions before selecting the "
-        "definition for any date. Do not infer legal effect from the newest "
-        "version number or snapshot timestamp.",
-        "4. Only after review, update approved inputs, rebuild the PARAM map, "
-        "run unit tests and acceptance checks in a separate PR.",
+        "1. The updated residue and active-substance inputs are proposed in this "
+        "same pull request, along with the rebuilt PARAM map.",
+        "2. Do not hold back a new RD merely because its application date is not "
+        "provided: latest-published is the normal working assumption.",
+        "3. Where there is **specific evidence** of a future application date, "
+        "check the case and retain the prior applicable definition. The source "
+        "fields listed above are candidates for investigation, not proof by name alone.",
+        "4. The project does not yet resolve historical RDs for a requested "
+        "sampling date; see the dedicated issue for date-aware selection.",
         "",
     ]
     report.parent.mkdir(parents=True, exist_ok=True)
@@ -247,7 +252,7 @@ def main() -> None:
     for name, details in result["source"].items():
         print(f"{name}: {details['row_count']} full records, "
               f"{details['page_count']} pages, {len(details['fields'])} fields")
-    print(f"Review report: {args.report} (application dates NOT verified)")
+    print(f"Review report: {args.report} (latest definitions presumed applicable)")
 
 
 if __name__ == "__main__":
