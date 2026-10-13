@@ -1,0 +1,142 @@
+# Recover the 15 successful and one partial shard from the original run.
+# Only the missing RD from shard 5 is sent to the model again.
+name: Recover complete RD guidance migration
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/recover_guidance_migration.yml
+
+permissions:
+  actions: read
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: all-guided-rd-migration
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Retrieve all sixteen shard artifacts from run 38465473954
+        uses: actions/download-artifact@v4
+        with:
+          run-id: 38465473954
+          github-token: ${{ github.token }}
+          pattern: guided-shard-*
+          path: shards
+          merge-multiple: true
+      - name: Verify previous shard artifacts are present
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          paths = list(Path('shards').glob('guided-*.json'))
+          assert len(paths) == 16, f'Expected 16 previous shard artifacts, got {len(paths)}'
+          print('Reusing', len(paths), 'completed and partially completed shard files.')
+          PY
+      - name: Retry the one refused definition in shard 5, preserving the other 47
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        shell: bash
+        run: |
+          # Reuse the 47 previous guided responses. The code asks only the
+          # missing definition, Verticillium albo-atrum isolate WCS850.
+          python -m rd_bridge.guided_model_parts \
+            --scope all --shard-index 5 --shard-count 16 \
+            --max-calls 1 --workers 1 --output shards/guided-5.json
+      - name: Verify the complete guidance cache before adoption
+        env:
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        run: python -m rd_bridge.guided_migration merge --shard-dir shards
+      - name: Rebuild PARAM map and describe all component changes
+        env:
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        shell: bash
+        run: |
+          cp data/residue_param_map.json old-reference-map.json
+          python -m rd_bridge.match
+          status=0
+          python -m rd_bridge.compare_parts > guided-comparison.md || status=$?
+          if [ "$status" != 0 ] && [ "$status" != 3 ]; then exit "$status"; fi
+          echo "acceptance_exit=$status" >> "$GITHUB_ENV"
+          python -m rd_bridge.guidance_audit
+          python -m rd_bridge.guided_migration report --baseline old-reference-map.json
+          sed -n '1,65p' reports/full_guidance_migration.md
+      - name: Run all unit and regression checks on the complete replacement
+        shell: bash
+        env:
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        run: |
+          status=0
+          python -m unittest discover -s tests -t . > migration-tests.txt 2>&1 || status=$?
+          tail -n 45 migration-tests.txt
+          echo "unit_tests_exit=$status" >> "$GITHUB_ENV"
+      - name: Preserve combined results whether the tests pass or not
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovered-complete-guidance-migration
+          path: |
+            data/guided_model_parts.json
+            data/residue_param_map.json
+            data/parts_comparison.json
+            reports/full_guidance_migration.json
+            reports/full_guidance_migration.md
+            reports/guidance_audit.json
+            reports/guidance_audit.md
+            guided-comparison.md
+            migration-tests.txt
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Adopt all guidance-backed interpretations when existing checks pass
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          git add data/guided_model_parts.json data/residue_param_map.json \
+            data/parts_comparison.json reports/full_guidance_migration.md \
+            reports/full_guidance_migration.json \
+            reports/guidance_audit.json reports/guidance_audit.md
+          if git diff --cached --quiet; then
+            echo "No change; migration already incorporated."
+            exit 0
+          fi
+          branch="model/complete-guidance-recovery-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git commit -m "Adopt full guided RD interpretations, recovered from run 38465473954"
+          git push origin "$branch"
+          {
+            echo "## Complete guidance migration recovered"
+            echo
+            echo "Recovered 15 successful and one partial shard from run 38465473954."
+            echo "Only the refused definition in shard 5 was reinterpreted."
+            echo "No independently reviewed external dataset is required."
+            echo
+            echo "Acceptance exit code: $acceptance_exit"
+            echo "Unit test exit code: $unit_tests_exit"
+            echo
+            sed -n '1,80p' reports/full_guidance_migration.md
+          } > body.md
+          url=$(gh pr create --base main --head "$branch" \
+            --title "Adopt all guidance-based RDs from recovered migration (run ${{ github.run_id }})" \
+            --body-file body.md)
+          echo "Complete migration evidence PR: $url"
+          if [ "$acceptance_exit" = "0" ] && [ "$unit_tests_exit" = "0" ]; then
+            gh pr merge "$url" --squash --delete-branch \
+              --subject "Adopt recovered complete guidance-based RD interpretations"
+            echo "Complete guided RD interpretations adopted on main."
+          else
+            echo "::warning::Regression(s) found; results saved to $url for concrete fixes."
+          fi
