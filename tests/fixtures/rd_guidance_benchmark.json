@@ -1,0 +1,173 @@
+{
+  "description": "Small explicit-EU-text benchmark to detect regressions in named analyte extraction; not an estimate of regulatory correctness over all RDs.",
+  "baseline": "data/model_parts.json (Haiku cache)",
+  "gold_policy": "Requirements must follow unambiguous wording in exact EU definitions and source interpretation principles; do not use an LLM majority vote as ground truth.",
+  "cases": [
+    {
+      "id": "chloridazon_animal",
+      "residue_id": 253,
+      "exception": 0,
+      "required": [
+        "chloridazon desphenyl"
+      ],
+      "forbidden": [
+        "^chloridazon$"
+      ],
+      "source": "EU 2023/710, Annex V (R): metabolite is analyte; parent is expression basis."
+    },
+    {
+      "id": "chloridazon_default",
+      "residue_id": 253,
+      "exception": null,
+      "required": [
+        "^chloridazon$",
+        "chloridazon desphenyl"
+      ],
+      "forbidden": [],
+      "source": "EU 2023/710 Annex V: sum explicitly lists parent and desphenyl."
+    },
+    {
+      "id": "fenpyroximate_m3",
+      "residue_id": 301,
+      "exception": 0,
+      "required": [
+        "\\bm ?3\\b"
+      ],
+      "forbidden": [
+        "^fenpyroximate$"
+      ],
+      "source": "EU pesticide-residues active exception: metabolite M-3 expressed as fenpyroximate."
+    },
+    {
+      "id": "kresoxim_bf4909",
+      "residue_id": 139,
+      "exception": 0,
+      "required": [
+        "bf ?490 ?9"
+      ],
+      "forbidden": [
+        "^kresoxim methyl$"
+      ],
+      "source": "EU product exception names BF-490-9 and an expression parent."
+    },
+    {
+      "id": "captan_exception_thpi",
+      "residue_id": 36,
+      "exception": 0,
+      "required": [
+        "^thpi$",
+        "3 oh thpi",
+        "5 oh thpi"
+      ],
+      "forbidden": [
+        "^captan$"
+      ],
+      "source": "EU commodity exception explicitly sums THPI and 3-OH/5-OH THPI."
+    },
+    {
+      "id": "aldicarb_sum",
+      "residue_id": 12,
+      "exception": null,
+      "required": [
+        "^aldicarb$",
+        "aldicarb sulfoxide",
+        "aldicarb sulfone"
+      ],
+      "forbidden": [],
+      "source": "EU RD explicit sum; OECD 2009 Scenario 1 on expressed-as parent."
+    },
+    {
+      "id": "methiocarb_sum",
+      "residue_id": 337,
+      "exception": null,
+      "required": [
+        "^methiocarb$",
+        "methiocarb sulfoxide",
+        "methiocarb sulfone"
+      ],
+      "forbidden": [],
+      "source": "EU explicit sum; OECD 2009 Scenario 1 methiocarb example."
+    },
+    {
+      "id": "flonicamid_sum",
+      "residue_id": 778,
+      "exception": null,
+      "required": [
+        "^flonicamid$",
+        "^tfna$",
+        "^tfng$"
+      ],
+      "forbidden": [],
+      "source": "EU RD explicitly names flonicamid, TFNA, TFNG."
+    },
+    {
+      "id": "ddac_homologues",
+      "residue_id": 2332,
+      "exception": null,
+      "required": [
+        "\\bc8\\b",
+        "\\bc10\\b",
+        "\\bc12\\b"
+      ],
+      "forbidden": [],
+      "source": "EU DDAC definition enumerates three alkyl chain lengths."
+    },
+    {
+      "id": "mevinphos_isomers",
+      "residue_id": 161,
+      "exception": null,
+      "required": [
+        "mevinphos.*\\be\\b|\\be\\b.*mevinphos",
+        "mevinphos.*\\bz\\b|\\bz\\b.*mevinphos"
+      ],
+      "forbidden": [
+        "^mevinphos$"
+      ],
+      "source": "EU RD explicitly names E- and Z-isomer."
+    },
+    {
+      "id": "ester_pair",
+      "residue_id": 2530,
+      "exception": null,
+      "required": [
+        "^2 5 dichlorobenzoic acid$",
+        "2 5 dichlorobenzoic acid methylester"
+      ],
+      "forbidden": [],
+      "source": "EU RD lists acid and its specified methyl ester separately."
+    },
+    {
+      "id": "phorate_derivatives",
+      "residue_id": 179,
+      "exception": null,
+      "required": [
+        "^phorate$",
+        "phorate oxygen analogue",
+        "phorate sulfone",
+        "phorate oxygen analogue sulfone"
+      ],
+      "forbidden": [],
+      "source": "EU RD sum includes phorate, oxygen analogue and both sulfones."
+    }
+  ],
+  "exploratory": [
+    {
+      "id": "dinocap_conditional",
+      "residue_id": 284,
+      "exception": null,
+      "source": "EU conditional meptyldinocap clause; requires expert review, no automatic gold."
+    },
+    {
+      "id": "guazatine_complex",
+      "residue_id": 321,
+      "exception": null,
+      "source": "Unenumerated mixture/summed component; no reliable automatically evaluable gold."
+    },
+    {
+      "id": "phosphane_generators",
+      "residue_id": 354,
+      "exception": null,
+      "source": "Complex common-moiety/analytical conversion case requiring expert review."
+    }
+  ]
+}
