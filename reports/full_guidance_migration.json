@@ -1,0 +1,3582 @@
+{
+  "definitions": 767,
+  "component_changes": [
+    {
+      "residue_id": 3,
+      "definition": "1,2-dichloroethane (ethylene dichloride)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "1,2-dichloroethane",
+          [
+            "RF-0003-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "1,2-dichloroethane (ethylene dichloride)",
+          [
+            "RF-0003-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 13,
+      "definition": "Aldrin and Dieldrin (Aldrin and dieldrin combined expressed as dieldrin)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Aldrin",
+          [
+            "RF-0021-002-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "Dieldrin",
+          [
+            "RF-0021-003-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "aldrin",
+          [
+            "RF-0021-002-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "dieldrin",
+          [
+            "RF-0021-003-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 18,
+      "definition": "Azimsulfuron",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Azimsulfuron",
+          [
+            "RF-0031-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "azimsulfuron",
+          [
+            "RF-0031-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 32,
+      "definition": "Bromopropylate",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Bromopropylate",
+          [
+            "RF-0052-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "bromopropylate",
+          [
+            "RF-0052-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 36,
+      "definition": "captan",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "captan",
+          [
+            "RF-0061-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "captan",
+          [
+            "RF-0061-001-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "tetrahydrophthalimide (THPI)",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 60,
+      "definition": "Clofentezine",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Clofentezine",
+          [
+            "RF-0098-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "clofentezine",
+          [
+            "RF-0098-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 69,
+      "definition": "Deltamethrin (cis-deltamethrin)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Deltamethrin",
+          [
+            "RF-0120-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Deltamethrin (cis-deltamethrin)",
+          [
+            "RF-0120-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 74,
+      "definition": "Dicofol (sum of p, p´ and o,p´ isomers)",
+      "before_parts_from": "model",
+      "after_parts_from": "rules",
+      "before": [
+        [
+          "analyte",
+          "o,p´-dicofol",
+          [
+            "RF-0130-003-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "p,p´-dicofol",
+          [
+            "RF-0130-002-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "o,p´-Dicofol",
+          [
+            "RF-0130-003-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "p,p´-Dicofol",
+          [
+            "RF-0130-002-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 78,
+      "definition": "Dinoterb (sum of dinoterb, its salts and esters, expressed as dinoterb)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Dinoterb",
+          [
+            "RF-0145-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "dinoterb",
+          [
+            "RF-0145-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 83,
+      "definition": "Dithiocarbamates (dithiocarbamates expressed as CS2, including maneb, mancozeb, metiram, propineb, thiram and ziram)",
+      "before_parts_from": "model",
+      "after_parts_from": "rules",
+      "before": [
+        [
+          "analyte",
+          "Dithiocarbamates",
+          [
+            "RF-0151-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "dithiocarbamates",
+          [
+            "RF-0151-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 92,
+      "definition": "Etoxazole",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Etoxazole",
+          [
+            "RF-0169-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "etoxazole",
+          [
+            "RF-0169-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 96,
+      "definition": "Fenarimol",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Fenarimol",
+          [
+            "RF-0174-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "fenarimol",
+          [
+            "RF-0174-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 99,
+      "definition": "Fenhexamid",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Fenhexamid",
+          [
+            "RF-0179-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "fenhexamid",
+          [
+            "RF-0179-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 103,
+      "definition": "Fentin (fentin including its salts, expressed as triphenyltin cation)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Fentin",
+          [
+            "RF-0687-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "fentin",
+          [
+            "RF-0687-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 105,
+      "definition": "Fenvalerate (any ratio of constituent isomers (RR, SS, RS & SR) including esfenvalerate)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "esfenvalerate",
+          [
+            "RF-0690-003-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "fenvalerate",
+          [
+            "RF-0690-002-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Fenvalerate",
+          [
+            "RF-0690-002-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "esfenvalerate",
+          [
+            "RF-0690-003-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 107,
+      "definition": "Flazasulfuron",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Flazasulfuron",
+          [
+            "RF-0193-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "flazasulfuron",
+          [
+            "RF-0193-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 109,
+      "definition": "Flucythrinate (flucythrinate including other mixtures of constituent isomers (sum of isomers))",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Flucythrinate",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "flucythrinate",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 113,
+      "definition": "Fluroxypyr (sum of fluroxypyr and its salts, expressed as fluroxypyr)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Fluroxypyr",
+          [
+            "RF-0215-003-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "fluroxypyr",
+          [
+            "RF-0215-003-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 113,
+      "definition": "Fluroxypyr (sum of fluroxypyr, its salts, its esters, and its conjugates, expressed as fluroxypyr)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Fluroxypyr",
+          [
+            "RF-0215-003-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "fluroxypyr",
+          [
+            "RF-0215-003-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 126,
+      "definition": "Hexaconazole",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Hexaconazole",
+          [
+            "RF-0241-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "hexaconazole",
+          [
+            "RF-0241-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 127,
+      "definition": "Hydrogen cyanide (cyanides expressed as hydrogen cyanide)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Hydrogen cyanide (cyanides expressed as hydrogen cyanide)",
+          [
+            "RF-0243-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "cyanides",
+          [
+            "RF-0243-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 130,
+      "definition": "Imazamox (Sum of imazamox and its salts, expressed as imazamox)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Imazamox",
+          [
+            "RF-0247-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "imazamox",
+          [
+            "RF-0247-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 132,
+      "definition": "Indoxacarb (sum of indoxacarb and its R enantiomer)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Indoxacarb",
+          [
+            "RF-0251-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "indoxacarb",
+          [
+            "RF-0251-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 135,
+      "definition": "Iprodione",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Iprodione",
+          [
+            "RF-0255-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "iprodione",
+          [
+            "RF-0255-001-PPP"
+          ]
+        ],
+        [
+          "group",
+          "metabolites containing the 3,5-dichloroaniline moiety",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 135,
+      "definition": "Sum of iprodione and all metabolites containing the 3,5-dichloroaniline moiety, expressed as iprodione",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "iprodione",
+          [
+            "RF-0255-001-PPP"
+          ]
+        ],
+        [
+          "group",
+          "metabolites containing the 3,5-dichloroaniline moiety",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "iprodione",
+          [
+            "RF-0255-001-PPP"
+          ]
+        ],
+        [
+          "group",
+          "all metabolites containing the 3,5-dichloroaniline moiety",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 139,
+      "definition": "Kresoxim-methyl",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "kresoxim-methyl",
+          [
+            "RF-0260-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Kresoxim-methyl",
+          [
+            "RF-0260-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 148,
+      "definition": "Mepanipyrim",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Mepanipyrim",
+          [
+            "RF-0274-002-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "2-anilino-4-(2-hydroxypropyl)-6-methylpyrimidine",
+          []
+        ],
+        [
+          "analyte",
+          "mepanipyrim",
+          [
+            "RF-0274-002-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 157,
+      "definition": "Methomyl",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Methomyl",
+          [
+            "RF-0293-003-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "methomyl",
+          [
+            "RF-0293-003-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "thiodicarb",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 168,
+      "definition": "Oxadiargyl",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Oxadiargyl",
+          [
+            "RF-0317-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "oxadiargyl",
+          [
+            "RF-0317-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 176,
+      "definition": "Pendimethalin",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Pendimethalin",
+          [
+            "RF-0331-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "pendimethalin",
+          [
+            "RF-0331-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 185,
+      "definition": "Procymidone",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Procymidone",
+          [
+            "RF-0350-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "procymidone",
+          [
+            "RF-0350-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 185,
+      "definition": "Vinclozolin, iprodione, procymidone, sum of compounds and all metabolites containing the 3,5-dichloroaniline moiety expressed as 3,5 dichloroaniline",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Vinclozolin",
+          [
+            "RF-0450-003-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "iprodione",
+          [
+            "RF-0255-001-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "procymidone",
+          [
+            "RF-0350-001-PPP"
+          ]
+        ],
+        [
+          "group",
+          "all metabolites containing the 3,5-dichloroaniline moiety",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "iprodione",
+          [
+            "RF-0255-001-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "procymidone",
+          [
+            "RF-0350-001-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "vinclozolin",
+          [
+            "RF-0450-003-PPP"
+          ]
+        ],
+        [
+          "group",
+          "compounds and all metabolites containing the 3,5-dichloroaniline moiety",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 187,
+      "definition": "Prohexadione (prohexadione (acid) and its salts expressed as prohexadione-calcium)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Prohexadione",
+          [
+            "RF-0352-002-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "prohexadione",
+          [
+            "RF-0352-002-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 190,
+      "definition": "Propoxur",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Propoxur",
+          [
+            "RF-0361-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "propoxur",
+          [
+            "RF-0361-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 192,
+      "definition": "Sum of propyzamide and all metabolites containing the 3,5-dichlorobenzoic acid moiety, expressed as propyzamide",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "propyzamide",
+          [
+            "RF-0364-001-PPP"
+          ]
+        ],
+        [
+          "group",
+          "metabolites containing the 3,5-dichlorobenzoic acid moiety",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "propyzamide",
+          [
+            "RF-0364-001-PPP"
+          ]
+        ],
+        [
+          "group",
+          "all metabolites containing the 3,5-dichlorobenzoic acid moiety",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 194,
+      "definition": "Pymetrozine",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Pymetrozine",
+          [
+            "RF-0369-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "pymetrozine",
+          [
+            "RF-0369-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 203,
+      "definition": "Resmethrin (resmethrin including other mixtures of consituent isomers (sum of isomers))",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Resmethrin",
+          [
+            "RF-0385-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "resmethrin",
+          [
+            "RF-0385-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 214,
+      "definition": "Thiram (expressed as thiram)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Thiram",
+          [
+            "RF-0423-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "thiram",
+          [
+            "RF-0423-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 241,
+      "definition": "Benfluralin",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Benfluralin",
+          [
+            "RF-0039-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "benfluralin",
+          [
+            "RF-0039-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 249,
+      "definition": "Butralin",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Butralin",
+          [
+            "RF-0057-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "butralin",
+          [
+            "RF-0057-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 251,
+      "definition": "Carbetamide (sum of carbetamide and its S isomer)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Carbetamide",
+          [
+            "RF-0064-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "carbetamide",
+          [
+            "RF-0064-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 266,
+      "definition": "Cyproconazole",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Cyproconazole",
+          [
+            "RF-0113-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "cyproconazole",
+          [
+            "RF-0113-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 284,
+      "definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Dinocap",
+          [
+            "RF-0143-002-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "meptyldinocap",
+          [
+            "RF-00002838-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "meptyldinocap corresponding phenol",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "dinocap",
+          [
+            "RF-0143-002-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "dinocap phenol",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [
+        "RF-00002838-PAR"
+      ],
+      "same_component_codes": false
+    },
+    {
+      "residue_id": 285,
+      "definition": "Dithianon",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Dithianon",
+          [
+            "RF-0150-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "dithianon",
+          [
+            "RF-0150-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 289,
+      "definition": "EPTC (ethyl dipropylthiocarbamate)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "EPTC",
+          [
+            "RF-0158-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "EPTC (ethyl dipropylthiocarbamate)",
+          [
+            "RF-0158-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 300,
+      "definition": "Fenpropidin (sum of fenpropidin and its salts, expressed as fenpropidin)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Fenpropidin",
+          [
+            "RF-00007586-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "fenpropidin",
+          [
+            "RF-00007586-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 301,
+      "definition": "Fenpyroximate (metabolite M-3, expressed as fenpyroximate (F))",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "fenpyroximate",
+          [
+            "RF-0186-001-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "fenpyroximate metabolite M-3",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "fenpyroximate metabolite M-3",
+          [
+            "RF-00005723-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [
+        "RF-00005723-PAR"
+      ],
+      "removed_param_codes": [
+        "RF-0186-001-PPP"
+      ],
+      "same_component_codes": false
+    },
+    {
+      "residue_id": 310,
+      "definition": "Fluoxastrobin (sum of fluoxastrobin, its Z-isomer and its metabolite 6-(2-chlorophenoxy)-5-fluoro-4-pyrimidinol, expressed as fluoxastrobin)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "6-(2-chlorophenoxy)-5-fluoro-4-pyrimidinol",
+          []
+        ],
+        [
+          "analyte",
+          "fluoxastrobin",
+          [
+            "RF-0211-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "6-(2-chlorophenoxy)-5-fluoro-4-pyrimidinol",
+          []
+        ],
+        [
+          "analyte",
+          "fluoxastrobin",
+          [
+            "RF-0211-001-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "fluoxastrobin Z-isomer",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 314,
+      "definition": "Flutolanil",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Flutolanil",
+          [
+            "RF-0219-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "flutolanil",
+          [
+            "RF-0219-001-PPP"
+          ]
+        ],
+        [
+          "group",
+          "metabolites containing the 2-trifluoromethylbenzoic acid moiety",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 314,
+      "definition": "Flutolanil (Flutolanil and metabolites containing the 2-trifluoromethylbenzoic acid moiety, expressed as flutolanil)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Flutolanil",
+          [
+            "RF-0219-001-PPP"
+          ]
+        ],
+        [
+          "group",
+          "metabolites containing the 2-trifluoromethylbenzoic acid moiety",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "flutolanil",
+          [
+            "RF-0219-001-PPP"
+          ]
+        ],
+        [
+          "group",
+          "metabolites containing the 2-trifluoromethylbenzoic acid moiety",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 330,
+      "definition": "Mepiquat (sum of mepiquat and its salts, expressed as mepiquat chloride)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Mepiquat",
+          [
+            "RF-0275-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "mepiquat",
+          [
+            "RF-0275-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 332,
+      "definition": "Metam (see methylisothiocyanate)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Metam",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Metam",
+          []
+        ],
+        [
+          "analyte",
+          "methylisothiocyanate",
+          [
+            "RF-00013459-PAR",
+            "RF-0118-001-PPP",
+            "RF-0790-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [
+        "RF-00013459-PAR",
+        "RF-0118-001-PPP",
+        "RF-0790-001-PPP"
+      ],
+      "removed_param_codes": [],
+      "same_component_codes": false
+    },
+    {
+      "residue_id": 351,
+      "definition": "Phenothrin (phenothrin including other mixtures of constituent isomers (sum of isomers))",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Phenothrin",
+          [
+            "RF-00012805-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "phenothrin",
+          [
+            "RF-00012805-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 354,
+      "definition": "Phosphane and phosphide salts (sum of phosphane and phosphane generators (relevant phosphide salts), determined and expressed as phosphane)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Phosphane and phosphide salts",
+          [
+            "RF-00005719-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "phosphane",
+          []
+        ],
+        [
+          "group",
+          "phosphane generators (relevant phosphide salts)",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [
+        "RF-00005719-PAR"
+      ],
+      "same_component_codes": false
+    },
+    {
+      "residue_id": 358,
+      "definition": "Propachlor: oxalinic derivate of propachlor, expressed as propachlor",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "propachlor",
+          [
+            "RF-0353-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "oxalinic derivate of propachlor",
+          [
+            "RF-0353-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 359,
+      "definition": "Propamocarb (Sum of propamocarb and its salts, expressed as propamocarb)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Propamocarb",
+          [
+            "RF-0354-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "propamocarb",
+          [
+            "RF-0354-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 375,
+      "definition": "Spiromesifen",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Spiromesifen",
+          [
+            "RF-0395-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "spiromesifen",
+          [
+            "RF-0395-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 380,
+      "definition": "Tebufenozide",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Tebufenozide",
+          [
+            "RF-0404-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "tebufenozide",
+          [
+            "RF-0404-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 384,
+      "definition": "Terbufos",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Terbufos",
+          [
+            "RF-0412-002-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "terbufos",
+          [
+            "RF-0412-002-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "terbufos sulfone",
+          []
+        ],
+        [
+          "analyte",
+          "terbufos sulfoxide",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 393,
+      "definition": "Triclopyr",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Triclopyr",
+          [
+            "RF-0436-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "3,5,6-trichloro-2-pyridinol",
+          []
+        ],
+        [
+          "analyte",
+          "triclopyr",
+          [
+            "RF-0436-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 394,
+      "definition": "Tricyclazole",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Tricyclazole",
+          [
+            "RF-0437-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "tricyclazole",
+          [
+            "RF-0437-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 398,
+      "definition": "Trinexapac (sum of trinexapac (acid) and its salts, expressed as trinexapac)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Trinexapac",
+          [
+            "RF-0446-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "trinexapac (acid)",
+          [
+            "RF-0446-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 399,
+      "definition": "1,4-Diaminobutane  (aka Putrescine)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "1,4-Diaminobutane",
+          []
+        ],
+        [
+          "analyte",
+          "Putrescine",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "1,4-Diaminobutane",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 412,
+      "definition": "Fatty acids / Lauric acid",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Lauric acid",
+          []
+        ],
+        [
+          "group",
+          "Fatty acids",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Lauric acid",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 413,
+      "definition": "Fatty acids C7-C20",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Fatty acids C10",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C11",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C12",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C13",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C14",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C15",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C16",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C17",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C18",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C19",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C20",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C7",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C8",
+          []
+        ],
+        [
+          "analyte",
+          "Fatty acids C9",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Fatty acids C7-C20",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 418,
+      "definition": "Fatty acids: Oleic acid incl ethyloleate",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Oleic acid",
+          []
+        ],
+        [
+          "analyte",
+          "ethyloleate",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "ethyloleate",
+          []
+        ],
+        [
+          "analyte",
+          "oleic acid",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 422,
+      "definition": "Ferric sulphate (Iron (III) sulphate)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Ferric sulphate",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Ferric sulphate (Iron (III) sulphate)",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 428,
+      "definition": "Kieselguhr  (aka diatomaceous earth)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Kieselguhr (diatomaceous earth)",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Kieselguhr",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 438,
+      "definition": "Plant oils / Spearmint oil",
+      "before_parts_from": "model",
+      "after_parts_from": "rules",
+      "before": [
+        [
+          "analyte",
+          "Spearmint oil",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Plant oils / Spearmint oil",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 440,
+      "definition": "Potassium Iodide",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Potassium Iodide",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Potassium iodide",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 468,
+      "definition": "Propham",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Propham",
+          [
+            "RF-0867-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "propham",
+          [
+            "RF-0867-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 776,
+      "definition": "Cyflufenamid (sum of cyflufenamid (Z-isomer) and its E-isomer, expressed as cyflufenamid)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "cyflufenamid",
+          [
+            "RF-0107-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "cyflufenamid (Z-isomer)",
+          [
+            "RF-00007590-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "cyflufenamid E-isomer",
+          []
+        ]
+      ],
+      "added_param_codes": [
+        "RF-00007590-PAR"
+      ],
+      "removed_param_codes": [
+        "RF-0107-001-PPP"
+      ],
+      "same_component_codes": false
+    },
+    {
+      "residue_id": 776,
+      "definition": "sum of cyflufenamid (Z-isomer), its E-isomer and metabolite 149-F1, expressed as cyflufenamid",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "149-F1",
+          [
+            "RF-00012292-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "cyflufenamid E-isomer",
+          []
+        ],
+        [
+          "analyte",
+          "cyflufenamid Z-isomer",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "149-F1",
+          [
+            "RF-00012292-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "cyflufenamid (Z-isomer)",
+          [
+            "RF-00007590-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "cyflufenamid E-isomer",
+          []
+        ]
+      ],
+      "added_param_codes": [
+        "RF-00007590-PAR"
+      ],
+      "removed_param_codes": [],
+      "same_component_codes": false
+    },
+    {
+      "residue_id": 779,
+      "definition": "Flubendiamide",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Flubendiamide",
+          [
+            "RF-0199-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "flubendiamide",
+          [
+            "RF-0199-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 784,
+      "definition": "Flurprimidole",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Flurprimidole",
+          [
+            "RF-0216-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Flurprimidol",
+          [
+            "RF-0216-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 790,
+      "definition": "Mandipropamid (any ratio of constituent isomers)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Mandipropamid",
+          [
+            "RF-00012047-PAR",
+            "RF-0268-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "mandipropamid",
+          [
+            "RF-00012047-PAR",
+            "RF-0268-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 802,
+      "definition": "Pyrasulfotole",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Pyrasulfotole",
+          [
+            "RF-0372-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "pyrasulfotole",
+          [
+            "RF-0372-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 808,
+      "definition": "Tembotrione (Sum of parent tembotrione (AE 0172747) and its metabolite M5 (4,6-dihydroxy tembotrione), expressed as tembotrione)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "4,6-dihydroxy tembotrione (M5)",
+          [
+            "RF-00002608-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "tembotrione (AE 0172747)",
+          [
+            "RF-0409-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "M5 (4,6-dihydroxy tembotrione)",
+          [
+            "RF-00002608-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "tembotrione (AE 0172747)",
+          [
+            "RF-0409-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 810,
+      "definition": "Topramezone (BAS 670H)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Topramezone",
+          [
+            "RF-0426-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Topramezone (BAS 670H)",
+          [
+            "RF-0426-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 811,
+      "definition": "Tralkoxydim (sum of the constituent isomers of tralkoxydim)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Tralkoxydim",
+          [
+            "RF-0427-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "tralkoxydim",
+          [
+            "RF-0427-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2080,
+      "definition": "Amisulbrom",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Amisulbrom",
+          [
+            "RF-0470-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "amisulbrom",
+          [
+            "RF-0470-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2268,
+      "definition": "Fluxapyroxad",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Fluxapyroxad",
+          [
+            "RF-00000024-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "fluxapyroxad",
+          [
+            "RF-00000024-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2309,
+      "definition": "Aureobasidium pullulans strains DSM 14940 and DSM 14941",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Aureobasidium pullulans strain DSM 14940",
+          []
+        ],
+        [
+          "analyte",
+          "Aureobasidium pullulans strain DSM 14941",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Aureobasidium pullulans strains DSM 14940 and DSM 14941",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2321,
+      "definition": "Pyriofenone",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Pyriofenone",
+          [
+            "RF-00003031-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "pyriofenone",
+          [
+            "RF-00003031-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2332,
+      "definition": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C10",
+          [
+            "RF-00007627-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C12",
+          [
+            "RF-00007489-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C8",
+          [
+            "RF-00007495-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "alkyl-quaternary ammonium salts with alkyl chain length of C10",
+          [
+            "RF-00007627-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "alkyl-quaternary ammonium salts with alkyl chain length of C12",
+          [
+            "RF-00007489-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "alkyl-quaternary ammonium salts with alkyl chain length of C8",
+          [
+            "RF-00007495-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2333,
+      "definition": "Benzalkonium chloride (mixture of alkylbenzyldimethylammonium chlorides with alkyl chain lengths of C8, C10, C12, C14, C16 and C18)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride C10",
+          [
+            "RF-1078-003-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride C12",
+          [
+            "RF-1078-004-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride C14",
+          [
+            "RF-1078-005-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride C16",
+          [
+            "RF-1078-006-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride C18",
+          [
+            "RF-1078-007-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride C8",
+          [
+            "RF-00003376-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride with alkyl chain length C10",
+          [
+            "RF-1078-003-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride with alkyl chain length C12",
+          [
+            "RF-1078-004-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride with alkyl chain length C14",
+          [
+            "RF-1078-005-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride with alkyl chain length C16",
+          [
+            "RF-1078-006-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride with alkyl chain length C18",
+          [
+            "RF-1078-007-PPP"
+          ]
+        ],
+        [
+          "analyte",
+          "alkylbenzyldimethylammonium chloride with alkyl chain length C8",
+          [
+            "RF-00003376-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2344,
+      "definition": "Bone oil",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "bone oil",
+          [
+            "RF-00011518-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Bone oil",
+          [
+            "RF-00011518-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2347,
+      "definition": "Paraffin oil (CAS 64742-54-7)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Paraffin oil (CAS 64742-54-7)",
+          [
+            "RF-00014619-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Paraffin oil",
+          [
+            "RF-00014619-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2348,
+      "definition": "Petroleum oils (CAS 92062-35-6)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Petroleum oils (CAS 92062-35-6)",
+          [
+            "RF-00014630-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Petroleum oils",
+          [
+            "RF-00014630-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2380,
+      "definition": "Flumetralin",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Flumetralin",
+          [
+            "RF-0706-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "flumetralin",
+          [
+            "RF-0706-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2409,
+      "definition": "Paraffin oil (CAS 64742-46-7)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Paraffin oil (CAS 64742-46-7)",
+          [
+            "RF-00014619-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Paraffin oil",
+          [
+            "RF-00014619-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2412,
+      "definition": "Paraffin oil (CAS 97862-82-3)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Paraffin oil (CAS 97862-82-3)",
+          [
+            "RF-00014619-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Paraffin oil",
+          [
+            "RF-00014619-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2417,
+      "definition": "Sodium 5-nitroguaiacolate, sodium o-nitrophenolate and sodium p-nitrophenolate (Sum of sodium 5-nitroguaiacolate, sodium o-nitrophenolate and sodium p-nitrophenolate, expressed as sodium 5-nitroguaiacolate)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Sodium 5-nitroguaiacolate",
+          [
+            "RF-00005776-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "Sodium o-nitrophenolate",
+          [
+            "RF-00005777-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "Sodium p-nitrophenolate",
+          [
+            "RF-00005778-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "sodium 5-nitroguaiacolate",
+          [
+            "RF-00005776-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "sodium o-nitrophenolate",
+          [
+            "RF-00005777-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "sodium p-nitrophenolate",
+          [
+            "RF-00005778-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2419,
+      "definition": "Thiodicarb",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Thiodicarb",
+          [
+            "RF-0293-002-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "methomyl",
+          []
+        ],
+        [
+          "analyte",
+          "thiodicarb",
+          [
+            "RF-0293-002-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2428,
+      "definition": "Cerevisane",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Cerevisane",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "cerevisane",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2476,
+      "definition": "Oxathiapiprolin",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Oxathiapiprolin",
+          [
+            "RF-00008949-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "oxathiapiprolin",
+          [
+            "RF-00008949-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2494,
+      "definition": "Urtica spp.",
+      "before_parts_from": "model",
+      "after_parts_from": "rules",
+      "before": [
+        [
+          "analyte",
+          "Urtica spp.",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Urtica spp",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2513,
+      "definition": "Fenpicoxamid",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Fenpicoxamid",
+          [
+            "RF-00010217-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "fenpicoxamid",
+          [
+            "RF-00010217-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2516,
+      "definition": "Talc E553B",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Talc",
+          [
+            "RF-00000327-ADD"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Talc E553B",
+          [
+            "RF-00000327-ADD"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2536,
+      "definition": "Bicyclopyrone (sum of bicyclopyrone and its structurally related metabolites determined as the sum of the common moieties 2-(2- methoxyethoxymethyl)-6-(trifluoromethyl) pyridine-3-carboxylic acid (SYN503780) and (2-(2-hydroxyethoxymethyl)-6- (trifluoromethyl)pyridine-3-carboxylic acid (CSCD686480), expressed as bicyclopyrone)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "2-(2-hydroxyethoxymethyl)-6-(trifluoromethyl)pyridine-3-carboxylic acid (CSCD686480)",
+          [
+            "RF-00011517-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "2-(2-methoxyethoxymethyl)-6-(trifluoromethyl)pyridine-3-carboxylic acid (SYN503780)",
+          [
+            "RF-00011516-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "bicyclopyrone",
+          [
+            "RF-00011514-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "2-(2-hydroxyethoxymethyl)-6-(trifluoromethyl)pyridine-3-carboxylic acid (CSCD686480)",
+          [
+            "RF-00011517-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "2-(2-methoxyethoxymethyl)-6-(trifluoromethyl)pyridine-3-carboxylic acid (SYN503780)",
+          [
+            "RF-00011516-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "bicyclopyrone",
+          [
+            "RF-00011514-PAR"
+          ]
+        ],
+        [
+          "group",
+          "structurally related metabolites of bicyclopyrone",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2543,
+      "definition": "Clonostachys rosea strain J1446 (formerly Gliocladium catenulatum strain J1446)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Clonostachys rosea strain J1446 (formerly Gliocladium catenulatum strain J1446)",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Clonostachys rosea strain J1446",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2690,
+      "definition": "Tefluthrin (tefluthrin including other mixtures of constituent isomers (sum of isomers))",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Tefluthrin",
+          [
+            "RF-0408-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "tefluthrin",
+          [
+            "RF-0408-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2770,
+      "definition": "Aqueous extract from the germinated seeds of sweet Lupinus albus",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "aqueous extract from the germinated seeds of sweet Lupinus albus",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Aqueous extract from the germinated seeds of sweet Lupinus albus",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 2790,
+      "definition": "Quinmerac (sum of quinmerac and its metabolites BH 518-2 and BH 518-4 expressed as quinmerac)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "BH 518-2",
+          [
+            "RF-00007283-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "BH 518-4",
+          [
+            "RF-00007284-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "Quinmerac",
+          [
+            "RF-0381-001-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "BH 518-2",
+          [
+            "RF-00007283-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "BH 518-4",
+          [
+            "RF-00007284-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "quinmerac",
+          [
+            "RF-0381-001-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 3030,
+      "definition": "1-methyl-3-(trifluoromethyl)-1H-pyrazole-4-carboxamide (PAM)",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "1-methyl-3-(trifluoromethyl)-1H-pyrazole-4-carboxamide",
+          [
+            "RF-00009238-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "1-methyl-3-(trifluoromethyl)-1H-pyrazole-4-carboxamide (PAM)",
+          [
+            "RF-00009238-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 3050,
+      "definition": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2)",
+          [
+            "RF-00006227-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2)",
+          [
+            "RF-00006240-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "Cycloxydim",
+          [
+            "RF-0106-002-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2)",
+          [
+            "RF-00006227-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2)",
+          [
+            "RF-00006240-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "cycloxydim",
+          [
+            "RF-0106-002-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 3231,
+      "definition": "Repellants: Sheep fat",
+      "before_parts_from": "model",
+      "after_parts_from": "rules",
+      "before": [
+        [
+          "analyte",
+          "Repellants",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Sheep fat",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 3370,
+      "definition": "Sum of metalaxyl (sum of enantiomers) and metabolites (free + conjugated) M3 (N- (2,6-dimethylphenyl)-N-(hydroxyacetyl)alanine methyl ester) and M8 (N-(2-hydroxymethyl-6- methylphenyl)-N-(methoxyacetyl)alanine methyl ester (sum of enantiomers), expressed as metalaxyl",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "M3 (N- (2,6-dimethylphenyl)-N-(hydroxyacetyl)alanine methyl ester)",
+          [
+            "RF-00015696-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "M8 (N-(2-hydroxymethyl-6- methylphenyl)-N-(methoxyacetyl)alanine methyl ester)",
+          [
+            "RF-00015697-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "metalaxyl",
+          [
+            "RF-0281-002-PPP"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "M3 (N-(2,6-dimethylphenyl)-N-(hydroxyacetyl)alanine methyl ester)",
+          [
+            "RF-00015696-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "M8 (N-(2-hydroxymethyl-6-methylphenyl)-N-(methoxyacetyl)alanine methyl ester)",
+          [
+            "RF-00015697-PAR"
+          ]
+        ],
+        [
+          "analyte",
+          "metalaxyl",
+          [
+            "RF-0281-002-PPP"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 3430,
+      "definition": "Phosphonic acid and its salts expressed as phosphonic acid",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Phosphonic acid",
+          [
+            "RF-00004675-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "phosphonic acid",
+          [
+            "RF-00004675-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 3850,
+      "definition": "Plant oils / Citronella oil",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Citronella oil",
+          []
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "Citronella oil",
+          []
+        ],
+        [
+          "group",
+          "Plant oils",
+          []
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    },
+    {
+      "residue_id": 3890,
+      "definition": "Triflusulfuron (6-(2,2,2-trifluoroethoxy)-1,3,5-triazine-2,4-diamine (IN-M7222))",
+      "before_parts_from": "model",
+      "after_parts_from": "guided_model",
+      "before": [
+        [
+          "analyte",
+          "Triflusulfuron (6-(2,2,2-trifluoroethoxy)-1,3,5-triazine-2,4-diamine (IN-M7222))",
+          [
+            "RF-00005716-PAR"
+          ]
+        ]
+      ],
+      "after": [
+        [
+          "analyte",
+          "6-(2,2,2-trifluoroethoxy)-1,3,5-triazine-2,4-diamine (IN-M7222)",
+          [
+            "RF-00005716-PAR"
+          ]
+        ]
+      ],
+      "added_param_codes": [],
+      "removed_param_codes": [],
+      "same_component_codes": true
+    }
+  ],
+  "parts_from": {
+    "guided_model": 735,
+    "legacy_regression_fallback": 2,
+    "legal_guidance": 1,
+    "published_evidence": 1,
+    "rules": 28
+  },
+  "guided_readings": 765,
+  "alternate_readings": [
+    {
+      "definition": "Benthiavalicarb-isopropyl (sum of benthiavalicarb-isopropyl (KIF 230 R-L) and its RS enantiomer (KIF 230-S-D))",
+      "interpretation_source": "legacy_retained_after_regression",
+      "model_used": "claude-haiku-5-5 (old cache)"
+    },
+    {
+      "definition": "Cinidon-ethyl (sum of cinidon ethyl and its E-isomer)",
+      "interpretation_source": "guided_validation_repair",
+      "model_used": "claude-sonnet-5-5"
+    },
+    {
+      "definition": "Clethodim (sum of Sethoxydim and Clethodim including degradation products calculated as Sethoxydim)",
+      "interpretation_source": "guided_validation_repair",
+      "model_used": "claude-sonnet-5-5"
+    },
+    {
+      "definition": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate",
+      "interpretation_source": "legacy_retained_after_regression",
+      "model_used": "claude-haiku-5-5 (old cache)"
+    },
+    {
+      "definition": "Guazatine (guazatine acetate, sum of components)",
+      "interpretation_source": "guided_validation_repair",
+      "model_used": "claude-sonnet-5-5"
+    },
+    {
+      "definition": "Verticillium albo-atrum isolate WCS850",
+      "interpretation_source": "model",
+      "model_used": "claude-sonnet-5-5"
+    }
+  ],
+  "model": "claude-haiku-5-5",
+  "guidance_version": "b4fb746047c944a8",
+  "acceptance_passed": 34,
+  "acceptance_total": 34,
+  "acceptance_failures": []
+}

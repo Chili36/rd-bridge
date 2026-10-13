@@ -1,0 +1,223 @@
+{
+  "initial": [
+    {
+      "residue_id": 259,
+      "exception": null,
+      "analysed": [
+        "RF-0096-003-PPP",
+        "RF-0096-005-PPP"
+      ],
+      "expected": "complete",
+      "label": "sethoxydim and clethodim: the degradation products are determined as sethoxydim, not measured apart",
+      "actual": "undetermined"
+    },
+    {
+      "residue_id": 59,
+      "exception": null,
+      "analysed": [
+        "RF-0095-002-PPP"
+      ],
+      "expected": "complete",
+      "label": "cinidon-ethyl covers its E-isomer",
+      "actual": "undetermined"
+    },
+    {
+      "residue_id": 3950,
+      "exception": null,
+      "analysed": [
+        "RF-0043-003-PPP"
+      ],
+      "expected": "complete",
+      "label": "benthiavalicarb-isopropyl covers its RS enantiomer",
+      "actual": "undetermined"
+    },
+    {
+      "residue_id": 321,
+      "exception": null,
+      "analysed": [
+        "RF-0233-001-PPP"
+      ],
+      "expected": "not_covered",
+      "label": "guazatine parent AS code is not the guazatine acetate RD",
+      "actual": "complete"
+    },
+    {
+      "residue_id": 2655,
+      "exception": null,
+      "analysed": [
+        "RF-0721-001-PPP"
+      ],
+      "expected": "not_covered",
+      "label": "non-reportable fluvalinate AS code is not the whole RD",
+      "actual": "complete"
+    }
+  ],
+  "attempts": [
+    {
+      "round": 1,
+      "residue_id": 259,
+      "definition": "Clethodim (sum of Sethoxydim and Clethodim including degradation products calculated as Sethoxydim)",
+      "attempt": "sonnet",
+      "reason": [
+        "sethoxydim and clethodim: the degradation products are determined as sethoxydim, not measured apart"
+      ],
+      "checks": [
+        {
+          "case": "sethoxydim and clethodim: the degradation products are determined as sethoxydim, not measured apart",
+          "expected": "complete",
+          "actual": "complete",
+          "passed": true
+        }
+      ],
+      "accepted": true
+    },
+    {
+      "round": 1,
+      "residue_id": 59,
+      "definition": "Cinidon-ethyl (sum of cinidon ethyl and its E-isomer)",
+      "attempt": "sonnet",
+      "reason": [
+        "cinidon-ethyl covers its E-isomer"
+      ],
+      "checks": [
+        {
+          "case": "cinidon-ethyl covers its E-isomer",
+          "expected": "complete",
+          "actual": "complete",
+          "passed": true
+        }
+      ],
+      "accepted": true
+    },
+    {
+      "round": 1,
+      "residue_id": 3950,
+      "definition": "Benthiavalicarb-isopropyl (sum of benthiavalicarb-isopropyl (KIF 230 R-L) and its RS enantiomer (KIF 230-S-D))",
+      "attempt": "sonnet",
+      "reason": [
+        "benthiavalicarb-isopropyl covers its RS enantiomer"
+      ],
+      "checks": [
+        {
+          "case": "benthiavalicarb-isopropyl covers its RS enantiomer",
+          "expected": "complete",
+          "actual": "undetermined",
+          "passed": false
+        }
+      ],
+      "accepted": false,
+      "reason_failed": "Existing acceptance cases still fail"
+    },
+    {
+      "round": 1,
+      "residue_id": 321,
+      "definition": "Guazatine (guazatine acetate, sum of components)",
+      "attempt": "sonnet",
+      "reason": [
+        "guazatine parent AS code is not the guazatine acetate RD"
+      ],
+      "checks": [
+        {
+          "case": "guazatine acetate sum: exact whole-RD PARAM code",
+          "expected": "complete",
+          "actual": "complete",
+          "passed": true
+        },
+        {
+          "case": "guazatine parent AS code is not the guazatine acetate RD",
+          "expected": "not_covered",
+          "actual": "not_covered",
+          "passed": true
+        }
+      ],
+      "accepted": true
+    },
+    {
+      "round": 1,
+      "residue_id": 2655,
+      "definition": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate",
+      "attempt": "sonnet",
+      "reason": [
+        "non-reportable fluvalinate AS code is not the whole RD"
+      ],
+      "checks": [
+        {
+          "case": "fluvalinate sum of isomers: exact whole-RD PARAM code",
+          "expected": "complete",
+          "actual": "complete",
+          "passed": true
+        },
+        {
+          "case": "non-reportable fluvalinate AS code is not the whole RD",
+          "expected": "not_covered",
+          "actual": "complete",
+          "passed": false
+        }
+      ],
+      "accepted": false,
+      "reason_failed": "Existing acceptance cases still fail"
+    },
+    {
+      "round": 2,
+      "residue_id": 3950,
+      "definition": "Benthiavalicarb-isopropyl (sum of benthiavalicarb-isopropyl (KIF 230 R-L) and its RS enantiomer (KIF 230-S-D))",
+      "attempt": "sonnet",
+      "reason": [
+        "benthiavalicarb-isopropyl covers its RS enantiomer"
+      ],
+      "checks": [
+        {
+          "case": "benthiavalicarb-isopropyl covers its RS enantiomer",
+          "expected": "complete",
+          "actual": "undetermined",
+          "passed": false
+        }
+      ],
+      "accepted": false,
+      "reason_failed": "Existing acceptance cases still fail"
+    },
+    {
+      "round": 2,
+      "residue_id": 2655,
+      "definition": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate",
+      "attempt": "sonnet",
+      "reason": [
+        "non-reportable fluvalinate AS code is not the whole RD"
+      ],
+      "checks": [
+        {
+          "case": "fluvalinate sum of isomers: exact whole-RD PARAM code",
+          "expected": "complete",
+          "actual": "complete",
+          "passed": true
+        },
+        {
+          "case": "non-reportable fluvalinate AS code is not the whole RD",
+          "expected": "not_covered",
+          "actual": "complete",
+          "passed": false
+        }
+      ],
+      "accepted": false,
+      "reason_failed": "Existing acceptance cases still fail"
+    }
+  ],
+  "sonnet_calls": 7,
+  "model_repairs_accepted": 3,
+  "legacy_readings_retained": [
+    {
+      "residue_id": 3950,
+      "definition": "Benthiavalicarb-isopropyl (sum of benthiavalicarb-isopropyl (KIF 230 R-L) and its RS enantiomer (KIF 230-S-D))",
+      "reason": "previous passing interpretation retained"
+    },
+    {
+      "residue_id": 2655,
+      "definition": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate",
+      "reason": "previous passing interpretation retained"
+    }
+  ],
+  "remaining": [],
+  "final_passed": 34,
+  "final_total": 34,
+  "guidance_version": "b4fb746047c944a8"
+}
