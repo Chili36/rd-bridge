@@ -162,7 +162,7 @@ jobs:
             echo
             echo "**All** unique EU RD texts have been reread using versioned,"
             echo "cited OECD/EU/EFSA guidance. Historical answers remain in"
-            echo "`data/model_parts.json` for comparison and rollback."
+            echo "data/model_parts.json for comparison and rollback."
             echo
             echo "No unavailable independently reviewed dataset was required."
             echo "This is a replacement with auditability, not certified perfect accuracy."
