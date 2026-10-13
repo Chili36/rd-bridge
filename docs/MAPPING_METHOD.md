@@ -79,7 +79,9 @@ and does not silently become a list of required individual analyses.
 
 The normal parser splits a definition into analytes, groups and qualifiers.
 The previously generated baseline model readings remain cached in
-`data/model_parts.json`. **New or changed definitions** are interpreted by
+`data/model_parts.json` for rollback. **All current definitions are migrated
+to the guidance-backed model in a one-time, sharded workflow**, and new or
+changed definitions are thereafter interpreted by
 [`rd_bridge.guided_model_parts`](../rd_bridge/guided_model_parts.py),
 which selects and supplies source-located OECD, EU and EFSA principles from
 [`interpretation_guidance.json`](../data/interpretation_guidance.json)
