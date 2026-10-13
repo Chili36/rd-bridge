@@ -252,6 +252,13 @@ def main():
         parser.error("new-scope writes must target the standard guided cache")
     if todo and not __import__("os").environ.get("ANTHROPIC_API_KEY"):
         parser.error("ANTHROPIC_API_KEY is required for new guided interpretations")
+    if not todo and not answers:
+        # A fresh repository with a valid existing baseline has no new RD text
+        # to interpret. Avoid proposing a meaningless empty guided cache in
+        # every EU data refresh (and do not touch any prior saved files).
+        print(f"{llm.MODEL} ({PROMPT_VERSION}): 0 calls, no guided results; "
+              "cache unchanged")
+        return
     answers, errors = refresh(todo, ctxs, answers, workers=args.workers, data=data)
     save(answers, args.output, data=data)
     print(f"{llm.MODEL} ({PROMPT_VERSION}): {len(ctxs)} definitions, "
