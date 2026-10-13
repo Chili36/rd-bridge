@@ -16,7 +16,7 @@ import os
 import re
 import sys
 
-from rd_bridge import components, compounds, evidence_parts, footnotes, model_parts, qualifier_parts
+from rd_bridge import components, compounds, evidence_parts, footnotes, guidance, model_parts, qualifier_parts
 
 FOOTNOTE_MARKERS = re.compile(r"\s*(\((R|F|A|\+|\+\+|\*|)\)\s*)+$")
 NEAR_CUTOFF = 0.9
@@ -165,6 +165,13 @@ def build(residues: list, terms: list, parts=None, readings=None) -> list:
             documented = evidence_parts.documented_components(text, definition, parts)
             if documented:
                 definition["components"], definition["parts_from"] = documented, "published_evidence"
+            # Legislation-backed case rules override a contradictory cached model
+            # reading only when the exact EU text, exception scope, PARAM code
+            # and independently parsed components all match. Never let two LLMs
+            # vote an extra analyte into the legal residue definition.
+            verified = guidance.apply_verified(definition, rules, residue_name)
+            if verified:
+                definition.update(verified)
         return definition
 
     by_id = collections.defaultdict(list)
