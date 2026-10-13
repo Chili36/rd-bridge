@@ -1,0 +1,1361 @@
+{
+  "created_utc": "2026-10-13T20:24:39+00:00",
+  "model": "claude-haiku-5-5",
+  "guidance_version": "b4fb746047c944a8",
+  "prompt_version": "b8bb12e410942560",
+  "scope": "bounded targeted regression; no independent corpus-wide accuracy claim",
+  "gold_cases_checked": 12,
+  "exploratory_cases_checked": 3,
+  "baseline_gold_passed": 10,
+  "guided_gold_passed": 12,
+  "improvements": [
+    "chloridazon_animal",
+    "fenpyroximate_m3"
+  ],
+  "regressions": [],
+  "safe_to_auto_promote": false,
+  "findings": [
+    {
+      "case_id": "chloridazon_animal",
+      "residue_id": 253,
+      "exception": 0,
+      "definition": "Chloridazon (chloridazon-desphenyl, expressed as chloridazon)",
+      "source_evidence": "EU 2023/710, Annex V (R): metabolite is analyte; parent is expression basis.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-COMMODITY-VARIANTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "chloridazon",
+        "parts": [
+          {
+            "name": "chloridazon-desphenyl",
+            "role": "analyte"
+          }
+        ],
+        "context": "ad4b141b1f43",
+        "guidance_context": "8a4b8da53376c872",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-COMMODITY-VARIANTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "ad4b141b1f43",
+        "expressed_as": "chloridazon",
+        "parts": [
+          {
+            "name": "chloridazon",
+            "param_name": "Chloridazon",
+            "role": "analyte"
+          },
+          {
+            "name": "chloridazon-desphenyl",
+            "notes": [
+              "expressed as chloridazon"
+            ],
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "chloridazon desphenyl"
+        ],
+        "forbidden": [
+          "^chloridazon$"
+        ]
+      },
+      "baseline": {
+        "passed": false,
+        "found": [
+          "chloridazon",
+          "chloridazon desphenyl"
+        ],
+        "missing": [],
+        "prohibited": [
+          "^chloridazon$"
+        ],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "chloridazon desphenyl"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "chloridazon_default",
+      "residue_id": 253,
+      "exception": null,
+      "definition": "Chloridazon (sum of chloridazon and chloridazon-desphenyl, expressed as chloridazon)",
+      "source_evidence": "EU 2023/710 Annex V: sum explicitly lists parent and desphenyl.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-SUMMED-COMPONENTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "chloridazon",
+        "parts": [
+          {
+            "name": "chloridazon",
+            "role": "analyte",
+            "param_name": "Chloridazon",
+            "notes": [
+              "sum of chloridazon and chloridazon-desphenyl"
+            ]
+          },
+          {
+            "name": "chloridazon-desphenyl",
+            "role": "analyte"
+          }
+        ],
+        "context": "ad4b141b1f43",
+        "guidance_context": "e19829424547c943",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-SUMMED-COMPONENTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "ad4b141b1f43",
+        "expressed_as": "chloridazon",
+        "parts": [
+          {
+            "name": "chloridazon",
+            "notes": [
+              "summed with chloridazon-desphenyl"
+            ],
+            "param_name": "Chloridazon",
+            "role": "analyte"
+          },
+          {
+            "name": "chloridazon-desphenyl",
+            "notes": [
+              "summed with chloridazon"
+            ],
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "^chloridazon$",
+          "chloridazon desphenyl"
+        ],
+        "forbidden": []
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "chloridazon",
+          "chloridazon desphenyl"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "chloridazon",
+          "chloridazon desphenyl"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "fenpyroximate_m3",
+      "residue_id": 301,
+      "exception": 0,
+      "definition": "Fenpyroximate (metabolite M-3, expressed as fenpyroximate (F))",
+      "source_evidence": "EU pesticide-residues active exception: metabolite M-3 expressed as fenpyroximate.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-COMMODITY-VARIANTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "fenpyroximate (F)",
+        "parts": [
+          {
+            "name": "fenpyroximate metabolite M-3",
+            "role": "analyte"
+          }
+        ],
+        "context": "f058d90a26ec",
+        "guidance_context": "3b03fa5c54bab5c2",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-COMMODITY-VARIANTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "f058d90a26ec",
+        "expressed_as": "fenpyroximate (F)",
+        "parts": [
+          {
+            "name": "fenpyroximate",
+            "param_name": "Fenpyroximate",
+            "role": "analyte"
+          },
+          {
+            "name": "fenpyroximate metabolite M-3",
+            "notes": [
+              "expressed as fenpyroximate (F)"
+            ],
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "\\bm ?3\\b"
+        ],
+        "forbidden": [
+          "^fenpyroximate$"
+        ]
+      },
+      "baseline": {
+        "passed": false,
+        "found": [
+          "fenpyroximate",
+          "fenpyroximate metabolite m 3"
+        ],
+        "missing": [],
+        "prohibited": [
+          "^fenpyroximate$"
+        ],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "fenpyroximate metabolite m 3"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "kresoxim_bf4909",
+      "residue_id": 139,
+      "exception": 0,
+      "definition": "kresoxim methyl (BF-490-9, expressed as parent)",
+      "source_evidence": "EU product exception names BF-490-9 and an expression parent.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-COMMODITY-VARIANTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "parent",
+        "parts": [
+          {
+            "name": "kresoxim methyl (BF-490-9)",
+            "role": "analyte",
+            "param_name": "Kresoxim-methyl"
+          }
+        ],
+        "context": "8828ee3aab8f",
+        "guidance_context": "719953cc4fe53e0c",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-COMMODITY-VARIANTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "8828ee3aab8f",
+        "expressed_as": "parent",
+        "parts": [
+          {
+            "name": "kresoxim methyl (BF-490-9)",
+            "notes": [
+              "expressed as parent"
+            ],
+            "param_name": "Kresoxim-methyl",
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "bf ?490 ?9"
+        ],
+        "forbidden": [
+          "^kresoxim methyl$"
+        ]
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "kresoxim methyl bf 490 9"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "kresoxim methyl bf 490 9"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "captan_exception_thpi",
+      "residue_id": 36,
+      "exception": 0,
+      "definition": "Sum of THPI, 3-OH THPI and 5-OH THPI, expressed as captan",
+      "source_evidence": "EU commodity exception explicitly sums THPI and 3-OH/5-OH THPI.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-SUMMED-COMPONENTS",
+        "OECD-COMMODITY-VARIANTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "captan",
+        "parts": [
+          {
+            "name": "THPI",
+            "role": "analyte"
+          },
+          {
+            "name": "3-OH THPI",
+            "role": "analyte"
+          },
+          {
+            "name": "5-OH THPI",
+            "role": "analyte"
+          }
+        ],
+        "context": "f21ca1a6cd26",
+        "guidance_context": "2daf959ad9a7ab0c",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-SUMMED-COMPONENTS",
+          "OECD-COMMODITY-VARIANTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "f21ca1a6cd26",
+        "expressed_as": "captan",
+        "parts": [
+          {
+            "name": "THPI",
+            "role": "analyte"
+          },
+          {
+            "name": "3-OH THPI",
+            "role": "analyte"
+          },
+          {
+            "name": "5-OH THPI",
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "^thpi$",
+          "3 oh thpi",
+          "5 oh thpi"
+        ],
+        "forbidden": [
+          "^captan$"
+        ]
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "thpi",
+          "3 oh thpi",
+          "5 oh thpi"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "thpi",
+          "3 oh thpi",
+          "5 oh thpi"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "aldicarb_sum",
+      "residue_id": 12,
+      "exception": null,
+      "definition": "Aldicarb (sum of aldicarb, its sulfoxide and its sulfone, expressed as aldicarb)",
+      "source_evidence": "EU RD explicit sum; OECD 2009 Scenario 1 on expressed-as parent.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-SUMMED-COMPONENTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "aldicarb",
+        "parts": [
+          {
+            "name": "aldicarb",
+            "role": "analyte",
+            "param_name": "Aldicarb",
+            "notes": [
+              "sum of aldicarb, its sulfoxide and its sulfone"
+            ]
+          },
+          {
+            "name": "aldicarb sulfoxide",
+            "role": "analyte",
+            "notes": [
+              "sum of aldicarb, its sulfoxide and its sulfone"
+            ]
+          },
+          {
+            "name": "aldicarb sulfone",
+            "role": "analyte",
+            "notes": [
+              "sum of aldicarb, its sulfoxide and its sulfone"
+            ]
+          }
+        ],
+        "context": "011b4c52dd6d",
+        "guidance_context": "e08b0c80617c824c",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-SUMMED-COMPONENTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "011b4c52dd6d",
+        "expressed_as": "aldicarb",
+        "parts": [
+          {
+            "name": "aldicarb",
+            "param_name": "Aldicarb",
+            "role": "analyte"
+          },
+          {
+            "name": "aldicarb sulfoxide",
+            "role": "analyte"
+          },
+          {
+            "name": "aldicarb sulfone",
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "^aldicarb$",
+          "aldicarb sulfoxide",
+          "aldicarb sulfone"
+        ],
+        "forbidden": []
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "aldicarb",
+          "aldicarb sulfoxide",
+          "aldicarb sulfone"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "aldicarb",
+          "aldicarb sulfoxide",
+          "aldicarb sulfone"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "methiocarb_sum",
+      "residue_id": 337,
+      "exception": null,
+      "definition": "Methiocarb (sum of methiocarb and methiocarb sulfoxide and sulfone, expressed as methiocarb)",
+      "source_evidence": "EU explicit sum; OECD 2009 Scenario 1 methiocarb example.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-SUMMED-COMPONENTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "methiocarb",
+        "parts": [
+          {
+            "name": "methiocarb",
+            "role": "analyte",
+            "param_name": "Methiocarb"
+          },
+          {
+            "name": "methiocarb sulfoxide",
+            "role": "analyte"
+          },
+          {
+            "name": "methiocarb sulfone",
+            "role": "analyte"
+          }
+        ],
+        "context": "2c1cf5a2e74c",
+        "guidance_context": "32610e57c78ab314",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-SUMMED-COMPONENTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "2c1cf5a2e74c",
+        "expressed_as": "methiocarb",
+        "parts": [
+          {
+            "name": "methiocarb",
+            "notes": [
+              "sum of methiocarb, methiocarb sulfoxide and methiocarb sulfone, expressed as methiocarb"
+            ],
+            "param_name": "Methiocarb",
+            "role": "analyte"
+          },
+          {
+            "name": "methiocarb sulfoxide",
+            "role": "analyte"
+          },
+          {
+            "name": "methiocarb sulfone",
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "^methiocarb$",
+          "methiocarb sulfoxide",
+          "methiocarb sulfone"
+        ],
+        "forbidden": []
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "methiocarb",
+          "methiocarb sulfoxide",
+          "methiocarb sulfone"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "methiocarb",
+          "methiocarb sulfoxide",
+          "methiocarb sulfone"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "flonicamid_sum",
+      "residue_id": 778,
+      "exception": null,
+      "definition": "Flonicamid (sum of flonicamid, TFNA and TFNG expressed as flonicamid)",
+      "source_evidence": "EU RD explicitly names flonicamid, TFNA, TFNG.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-SUMMED-COMPONENTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "flonicamid",
+        "parts": [
+          {
+            "name": "flonicamid",
+            "role": "analyte",
+            "param_name": "Flonicamid"
+          },
+          {
+            "name": "TFNA",
+            "role": "analyte",
+            "param_name": "TNFA (4-(Trifluoromethyl)nicotinic acid)"
+          },
+          {
+            "name": "TFNG",
+            "role": "analyte",
+            "param_name": "TNFG (4-(Trifluoromethyl)nicotinoyl glycine)"
+          }
+        ],
+        "context": "fac4f642d7c7",
+        "guidance_context": "b22d57ec3c019d8a",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-SUMMED-COMPONENTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "fac4f642d7c7",
+        "expressed_as": "flonicamid",
+        "parts": [
+          {
+            "name": "flonicamid",
+            "notes": [
+              "summed in the definition as the parent substance, to which the sum is expressed"
+            ],
+            "param_name": "Flonicamid",
+            "role": "analyte"
+          },
+          {
+            "name": "TFNA",
+            "param_name": "TNFA (4-(Trifluoromethyl)nicotinic acid)",
+            "role": "analyte"
+          },
+          {
+            "name": "TFNG",
+            "param_name": "TNFG (4-(Trifluoromethyl)nicotinoyl glycine)",
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "^flonicamid$",
+          "^tfna$",
+          "^tfng$"
+        ],
+        "forbidden": []
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "flonicamid",
+          "tfna",
+          "tfng"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "flonicamid",
+          "tfna",
+          "tfng"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "ddac_homologues",
+      "residue_id": 2332,
+      "exception": null,
+      "definition": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+      "source_evidence": "EU DDAC definition enumerates three alkyl chain lengths.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-SUMMED-COMPONENTS",
+        "OECD-FREE-CONJUGATED",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": null,
+        "parts": [
+          {
+            "name": "Didecyldimethylammonium chloride alkyl-quaternary ammonium salt with alkyl chain length of C8",
+            "role": "analyte",
+            "param_name": "DDAC-C08",
+            "notes": [
+              "listed as one of the mixture of alkyl-quaternary ammonium salts"
+            ]
+          },
+          {
+            "name": "Didecyldimethylammonium chloride alkyl-quaternary ammonium salt with alkyl chain length of C10",
+            "role": "analyte",
+            "param_name": "DDAC-C10",
+            "notes": [
+              "listed as one of the mixture of alkyl-quaternary ammonium salts"
+            ]
+          },
+          {
+            "name": "Didecyldimethylammonium chloride alkyl-quaternary ammonium salt with alkyl chain length of C12",
+            "role": "analyte",
+            "param_name": "DDAC-C12",
+            "notes": [
+              "listed as one of the mixture of alkyl-quaternary ammonium salts"
+            ]
+          },
+          {
+            "name": "mixture of alkyl-quaternary ammonium salts",
+            "role": "qualifier",
+            "notes": [
+              "describes the sum of the named chain-length salts; does not add a separate measurement"
+            ]
+          }
+        ],
+        "context": "c9541068810a",
+        "guidance_context": "993194dd3bd7e499",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-SUMMED-COMPONENTS",
+          "OECD-FREE-CONJUGATED",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "c9541068810a",
+        "expressed_as": null,
+        "parts": [
+          {
+            "name": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C8",
+            "param_name": "DDAC-C08",
+            "role": "analyte"
+          },
+          {
+            "name": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C10",
+            "param_name": "DDAC-C10",
+            "role": "analyte"
+          },
+          {
+            "name": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C12",
+            "param_name": "DDAC-C12",
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "\\bc8\\b",
+          "\\bc10\\b",
+          "\\bc12\\b"
+        ],
+        "forbidden": []
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "didecyldimethylammonium chloride alkyl quaternary ammonium salt with alkyl chain length of c8",
+          "didecyldimethylammonium chloride alkyl quaternary ammonium salt with alkyl chain length of c10",
+          "didecyldimethylammonium chloride alkyl quaternary ammonium salt with alkyl chain length of c12"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "didecyldimethylammonium chloride alkyl quaternary ammonium salt with alkyl chain length of c8",
+          "didecyldimethylammonium chloride alkyl quaternary ammonium salt with alkyl chain length of c10",
+          "didecyldimethylammonium chloride alkyl quaternary ammonium salt with alkyl chain length of c12"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "mevinphos_isomers",
+      "residue_id": 161,
+      "exception": null,
+      "definition": "Mevinphos (sum of E- and Z-isomers)",
+      "source_evidence": "EU RD explicitly names E- and Z-isomer.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-SUMMED-COMPONENTS",
+        "OECD-ISOMER-COVERAGE",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": null,
+        "parts": [
+          {
+            "name": "Mevinphos E-isomer",
+            "role": "analyte",
+            "notes": [
+              "sum of E- and Z-isomers"
+            ]
+          },
+          {
+            "name": "Mevinphos Z-isomer",
+            "role": "analyte",
+            "notes": [
+              "sum of E- and Z-isomers"
+            ]
+          }
+        ],
+        "context": "ed12b286ce43",
+        "guidance_context": "cdab1dbe291e04ae",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-SUMMED-COMPONENTS",
+          "OECD-ISOMER-COVERAGE",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "ed12b286ce43",
+        "expressed_as": null,
+        "parts": [
+          {
+            "name": "Mevinphos E-isomer",
+            "role": "analyte"
+          },
+          {
+            "name": "Mevinphos Z-isomer",
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "mevinphos.*\\be\\b|\\be\\b.*mevinphos",
+          "mevinphos.*\\bz\\b|\\bz\\b.*mevinphos"
+        ],
+        "forbidden": [
+          "^mevinphos$"
+        ]
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "mevinphos e isomer",
+          "mevinphos z isomer"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "mevinphos e isomer",
+          "mevinphos z isomer"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "ester_pair",
+      "residue_id": 2530,
+      "exception": null,
+      "definition": "2,5-dichlorobenzoic acid methylester (sum of 2,5-dichlorobenzoic acid and its ester expressed as 2,5-dichlorobenzoic acid methylester)",
+      "source_evidence": "EU RD lists acid and its specified methyl ester separately.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-SUMMED-COMPONENTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "2,5-dichlorobenzoic acid methylester",
+        "parts": [
+          {
+            "name": "2,5-dichlorobenzoic acid",
+            "role": "analyte",
+            "param_name": "2,5-Dichlorobenzoic acid",
+            "notes": [
+              "summed with its ester in the residue definition"
+            ]
+          },
+          {
+            "name": "2,5-dichlorobenzoic acid methylester",
+            "role": "analyte",
+            "param_name": "2,5-Dichlorobenzoic acid methylester",
+            "notes": [
+              "ester of 2,5-dichlorobenzoic acid; also the expression basis for the reported result"
+            ]
+          }
+        ],
+        "context": "81b0d2a3102b",
+        "guidance_context": "26f67b382b8159e8",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-SUMMED-COMPONENTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "81b0d2a3102b",
+        "expressed_as": "2,5-dichlorobenzoic acid methylester",
+        "parts": [
+          {
+            "name": "2,5-dichlorobenzoic acid",
+            "notes": [
+              "summed with its ester"
+            ],
+            "param_name": "2,5-Dichlorobenzoic acid",
+            "role": "analyte"
+          },
+          {
+            "name": "2,5-dichlorobenzoic acid methylester",
+            "notes": [
+              "sum with 2,5-dichlorobenzoic acid, expressed as 2,5-dichlorobenzoic acid methylester"
+            ],
+            "param_name": "2,5-Dichlorobenzoic acid methylester",
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "^2 5 dichlorobenzoic acid$",
+          "2 5 dichlorobenzoic acid methylester"
+        ],
+        "forbidden": []
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "2 5 dichlorobenzoic acid",
+          "2 5 dichlorobenzoic acid methylester"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "2 5 dichlorobenzoic acid",
+          "2 5 dichlorobenzoic acid methylester"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "phorate_derivatives",
+      "residue_id": 179,
+      "exception": null,
+      "definition": "Phorate (sum of phorate, its oxygen analogue and their sulfones expressed as phorate)",
+      "source_evidence": "EU RD sum includes phorate, oxygen analogue and both sulfones.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-SUMMED-COMPONENTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "phorate",
+        "parts": [
+          {
+            "name": "phorate",
+            "role": "analyte",
+            "notes": [
+              "sum of phorate, its oxygen analogue and their sulfones"
+            ]
+          },
+          {
+            "name": "phorate oxygen analogue",
+            "role": "analyte",
+            "notes": [
+              "sum of phorate, its oxygen analogue and their sulfones"
+            ]
+          },
+          {
+            "name": "phorate sulfone",
+            "role": "analyte",
+            "notes": [
+              "sulfone of phorate, included in the sum"
+            ]
+          },
+          {
+            "name": "phorate oxygen analogue sulfone",
+            "role": "analyte",
+            "notes": [
+              "sulfone of the phorate oxygen analogue, included in the sum"
+            ]
+          }
+        ],
+        "context": "e41c444da14f",
+        "guidance_context": "8b6d6aede38e2b69",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-SUMMED-COMPONENTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "e41c444da14f",
+        "expressed_as": "phorate",
+        "parts": [
+          {
+            "name": "phorate",
+            "notes": [
+              "summed with its oxygen analogue and sulfones, expressed as phorate"
+            ],
+            "param_name": "Phorate",
+            "role": "analyte"
+          },
+          {
+            "name": "phorate oxygen analogue",
+            "notes": [
+              "summed, expressed as phorate"
+            ],
+            "role": "analyte"
+          },
+          {
+            "name": "phorate sulfone",
+            "notes": [
+              "summed, expressed as phorate"
+            ],
+            "role": "analyte"
+          },
+          {
+            "name": "phorate oxygen analogue sulfone",
+            "notes": [
+              "summed, expressed as phorate"
+            ],
+            "role": "analyte"
+          }
+        ]
+      },
+      "gold_rule_checks": {
+        "required": [
+          "^phorate$",
+          "phorate oxygen analogue",
+          "phorate sulfone",
+          "phorate oxygen analogue sulfone"
+        ],
+        "forbidden": []
+      },
+      "baseline": {
+        "passed": true,
+        "found": [
+          "phorate",
+          "phorate oxygen analogue",
+          "phorate sulfone",
+          "phorate oxygen analogue sulfone"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      },
+      "guided": {
+        "passed": true,
+        "found": [
+          "phorate",
+          "phorate oxygen analogue",
+          "phorate sulfone",
+          "phorate oxygen analogue sulfone"
+        ],
+        "missing": [],
+        "prohibited": [],
+        "available": true
+      }
+    },
+    {
+      "case_id": "dinocap_conditional",
+      "residue_id": 284,
+      "exception": null,
+      "definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
+      "source_evidence": "EU conditional meptyldinocap clause; requires expert review, no automatic gold.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-SUMMED-COMPONENTS",
+        "OECD-ISOMER-COVERAGE",
+        "EU-CONDITIONAL-CLAUSE",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "dinocap",
+        "parts": [
+          {
+            "name": "dinocap",
+            "role": "analyte",
+            "param_name": "Dinocap",
+            "notes": [
+              "sum of dinocap isomers; isomers not named individually, so they are a qualifier of dinocap"
+            ]
+          },
+          {
+            "name": "corresponding phenols of dinocap isomers",
+            "role": "group",
+            "notes": [
+              "structurally defined class of dinocap phenols, not enumerated in the definition",
+              "conditional: where only meptyldinocap or its corresponding phenol is detected and none of the other dinocap components (including their corresponding phenols), the MRLs and residue definition of meptyldinocap apply instead; this is an alternative rule, not an additional measured analyte"
+            ]
+          }
+        ],
+        "context": "71812b5805d2",
+        "guidance_context": "70c42fab533b5d3e",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-SUMMED-COMPONENTS",
+          "OECD-ISOMER-COVERAGE",
+          "EU-CONDITIONAL-CLAUSE",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "71812b5805d2",
+        "expressed_as": "dinocap",
+        "parts": [
+          {
+            "name": "Dinocap",
+            "notes": [
+              "sum of dinocap isomers and their corresponding phenols expressed as dinocap"
+            ],
+            "param_name": "Dinocap",
+            "role": "analyte"
+          },
+          {
+            "name": "sum of dinocap isomers",
+            "role": "qualifier"
+          },
+          {
+            "name": "their corresponding phenols",
+            "role": "qualifier"
+          },
+          {
+            "name": "meptyldinocap",
+            "notes": [
+              "applied only where meptyldinocap or its corresponding phenol is detected and none of the other dinocap components (including their corresponding phenols) are detected"
+            ],
+            "role": "analyte"
+          },
+          {
+            "name": "meptyldinocap corresponding phenol",
+            "notes": [
+              "applied only where meptyldinocap or its corresponding phenol is detected and none of the other dinocap components (including their corresponding phenols) are detected"
+            ],
+            "role": "analyte"
+          }
+        ]
+      },
+      "exploratory_review_only": true
+    },
+    {
+      "case_id": "guazatine_complex",
+      "residue_id": 321,
+      "exception": null,
+      "definition": "Guazatine (guazatine acetate, sum of components)",
+      "source_evidence": "Unenumerated mixture/summed component; no reliable automatically evaluable gold.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-SUMMED-COMPONENTS",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": null,
+        "parts": [
+          {
+            "name": "Guazatine",
+            "role": "analyte",
+            "param_name": "Guazatine",
+            "notes": [
+              "sum of components"
+            ]
+          },
+          {
+            "name": "guazatine acetate",
+            "role": "qualifier",
+            "notes": [
+              "salt form named in the definition heading; does not add a separate measurement"
+            ]
+          }
+        ],
+        "context": "4ca8aa0e3ccb",
+        "guidance_context": "cd7ff2c23488b70a",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-SUMMED-COMPONENTS",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "4ca8aa0e3ccb",
+        "expressed_as": null,
+        "parts": [
+          {
+            "name": "guazatine acetate",
+            "notes": [
+              "sum of components"
+            ],
+            "role": "analyte"
+          }
+        ]
+      },
+      "exploratory_review_only": true
+    },
+    {
+      "case_id": "phosphane_generators",
+      "residue_id": 354,
+      "exception": null,
+      "definition": "Phosphane and phosphide salts (sum of phosphane and phosphane generators (relevant phosphide salts), determined and expressed as phosphane)",
+      "source_evidence": "Complex common-moiety/analytical conversion case requiring expert review.",
+      "guidance_ids": [
+        "EU-TEXT-CONTROLS",
+        "OECD-ENFORCEMENT-SCOPE",
+        "OECD-EXPRESSION-BASIS",
+        "OECD-SUMMED-COMPONENTS",
+        "OECD-FREE-CONJUGATED",
+        "EFSA-WHOLE-VS-PARTS"
+      ],
+      "guided_reading": {
+        "expressed_as": "phosphane",
+        "parts": [
+          {
+            "name": "phosphane",
+            "role": "analyte",
+            "notes": [
+              "determined and expressed as phosphane"
+            ]
+          },
+          {
+            "name": "phosphane generators (relevant phosphide salts)",
+            "role": "group",
+            "notes": [
+              "sum of phosphane and phosphane generators; relevant phosphide salts are not enumerated"
+            ]
+          }
+        ],
+        "context": "ac38a058b050",
+        "guidance_context": "09b61b13b7b2d541",
+        "guidance_ids": [
+          "EU-TEXT-CONTROLS",
+          "OECD-ENFORCEMENT-SCOPE",
+          "OECD-EXPRESSION-BASIS",
+          "OECD-SUMMED-COMPONENTS",
+          "OECD-FREE-CONJUGATED",
+          "EFSA-WHOLE-VS-PARTS"
+        ],
+        "guidance_version": "b4fb746047c944a8",
+        "prompt_variant": "guided-rd-v1"
+      },
+      "baseline_reading": {
+        "context": "ac38a058b050",
+        "expressed_as": "phosphane",
+        "parts": [
+          {
+            "name": "Phosphane and phosphide salts",
+            "notes": [
+              "sum of phosphane and phosphane generators (relevant phosphide salts)",
+              "determined and expressed as phosphane"
+            ],
+            "param_name": "Phosphane and phosphide salts (sum of phosphane and phosphane generators (relevant phosphide salts), determined and expressed as phosphane)",
+            "role": "analyte"
+          }
+        ]
+      },
+      "exploratory_review_only": true
+    }
+  ]
+}
