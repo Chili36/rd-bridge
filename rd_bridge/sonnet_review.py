@@ -61,7 +61,7 @@ def review_candidates(rows, index, limit=12, focus=FOCUS_IDS):
     candidates = []
     for row in rows:
         for entry in [row["default"], *row["exceptions"]]:
-            if entry.get("parts_from") not in ("model", "guided_model"):
+            if entry.get("parts_from") not in ("model", "guided_model", "legacy_regression_fallback"):
                 continue
             rules = index.describe(entry["definition"], entry, row["name"])
             if compare_parts.verdict(entry["components"], rules) == "same":
