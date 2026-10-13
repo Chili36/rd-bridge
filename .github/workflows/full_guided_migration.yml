@@ -1,0 +1,180 @@
+# One complete migration of every current EU RD into the guidance-backed cache.
+# No manually curated 'gold standard' is required. All model outputs and
+# before/after PARAM evidence are saved for transparent iterative correction.
+name: Reinterpret all RDs with guidance
+
+on:
+  workflow_dispatch:
+  # The first run starts when this workflow is merged to main.
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/full_guided_migration.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: all-guided-rd-migration
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate source snapshots, guidance and 34 known cases
+        run: |
+          python -m unittest discover -s tests -t .
+          python - <<'PY'
+          import json
+          from rd_bridge import components, guided_model_parts
+          rows = json.load(open('data/residue_param_map.json', encoding='utf-8'))
+          idx = components.ComponentIndex.load()
+          count = len(guided_model_parts.contexts(rows, idx))
+          assert count > 100, f'Unusually small RD collection: {count}'
+          print(f'Complete source-grounded rereading will cover {count} unique EU RDs')
+          PY
+
+  reread:
+    needs: preflight
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reread assigned EU definitions with cited OECD/EFSA/EU guidance
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        shell: bash
+        run: |
+          python -m rd_bridge.guided_model_parts \
+            --scope all \
+            --shard-index ${{ matrix.shard }} \
+            --shard-count 16 \
+            --max-calls 60 \
+            --workers 2 \
+            --output "shards/guided-${{ matrix.shard }}.json"
+      - name: Keep successful/partial results available for diagnosis and retry
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: guided-shard-${{ matrix.shard }}
+          path: shards/guided-${{ matrix.shard }}.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  combine:
+    needs: reread
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: guided-shard-*
+          path: shards
+          merge-multiple: true
+      - name: Require 100 percent of the EU source definitions, all guidance-version matched
+        env:
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        run: python -m rd_bridge.guided_migration merge --shard-dir shards
+      - name: Rebuild primary PARAM map and record changed components
+        env:
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        shell: bash
+        run: |
+          cp data/residue_param_map.json old-reference-map.json
+          python -m rd_bridge.match
+          status=0
+          python -m rd_bridge.compare_parts > guided-comparison.md || status=$?
+          if [ "$status" != 0 ] && [ "$status" != 3 ]; then exit "$status"; fi
+          echo "acceptance_exit=$status" >> "$GITHUB_ENV"
+          python -m rd_bridge.guidance_audit
+          python -m rd_bridge.guided_migration report --baseline old-reference-map.json
+          echo "Acceptance comparison exit: $status"
+          sed -n '1,80p' reports/full_guidance_migration.md
+      - name: Run complete test suite against migrated interpretations
+        env:
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        shell: bash
+        run: |
+          status=0
+          python -m unittest discover -s tests -t . > migration-tests.txt 2>&1 || status=$?
+          tail -n 70 migration-tests.txt
+          echo "unit_tests_exit=$status" >> "$GITHUB_ENV"
+          # Preserve the full interpretation evidence and failing tests in a
+          # PR; do not discard the 765 paid model calls on a test regression.
+      - name: Preserve migration outputs even if GitHub cannot open a PR
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: complete-guidance-migration
+          path: |
+            data/guided_model_parts.json
+            data/residue_param_map.json
+            data/parts_comparison.json
+            reports/full_guidance_migration.md
+            reports/full_guidance_migration.json
+            reports/guidance_audit.json
+            reports/guidance_audit.md
+            guided-comparison.md
+            migration-tests.txt
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Propose replacing the old interpretations with complete guided readings
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          git add data/guided_model_parts.json data/residue_param_map.json \
+            data/parts_comparison.json reports/full_guidance_migration.md \
+            reports/full_guidance_migration.json \
+            reports/guidance_audit.json reports/guidance_audit.md
+          if git diff --cached --quiet; then
+            echo "No reference change to propose"
+            exit 0
+          fi
+          branch="model/full-guidance-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git commit -m "Reread all current EU RDs with cited guidance (run ${{ github.run_id }})"
+          git push origin "$branch"
+          {
+            echo "## Replace cached unguided Haiku readings with guidance-backed interpretations"
+            echo
+            echo "**All** unique EU RD texts have been reread using versioned,"
+            echo "cited OECD/EU/EFSA guidance. Historical answers remain in"
+            echo "`data/model_parts.json` for comparison and rollback."
+            echo
+            echo "No unavailable independently reviewed dataset was required."
+            echo "This is a replacement with auditability, not certified perfect accuracy."
+            echo
+            echo "**Existing acceptance checks exit:** $acceptance_exit"
+            echo "**Full unit tests exit:** $unit_tests_exit"
+            echo
+            echo "Review the detailed [migration report](reports/full_guidance_migration.md)"
+            echo "and complete cache; all changed PARAM component codes are documented."
+            echo
+            sed -n '1,60p' reports/full_guidance_migration.md
+          } > description.md
+          gh pr create --base main --head "$branch" \
+            --title "Adopt complete guidance-based interpretation of all EU RDs (run ${{ github.run_id }})" \
+            --body-file description.md
