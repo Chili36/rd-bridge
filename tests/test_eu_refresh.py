@@ -125,8 +125,7 @@ class FullSourceStageTest(unittest.TestCase):
         self.assertEqual((self.approved / "residues_en.json").read_bytes(), original_residues)
         self.assertEqual((self.approved / "active_substances.json").read_bytes(), original_active)
         self.assertFalse((self.approved / "residue_param_map.json").exists())
-        self.assertIn("NOT verified", self.report.read_text().replace(
-            "remains **unverified**", "NOT verified"))
+        self.assertIn("remains **unverified**", self.report.read_text())
 
     def test_same_data_produces_stable_committed_snapshot(self):
         eu_refresh.stage(self.approved, self.staging, self.report, self.get_page)
