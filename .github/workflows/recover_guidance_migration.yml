@@ -43,17 +43,17 @@ jobs:
           assert len(paths) == 16, f'Expected 16 previous shard artifacts, got {len(paths)}'
           print('Reusing', len(paths), 'completed and partially completed shard files.')
           PY
-      - name: Retry the one refused definition in shard 5, preserving the other 47
+      - name: Recover one refused EU isolate using Sonnet or exact source text
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RD_BRIDGE_MODEL: claude-haiku-5-5
         shell: bash
         run: |
-          # Reuse the 47 previous guided responses. The code asks only the
-          # missing definition, Verticillium albo-atrum isolate WCS850.
-          python -m rd_bridge.guided_model_parts \
-            --scope all --shard-index 5 --shard-count 16 \
-            --max-calls 1 --workers 1 --output shards/guided-5.json
+          # Both original and a subsequent Haiku retry refused this harmless
+          # biological-isolate name. Try Sonnet with the same guidance.
+          # If it also refuses, use the literal EU name with explicit fallback
+          # provenance; do not invent analytes or PARAM codes.
+          python -m rd_bridge.recover_refused --shard shards/guided-5.json
       - name: Verify the complete guidance cache before adoption
         env:
           RD_BRIDGE_MODEL: claude-haiku-5-5
@@ -121,7 +121,8 @@ jobs:
             echo "## Complete guidance migration recovered"
             echo
             echo "Recovered 15 successful and one partial shard from run 38465473954."
-            echo "Only the refused definition in shard 5 was reinterpreted."
+            echo "The one refused biological isolate was retried with Sonnet;"
+            echo "a source-literal fallback is explicit if both models refused."
             echo "No independently reviewed external dataset is required."
             echo
             echo "Acceptance exit code: $acceptance_exit"
