@@ -159,16 +159,24 @@ def build(residues: list, terms: list, parts=None, readings=None) -> list:
                     definition["model_reading_lost"] = sorted(lost)
                 else:
                     from_guidance = reading.get("prompt_variant") == guided_model_parts.PROMPT_VERSION
+                    literal = reading.get("interpretation_source") == "exact_EU_literal_fallback"
                     definition["components"] = model
-                    definition["parts_from"] = "guided_model" if from_guidance else "model"
+                    definition["parts_from"] = ("source_literal_fallback" if literal
+                                                else "guided_model" if from_guidance else "model")
                     if from_guidance:
-                        # References document which SOURCE PRINCIPLES the model saw.
-                        # They do not certify that the model's reading is correct.
+                        # Guidance provenance does not certify model correctness.
+                        # An exact-source fallback after refusals MUST NOT be
+                        # represented as a new model interpretation.
                         definition["model_guidance"] = {
                             "prompt_variant": reading["prompt_variant"],
                             "guidance_ids": reading["guidance_ids"],
                             "guidance_version": reading["guidance_version"],
                         }
+                        if reading.get("model_used"):
+                            definition["model_guidance"]["model_used"] = reading["model_used"]
+                        if literal:
+                            definition["model_guidance"]["interpretation_source"] = "exact_EU_literal_fallback"
+                            definition["model_guidance"]["requires_followup"] = True
             # For a named chemical mixture, published EFSA constituent evidence
             # can be stronger than the short EU API text and model's one-part reading.
             # Only explicit, catalogue-verified cases are overridden.

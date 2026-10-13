@@ -111,7 +111,8 @@ def compare_maps(previous, updated):
             "parts_from": dict(sorted(counts.items()))}
 
 
-def markdown(result, compare, *, guided_count, model, guidance_version):
+def markdown(result, compare, *, guided_count, model, guidance_version, alternate_readings=None):
+    alternate_readings = alternate_readings or []
     check = compare["cases"]
     passed = sum(x["passed"] for x in check)
     lines = [
@@ -121,10 +122,11 @@ def markdown(result, compare, *, guided_count, model, guidance_version):
         "replaced using the best available EU wording, versioned OECD/EFSA "
         "guidance and reproducible automated checks.", "",
         f"- Model: `{model}`; guidance version: `{guidance_version}`",
-        f"- **All {guided_count} unique EU definition texts were freshly reread** with guidance.",
+        f"- **{guided_count} unique EU definition texts** have guidance-versioned interpretations.",
         f"- Definitions in whole-RD map: {result['definitions']}; "
         "whole-RD PARAM codes retained unchanged.",
         f"- Active component interpretations by source: {result['parts_from']}.",
+        f"- Alternative model or source-literal fallbacks: {len(alternate_readings)}.",
         f"- Entries whose analyte/group interpretation changed: "
         f"**{len(result['component_changes'])}**.",
         f"- Existing acceptance scenarios: **{passed}/{len(check)} passed**.",
@@ -139,6 +141,12 @@ def markdown(result, compare, *, guided_count, model, guidance_version):
         "| RD ID | Removed PARAM codes | Added PARAM codes |",
         "| ---: | --- | --- |",
     ]
+    if alternate_readings:
+        lines += ["", "## Model fallback provenance", "",
+                  "These were not Haiku interpretations and are never concealed:", ""]
+        for item in alternate_readings:
+            lines.append(f"- **{item['definition']}**: {item['interpretation_source']}; "
+                         f"model: {item['model_used']}.")
     conflicts = [x for x in result["component_changes"] if not x["same_component_codes"]]
     if not conflicts:
         lines.append("| — | None | None |")
@@ -196,13 +204,22 @@ def main():
     if not guide:
         raise ValueError("Cannot report migration without a current guided cache")
     result = compare_maps(previous, updated)
+    alternate = [{
+        "definition": definition,
+        "interpretation_source": answer.get("interpretation_source", "model"),
+        "model_used": answer.get("model_used", llm.MODEL),
+    } for definition, answer in guide.items()
+        if answer.get("interpretation_source") == "exact_EU_literal_fallback"
+        or answer.get("model_used") not in (None, llm.MODEL)]
     text = markdown(result, comparison, guided_count=len(guide),
-                    model=llm.MODEL, guidance_version=guided_model_parts.guidance_hash())
+                    model=llm.MODEL, guidance_version=guided_model_parts.guidance_hash(),
+                    alternate_readings=alternate)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(text, encoding="utf-8")
     summary_path = args.output.with_suffix(".json")
     summary_path.write_text(json.dumps({
         **result, "guided_readings": len(guide),
+        "alternate_readings": alternate,
         "model": llm.MODEL,
         "guidance_version": guided_model_parts.guidance_hash(),
         "acceptance_passed": sum(c["passed"] for c in comparison["cases"]),
