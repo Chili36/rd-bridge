@@ -14,9 +14,9 @@ import xml.etree.ElementTree as ET
 _MAIN = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
 _REL = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}"
 _PKG_REL = "{http://schemas.openxmlformats.org/package/2006/relationships}"
-_ROWS = re.compile(rb'<row\\b[^>]*>(.*?)</row>', re.DOTALL)
-_CELLS = re.compile(rb'<c\\s+r="([A-Z]+)\\d+"[^>]*>(.*?)</c>', re.DOTALL)
-_VALUES = re.compile(rb'<(?:t(?:\\s+[^>]*)?|v)>(.*?)</(?:t|v)>', re.DOTALL)
+_ROWS = re.compile(rb'<row\b[^>]*>(.*?)</row>', re.DOTALL)
+_CELLS = re.compile(rb'<c\s+r="([A-Z]+)\d+"[^>]*>(.*?)</c>', re.DOTALL)
+_VALUES = re.compile(rb'<(?:t(?:\s+[^>]*)?|v)>(.*?)</(?:t|v)>', re.DOTALL)
 _TERMS = {
     "termCode", "termExtendedName", "status", "deprecated", "pestClass",
     "CAS", "otherNames", "commonNames", "masterFlag", "masterParentCode",
