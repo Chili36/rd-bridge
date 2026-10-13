@@ -1,0 +1,1333 @@
+{
+  "model": "claude-sonnet-5-5",
+  "method": "blind independent reading, then deterministic PARAM linking",
+  "generated_utc": "2026-10-13T09:49:30+00:00",
+  "total_model_rule_disagreements": 40,
+  "selected_cases": 12,
+  "cases": [
+    {
+      "residue_id": 321,
+      "definition": "Guazatine (guazatine acetate, sum of components)",
+      "score": 180,
+      "flags": [
+        "different PARAM component codes",
+        "one interpretation lacks any linked component",
+        "group/coverage difference",
+        "different unlinked analytes"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Guazatine (guazatine acetate, sum of components)",
+      "whole_residue_param_codes": [
+        "RF-00004664-PAR"
+      ],
+      "reading": {
+        "expressed_as": null,
+        "parts": [
+          {
+            "name": "Guazatine",
+            "role": "analyte",
+            "param_name": "Guazatine",
+            "notes": [
+              "sum of components"
+            ]
+          },
+          {
+            "name": "guazatine acetate",
+            "role": "qualifier"
+          }
+        ],
+        "context": "4ca8aa0e3ccb"
+      },
+      "sonnet_parts": [
+        {
+          "text": "Guazatine",
+          "name": "Guazatine",
+          "role": "analyte",
+          "notes": [
+            "sum of components"
+          ],
+          "method": "family",
+          "param_codes": [
+            "RF-0233-001-PPP"
+          ],
+          "param_names": [
+            "Guazatine"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "guazatine acetate",
+          "role": "qualifier"
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "guazatine acetate",
+          "name": "guazatine acetate",
+          "role": "analyte",
+          "notes": [
+            "sum of components"
+          ],
+          "method": "definition",
+          "param_codes": [
+            "RF-00004664-PAR"
+          ]
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "guazatine acetate",
+          "name": "guazatine acetate",
+          "role": "analyte",
+          "method": "none",
+          "param_codes": []
+        },
+        {
+          "text": "sum of components",
+          "name": "components",
+          "role": "group"
+        }
+      ],
+      "alignment": "neither",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 2655,
+      "definition": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate",
+      "score": 0,
+      "flags": [
+        "former acceptance test"
+      ],
+      "source": "acceptance",
+      "residue_name": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate(F)",
+      "whole_residue_param_codes": [
+        "RF-00012800-PAR"
+      ],
+      "reading": {
+        "expressed_as": null,
+        "parts": [
+          {
+            "name": "Fluvalinate",
+            "role": "analyte",
+            "param_name": "Fluvalinate",
+            "notes": [
+              "sum of isomers"
+            ]
+          },
+          {
+            "name": "resulting from the use of tau-fluvalinate",
+            "role": "qualifier",
+            "notes": [
+              "origin note"
+            ]
+          }
+        ],
+        "context": "b2b8a9f8aa25"
+      },
+      "sonnet_parts": [
+        {
+          "text": "Fluvalinate",
+          "name": "Fluvalinate",
+          "role": "analyte",
+          "notes": [
+            "sum of isomers"
+          ],
+          "method": "family",
+          "param_codes": [
+            "RF-0721-001-PPP"
+          ],
+          "param_names": [
+            "Fluvalinate"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "resulting from the use of tau-fluvalinate",
+          "role": "qualifier",
+          "notes": [
+            "origin note"
+          ]
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate",
+          "name": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate",
+          "role": "analyte",
+          "notes": [
+            "sum of isomers",
+            "resulting from the use of tau-fluvalinate"
+          ],
+          "method": "global",
+          "param_codes": [
+            "RF-00012800-PAR"
+          ],
+          "param_names": [
+            "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate"
+          ]
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "Fluvalinate (sum of isomers) resulting from the use of tau-fluvalinate",
+          "name": "Fluvalinate resulting from the use of tau-fluvalinate",
+          "notes": [
+            "sum of isomers"
+          ],
+          "role": "analyte",
+          "method": "definition",
+          "param_codes": [
+            "RF-00012800-PAR"
+          ]
+        }
+      ],
+      "alignment": "neither",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 139,
+      "definition": "kresoxim methyl (BF-490-9, expressed as parent)",
+      "score": 160,
+      "flags": [
+        "different PARAM component codes",
+        "one interpretation lacks any linked component",
+        "different unlinked analytes"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Kresoxim-methyl (R)",
+      "whole_residue_param_codes": [],
+      "reading": {
+        "expressed_as": "parent",
+        "parts": [
+          {
+            "name": "kresoxim methyl (BF-490-9)",
+            "role": "analyte",
+            "param_name": "Kresoxim-methyl"
+          }
+        ],
+        "context": "8828ee3aab8f"
+      },
+      "sonnet_parts": [
+        {
+          "text": "kresoxim methyl (BF-490-9)",
+          "name": "kresoxim methyl (BF-490-9)",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0260-002-PPP"
+          ],
+          "param_names": [
+            "Kresoxim methyl (BF-490-9 (2-[2-(4-hydroxy-2-methylphenoxymethyl)phenyl]-2-methoxy-iminoacetic acid), expressed as parent)"
+          ],
+          "match": "code in name",
+          "model_agrees": false,
+          "model_named": [
+            "RF-0260-001-PPP"
+          ]
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "kresoxim methyl (BF-490-9)",
+          "name": "kresoxim methyl (BF-490-9)",
+          "role": "analyte",
+          "notes": [
+            "expressed as parent"
+          ],
+          "method": "family",
+          "param_codes": [
+            "RF-0260-002-PPP"
+          ],
+          "param_names": [
+            "Kresoxim methyl (BF-490-9 (2-[2-(4-hydroxy-2-methylphenoxymethyl)phenyl]-2-methoxy-iminoacetic acid), expressed as parent)"
+          ],
+          "match": "code in name",
+          "model_agrees": false,
+          "model_named": [
+            "RF-0260-001-PPP"
+          ]
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "BF-490-9",
+          "name": "BF-490-9",
+          "role": "analyte",
+          "method": "none",
+          "param_codes": []
+        }
+      ],
+      "alignment": "haiku",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 354,
+      "definition": "Phosphane and phosphide salts (sum of phosphane and phosphane generators (relevant phosphide salts), determined and expressed as phosphane)",
+      "score": 160,
+      "flags": [
+        "different PARAM component codes",
+        "one interpretation lacks any linked component",
+        "different unlinked analytes"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Phosphane and phosphide salts (sum of phosphane and phosphane generators (relevant phosphide salts), determined and expressed as phosphane)",
+      "whole_residue_param_codes": [
+        "RF-00005719-PAR"
+      ],
+      "reading": {
+        "expressed_as": "phosphane",
+        "parts": [
+          {
+            "name": "phosphane",
+            "role": "analyte",
+            "notes": [
+              "sum of phosphane and phosphane generators, determined as phosphane"
+            ]
+          },
+          {
+            "name": "phosphane generators (relevant phosphide salts)",
+            "role": "qualifier",
+            "notes": [
+              "determined as phosphane"
+            ]
+          }
+        ],
+        "context": "ac38a058b050"
+      },
+      "sonnet_parts": [
+        {
+          "text": "phosphane",
+          "name": "phosphane",
+          "role": "analyte",
+          "notes": [
+            "sum of phosphane and phosphane generators, determined as phosphane"
+          ],
+          "method": "definition",
+          "param_codes": [
+            "RF-00005719-PAR"
+          ]
+        },
+        {
+          "text": "phosphane generators (relevant phosphide salts)",
+          "role": "qualifier",
+          "notes": [
+            "determined as phosphane"
+          ]
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "Phosphane and phosphide salts",
+          "name": "Phosphane and phosphide salts",
+          "role": "analyte",
+          "notes": [
+            "sum of phosphane and phosphane generators (relevant phosphide salts)",
+            "determined and expressed as phosphane"
+          ],
+          "method": "definition",
+          "param_codes": [
+            "RF-00005719-PAR"
+          ]
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "sum of phosphane",
+          "name": "phosphane",
+          "role": "analyte",
+          "method": "none",
+          "param_codes": []
+        },
+        {
+          "text": "phosphane generators (relevant phosphide salts)",
+          "name": "phosphane generators (relevant phosphide salts)",
+          "role": "analyte",
+          "method": "none",
+          "param_codes": []
+        }
+      ],
+      "alignment": "haiku",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 284,
+      "definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
+      "score": 130,
+      "flags": [
+        "different PARAM component codes",
+        "group/coverage difference",
+        "different unlinked analytes"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)(F)",
+      "whole_residue_param_codes": [],
+      "reading": {
+        "expressed_as": "dinocap",
+        "parts": [
+          {
+            "name": "dinocap",
+            "role": "analyte",
+            "param_name": "Dinocap",
+            "notes": [
+              "sum of dinocap isomers"
+            ]
+          },
+          {
+            "name": "dinocap corresponding phenols",
+            "role": "analyte",
+            "notes": [
+              "corresponding phenols of dinocap isomers"
+            ]
+          },
+          {
+            "name": "Where only meptyldinocap or its corresponding phenol are detected but none of the other components, the MRLs and residue definition of meptyldinocap apply",
+            "role": "qualifier"
+          }
+        ],
+        "context": "71812b5805d2"
+      },
+      "sonnet_parts": [
+        {
+          "text": "dinocap",
+          "name": "dinocap",
+          "role": "analyte",
+          "notes": [
+            "sum of dinocap isomers"
+          ],
+          "method": "family",
+          "param_codes": [
+            "RF-0143-002-PPP"
+          ],
+          "param_names": [
+            "Dinocap"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "dinocap corresponding phenols",
+          "name": "dinocap corresponding phenols",
+          "role": "analyte",
+          "notes": [
+            "corresponding phenols of dinocap isomers"
+          ],
+          "method": "none",
+          "param_codes": []
+        },
+        {
+          "text": "Where only meptyldinocap or its corresponding phenol are detected but none of the other components, the MRLs and residue definition of meptyldinocap apply",
+          "role": "qualifier"
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "Dinocap",
+          "name": "Dinocap",
+          "role": "analyte",
+          "notes": [
+            "sum of dinocap isomers and their corresponding phenols expressed as dinocap"
+          ],
+          "method": "family",
+          "param_codes": [
+            "RF-0143-002-PPP"
+          ],
+          "param_names": [
+            "Dinocap"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "sum of dinocap isomers",
+          "role": "qualifier"
+        },
+        {
+          "text": "their corresponding phenols",
+          "role": "qualifier"
+        },
+        {
+          "text": "meptyldinocap",
+          "name": "meptyldinocap",
+          "role": "analyte",
+          "notes": [
+            "applied only where meptyldinocap or its corresponding phenol is detected and none of the other dinocap components (including their corresponding phenols) are detected"
+          ],
+          "method": "global",
+          "param_codes": [
+            "RF-00002838-PAR"
+          ],
+          "param_names": [
+            "Meptyldinocap"
+          ]
+        },
+        {
+          "text": "meptyldinocap corresponding phenol",
+          "name": "meptyldinocap corresponding phenol",
+          "role": "analyte",
+          "notes": [
+            "applied only where meptyldinocap or its corresponding phenol is detected and none of the other dinocap components (including their corresponding phenols) are detected"
+          ],
+          "method": "none",
+          "param_codes": []
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "sum of dinocap isomers",
+          "name": "dinocap",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0143-002-PPP"
+          ],
+          "param_names": [
+            "Dinocap"
+          ]
+        },
+        {
+          "text": "their corresponding phenols",
+          "name": "corresponding phenols",
+          "plural": true,
+          "role": "group"
+        }
+      ],
+      "alignment": "neither",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 307,
+      "definition": "sum of fludioxonil and its metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid, expressed as fludioxonil",
+      "score": 120,
+      "flags": [
+        "different PARAM component codes",
+        "group/coverage difference"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Fludioxonil (R)(F)",
+      "whole_residue_param_codes": [
+        "RF-00003352-PAR"
+      ],
+      "reading": {
+        "expressed_as": "fludioxonil",
+        "parts": [
+          {
+            "name": "fludioxonil",
+            "role": "analyte",
+            "param_name": "Fludioxonil"
+          },
+          {
+            "name": "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid",
+            "role": "analyte",
+            "param_name": "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid",
+            "notes": [
+              "fludioxonil metabolites oxidized to this metabolite"
+            ]
+          }
+        ],
+        "context": "d2bc85f13247"
+      },
+      "sonnet_parts": [
+        {
+          "text": "fludioxonil",
+          "name": "fludioxonil",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0202-001-PPP"
+          ],
+          "param_names": [
+            "Fludioxonil"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid",
+          "name": "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid",
+          "role": "analyte",
+          "notes": [
+            "fludioxonil metabolites oxidized to this metabolite"
+          ],
+          "method": "param_sum",
+          "param_codes": [
+            "RF-00004643-PAR"
+          ],
+          "param_names": [
+            "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid"
+          ],
+          "model_agrees": true
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "fludioxonil",
+          "name": "fludioxonil",
+          "role": "analyte",
+          "notes": [
+            "sum of fludioxonil and its metabolites"
+          ],
+          "method": "family",
+          "param_codes": [
+            "RF-0202-001-PPP"
+          ],
+          "param_names": [
+            "Fludioxonil"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid",
+          "name": "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid",
+          "role": "analyte",
+          "notes": [
+            "metabolite oxidized to this substance"
+          ],
+          "method": "param_sum",
+          "param_codes": [
+            "RF-00004643-PAR"
+          ],
+          "param_names": [
+            "2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid"
+          ],
+          "model_agrees": true
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "sum of fludioxonil",
+          "name": "fludioxonil",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0202-001-PPP"
+          ],
+          "param_names": [
+            "Fludioxonil"
+          ]
+        },
+        {
+          "text": "its metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid",
+          "name": "metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid",
+          "role": "group"
+        }
+      ],
+      "alignment": "haiku",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 3050,
+      "definition": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim",
+      "score": 120,
+      "flags": [
+        "different PARAM component codes",
+        "group/coverage difference"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim(A)",
+      "whole_residue_param_codes": [
+        "RF-00014256-PAR"
+      ],
+      "reading": {
+        "expressed_as": "cycloxydim",
+        "parts": [
+          {
+            "name": "Cycloxydim",
+            "role": "analyte",
+            "param_name": "Cycloxydim"
+          },
+          {
+            "name": "3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2)",
+            "role": "analyte",
+            "notes": [
+              "degradation and reaction products determined as this substance"
+            ]
+          },
+          {
+            "name": "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2)",
+            "role": "analyte",
+            "notes": [
+              "degradation and reaction products determined as this substance"
+            ]
+          },
+          {
+            "name": "derivatives thereof",
+            "role": "qualifier"
+          }
+        ],
+        "context": "b9e371331714"
+      },
+      "sonnet_parts": [
+        {
+          "text": "Cycloxydim",
+          "name": "Cycloxydim",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0106-002-PPP"
+          ],
+          "param_names": [
+            "Cycloxydim"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2)",
+          "name": "3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2)",
+          "role": "analyte",
+          "notes": [
+            "degradation and reaction products determined as this substance"
+          ],
+          "method": "global",
+          "param_codes": [
+            "RF-00006227-PAR"
+          ],
+          "param_names": [
+            "3-(3-thianyl)glutaric acid S-dioxide"
+          ]
+        },
+        {
+          "text": "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2)",
+          "name": "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2)",
+          "role": "analyte",
+          "notes": [
+            "degradation and reaction products determined as this substance"
+          ],
+          "method": "global",
+          "param_codes": [
+            "RF-00006240-PAR"
+          ],
+          "param_names": [
+            "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide"
+          ]
+        },
+        {
+          "text": "derivatives thereof",
+          "role": "qualifier"
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "Cycloxydim",
+          "name": "Cycloxydim",
+          "role": "analyte",
+          "notes": [
+            "including degradation and reaction products"
+          ],
+          "method": "family",
+          "param_codes": [
+            "RF-0106-002-PPP"
+          ],
+          "param_names": [
+            "Cycloxydim"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2)",
+          "name": "3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2)",
+          "role": "analyte",
+          "notes": [
+            "determined as product of cycloxydim degradation or reaction"
+          ],
+          "method": "global",
+          "param_codes": [
+            "RF-00006227-PAR"
+          ],
+          "param_names": [
+            "3-(3-thianyl)glutaric acid S-dioxide"
+          ]
+        },
+        {
+          "text": "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2)",
+          "name": "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2)",
+          "role": "analyte",
+          "notes": [
+            "determined as product of cycloxydim degradation or reaction"
+          ],
+          "method": "global",
+          "param_codes": [
+            "RF-00006240-PAR"
+          ],
+          "param_names": [
+            "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide"
+          ]
+        },
+        {
+          "text": "derivatives thereof",
+          "role": "qualifier",
+          "notes": [
+            "applies to BH 517-TGSO2 and BH 517-5-OH-TGSO2"
+          ]
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "Cycloxydim",
+          "name": "Cycloxydim",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0106-002-PPP"
+          ],
+          "param_names": [
+            "Cycloxydim"
+          ]
+        },
+        {
+          "text": "degradation",
+          "name": "degradation",
+          "role": "group"
+        },
+        {
+          "text": "reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2)",
+          "name": "reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2)",
+          "role": "group"
+        },
+        {
+          "text": "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof",
+          "name": "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof",
+          "role": "group"
+        }
+      ],
+      "alignment": "haiku",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 301,
+      "definition": "Fenpyroximate (metabolite M-3, expressed as fenpyroximate (F))",
+      "score": 110,
+      "flags": [
+        "different PARAM component codes",
+        "different unlinked analytes"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Fenpyroximate (R)(F)(A)",
+      "whole_residue_param_codes": [
+        "RF-00005723-PAR"
+      ],
+      "reading": {
+        "expressed_as": "fenpyroximate (F)",
+        "parts": [
+          {
+            "name": "fenpyroximate",
+            "role": "analyte",
+            "param_name": "Fenpyroximate"
+          },
+          {
+            "name": "fenpyroximate metabolite M-3",
+            "role": "analyte"
+          }
+        ],
+        "context": "f058d90a26ec"
+      },
+      "sonnet_parts": [
+        {
+          "text": "fenpyroximate",
+          "name": "fenpyroximate",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0186-001-PPP"
+          ],
+          "param_names": [
+            "Fenpyroximate"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "fenpyroximate metabolite M-3",
+          "name": "fenpyroximate metabolite M-3",
+          "role": "analyte",
+          "method": "none",
+          "param_codes": []
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "fenpyroximate",
+          "name": "fenpyroximate",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0186-001-PPP"
+          ],
+          "param_names": [
+            "Fenpyroximate"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "fenpyroximate metabolite M-3",
+          "name": "fenpyroximate metabolite M-3",
+          "role": "analyte",
+          "notes": [
+            "expressed as fenpyroximate (F)"
+          ],
+          "method": "none",
+          "param_codes": []
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "metabolite M-3",
+          "name": "M-3",
+          "role": "analyte",
+          "method": "definition",
+          "param_codes": [
+            "RF-00005723-PAR"
+          ]
+        }
+      ],
+      "alignment": "haiku",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 778,
+      "definition": "Flonicamid (sum of flonicamid, TFNA and TFNG expressed as flonicamid)",
+      "score": 110,
+      "flags": [
+        "different PARAM component codes",
+        "different unlinked analytes"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Flonicamid (sum of flonicamid, TFNA and TFNG expressed as flonicamid)(R)",
+      "whole_residue_param_codes": [
+        "RF-00004683-PAR"
+      ],
+      "reading": {
+        "expressed_as": "flonicamid",
+        "parts": [
+          {
+            "name": "flonicamid",
+            "role": "analyte",
+            "param_name": "Flonicamid"
+          },
+          {
+            "name": "TFNA",
+            "role": "analyte",
+            "param_name": "TNFA (4-(Trifluoromethyl)nicotinic acid)"
+          },
+          {
+            "name": "TFNG",
+            "role": "analyte",
+            "param_name": "TNFG (4-(Trifluoromethyl)nicotinoyl glycine)"
+          }
+        ],
+        "context": "fac4f642d7c7"
+      },
+      "sonnet_parts": [
+        {
+          "text": "flonicamid",
+          "name": "flonicamid",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0194-002-PPP"
+          ],
+          "param_names": [
+            "Flonicamid"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "TFNA",
+          "name": "TFNA",
+          "role": "analyte",
+          "method": "model",
+          "param_codes": [
+            "RF-00003348-PAR"
+          ],
+          "param_names": [
+            "TNFA (4-(Trifluoromethyl)nicotinic acid)"
+          ]
+        },
+        {
+          "text": "TFNG",
+          "name": "TFNG",
+          "role": "analyte",
+          "method": "model",
+          "param_codes": [
+            "RF-00003349-PAR"
+          ],
+          "param_names": [
+            "TNFG (4-(Trifluoromethyl)nicotinoyl glycine)"
+          ]
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "flonicamid",
+          "name": "flonicamid",
+          "role": "analyte",
+          "notes": [
+            "summed in the definition as the parent substance, to which the sum is expressed"
+          ],
+          "method": "family",
+          "param_codes": [
+            "RF-0194-002-PPP"
+          ],
+          "param_names": [
+            "Flonicamid"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "TFNA",
+          "name": "TFNA",
+          "role": "analyte",
+          "method": "model",
+          "param_codes": [
+            "RF-00003348-PAR"
+          ],
+          "param_names": [
+            "TNFA (4-(Trifluoromethyl)nicotinic acid)"
+          ]
+        },
+        {
+          "text": "TFNG",
+          "name": "TFNG",
+          "role": "analyte",
+          "method": "model",
+          "param_codes": [
+            "RF-00003349-PAR"
+          ],
+          "param_names": [
+            "TNFG (4-(Trifluoromethyl)nicotinoyl glycine)"
+          ]
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "sum of flonicamid",
+          "name": "flonicamid",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0194-002-PPP"
+          ],
+          "param_names": [
+            "Flonicamid"
+          ]
+        },
+        {
+          "text": "TFNA",
+          "name": "TFNA",
+          "role": "analyte",
+          "method": "none",
+          "param_codes": []
+        },
+        {
+          "text": "TFNG",
+          "name": "TFNG",
+          "role": "analyte",
+          "method": "none",
+          "param_codes": []
+        }
+      ],
+      "alignment": "haiku",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 166,
+      "definition": "free and conjugated forms of alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090), expressed as myclobutanil",
+      "score": 100,
+      "flags": [
+        "different PARAM component codes"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Myclobutanil  (sum of  constituent isomers)(R)",
+      "whole_residue_param_codes": [
+        "RF-00013001-PAR"
+      ],
+      "reading": {
+        "expressed_as": "myclobutanil",
+        "parts": [
+          {
+            "name": "alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090)",
+            "role": "analyte",
+            "notes": [
+              "free and conjugated forms"
+            ]
+          }
+        ],
+        "context": "f02d12b91bc3"
+      },
+      "sonnet_parts": [
+        {
+          "text": "alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090)",
+          "name": "alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090)",
+          "role": "analyte",
+          "notes": [
+            "free and conjugated forms"
+          ],
+          "method": "global",
+          "param_codes": [
+            "RF-1005-001-PPP"
+          ],
+          "param_names": [
+            "Alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090) expressed as myclobutanil"
+          ]
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090)",
+          "name": "alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090)",
+          "role": "analyte",
+          "notes": [
+            "free and conjugated forms"
+          ],
+          "method": "global",
+          "param_codes": [
+            "RF-1005-001-PPP"
+          ],
+          "param_names": [
+            "Alpha-(3-hydroxybutyl) - alpha - (4-chloro-phenyl) - 1H - 1,2,4 - triazole -1-propanenitrile (RH9090) expressed as myclobutanil"
+          ]
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "(free and conjugated) forms of alpha-(3-hydroxybutyl) - alpha-(4-chloro-phenyl) - 1H-1,2,4-triazole-1-propanenitrile (RH9090)",
+          "name": "forms of alpha-(3-hydroxybutyl) - alpha-(4-chloro-phenyl) - 1H-1,2,4-triazole-1-propanenitrile (RH9090)",
+          "notes": [
+            "free and conjugated"
+          ],
+          "role": "analyte",
+          "method": "definition",
+          "param_codes": [
+            "RF-00013001-PAR"
+          ]
+        }
+      ],
+      "alignment": "haiku",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 253,
+      "definition": "Chloridazon (chloridazon-desphenyl, expressed as chloridazon)",
+      "score": 100,
+      "flags": [
+        "different PARAM component codes"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Chloridazon (sum of chloridazon and chloridazon-desphenyl, expressed as chloridazon)(R)",
+      "whole_residue_param_codes": [
+        "RF-00005712-PAR"
+      ],
+      "reading": {
+        "expressed_as": "chloridazon",
+        "parts": [
+          {
+            "name": "chloridazon-desphenyl",
+            "role": "analyte"
+          }
+        ],
+        "context": "ad4b141b1f43"
+      },
+      "sonnet_parts": [
+        {
+          "text": "chloridazon-desphenyl",
+          "name": "chloridazon-desphenyl",
+          "role": "analyte",
+          "method": "global",
+          "param_codes": [
+            "RF-00006186-PAR"
+          ],
+          "param_names": [
+            "Chloridazon-desphenyl"
+          ]
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "chloridazon",
+          "name": "chloridazon",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-0080-001-PPP"
+          ],
+          "param_names": [
+            "Chloridazon"
+          ],
+          "model_agrees": true
+        },
+        {
+          "text": "chloridazon-desphenyl",
+          "name": "chloridazon-desphenyl",
+          "role": "analyte",
+          "notes": [
+            "expressed as chloridazon"
+          ],
+          "method": "global",
+          "param_codes": [
+            "RF-00006186-PAR"
+          ],
+          "param_names": [
+            "Chloridazon-desphenyl"
+          ]
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "chloridazon-desphenyl",
+          "name": "chloridazon-desphenyl",
+          "role": "analyte",
+          "method": "global",
+          "param_codes": [
+            "RF-00006186-PAR"
+          ],
+          "param_names": [
+            "Chloridazon-desphenyl"
+          ]
+        }
+      ],
+      "alignment": "rules",
+      "human_review_required": true
+    },
+    {
+      "residue_id": 2332,
+      "definition": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+      "score": 100,
+      "flags": [
+        "different PARAM component codes"
+      ],
+      "source": "model_vs_rules",
+      "residue_name": "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)",
+      "whole_residue_param_codes": [
+        "RF-1078-002-PPP"
+      ],
+      "reading": {
+        "expressed_as": null,
+        "parts": [
+          {
+            "name": "Didecyldimethylammonium chloride C8",
+            "role": "analyte",
+            "param_name": "DDAC-C08",
+            "notes": [
+              "alkyl chain length C8"
+            ]
+          },
+          {
+            "name": "Didecyldimethylammonium chloride C10",
+            "role": "analyte",
+            "param_name": "DDAC-C10",
+            "notes": [
+              "alkyl chain length C10"
+            ]
+          },
+          {
+            "name": "Didecyldimethylammonium chloride C12",
+            "role": "analyte",
+            "param_name": "DDAC-C12",
+            "notes": [
+              "alkyl chain length C12"
+            ]
+          }
+        ],
+        "context": "c9541068810a"
+      },
+      "sonnet_parts": [
+        {
+          "text": "Didecyldimethylammonium chloride C8",
+          "name": "Didecyldimethylammonium chloride C8",
+          "role": "analyte",
+          "notes": [
+            "alkyl chain length C8"
+          ],
+          "method": "model",
+          "param_codes": [
+            "RF-00007495-PAR"
+          ],
+          "param_names": [
+            "DDAC-C08"
+          ]
+        },
+        {
+          "text": "Didecyldimethylammonium chloride C10",
+          "name": "Didecyldimethylammonium chloride C10",
+          "role": "analyte",
+          "notes": [
+            "alkyl chain length C10"
+          ],
+          "method": "model",
+          "param_codes": [
+            "RF-00007627-PAR"
+          ],
+          "param_names": [
+            "DDAC-C10"
+          ]
+        },
+        {
+          "text": "Didecyldimethylammonium chloride C12",
+          "name": "Didecyldimethylammonium chloride C12",
+          "role": "analyte",
+          "notes": [
+            "alkyl chain length C12"
+          ],
+          "method": "model",
+          "param_codes": [
+            "RF-00007489-PAR"
+          ],
+          "param_names": [
+            "DDAC-C12"
+          ]
+        }
+      ],
+      "haiku_parts": [
+        {
+          "text": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C8",
+          "name": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C8",
+          "role": "analyte",
+          "method": "model",
+          "param_codes": [
+            "RF-00007495-PAR"
+          ],
+          "param_names": [
+            "DDAC-C08"
+          ]
+        },
+        {
+          "text": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C10",
+          "name": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C10",
+          "role": "analyte",
+          "method": "model",
+          "param_codes": [
+            "RF-00007627-PAR"
+          ],
+          "param_names": [
+            "DDAC-C10"
+          ]
+        },
+        {
+          "text": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C12",
+          "name": "Didecyldimethylammonium chloride, alkyl-quaternary ammonium salt with alkyl chain length of C12",
+          "role": "analyte",
+          "method": "model",
+          "param_codes": [
+            "RF-00007489-PAR"
+          ],
+          "param_names": [
+            "DDAC-C12"
+          ]
+        }
+      ],
+      "rule_parts": [
+        {
+          "text": "Didecyldimethylammonium chloride",
+          "name": "Didecyldimethylammonium chloride",
+          "role": "analyte",
+          "method": "family",
+          "param_codes": [
+            "RF-00012336-PAR",
+            "RF-1078-002-PPP"
+          ],
+          "param_names": [
+            "Didecyldimethylammonium chloride",
+            "Didecyldimethylammonium chloride (mixture of alkyl-quaternary ammonium salts with alkyl chain lengths of C8, C10 and C12)"
+          ]
+        }
+      ],
+      "alignment": "haiku",
+      "human_review_required": true
+    }
+  ]
+}
