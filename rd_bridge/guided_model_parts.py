@@ -5,12 +5,14 @@ guidance an actual input to every model call. Source summaries are versioned in
 data/interpretation_guidance.json and selected by RD wording/scope. The model
 reads the EU text; the downstream PARAM linker stays deterministic.
 
-The independent cache prevents a guidance change from invalidating ~765 prior
-Haiku answers. New/change-only refreshes automatically use the guided reader.
-Previously interpreted RDs are never replaced without a separate reviewed PR.
+The guided cache preserves prior answers for traceability. New/change-only
+refreshes use guided reading; a one-time, explicitly sharded migration can
+reinterpret ALL current definitions in the same versioned guidance framework.
+The legacy cache remains available for comparison and rollback.
 
 Usage:
     python -m rd_bridge.guided_model_parts --scope new --max-calls 40
+    python -m rd_bridge.guided_model_parts --scope all --shard-index 0 --shard-count 16 --max-calls 60 --output shards/shard0.json
     python -m rd_bridge.guided_model_parts --scope selected --ids 253,301 --max-calls 6 --output reports/experiment.json
 """
 import argparse
@@ -184,7 +186,7 @@ def valid(answer, definition, ctx, data=None):
 
 def choose_todo(current_contexts, baseline_answers, guided_answers, *,
                 scope="new", selected_ids=None, rows=None, data=None):
-    """'new' never re-asks a valid old reading; 'selected' is explicit opt-in."""
+    """'new' retains old readings; 'all' deliberately rereads; 'selected' targets IDs."""
     data = data or catalogue()
     wanted = set(current_contexts)
     if scope == "selected":
@@ -196,8 +198,8 @@ def choose_todo(current_contexts, baseline_answers, guided_answers, *,
         missing = targets - {r["residue_id"] for r in rows}
         if missing:
             raise ValueError("Unknown RD IDs: " + repr(sorted(missing)))
-    elif scope != "new":
-        raise ValueError("scope must be new or selected")
+    elif scope not in ("new", "all"):
+        raise ValueError("scope must be new, selected or all")
     out = []
     for definition in sorted(wanted):
         ctx = current_contexts[definition]
@@ -227,7 +229,11 @@ def refresh(todo, ctxs, answers, *, workers=4, data=None, caller=llm.call):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--scope", choices=("new", "selected"), default="new")
+    parser.add_argument("--scope", choices=("new", "selected", "all"), default="new")
+    parser.add_argument("--shard-index", type=int,
+                        help="zero-based shard number for bounded full migration")
+    parser.add_argument("--shard-count", type=int,
+                        help="total shards in a full migration")
     parser.add_argument("--ids", help="Comma-separated RD IDs for selected scope")
     parser.add_argument("--max-calls", type=int, default=40)
     parser.add_argument("--workers", type=int, default=4)
@@ -235,6 +241,15 @@ def main():
     args = parser.parse_args()
     if args.max_calls < 1 or args.workers < 1:
         parser.error("max-calls and workers must be positive")
+    if (args.shard_index is None) != (args.shard_count is None):
+        parser.error("both --shard-index and --shard-count are required together")
+    if args.shard_index is not None:
+        if args.scope != "all":
+            parser.error("sharding is only supported with --scope all")
+        if args.shard_count < 1 or not 0 <= args.shard_index < args.shard_count:
+            parser.error("shard-index must be in [0, shard-count)")
+        if args.output.resolve() == CACHE.resolve():
+            parser.error("shards must write to their own output, not the primary guided cache")
     rows = json.loads((ROOT / "data" / "residue_param_map.json").read_text(encoding="utf-8"))
     index = components.ComponentIndex.load(str(ROOT / "data" / "param_components.json"))
     ctxs = contexts(rows, index)
@@ -245,6 +260,14 @@ def main():
     ids = [int(v) for v in args.ids.split(",")] if args.ids else None
     todo = choose_todo(ctxs, previous, answers, scope=args.scope,
                        selected_ids=ids, rows=rows, data=data)
+    if args.shard_index is not None:
+        # Stable assignment based on ALL definition keys, not only outstanding
+        # tasks: interrupted or retried runs never move a definition to a
+        # different shard. Each shard checks every one of its own keys.
+        allowed = {text for n, text in enumerate(sorted(ctxs))
+                   if n % args.shard_count == args.shard_index}
+        todo = [text for text in todo if text in allowed]
+        answers = {text: answer for text, answer in answers.items() if text in allowed}
     if len(todo) > args.max_calls:
         parser.error(f"{len(todo)} uncached definitions exceed --max-calls={args.max_calls}; "
                      "refusing an unbounded paid run")
