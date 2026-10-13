@@ -66,6 +66,12 @@ CASES = [
     (307, 0, ["RF-0202-001-PPP", "RF-00004643-PAR"], "complete", "fludioxonil plus the acid its metabolites are oxidized to"),
     (307, 0, ["RF-0202-001-PPP"], "partial", "fludioxonil alone misses the acid, which has a code"),
     (2750, None, ["RF-00003368-PAR"], "partial", "spirotetramat alone misses spirotetramat-enol"),
+    # EU Regulation 2023/710 explicitly names just the metabolite for the animal exception.
+    # "expressed as chloridazon" is a reporting/conversion basis, not an extra analyte.
+    (253, 0, ["RF-00006186-PAR"], "complete",
+     "chloridazon animal exception: desphenyl metabolite alone covers the definition"),
+    (253, 0, ["RF-0080-001-PPP"], "not_covered",
+     "chloridazon animal exception: parent alone is not the named metabolite"),
 ]
 
 
@@ -94,7 +100,9 @@ def compare(rows: list, index: components.ComponentIndex) -> dict:
     for r in rows:
         for entry in [r["default"], *r["exceptions"]]:
             if entry.get("parts_from") != "model":
-                counts["rules_only"] += 1
+                counts["rules_only"] += 1  # retained key for compatible statistics
+                if entry.get("parts_from") == "legal_guidance":
+                    counts["legal_guidance"] += 1
                 if entry.get("model_reading_lost"):
                     counts["model_not_used"] += 1
                 continue
@@ -133,9 +141,12 @@ def cases(rows: list) -> list:
 def markdown(result: dict) -> str:
     c, a = result["comparison"]["counts"], result["comparison"]["agreement"]
     read = c.get("same", 0) + c.get("different", 0)
-    lines = [f"Definitions read by the model: {read} ({c.get('rules_only', 0)} still from the rules); "
-             f"same result as the rule parser: {c.get('same', 0)}, different: {c.get('different', 0)}. "
-             f"Model readings not used because they would lose a rule link: {c.get('model_not_used', 0)}.", "",
+    lines = [f"Definitions selected from the model: {read}; "
+             f"not selected from the model: {c.get('rules_only', 0)} "
+             f"(source-verified legal guidance: {c.get('legal_guidance', 0)}). "
+             f"Compared model/rule agreements: {c.get('same', 0)}, "
+             f"differences: {c.get('different', 0)}. "
+             f"Model readings rejected because they would lose a rule link: {c.get('model_not_used', 0)}.", "",
              f"Where the rules link a component, the model's PARAM term agrees {a.get('agree', 0)} times "
              f"and disagrees {a.get('disagree', 0)} times.", ""]
     passed = sum(x["passed"] for x in result["cases"])
