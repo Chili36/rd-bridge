@@ -1,4 +1,4 @@
-"""Extract pesticide parameters from EFSA's PARAM catalogue (.ecf).
+"""Extract pesticide parameters from EFSA's PARAM catalogue (.ecf or .xlsx).
 
 Writes two files:
 - data/param_pest_terms.json: the approved, reportable pestParam terms that residue
@@ -8,7 +8,7 @@ Writes two files:
   names, CAS and its parent in PARAM's main hierarchy, where each substance heads a family
   of its summed terms and metabolites. Intermediate family nodes are kept too.
 
-Usage: python -m rd_bridge.load_param <PARAM.ecf> [data/param_pest_terms.json] [data/param_components.json]
+Usage: python -m rd_bridge.load_param <PARAM.ecf|PARAM.xlsx> [data/param_pest_terms.json] [data/param_components.json]
 """
 import json
 import sys
@@ -21,6 +21,9 @@ EXCLUDED_PARENT = "RF-00012999-PAR"
 
 def read_catalogue(ecf_path: str) -> tuple:
     """Return (version info, {code: term}) for every approved term."""
+    if str(ecf_path).lower().endswith(".xlsx"):
+        from rd_bridge.load_param_xlsx import read_catalogue_xlsx
+        return read_catalogue_xlsx(ecf_path)
     version, terms = {}, {}
     with zipfile.ZipFile(ecf_path) as zf:
         xml_name = next(n for n in zf.namelist() if n.endswith(".xml"))
@@ -43,7 +46,7 @@ def read_catalogue(ecf_path: str) -> tuple:
 
 def pest_terms(terms: dict) -> list:
     out = []
-    for code, t in terms.items():
+    for code, t in sorted(terms.items()):
         pest = t["hier"].get("pestParam")
         if pest and pest[0] == "true" and pest[1] != EXCLUDED_PARENT:
             out.append({"code": code, "name": t["name"],
