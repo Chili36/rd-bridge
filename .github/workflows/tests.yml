@@ -18,6 +18,13 @@ jobs:
           python-version: "3.12"
       - name: Run standard-library tests
         run: python -m unittest discover -s tests -t .
+      - name: Verify source-grounded reference and audit are reproducible
+        run: |
+          python -m rd_bridge.match
+          python -m rd_bridge.compare_parts > /dev/null
+          python -m rd_bridge.guidance_audit
+          git diff --exit-code -- data/residue_param_map.json data/unmatched.json \
+            data/parts_comparison.json reports/guidance_audit.json reports/guidance_audit.md
 
   python310:
     # README promises Python 3.10+ for the package; DMT's image runs 3.11

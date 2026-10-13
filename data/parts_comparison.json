@@ -2,12 +2,13 @@
  "comparison": {
   "counts": {
    "same": 711,
-   "different": 40,
-   "rules_only": 16,
-   "model_not_used": 5
+   "different": 39,
+   "rules_only": 17,
+   "model_not_used": 5,
+   "legal_guidance": 1
   },
   "agreement": {
-   "agree": 590,
+   "agree": 589,
    "disagree": 2
   },
   "model_links": [
@@ -146,17 +147,6 @@
      "procymidone [analyte: RF-0350-001-PPP]",
      "compounds [group: -]",
      "metabolites containing the 3,5-dichloroaniline moiety [group: -]"
-    ]
-   },
-   {
-    "residue_id": 253,
-    "definition": "Chloridazon (chloridazon-desphenyl, expressed as chloridazon)",
-    "model": [
-     "chloridazon [analyte: RF-0080-001-PPP]",
-     "chloridazon-desphenyl [analyte: RF-00006186-PAR]"
-    ],
-    "rules": [
-     "chloridazon-desphenyl [analyte: RF-00006186-PAR]"
     ]
    },
    {
@@ -842,6 +832,22 @@
    "expected": "partial",
    "passed": true,
    "parts_from": "model"
+  },
+  {
+   "case": "chloridazon animal exception: desphenyl metabolite alone covers the definition",
+   "residue_id": 253,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "legal_guidance"
+  },
+  {
+   "case": "chloridazon animal exception: parent alone is not the named metabolite",
+   "residue_id": 253,
+   "status": "not_covered",
+   "expected": "not_covered",
+   "passed": true,
+   "parts_from": "legal_guidance"
   }
  ]
 }

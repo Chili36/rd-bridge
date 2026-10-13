@@ -95,6 +95,29 @@ class ActiveSubstanceFallbackTest(unittest.TestCase):
                               str(ROOT / "data" / "active_substances.json"),
                               str(ROOT / "data" / "param_pest_terms.json"))
 
+    def test_source_verified_chloridazon_animal_exception(self):
+        # EU 2023/710: animal products other than honey: only the desphenyl
+        # metabolite is measured, even though results are expressed as parent.
+        animal = self.r.resolve("A01QX", "Chloridazon")
+        self.assertEqual(animal["scope"], "exception")
+        self.assertEqual(animal["param_codes"], ["RF-00005712-PAR"])
+        self.assertEqual([p["name"] for p in animal["components"]
+                          if p["role"] == "analyte"], ["chloridazon-desphenyl"])
+        self.assertEqual(animal["interpretation_evidence"]["rule_id"],
+                         "EU-2023-710-CHLORIDAZON-R")
+        self.assertEqual(
+            self.r.resolve("A01QX", "Chloridazon", ["RF-00006186-PAR"])
+            ["completeness"]["status"], "complete")
+        self.assertEqual(
+            self.r.resolve("A01QX", "Chloridazon", ["RF-0080-001-PPP"])
+            ["completeness"]["status"], "not_covered")
+        plant = self.r.resolve("A01DJ", "Chloridazon")
+        self.assertEqual(plant["scope"], "default")
+        self.assertEqual({p["name"] for p in plant["components"]
+                          if p["role"] == "analyte"},
+                         {"chloridazon", "chloridazon-desphenyl"})
+        self.assertNotIn("interpretation_evidence", plant)
+
     def test_four_EU_known_substances_without_residue_definition(self):
         expected = {
             "Azamethiphos": "RF-0484-001-PPP",

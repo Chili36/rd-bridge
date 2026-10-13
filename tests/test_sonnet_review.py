@@ -24,7 +24,7 @@ class PrioritizationTest(unittest.TestCase):
             rows = json.load(fh)
         index = components.ComponentIndex.load(str(ROOT / "data" / "param_components.json"))
         cases, conflicts = sonnet_review.review_candidates(rows, index, limit=12)
-        self.assertEqual(len(conflicts), 40)
+        self.assertEqual(len(conflicts), 39)  # one legally verified correction (Chloridazon)
         self.assertEqual(len(cases), 12)
         self.assertEqual({321, 2655} & {x["residue_id"] for x in cases}, {321, 2655})
         self.assertEqual(len({(c["residue_id"], c["definition"]) for c in cases}), 12)
