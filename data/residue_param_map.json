@@ -9887,19 +9887,6 @@
     ],
     "components": [
      {
-      "text": "chloridazon",
-      "name": "chloridazon",
-      "role": "analyte",
-      "method": "family",
-      "param_codes": [
-       "RF-0080-001-PPP"
-      ],
-      "param_names": [
-       "Chloridazon"
-      ],
-      "model_agrees": true
-     },
-     {
       "text": "chloridazon-desphenyl",
       "name": "chloridazon-desphenyl",
       "role": "analyte",
@@ -9915,7 +9902,25 @@
       ]
      }
     ],
-    "parts_from": "model"
+    "parts_from": "legal_guidance",
+    "interpretation_evidence": {
+     "rule_id": "EU-2023-710-CHLORIDAZON-R",
+     "reason": "The animal-product exception names only chloridazon-desphenyl; chloridazon is the expression basis, not a second analyte.",
+     "source": [
+      {
+       "title": "Commission Regulation (EU) 2023/710, Annex V, chloridazon (R) footnote",
+       "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0710",
+       "role": "binding EU definition and commodity exception"
+      },
+      {
+       "title": "OECD Guidance Document on the Definition of Residue (2009)",
+       "url": "https://doi.org/10.1787/66ca5caa-en",
+       "role": "principles and examples for enforcement/risk-assessment definitions"
+      }
+     ],
+     "expression_basis": "chloridazon",
+     "measurement_component": "chloridazon-desphenyl"
+    }
    }
   ],
   "footnote_r": "Chloridazon - code 1000000 except 1040000: Chloridazon (chloridazon-desphenyl, expressed as chloridazon)"
