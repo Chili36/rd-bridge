@@ -764,11 +764,19 @@
    "parts_from": "model"
   },
   {
-   "case": "guazatine is the sum of its components",
+   "case": "guazatine acetate sum: exact whole-RD PARAM code",
+   "residue_id": 321,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "guazatine parent AS code is not the guazatine acetate RD",
    "residue_id": 321,
    "status": "not_covered",
-   "expected": "complete",
-   "passed": false,
+   "expected": "not_covered",
+   "passed": true,
    "parts_from": "model"
   },
   {
@@ -788,11 +796,19 @@
    "parts_from": "model"
   },
   {
-   "case": "fluvalinate (all isomers) is the fluvalinate residue",
+   "case": "fluvalinate sum of isomers: exact whole-RD PARAM code",
+   "residue_id": 2655,
+   "status": "complete",
+   "expected": "complete",
+   "passed": true,
+   "parts_from": "model"
+  },
+  {
+   "case": "non-reportable fluvalinate AS code is not the whole RD",
    "residue_id": 2655,
    "status": "not_covered",
-   "expected": "complete",
-   "passed": false,
+   "expected": "not_covered",
+   "passed": true,
    "parts_from": "model"
   },
   {
