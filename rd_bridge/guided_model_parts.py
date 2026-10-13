@@ -211,6 +211,19 @@ def choose_todo(current_contexts, baseline_answers, guided_answers, *,
     return out
 
 
+def in_shard(todo, all_definitions, index: int, count: int):
+    """Return a stable subset based on the full sorted EU definition list.
+
+    Assignments do not change when one shard has already finished; therefore
+    retries never charge the API for a different partition.
+    """
+    if count < 1 or not 0 <= index < count:
+        raise ValueError("invalid shard count/index")
+    assigned = {text for n, text in enumerate(sorted(all_definitions))
+                if n % count == index}
+    return [text for text in todo if text in assigned]
+
+
 def refresh(todo, ctxs, answers, *, workers=4, data=None, caller=llm.call):
     data = data or catalogue()
     errors = {}
@@ -264,9 +277,8 @@ def main():
         # Stable assignment based on ALL definition keys, not only outstanding
         # tasks: interrupted or retried runs never move a definition to a
         # different shard. Each shard checks every one of its own keys.
-        allowed = {text for n, text in enumerate(sorted(ctxs))
-                   if n % args.shard_count == args.shard_index}
-        todo = [text for text in todo if text in allowed]
+        todo = in_shard(todo, ctxs, args.shard_index, args.shard_count)
+        allowed = set(in_shard(sorted(ctxs), ctxs, args.shard_index, args.shard_count))
         answers = {text: answer for text, answer in answers.items() if text in allowed}
     if len(todo) > args.max_calls:
         parser.error(f"{len(todo)} uncached definitions exceed --max-calls={args.max_calls}; "
