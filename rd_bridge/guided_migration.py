@@ -120,7 +120,7 @@ def markdown(result, compare, *, guided_count, model, guidance_version):
         "and is not a prerequisite for this migration.** Interpretations are "
         "replaced using the best available EU wording, versioned OECD/EFSA "
         "guidance and reproducible automated checks.", "",
-        f"- Model: \\u0060{model}\\u0060; guidance version: \\u0060{guidance_version}\\u0060",
+        f"- Model: `{model}`; guidance version: `{guidance_version}`",
         f"- **All {guided_count} unique EU definition texts were freshly reread** with guidance.",
         f"- Definitions in whole-RD map: {result['definitions']}; "
         "whole-RD PARAM codes retained unchanged.",
@@ -156,8 +156,8 @@ def markdown(result, compare, *, guided_count, model, guidance_version):
     lines.extend(["", "## All changed component interpretations", ""])
     for item in result["component_changes"]:
         lines += [f"### RD {item['residue_id']}: {item['definition']}", "",
-                  f"Previous: \\u0060{item['before_parts_from']}\\u0060; "
-                  f"new: \\u0060{item['after_parts_from']}\\u0060.",
+                  f"Previous: `{item['before_parts_from']}`; "
+                  f"new: `{item['after_parts_from']}`.",
                   f"Removed PARAM codes: {item['removed_param_codes']}; "
                   f"added: {item['added_param_codes']}.", "",
                   "Before:", ""]
