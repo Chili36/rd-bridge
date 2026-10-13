@@ -75,17 +75,24 @@ PARAM form is identifiable, it is listed separately in `qualifier_components`
 with method `qualifier` and the reason for the link. That list is not exhaustive,
 and does not silently become a list of required individual analyses.
 
-### Optional model readings
+### Guidance-backed model readings
 
 The normal parser splits a definition into analytes, groups and qualifiers.
-`rd_bridge.model_parts` can optionally read definitions with a model and cache
-its readings in `data/model_parts.json`. The deterministic PARAM linker then
-maps the interpreted names, not the model on its own. Readings are accepted
-only when they preserve rule-linked evidence and satisfy the text-grounding
-checks; rejections are visible in the data. The cached model results are an
-input to rebuilding the dataset, not a runtime dependency of the FoodEx2
-lookup. `rd_bridge.compare_parts` reports disagreements with the parser and
-tests the accepted examples.
+The previously generated baseline model readings remain cached in
+`data/model_parts.json`. **New or changed definitions** are interpreted by
+[`rd_bridge.guided_model_parts`](../rd_bridge/guided_model_parts.py),
+which selects and supplies source-located OECD, EU and EFSA principles from
+[`interpretation_guidance.json`](../data/interpretation_guidance.json)
+in the *actual* model prompt. Guided answers are stored in a separate
+versioned `data/guided_model_parts.json` cache and replace legacy answers
+only when reviewed and included in an accepted PR.
+
+The deterministic PARAM linker still maps the names, not the model on its
+own. All readings must retain rule-linked evidence and pass text grounding;
+the source documents included in a prompt are provenance, **not a guarantee
+of a correct interpretation**. `rd_bridge.compare_parts` reports
+model-versus-rule disagreements and tests known acceptance examples.
+The model cache is a build input, not a FoodEx2 runtime dependency.
 
 ## FoodEx2 is a separate use of the reference
 
@@ -127,7 +134,9 @@ qualifiers are not treated as exhaustive sets of required analytes.
 python -m rd_bridge.fetch_residues           # EU definition source snapshot
 python -m rd_bridge.fetch_active_substances  # additional active-substances source
 python -m rd_bridge.fetch_param               # EFSA PARAM catalogue extract
-python -m rd_bridge.model_parts               # optional; requires ANTHROPIC_API_KEY
+python -m rd_bridge.guided_model_parts --scope new --max-calls 40  # guidance-backed new/changed RD
+python -m rd_bridge.guidance_eval --limit 15    # bounded real-model A/B review only
+python -m rd_bridge.model_parts               # legacy reader; existing cache is retained
 python -m rd_bridge.match                     # primary reference JSON
 python -m rd_bridge.compare_parts             # current component comparison + acceptance
 python -m rd_bridge.guidance_audit            # source-based audit of the frozen 40 disagreements
