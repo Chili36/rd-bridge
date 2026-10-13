@@ -37,6 +37,23 @@ def have_group(parts: list) -> bool:
     return any("[group:" in part for part in parts)
 
 
+def analyte_count(parts: list) -> int:
+    return sum("[analyte:" in part for part in parts)
+
+
+def alias_only_disagreement(text: str, model: list, rules: list) -> bool:
+    """Only mark aliases as wording if enumeration of distinct strains is absent."""
+    if not guidance.lexical_alias_candidate(text):
+        return False
+    a, b = analyte_count(model), analyte_count(rules)
+    if a == b == 1:
+        return True
+    # 1,4-diaminobutane (aka putrescine): 2 synonym names, not two analytes.
+    if re.search(r"\\baka\\b", text, re.I) and a == 2 and b == 1:
+        return True
+    return False
+
+
 def entry_for(rows: list, residue_id: int, definition: str) -> dict:
     row = next((r for r in rows if r["residue_id"] == residue_id), None)
     if row is None:
@@ -74,7 +91,7 @@ def classify(diff: dict, entry: dict) -> dict:
                           "as the measured component, with chloridazon as expression basis.",
             "evidence": evidence,
         }
-    if guidance.lexical_alias_candidate(original) and left == right and not group_difference:
+    if alias_only_disagreement(original, diff["model"], diff["rules"]) and left == right and not group_difference:
         return {
             **base,
             "category": "source_wording_resolved",
@@ -90,7 +107,7 @@ def classify(diff: dict, entry: dict) -> dict:
         reason = ("The interpreters linked different component PARAM codes. "
                   "Resolve from the EU wording, linked legal residue-definition "
                   "entry and EFSA catalogue—not a vote.")
-    elif group_difference:
+    elif group_difference or analyte_count(diff["model"]) != analyte_count(diff["rules"]):
         category = "component_scope_conflict"
         reason = ("The readings disagree whether a separately relevant "
                   "unbounded group of residues is part of the definition.")
