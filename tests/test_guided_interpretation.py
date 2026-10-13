@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest import mock
 
 from rd_bridge import components, guidance_eval, guided_model_parts, model_parts
 
@@ -93,6 +94,14 @@ class GuidanceSelectionTest(unittest.TestCase):
         legacy["Existing"]["context"] = "stale"
         self.assertEqual(guided_model_parts.choose_todo(
             contexts, legacy, {}, data=data), ["Existing", "New"])
+
+    def test_no_new_rd_does_not_write_empty_guided_cache(self):
+        with mock.patch("rd_bridge.guided_model_parts.choose_todo", return_value=[]), \
+                mock.patch("rd_bridge.guided_model_parts.load", return_value={}), \
+                mock.patch("rd_bridge.guided_model_parts.save") as save, \
+                mock.patch("sys.argv", ["guided_model_parts"]):
+            guided_model_parts.main()
+        save.assert_not_called()
 
     def test_independent_guide_is_not_made_up_when_api_fails(self):
         text = "Chloridazon (chloridazon-desphenyl, expressed as chloridazon)"
