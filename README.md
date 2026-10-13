@@ -110,8 +110,8 @@ Model-assisted reading of definition text is optional and cached in `data/model_
 
 ### Scope and limits
 
-- The committed data reflects the **latest published definitions in the October 2026 source snapshot**, not a legally verified selection for today. A later-published definition may have a future application date. The resolver explicitly reports `applicability.status = "unverified"` and does **not** select definitions as of a historical or future date.
-- [EU source snapshot updates](docs/EU_SOURCE_REFRESH.md) can fetch full source records into a draft pull request, but cannot automatically replace the approved source data or PARAM map until legal applicability has been checked.
+- The reference uses the **latest available EU-published residue definitions**, presumed applicable unless specific evidence shows a later application date. `resolve` reports `applicability.status = "presumed_applicable"`; it does not yet support selecting historical definitions by a sampling date.
+- [EU source updates](docs/EU_SOURCE_REFRESH.md) fetch full source records, rebuild the PARAM map and propose updates through a pull request. Missing application dates do **not** prevent an update; known future-effective cases can be reviewed separately.
 - Some definitions or parts have no trustworthy PARAM link; the dataset records those limitations. Substance approval status and default-MRL information can come from the separate active-substances source, but rd-bridge does **not** assess MRL compliance.
 - The optional food lookup uses the supported EFSA food-class rules; some processed or composite foods may not map to an Annex I commodity.
 - [Comparison with accepted Swedish and French 2024 reports](reports/monitoring_2024.md) found 99.98% agreement among **judgeable full-definition (`P005A`)** records. This is conditional agreement with accepted reporting, **not proof of legal correctness or independent mapping accuracy**. The [machine-readable results](reports/monitoring_2024.json) preserve the denominator and disagreements.
