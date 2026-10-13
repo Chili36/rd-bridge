@@ -254,6 +254,26 @@ class CompletenessTest(unittest.TestCase):
         entry = {**self.ENTRY, "method": "ambiguous", "param_codes": ["SUM", "OTHER"]}
         self.assertEqual(completeness(entry, ["OTHER"])["status"], "not_covered")
 
+    def test_guazatine_full_rd_is_distinct_from_active_substance(self):
+        with (ROOT / "data" / "residue_param_map.json").open(encoding="utf-8") as fh:
+            residues = {r["residue_id"]: r for r in json.load(fh)}
+        rd = residues[321]["default"]
+        self.assertEqual(rd["param_codes"], ["RF-00004664-PAR"])
+        self.assertEqual(completeness(rd, ["RF-00004664-PAR"])["status"], "complete")
+        self.assertEqual(completeness(rd, ["RF-0233-001-PPP"])["status"], "not_covered")
+
+    def test_fluvalinate_full_rd_is_distinct_from_nonreportable_as(self):
+        with (ROOT / "data" / "residue_param_map.json").open(encoding="utf-8") as fh:
+            residues = {r["residue_id"]: r for r in json.load(fh)}
+        with (ROOT / "data" / "param_components.json").open(encoding="utf-8") as fh:
+            catalog = json.load(fh)["terms"]
+        rd = residues[2655]["default"]
+        self.assertEqual(rd["param_codes"], ["RF-00012800-PAR"])
+        self.assertTrue(catalog["RF-00012800-PAR"]["reportable"])
+        self.assertFalse(catalog["RF-0721-001-PPP"]["reportable"])
+        self.assertEqual(completeness(rd, ["RF-00012800-PAR"])["status"], "complete")
+        self.assertEqual(completeness(rd, ["RF-0721-001-PPP"])["status"], "not_covered")
+
 
 class LoadParamTest(unittest.TestCase):
     XML = """<message><catalogue><catalogueVersion><version>9.9</version><validFrom>2026-01-01T00:00:00</validFrom>
