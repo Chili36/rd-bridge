@@ -257,7 +257,7 @@
       "current_parts_from": "model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
-      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
       "evidence": {
         "EU_definition": "Clethodim (sum of Sethoxydim and Clethodim including degradation products calculated as Sethoxydim)",
         "efsa_param_guidance": {
@@ -607,7 +607,7 @@
       "current_parts_from": "model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
-      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
       "evidence": {
         "EU_definition": "Fatty acids / Lauric acid",
         "efsa_param_guidance": {
@@ -650,7 +650,7 @@
       "current_parts_from": "model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
-      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
       "evidence": {
         "EU_definition": "Fatty acids C7-C20",
         "efsa_param_guidance": {
@@ -681,7 +681,7 @@
       "current_parts_from": "model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
-      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
       "evidence": {
         "EU_definition": "Fatty acids: Oleic acid incl ethyloleate",
         "efsa_param_guidance": {
@@ -842,7 +842,7 @@
       "current_parts_from": "model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
-      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
       "evidence": {
         "EU_definition": "sum of cyflufenamid (Z-isomer), its E-isomer and metabolite 149-F1, expressed as cyflufenamid",
         "efsa_param_guidance": {
@@ -974,7 +974,7 @@
       "current_parts_from": "model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
-      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
       "evidence": {
         "EU_definition": "Aureobasidium pullulans strains DSM 14940 and DSM 14941",
         "efsa_param_guidance": {
@@ -1094,7 +1094,7 @@
       "current_parts_from": "model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
-      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
       "evidence": {
         "EU_definition": "Trichoderma asperellum (formerly T. harzianum) strains ICC012, T25 and TV1",
         "efsa_param_guidance": {
@@ -1125,7 +1125,7 @@
       "current_parts_from": "model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
-      "resolution": "The readings disagree whether a separately relevant unbounded group of residues is part of the definition.",
+      "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
       "evidence": {
         "EU_definition": "Trichoderma atroviride (formerly T. harzianum) strains IMI 206040 and T11",
         "efsa_param_guidance": {
