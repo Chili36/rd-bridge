@@ -1,4 +1,4 @@
-"""Offline safety checks for the EU source-snapshot workflow."""
+"""Offline safety checks for EU source capture and proposed reference updates."""
 import json
 from pathlib import Path
 import tempfile
@@ -108,7 +108,7 @@ class FullSourceStageTest(unittest.TestCase):
                               active(extra_status_field="future")]}
         raise AssertionError(url)
 
-    def test_full_rows_staged_without_overwriting_approved_reference(self):
+    def test_full_rows_saved_and_approved_inputs_proposed(self):
         original_residues = (self.approved / "residues_en.json").read_bytes()
         original_active = (self.approved / "active_substances.json").read_bytes()
         manifest = eu_refresh.stage(self.approved, self.staging, self.report,
@@ -119,13 +119,18 @@ class FullSourceStageTest(unittest.TestCase):
         self.assertEqual(staged_residues[0]["new_opaque"], {"keep": True})
         self.assertEqual(len(staged_active), 2)  # Full raw records, no deduplication.
         self.assertEqual(staged_active[0]["extra_status_field"], "future")
-        self.assertEqual(manifest["legal_applicability"], "unverified")
+        self.assertEqual(manifest["applicability_policy"],
+                         "presume_latest_applicable_unless_known_future_date")
         self.assertIn("application_date",
                       manifest["source"]["residues"]["date_field_candidates"])
-        self.assertEqual((self.approved / "residues_en.json").read_bytes(), original_residues)
-        self.assertEqual((self.approved / "active_substances.json").read_bytes(), original_active)
+        # Updated mapping inputs are proposed in the PR, rather than left unused.
+        self.assertNotEqual((self.approved / "residues_en.json").read_bytes(), original_residues)
+        updated_residues = json.loads((self.approved / "residues_en.json").read_text())
+        self.assertEqual(updated_residues[0]["application_date"], "2027-04-01")
+        updated_active = json.loads((self.approved / "active_substances.json").read_text())
+        self.assertEqual(updated_active, json.loads(original_active.decode("utf-8")))
         self.assertFalse((self.approved / "residue_param_map.json").exists())
-        self.assertIn("remains **unverified**", self.report.read_text())
+        self.assertIn("Missing date information does not block", self.report.read_text())
         self.assertIn("| pesticide-residues | 1 | 1 | 1 | 0 | 0 |", self.report.read_text())
 
     def test_same_data_produces_stable_committed_snapshot(self):
