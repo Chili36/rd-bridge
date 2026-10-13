@@ -106,7 +106,7 @@ python -m rd_bridge.match                    # rebuild the primary JSON referenc
 python -m unittest discover -s tests -t .    # regression tests
 ```
 
-Model-assisted reading of definition text is optional and cached in `data/model_parts.json`; link evidence remains visible. See [how the mapping works](docs/MAPPING_METHOD.md) for component interpretation, matching methods, model readings and reproducibility.
+Model-assisted reading of definition text is optional and cached in `data/model_parts.json`; link evidence remains visible. See [how the mapping works](docs/MAPPING_METHOD.md) and [the source-grounded interpretation rules](docs/INTERPRETATION_GUIDANCE.md) for legal wording, component interpretation, matching evidence and reproducibility.
 
 ### Scope and limits
 
