@@ -149,7 +149,14 @@ class Resolver:
             status = "unknown_substance" if not found else "ambiguous_substance"
             return {**out, "status": status, "candidates": [r["residue_id"] for r in found]}
         residue = found[0]
-        out.update(residue_id=residue["residue_id"], residue_name=residue["name"])
+        out.update(
+            residue_id=residue["residue_id"], residue_name=residue["name"],
+            applicability={
+                "status": "unverified",
+                "reason": "No legally verified application date is available for this "
+                          "source snapshot; a newer published definition may not yet apply.",
+            },
+        )
         exceptions = residue["exceptions"]
         code = commodity["annex_code"]
 
