@@ -9890,9 +9890,6 @@
       "text": "chloridazon-desphenyl",
       "name": "chloridazon-desphenyl",
       "role": "analyte",
-      "notes": [
-       "expressed as chloridazon"
-      ],
       "method": "global",
       "param_codes": [
        "RF-00006186-PAR"
