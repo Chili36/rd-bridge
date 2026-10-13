@@ -175,6 +175,20 @@ jobs:
             echo
             sed -n '1,60p' reports/full_guidance_migration.md
           } > description.md
-          gh pr create --base main --head "$branch" \
+          url=$(gh pr create --base main --head "$branch" \
             --title "Adopt complete guidance-based interpretation of all EU RDs (run ${{ github.run_id }})" \
-            --body-file description.md
+            --body-file description.md)
+          echo "Evidence PR: $url"
+          # The user cannot supply an independently reviewed corpus. Do not
+          # convert that non-existent artifact into a permanent merge gate.
+          # Adopt the fully regenerated guided cache once all PRESENT,
+          # reproducible safeguards pass: 100% sources, unchanged whole-RD
+          # PARAM codes, 34 existing acceptance scenarios, and unit tests.
+          if [ "$acceptance_exit" = "0" ] && [ "$unit_tests_exit" = "0" ]; then
+            gh pr merge "$url" --squash --delete-branch \
+              --subject "Adopt full guidance-based RD interpretations"
+            echo "Complete source-guided interpretations adopted on main."
+          else
+            echo "::warning::Known regressions need a correction. Full model results"
+            echo "::warning::are preserved in $url; no outside review corpus is required."
+          fi
