@@ -5,11 +5,8 @@ name: Reinterpret all RDs with guidance
 
 on:
   workflow_dispatch:
-  # The first run starts when this workflow is merged to main.
-  push:
-    branches: [main]
-    paths:
-      - .github/workflows/full_guided_migration.yml
+  # The initial one-time migration has already completed. Do not repeat
+  # hundreds of paid calls on workflow edits. Future full runs are deliberate.
 
 permissions:
   contents: write
@@ -95,12 +92,20 @@ jobs:
         env:
           RD_BRIDGE_MODEL: claude-haiku-5-5
         run: python -m rd_bridge.guided_migration merge --shard-dir shards
-      - name: Rebuild primary PARAM map and record changed components
+      - name: Rebuild PARAM map and automatically repair known regressions
         env:
           RD_BRIDGE_MODEL: claude-haiku-5-5
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         shell: bash
         run: |
           cp data/residue_param_map.json old-reference-map.json
+          python -m rd_bridge.match
+          # Retry only the specific failing definitions with Sonnet, supplying
+          # their EU text, PARAM metadata, guidance and failing test feedback.
+          # If no verified repair passes, retain that definition's previous
+          # passing reading with explicit provenance, not an incorrect one.
+          python -m rd_bridge.auto_repair \
+            --baseline old-reference-map.json --max-rounds 2 --max-calls 12
           python -m rd_bridge.match
           status=0
           python -m rd_bridge.compare_parts > guided-comparison.md || status=$?
@@ -132,6 +137,7 @@ jobs:
             data/parts_comparison.json
             reports/full_guidance_migration.md
             reports/full_guidance_migration.json
+            reports/automatic_interpretation_repair.json
             reports/guidance_audit.json
             reports/guidance_audit.md
             guided-comparison.md
@@ -145,7 +151,7 @@ jobs:
         run: |
           git add data/guided_model_parts.json data/residue_param_map.json \
             data/parts_comparison.json reports/full_guidance_migration.md \
-            reports/full_guidance_migration.json \
+            reports/full_guidance_migration.json reports/automatic_interpretation_repair.json \
             reports/guidance_audit.json reports/guidance_audit.md
           if git diff --cached --quiet; then
             echo "No reference change to propose"
