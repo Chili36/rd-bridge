@@ -54,7 +54,7 @@
       "parser_reading": [
         "compounds containing the 2-chlorobenzoyl moiety [group: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "unlinked_component_identity",
       "review_status": "requires_source_review",
       "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
@@ -86,7 +86,7 @@
       "parser_reading": [
         "BF-490-9 [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -122,7 +122,7 @@
       "parser_reading": [
         "forms of alpha-(3-hydroxybutyl) - alpha-(4-chloro-phenyl) - 1H-1,2,4-triazole-1-propanenitrile (RH9090) [analyte: RF-00013001-PAR]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -169,7 +169,7 @@
         "compounds [group: -]",
         "metabolites containing the 3,5-dichloroaniline moiety [group: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "naming_or_qualifier_difference",
       "review_status": "requires_source_review",
       "resolution": "Linked component codes agree, but wording, qualifiers or component structure differ. Review before calling it harmless.",
@@ -254,7 +254,7 @@
         "Clethodim [analyte: RF-0096-005-PPP]",
         "degradation products [group: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
       "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
@@ -294,7 +294,7 @@
         "dinocap [analyte: RF-0143-002-PPP]",
         "corresponding phenols [group: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -331,7 +331,7 @@
       "parser_reading": [
         "M-3 [analyte: RF-00005723-PAR]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -370,7 +370,7 @@
         "fludioxonil [analyte: RF-0202-001-PPP]",
         "metabolites oxidized to metabolite 2,2-difluoro-benzo[1,3]dioxole-4 carboxylic acid [group: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -404,7 +404,7 @@
         "cis-Flurochloridone [analyte: -]",
         "trans-Flurochloridone [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "unlinked_component_identity",
       "review_status": "requires_source_review",
       "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
@@ -439,7 +439,7 @@
         "guazatine acetate [analyte: -]",
         "components [group: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -469,7 +469,7 @@
       "parser_reading": [
         "Metam (see methylisothiocyanate) [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "unlinked_component_identity",
       "review_status": "requires_source_review",
       "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
@@ -504,7 +504,7 @@
         "phosphane [analyte: -]",
         "phosphane generators (relevant phosphide salts) [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -551,7 +551,7 @@
         "propaquizafop [analyte: RF-0356-001-PPP]",
         "its conjugates [qualifier: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "naming_or_qualifier_difference",
       "review_status": "requires_source_review",
       "resolution": "Linked component codes agree, but wording, qualifiers or component structure differ. Review before calling it harmless.",
@@ -582,7 +582,7 @@
       "parser_reading": [
         "1,4-Diaminobutane  (aka Putrescine) [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "source_wording_resolved",
       "review_status": "wording_only",
       "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
@@ -604,7 +604,7 @@
       "parser_reading": [
         "Fatty acids / Lauric acid [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
       "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
@@ -647,7 +647,7 @@
       "parser_reading": [
         "Fatty acids C7-C20 [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
       "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
@@ -678,7 +678,7 @@
       "parser_reading": [
         "Oleic acid incl ethyloleate [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
       "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
@@ -709,7 +709,7 @@
       "parser_reading": [
         "Ferric sulphate (Iron (III) sulphate) [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "unlinked_component_identity",
       "review_status": "requires_source_review",
       "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
@@ -739,7 +739,7 @@
       "parser_reading": [
         "Plant oils / Citronellol [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "unlinked_component_identity",
       "review_status": "requires_source_review",
       "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
@@ -769,7 +769,7 @@
       "parser_reading": [
         "Plant oils / Clove oil Eugenol [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "unlinked_component_identity",
       "review_status": "requires_source_review",
       "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
@@ -799,7 +799,7 @@
       "parser_reading": [
         "Plant oils / Spearmint oil [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "rules",
       "category": "unlinked_component_identity",
       "review_status": "requires_source_review",
       "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
@@ -839,7 +839,7 @@
         "its E-isomer [qualifier: -]",
         "149-F1 [analyte: RF-00012292-PAR]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
       "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
@@ -881,7 +881,7 @@
         "TFNA [analyte: -]",
         "TFNG [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -919,7 +919,7 @@
         "E-Metaflumizone [analyte: -]",
         "Z-Metaflumizone [analyte: RF-00007590-PAR]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "naming_or_qualifier_difference",
       "review_status": "requires_source_review",
       "resolution": "Linked component codes agree, but wording, qualifiers or component structure differ. Review before calling it harmless.",
@@ -949,7 +949,7 @@
       "parser_reading": [
         "Purpureocillium lilacinum strain 251 (former Paecilomyces lilacinus strain 251) [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "source_wording_resolved",
       "review_status": "wording_only",
       "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
@@ -971,7 +971,7 @@
       "parser_reading": [
         "Aureobasidium pullulans strains DSM 14940 and DSM 14941 [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
       "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
@@ -1012,7 +1012,7 @@
       "parser_reading": [
         "Didecyldimethylammonium chloride [analyte: RF-00012336-PAR,RF-1078-002-PPP]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -1059,7 +1059,7 @@
       "parser_reading": [
         "Benzalkonium chloride [analyte: RF-00002582-PAR,RF-00012321-PAR]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -1091,7 +1091,7 @@
       "parser_reading": [
         "Trichoderma asperellum (formerly T. harzianum) strains ICC012, T25 and TV1 [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
       "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
@@ -1122,7 +1122,7 @@
       "parser_reading": [
         "Trichoderma atroviride (formerly T. harzianum) strains IMI 206040 and T11 [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_scope_conflict",
       "review_status": "requires_source_review",
       "resolution": "The readings disagree about component enumeration or whether a distinct group is included in the definition.",
@@ -1153,7 +1153,7 @@
       "parser_reading": [
         "Trichoderma afroharzianum (Formerly Trichoderma harzianum) strain T-22 [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "source_wording_resolved",
       "review_status": "wording_only",
       "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
@@ -1174,7 +1174,7 @@
       "parser_reading": [
         "FEN 560  (also called fenugreek or fenugreek seed powder) [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "source_wording_resolved",
       "review_status": "wording_only",
       "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
@@ -1195,7 +1195,7 @@
       "parser_reading": [
         "Methyl decanoate (CAS 110-42-9) [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "source_wording_resolved",
       "review_status": "wording_only",
       "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
@@ -1216,7 +1216,7 @@
       "parser_reading": [
         "Methyl octanoate (CAS 111-11-5) [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "source_wording_resolved",
       "review_status": "wording_only",
       "resolution": "The supplied EU wording marks an alias/previous name/identifier. It is not by itself a second chemical component; no PARAM link has been changed or chemically validated.",
@@ -1246,7 +1246,7 @@
         "2,5-dichlorobenzoic acid [analyte: RF-00012387-PAR]",
         "its ester [qualifier: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -1285,7 +1285,7 @@
         "1,4-dimethylnaphthalene [analyte: RF-00004728-PAR]",
         "M23 [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "naming_or_qualifier_difference",
       "review_status": "requires_source_review",
       "resolution": "Linked component codes agree, but wording, qualifiers or component structure differ. Review before calling it harmless.",
@@ -1329,7 +1329,7 @@
         "reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) [group: -]",
         "3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof [group: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "component_code_conflict",
       "review_status": "requires_source_review",
       "resolution": "The interpreters linked different component PARAM codes. Resolve from the EU wording, linked legal residue-definition entry and EFSA catalogue—not a vote.",
@@ -1359,7 +1359,7 @@
       "parser_reading": [
         "Sheep fat [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "rules",
       "category": "unlinked_component_identity",
       "review_status": "requires_source_review",
       "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
@@ -1389,7 +1389,7 @@
       "parser_reading": [
         "Plant oils / Citronella oil [analyte: -]"
       ],
-      "current_parts_from": "model",
+      "current_parts_from": "guided_model",
       "category": "unlinked_component_identity",
       "review_status": "requires_source_review",
       "resolution": "Neither reading establishes a component PARAM link. Resolve the named species/chemical identity before mapping.",
