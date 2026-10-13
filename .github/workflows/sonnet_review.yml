@@ -1,0 +1,92 @@
+# Run a bounded independent Sonnet read of disputed EU residue definitions.
+# No PR secrets on fork PRs; only run on main (once when installed or on demand).
+name: Review disputed RDs with Sonnet
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/sonnet_review.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sonnet-review
+  cancel-in-progress: false
+
+jobs:
+  review:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline regression tests
+        run: python -m unittest discover -s tests -t .
+      - name: Check Sonnet model access without generating tokens
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        shell: bash
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY repository secret is missing"
+            exit 1
+          fi
+          http_status=$(curl --silent --show-error --max-time 30 \
+            --output /dev/null --write-out '%{http_code}' \
+            --header "x-api-key: $ANTHROPIC_API_KEY" \
+            --header "anthropic-version: 2023-06-01" \
+            https://api.anthropic.com/v1/models/claude-sonnet-5-5)
+          if [ "$http_status" != "200" ]; then
+            echo "::error::Sonnet access unavailable (HTTP $http_status)"
+            exit 1
+          fi
+      - name: Blind Sonnet review (12 bounded cases)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RD_BRIDGE_MODEL: claude-haiku-5-5
+        shell: bash
+        run: |
+          python -m rd_bridge.sonnet_review --limit 12
+      - name: Preserve review if PR creation fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sonnet-rd-discrepancy-review
+          path: |
+            reports/sonnet_review.json
+            reports/sonnet_review.md
+          if-no-files-found: ignore
+      - name: Open PR with model's independent second opinions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          git add reports/sonnet_review.json reports/sonnet_review.md
+          if git diff --cached --quiet; then
+            echo "No Sonnet review output changed"
+            exit 0
+          fi
+          branch="review/sonnet-rd-${{ github.run_id }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git commit -m "Record independent Sonnet review (run ${{ github.run_id }})"
+          git push origin "$branch"
+          {
+            echo "## Independent Sonnet review of RD disagreements"
+            echo
+            echo "This PR only adds Sonnet findings. **No reference codes or"
+            echo "interpretations have been changed automatically.**"
+            echo
+            cat reports/sonnet_review.md
+          } > body.md
+          gh pr create --base main --head "$branch" \
+            --title "Review Sonnet findings on disputed RDs (run ${{ github.run_id }})" \
+            --body-file body.md
