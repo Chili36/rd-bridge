@@ -1,0 +1,114 @@
+{
+ "api_version": "v3.0",
+ "applicability_policy": "presume_latest_applicable_unless_known_future_date",
+ "description": "Full-field EU snapshots and proposed latest-version reference update.",
+ "possible_future_application_dates": [],
+ "source": {
+  "active_substances": {
+   "date_field_candidates": {
+    "approval_date": {
+     "examples": [
+      "01/01/2002",
+      "01/01/2003",
+      "01/01/2004"
+     ],
+     "present": 3043
+    },
+    "candidate_for_substitution": {
+     "examples": [
+      "No",
+      "Yes"
+     ],
+     "present": 4789
+    },
+    "candidate_for_substitution_type": {
+     "examples": [
+      "endocrine disrupting properties",
+      "low ADI / ARfD / AOEL",
+      "non-active isomers"
+     ],
+     "present": 536
+    },
+    "expiry_date": {
+     "examples": [
+      "01/02/2022",
+      "01/03/2027",
+      "01/04/2041"
+     ],
+     "present": 3014
+    }
+   },
+   "fields": [
+    "ac_type",
+    "active_substance_part_of_group",
+    "active_substance_part_of_group_id",
+    "approval_date",
+    "as_cas_number",
+    "as_is_group",
+    "as_member_id",
+    "as_member_name",
+    "as_micro_org",
+    "authorisations_at_nat_level",
+    "basic_substance",
+    "candidate_for_substitution",
+    "candidate_for_substitution_type",
+    "cas_number",
+    "classification_reg_1272",
+    "corms",
+    "expiry_date",
+    "legislations_actives",
+    "legislations_old",
+    "low_risk_active_substance",
+    "pest_res_linked_annex",
+    "pest_res_linked_legislation",
+    "pest_res_linked_legislation_url",
+    "pest_res_mrl_webpage",
+    "pesticide_residue_linked",
+    "remark",
+    "risk_assessment",
+    "rms",
+    "substance_category",
+    "substance_id",
+    "substance_name",
+    "substance_status",
+    "tox_remark_aaoel",
+    "tox_remark_adi",
+    "tox_remark_aoel",
+    "tox_remark_arfd",
+    "tox_remark_other",
+    "tox_sourc_earfd",
+    "tox_source_aaoel",
+    "tox_source_adi",
+    "tox_source_aoel",
+    "tox_source_earfd",
+    "tox_source_other",
+    "tox_value_aaoel",
+    "tox_value_adi",
+    "tox_value_aoel",
+    "tox_value_arfd",
+    "tox_value_other"
+   ],
+   "page_count": 48,
+   "row_count": 4789,
+   "sha256": "c0a608b22002a6f71be0fff8bf72ab50eabc23e8ba14453bcb8a525fa4bb72ce",
+   "url": "https://api.datalake.sante.service.ec.europa.eu/sante/pesticides/active-substances?format=json&api-version=v3.0"
+  },
+  "residues": {
+   "date_field_candidates": {},
+   "fields": [
+    "original_pesticide_residue_id",
+    "pesticide_residue_footnote_code",
+    "pesticide_residue_footnote_def",
+    "pesticide_residue_footnote_txt",
+    "pesticide_residue_id",
+    "pesticide_residue_lg",
+    "pesticide_residue_name",
+    "pesticide_residue_version_nbr"
+   ],
+   "page_count": 8,
+   "row_count": 738,
+   "sha256": "1207ca9857293cc9ab484b540954dbbdb6a58ec53f9f82965af68a75f87c4dd9",
+   "url": "https://api.datalake.sante.service.ec.europa.eu/sante/pesticides/pesticide-residues?format=json&pesticide_residue_lg=EN&api-version=v3.0"
+  }
+ }
+}
