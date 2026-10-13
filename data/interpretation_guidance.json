@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "source_verified_on": "2026-10-13",
+  "description": "Curated, citable operational readings—not copied full publications and not independently binding law. Exact EU definition controls.",
+  "sources": {
+    "EU-RD": {
+      "title": "Regulation (EC) No 396/2005, Annexes II–V as amended (EU legal residue definition)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2005/396/oj",
+      "locator": "Annexes II–V; exact current text from EU Pesticides Database",
+      "type": "legal_definition"
+    },
+    "EU-CHLORIDAZON": {
+      "title": "Commission Regulation (EU) 2023/710",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0710",
+      "locator": "Annex V; Chloridazon (R) commodity-specific exception",
+      "type": "binding_case_example"
+    },
+    "EU-REPORTING": {
+      "title": "Commission Implementing Regulation (EU) 2025/854",
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2025/854/oj/eng",
+      "locator": "Article 2; 2026 monitoring programme",
+      "type": "reporting_legal"
+    },
+    "OECD-2009": {
+      "title": "OECD Guidance Document on the Definition of Residue, revised 2009",
+      "url": "https://doi.org/10.1787/66ca5caa-en",
+      "locator": "ENV/JM/MONO(2009)30, numbered sections and scenarios",
+      "type": "nonbinding_guidance"
+    },
+    "EFSA-2026": {
+      "title": "Chemical monitoring reporting guidance: 2026 data collection",
+      "url": "https://doi.org/10.2903/sp.efsa.2026.EN-9911",
+      "locator": "2026 SSD2 chemical monitoring reporting guidance (publication scope)",
+      "type": "reporting_guidance"
+    },
+    "EFSA-MONITORING-2026": {
+      "title": "The 2024 European Union report on pesticide residues in food",
+      "url": "https://doi.org/10.2903/j.efsa.2026.10054",
+      "locator": "Methodology: paramType P004A/P005A for full/subset; P002A for components",
+      "type": "reporting_evidence"
+    }
+  },
+  "rules": [
+    {
+      "id": "EU-TEXT-CONTROLS",
+      "priority": 0,
+      "always": true,
+      "sources": [
+        "EU-RD"
+      ],
+      "locator": "Annexes II–V, applicable residue-definition entry",
+      "principle": "The exact EU enforcement residue definition is authoritative for which components belong to the residue. Do not invent an analyte because it is the heading, a common name, in a catalogue family or a proposed risk-assessment residue. Parse the applicable commodity-specific (R) exception independently of the default.",
+      "origin": "implementation principle from binding definitions"
+    },
+    {
+      "id": "OECD-ENFORCEMENT-SCOPE",
+      "priority": 1,
+      "always": true,
+      "sources": [
+        "OECD-2009"
+      ],
+      "locator": "paragraphs 26–29, pp. 30–31",
+      "principle": "For MRL enforcement, a marker may be parent, metabolite or analytical derivative. The identity of the pesticide used is NOT by itself a requirement that its parent be measured. Do not import broader dietary risk-assessment components into an enforcement definition.",
+      "origin": "paraphrase of OECD reasoning"
+    },
+    {
+      "id": "OECD-EXPRESSION-BASIS",
+      "priority": 2,
+      "patterns": [
+        "expressed as",
+        "calculated as",
+        "equivalent"
+      ],
+      "sources": [
+        "OECD-2009",
+        "EU-CHLORIDAZON"
+      ],
+      "locator": "OECD Scenario 1 pp. 31–32; Scenario 11 pp. 34; EU 2023/710 Chloridazon footnote",
+      "principle": "'Expressed as X' normally identifies the substance used to express the reported quantity, potentially with mass conversion. It does not alone require measuring X. If 'X (Y, expressed as X)' identifies Y in the definition, include Y, not the heading X solely as an extra analyte. If the text actually says 'sum of X and Y', include both.",
+      "origin": "paraphrase of OECD with directly binding EU example"
+    },
+    {
+      "id": "OECD-SUMMED-COMPONENTS",
+      "priority": 3,
+      "patterns": [
+        "sum of",
+        "sum ",
+        "including",
+        "includes",
+        "mixture of"
+      ],
+      "sources": [
+        "OECD-2009",
+        "EU-REPORTING"
+      ],
+      "locator": "OECD Scenario 1 and 4 pp. 31–32; EU 2025/854 Article 2",
+      "principle": "Where the legal definition explicitly names a sum or mixture of distinguishable components, list each named constituent. Use a group only when the text specifies a structurally defined but nonenumerated class. Do not add the heading again when it merely labels the sum.",
+      "origin": "paraphrase and operational instruction"
+    },
+    {
+      "id": "OECD-CONVERSION",
+      "priority": 4,
+      "patterns": [
+        "determined as",
+        "hydrolys",
+        "oxidiz",
+        "converted",
+        "moiety",
+        "reaction products",
+        "degradation products"
+      ],
+      "sources": [
+        "OECD-2009"
+      ],
+      "locator": "Scenario 3–5 pp. 31–32",
+      "principle": "A measurement can determine several chemical forms through a single conversion product/common moiety. Distinguish the analyte ultimately determined from precursor forms and the compound used to express results. A conversion basis is not automatically an independently required parent analyte. Preserve any explicitly named precursors or nonenumerated group without guessing chemical identities.",
+      "origin": "paraphrase of OECD scenarios"
+    },
+    {
+      "id": "OECD-FREE-CONJUGATED",
+      "priority": 5,
+      "patterns": [
+        "conjugat",
+        "free",
+        "bound",
+        "salts",
+        "esters"
+      ],
+      "sources": [
+        "OECD-2009"
+      ],
+      "locator": "Scenario 8 pp. 33–34; Scenario 1 p. 31",
+      "principle": "'Free and conjugated', salts or unnamed esters usually qualify coverage of a named residue; do not invent a separately measured analyte for every unspecified form. Explicitly named, analytically distinct esters, salts or metabolites remain separately listed if the definition requires them.",
+      "origin": "paraphrase of OECD scenarios"
+    },
+    {
+      "id": "OECD-ISOMER-COVERAGE",
+      "priority": 6,
+      "patterns": [
+        "isomer",
+        "enantiomer",
+        "cis-",
+        "trans-",
+        "stereo"
+      ],
+      "sources": [
+        "OECD-2009"
+      ],
+      "locator": "Residue Definition for MRL Setting and Risk Assessment in the Case of Isomers, paragraphs 30–31, pp. 35–36",
+      "principle": "Treat an unnamed 'sum of isomers' as the aggregate for the named compound; do not hallucinate specific stereo forms. When the definition explicitly enumerates E/Z, cis/trans or R/S forms and separately measured terms exist, represent the named forms distinctly.",
+      "origin": "paraphrase of OECD isomer considerations"
+    },
+    {
+      "id": "OECD-COMMODITY-VARIANTS",
+      "priority": 7,
+      "patterns": [
+        "code 10",
+        "code 0",
+        "animals",
+        "milk",
+        "eggs",
+        "animal products"
+      ],
+      "sources": [
+        "OECD-2009",
+        "EU-RD"
+      ],
+      "locator": "OECD Scenario 11, p. 34; EU Annex (R) footnote",
+      "principle": "Plant and livestock residues may have different marker analytes. Do not copy analytes from the default or plant definition into an animal exception unless that exception actually names them. Product scope is metadata, not an analyte.",
+      "origin": "paraphrase of OECD and EU source semantics"
+    },
+    {
+      "id": "EU-CONDITIONAL-CLAUSE",
+      "priority": 8,
+      "patterns": [
+        "where only",
+        "where the",
+        "provided that",
+        "if only",
+        "except"
+      ],
+      "sources": [
+        "EU-RD"
+      ],
+      "locator": "Exact active EU residue-definition text / (R) footnote",
+      "principle": "A conditional statement such as 'where only Y is detected, apply Y's residue definition' describes an alternative rule, not an additional analyte in the unconditional residue sum. Preserve the condition as a qualifier or annotation and do not silently treat both branches as simultaneously measured.",
+      "origin": "operational reading of EU legal wording; not a blanket legal interpretation"
+    },
+    {
+      "id": "EU-ALIASES-NOT-EXTRA",
+      "priority": 9,
+      "patterns": [
+        "aka",
+        "also called",
+        "formerly",
+        "former",
+        "synonym"
+      ],
+      "sources": [
+        "EU-RD"
+      ],
+      "locator": "Exact active EU definition where the alternative name is in parentheses",
+      "principle": "An explicit alternate or former name is an identifier, not necessarily a second measured component. If there are separately listed biological strains or isomer identities, keep those distinct; do not collapse them just because a former name is also present.",
+      "origin": "operational rule for literal EU names"
+    },
+    {
+      "id": "EFSA-WHOLE-VS-PARTS",
+      "priority": 10,
+      "always": true,
+      "sources": [
+        "EU-REPORTING",
+        "EFSA-2026",
+        "EFSA-MONITORING-2026"
+      ],
+      "locator": "EU 2025/854 Article 2; EFSA 2026 ChemMon SSD2 scope; EFSA 2026 EU pesticide report methods",
+      "principle": "A whole legal RD PARAM identifier, an active-substance identifier and a separately reported analyte/part are different concepts. Only output the named components required by the EU definition; the deterministic PARAM mapper will link them. Do not choose a whole-RD code as a part merely because the label contains the same substance.",
+      "origin": "legal reporting instruction + EFSA publication context"
+    }
+  ]
+}
