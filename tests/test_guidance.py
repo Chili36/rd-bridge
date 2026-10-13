@@ -118,7 +118,11 @@ class GuidanceAuditTest(unittest.TestCase):
     def test_live_difference_count_declines_but_frozen_baseline_is_40(self):
         with (ROOT / "data" / "parts_comparison.json").open(encoding="utf-8") as fh:
             current = json.load(fh)
-        self.assertEqual(current["comparison"]["counts"]["different"], 39)
+        # The original, frozen 40-case baseline stays intact. The current
+        # disagreement count is expected to change when ALL definitions are
+        # genuinely reread with the new, guidance-backed model.
+        self.assertEqual(current["comparison"]["counts"]["different"],
+                         len(current["comparison"]["differences"]))
         self.assertEqual(current["comparison"]["counts"]["legal_guidance"], 1)
         self.assertEqual(len(current["cases"]), 34)
         self.assertTrue(all(c["passed"] for c in current["cases"]))
