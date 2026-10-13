@@ -165,8 +165,14 @@ python -m rd_bridge.guided_model_parts --scope selected --ids 253,301 --max-call
 The evaluation only creates `reports/guidance_model_evaluation.{json,md}`;
 it does **not** overwrite the primary map. The model workflow and EU refresh
 create review PRs rather than automatically merging changes.
-Small preselected tests **cannot establish overall accuracy**; an independent,
-larger human-reviewed benchmark is still needed.
+Small preselected tests **cannot establish overall accuracy**. Because no
+independently reviewed reference corpus can be obtained, such a corpus is
+**not a release gate**. Instead, the complete guidance-based reinterpretation
+uses the published EU definition, explicit OECD/EFSA principles, EFSA PARAM
+consistency tests, fixed regression examples, and a complete audit of every
+changed component. Corrections are incorporated incrementally as evidence
+becomes available. A missing external benchmark will never block replacing
+the cached model interpretations.
 
 Changes to source evidence, legal wording, commodity scope or EFSA
 catalogue version must be checked and tested when rebuilding.
