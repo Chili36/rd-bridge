@@ -49,7 +49,7 @@ def alias_only_disagreement(text: str, model: list, rules: list) -> bool:
     if a == b == 1:
         return True
     # 1,4-diaminobutane (aka putrescine): 2 synonym names, not two analytes.
-    if re.search(r"\\baka\\b", text, re.I) and a == 2 and b == 1:
+    if re.search(r"\baka\b", text, re.I) and a == 2 and b == 1:
         return True
     return False
 
