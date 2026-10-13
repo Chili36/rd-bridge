@@ -1,0 +1,39 @@
+# Validate the Anthropic repository secret without logging it or generating tokens.
+# Run on initial installation or start manually from GitHub Actions.
+name: Verify Anthropic API access
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/verify-anthropic.yml
+
+permissions: {}
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Validate Anthropic API key and Haiku 5.5 model access
+        shell: bash
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::Repository secret ANTHROPIC_API_KEY is missing or empty."
+            exit 1
+          fi
+          # The Models API does not generate model output or consume model tokens.
+          # Do not print the key, response headers, or response body.
+          status=$(curl --silent --show-error --max-time 30 --retry 2 \
+            --output /dev/null --write-out '%{http_code}' \
+            --header "x-api-key: $ANTHROPIC_API_KEY" \
+            --header "anthropic-version: 2023-06-01" \
+            https://api.anthropic.com/v1/models/claude-haiku-5-5)
+          if [ "$status" != "200" ]; then
+            echo "::error::Anthropic model-access check returned HTTP $status."
+            exit 1
+          fi
+          echo "Anthropic credentials work; Claude Haiku 5.5 model is accessible."
