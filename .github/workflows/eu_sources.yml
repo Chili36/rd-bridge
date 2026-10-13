@@ -37,7 +37,7 @@ jobs:
         run: python -m rd_bridge.eu_refresh --report eu-refresh-report.md
       - name: Rebuild PARAM mappings from refreshed data
         run: python -m rd_bridge.match | tee rebuild.txt
-      - name: Read new or changed definitions with the model
+      - name: Read new or changed definitions with guidance-backed model
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RD_BRIDGE_MODEL: claude-haiku-5-5
@@ -45,7 +45,10 @@ jobs:
         run: |
           status=0
           if [ -n "$ANTHROPIC_API_KEY" ]; then
-            python -m rd_bridge.model_parts > model-log.txt 2>&1 || status=$?
+            # Existing cached RDs are untouched. New/changed EU definitions
+            # are interpreted WITH cited OECD/EU/EFSA principles in the prompt.
+            # Fail closed on more than 40 calls to prevent accidental bulk cost.
+            python -m rd_bridge.guided_model_parts --scope new --max-calls 40 > model-log.txt 2>&1 || status=$?
           else
             echo "No model API key: existing cached readings/rule parser retained." > model-log.txt
           fi
@@ -113,6 +116,7 @@ jobs:
             cat eu-refresh-report.md
             echo
             echo "## Model readings"
+            echo "New/changed definitions use versioned OECD/EU/EFSA source guidance; pre-existing model cache remains unchanged."
             echo '~~~'
             cat model-log.txt
             echo '~~~'
