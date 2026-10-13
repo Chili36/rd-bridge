@@ -1,5 +1,6 @@
 """Offline safety checks for EU source capture and proposed reference updates."""
 import json
+from datetime import date
 from pathlib import Path
 import tempfile
 import unittest
@@ -36,6 +37,12 @@ class FetchPagesTest(unittest.TestCase):
         self.assertEqual((len(rows), count), (3, 2))
         self.assertEqual(sum("application_date" in x for x in rows), 2)
         self.assertTrue(any("another_future_field" in x for x in rows))
+
+    def test_future_application_date_is_highlighted_but_not_rejected(self):
+        items = [residue(1, application_date="2027-04-01"),
+                 residue(2), residue(3, application_date="2026-01-01")]
+        flagged = eu_refresh.possible_future_dates(items, as_of=date(2026, 10, 13))
+        self.assertEqual([x["residue_id"] for x in flagged], [1])
 
     def test_empty_result_fails(self):
         with self.assertRaisesRegex(RuntimeError, "empty"):
