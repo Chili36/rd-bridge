@@ -192,7 +192,7 @@ class Resolver:
     @staticmethod
     def _link(entry: dict) -> dict:
         keys = ("definition", "method", "param_codes", "evidence", "score",
-                "components", "qualifier_components", "interpretation_evidence")
+                "catalogue_gap", "components", "qualifier_components", "interpretation_evidence")
         return {k: entry[k] for k in keys if k in entry}
 
     @staticmethod

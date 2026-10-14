@@ -32809,6 +32809,26 @@
    "definition": "Benthiavalicarb-isopropyl (sum of benthiavalicarb-isopropyl (KIF 230 R-L) and its RS enantiomer (KIF 230-S-D))",
    "method": "none",
    "param_codes": [],
+   "catalogue_gap": {
+    "kind": "catalogue_scope_mismatch",
+    "legal_source": "https://eur-lex.europa.eu/eli/reg/2026/147/oj/eng",
+    "applies_from": "2026-08-12",
+    "param_catalogue_version": "17.8",
+    "reason": "EU Regulation 2026/147 defines the enforcement residue as KIF-230 R-L plus KIF-230 S-D. The available reportable PARAM term also includes KIF-230 S-L and KIF-230 R-D.",
+    "related_terms": [
+     {
+      "code": "RF-00004656-PAR",
+      "name": "Benthiavalicarb (Benthiavalicarb-isopropyl(KIF-230 R-L) and its enantiomer (KIF-230 S-D) and its diastereomers(KIF-230 S-L and KIF-230 R-D), expressed as benthiavalicarb-isopropyl)",
+      "relationship": "broader_four_isomer_residue"
+     },
+     {
+      "code": "RF-0043-003-PPP",
+      "name": "Benthiavalicarb isopropyl",
+      "relationship": "nonreportable_individual_substance"
+     }
+    ],
+    "resolution": "Use an updated EFSA code for this legal residue definition when one exists, or explicit EFSA reporting guidance confirming a code. Do not treat either related code as an exact whole-definition match."
+   },
    "components": [
     {
      "text": "Benthiavalicarb-isopropyl (KIF 230 R-L)",

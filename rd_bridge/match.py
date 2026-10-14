@@ -16,7 +16,7 @@ import os
 import re
 import sys
 
-from rd_bridge import components, compounds, evidence_parts, footnotes, guidance, guided_model_parts, model_parts, qualifier_parts
+from rd_bridge import catalogue_gaps, components, compounds, evidence_parts, footnotes, guidance, guided_model_parts, model_parts, qualifier_parts
 
 FOOTNOTE_MARKERS = re.compile(r"\s*(\((R|F|A|\+|\+\+|\*|)\)\s*)+$")
 NEAR_CUTOFF = 0.9
@@ -133,6 +133,9 @@ def build(residues: list, terms: list, parts=None, readings=None) -> list:
     def entry(definition: dict, residue_name: str) -> dict:
         if parts is not None:
             text = definition["definition"]
+            gap = catalogue_gaps.explain(text, definition, parts)
+            if gap:
+                definition["catalogue_gap"] = gap
             rules = parts.describe(text, definition, residue_name)
             definition["components"], definition["parts_from"] = rules, "rules"
             qualified = qualifier_parts.covered(text, parts)
@@ -240,7 +243,8 @@ def main() -> None:
         readings.update(guided_model_parts.load())
     rows = build(residues, terms, parts, readings)
     links = [r["default"] for r in rows] + [x for r in rows for x in r["exceptions"]]
-    unmatched = [{"residue_id": r["residue_id"], "definition": d["definition"], "method": d["method"]}
+    unmatched = [{"residue_id": r["residue_id"], "definition": d["definition"], "method": d["method"],
+                  **({"reason": d["catalogue_gap"]["kind"]} if "catalogue_gap" in d else {})}
                  for r in rows for d in [r["default"], *r["exceptions"]] if d["method"] != "exact"]
     with open("data/residue_param_map.json", "w", encoding="utf-8") as fh:
         json.dump(rows, fh, ensure_ascii=False, indent=1)

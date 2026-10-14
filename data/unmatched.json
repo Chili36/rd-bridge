@@ -792,7 +792,8 @@
  {
   "residue_id": 3950,
   "definition": "Benthiavalicarb-isopropyl (sum of benthiavalicarb-isopropyl (KIF 230 R-L) and its RS enantiomer (KIF 230-S-D))",
-  "method": "none"
+  "method": "none",
+  "reason": "catalogue_scope_mismatch"
  },
  {
   "residue_id": 4050,
