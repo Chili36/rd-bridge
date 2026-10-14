@@ -43,6 +43,24 @@ not forced: an ambiguous or missing link is left visibly unresolved.
 Whole-definition `param_codes` describe the *sum/whole*, not necessarily
 the code of every chemical that a laboratory might measure separately.
 
+### When legislation changes before PARAM
+
+[Benthiavalicarb-isopropyl under Regulation (EU) 2026/147](https://eur-lex.europa.eu/eli/reg/2026/147/oj/eng)
+is a real gap, not a spelling error. From **12 August 2026**, its EU
+enforcement definition covers **KIF-230 R-L + KIF-230 S-D**. EFSA PARAM
+**17.8** still has reportable `RF-00004656-PAR`, which also includes
+diastereomers KIF-230 S-L and KIF-230 R-D. `RF-0043-003-PPP` identifies
+the individual substance; in the pesticide hierarchy it is not a reportable
+whole-residue term. Neither is verified as the exact new legal definition.
+
+Record **3950** therefore has `method = "none"`, `param_codes = []`
+and a structured `catalogue_gap` with the relevant terms, source regulation
+and application date. The `resolve` response exposes this explanation with
+`status = "no_param_link"`. Matching continues automatically when a
+later PARAM catalogue supplies a valid new term or revises the old one;
+no manually reviewed reference corpus or forced substitution is required.
+
+
 ## Interpreting and linking the parts
 
 The [source-grounded interpretation hierarchy](INTERPRETATION_GUIDANCE.md) distinguishes binding EU wording, OECD principles for defining residues, EFSA's **2026** reporting guidance and the versioned PARAM catalogue. Source-backed cases can override a contradictory model interpretation only with recorded legal evidence and regression tests. The original cached model reading is retained for audit.
