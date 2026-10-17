@@ -2,8 +2,8 @@
  "comparison": {
   "counts": {
    "guided_model": 735,
-   "same": 690,
-   "different": 47,
+   "same": 691,
+   "different": 46,
    "rules_only": 30,
    "model_not_used": 6,
    "legal_guidance": 1,
@@ -146,16 +146,6 @@
     "rules": [
      "iprodione [analyte: RF-0255-001-PPP]",
      "metabolites containing the 3,5-dichloroaniline moiety [group: -]"
-    ]
-   },
-   {
-    "residue_id": 139,
-    "definition": "kresoxim methyl (BF-490-9, expressed as parent)",
-    "model": [
-     "kresoxim methyl (BF-490-9) [analyte: RF-0260-002-PPP]"
-    ],
-    "rules": [
-     "BF-490-9 [analyte: -]"
     ]
    },
    {
@@ -315,7 +305,7 @@
      "methylisothiocyanate [analyte: RF-00013459-PAR,RF-0118-001-PPP,RF-0790-001-PPP]"
     ],
     "rules": [
-     "Metam (see methylisothiocyanate) [analyte: -]"
+     "Metam (see methylisothiocyanate) [analyte: RF-00013459-PAR]"
     ]
    },
    {

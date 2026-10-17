@@ -75,7 +75,9 @@
     {
       "residue_id": 139,
       "definition": "kresoxim methyl (BF-490-9, expressed as parent)",
-      "whole_rd_param_codes": [],
+      "whole_rd_param_codes": [
+        "RF-0260-002-PPP"
+      ],
       "model_component_codes": [
         "RF-0260-002-PPP"
       ],
@@ -462,7 +464,9 @@
     {
       "residue_id": 332,
       "definition": "Metam (see methylisothiocyanate)",
-      "whole_rd_param_codes": [],
+      "whole_rd_param_codes": [
+        "RF-00013459-PAR"
+      ],
       "model_component_codes": [],
       "parser_component_codes": [],
       "model_reading": [
@@ -627,7 +631,9 @@
     {
       "residue_id": 413,
       "definition": "Fatty acids C7-C20",
-      "whole_rd_param_codes": [],
+      "whole_rd_param_codes": [
+        "RF-00000248-NTR"
+      ],
       "model_component_codes": [],
       "parser_component_codes": [],
       "model_reading": [
