@@ -275,7 +275,9 @@
     {
       "residue_id": 284,
       "definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
-      "whole_rd_param_codes": [],
+      "whole_rd_param_codes": [
+        "RF-0143-001-PPP"
+      ],
       "model_component_codes": [
         "RF-00002838-PAR",
         "RF-0143-002-PPP"
