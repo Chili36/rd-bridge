@@ -7,6 +7,11 @@
    "definition": "1,1-dichloro-2,2-bis(4-ethylphenyl)ethane",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The residue is perthane (1,1-dichloro-2,2-bis(4-ethylphenyl)ethane), and none of the shortlisted terms is this substance; the nearest ones (dichlorophen, 4,4'-dichlorodiphenyl sulfone, dichlorobenzene) are different chemicals."
+   },
    "components": [
     {
      "text": "1,1-dichloro-2,2-bis(4-ethylphenyl)ethane",
@@ -1384,15 +1389,21 @@
     "definition": "Sum of bentazone, its salts and 6-hydroxy (free and conjugated), expressed as bentazone",
     "repairs": [],
     "issues": [],
-    "method": "near",
-    "score": 0.94,
+    "method": "model",
     "param_codes": [
      "RF-00003369-PAR"
     ],
     "evidence": {
-     "via": "near",
+     "via": "model",
+     "model": "claude-sonnet-5-5",
+     "confidence": "high",
+     "reason": "RF-00003369-PAR is the sum of bentazone, its salts and 6-hydroxy bentazone (free and conjugated), expressed as bentazone, which matches the EU definition exactly; the other bentazone RD also includes 8-hydroxy bentazone, so it is a different residue.",
      "matched": [
       "Sum of bentazone, its salts and 6-hydroxy bentazone (free and conjugated), expressed as bentazone"
+     ],
+     "rule_method": "near",
+     "rule_codes": [
+      "RF-00003369-PAR"
      ]
     },
     "components": [
@@ -4171,8 +4182,21 @@
   "name": "Diquat",
   "default": {
    "definition": "Diquat",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00005725-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The EU definition 'Diquat' matches the PARAM residue definition for diquat (sum of diquat and its salts, expressed as diquat); the only differences are the added 'and its salts' and 'expressed as' wording.",
+    "matched": [
+     "Diquat (sum of diquat and its salts, expressed as diquat)"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Diquat",
@@ -6998,8 +7022,21 @@
     "definition": "kresoxim methyl (BF-490-9, expressed as parent)",
     "repairs": [],
     "issues": [],
-    "method": "none",
-    "param_codes": [],
+    "method": "model",
+    "param_codes": [
+     "RF-0260-002-PPP"
+    ],
+    "evidence": {
+     "via": "model",
+     "model": "claude-sonnet-5-5",
+     "confidence": "high",
+     "reason": "The EU definition 'kresoxim methyl (BF-490-9, expressed as parent)' matches the PARAM residue definition (RD) entry RF-0260-002-PPP, which cites BF-490-9 and 'expressed as parent'.",
+     "matched": [
+      "Kresoxim methyl (BF-490-9 (2-[2-(4-hydroxy-2-methylphenoxymethyl)phenyl]-2-methoxy-iminoacetic acid), expressed as parent)"
+     ],
+     "rule_method": "none",
+     "rule_codes": []
+    },
     "components": [
      {
       "text": "kresoxim methyl (BF-490-9)",
@@ -9500,14 +9537,27 @@
   "name": "Propoxycarbazone (propoxycarbazone, its salts and 2-hydroxypropoxycarbazone expressed as propoxycarbazone)(A)",
   "default": {
    "definition": "Propoxycarbazone (propoxycarbazone, its salts and 2-hydroxypropoxycarbazone expressed as propoxycarbazone)",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-0362-001-PPP"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The PARAM residue definition term for propoxycarbazone (its salts and 2-hydroxypropoxycarbazone, calculated as propoxycarbazone) matches the EU definition; the small typo in the hydroxy metabolite name does not change the residue.",
+    "matched": [
+     "Propoxycarbazone (propoxycarbazone, its salts and 2-hydroxy-propoxy-propoxycarbazone, calculated as propoxycarbazone)"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "propoxycarbazone",
      "name": "propoxycarbazone",
      "role": "analyte",
-     "method": "family",
+     "method": "param_sum",
      "param_codes": [
       "RF-0362-001-PPP",
       "RF-0362-002-PPP"
@@ -9529,7 +9579,7 @@
      "notes": [
       "expressed as propoxycarbazone"
      ],
-     "method": "family",
+     "method": "param_sum",
      "param_codes": [
       "RF-00004648-PAR"
      ],
@@ -9600,15 +9650,21 @@
     "definition": "Sum of propyzamide and all metabolites containing the 3,5-dichlorobenzoic acid moiety, expressed as propyzamide",
     "repairs": [],
     "issues": [],
-    "method": "near",
-    "score": 0.944,
+    "method": "model",
     "param_codes": [
      "RF-0364-002-PPP"
     ],
     "evidence": {
-     "via": "near",
+     "via": "model",
+     "model": "claude-sonnet-5-5",
+     "confidence": "high",
+     "reason": "The PARAM term is propyzamide as the sum of propyzamide and all metabolites containing the 3,5-dichlorobenzoic acid fraction, expressed as propyzamide; this is the same residue as the EU definition, with only 'fraction' versus 'moiety' differing.",
      "matched": [
       "Propyzamide (sum of propyzamide and all metabolites containing the 3,5-dichlorobenzoic acid fraction expressed as propyzamide)"
+     ],
+     "rule_method": "near",
+     "rule_codes": [
+      "RF-0364-002-PPP"
      ]
     },
     "components": [
@@ -9616,7 +9672,7 @@
       "text": "propyzamide",
       "name": "propyzamide",
       "role": "analyte",
-      "method": "family",
+      "method": "param_sum",
       "param_codes": [
        "RF-0364-001-PPP"
       ],
@@ -12906,15 +12962,30 @@
   "name": "Clodinafop and its S-isomers and their salts, expressed as clodinafop (F)",
   "default": {
    "definition": "Clodinafop and its S-isomers and their salts, expressed as clodinafop",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-0097-001-PPP"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The PARAM term 'Clodinafop and its S-isomers, expressed as clodinafop' is the same residue as the EU definition; only the 'and their salts' wording is omitted.",
+    "matched": [
+     "Clodinafop and its S-isomers, expressed as clodinafop"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "clodinafop",
      "name": "clodinafop",
      "role": "analyte",
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-0097-001-PPP"
+     ]
     },
     {
      "text": "S-isomers",
@@ -16419,8 +16490,21 @@
   "name": "Metam (see methylisothiocyanate)",
   "default": {
    "definition": "Metam (see methylisothiocyanate)",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00013459-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "medium",
+    "reason": "The EU definition for Metam cross-references methylisothiocyanate, and the PARAM residue definition 'Methylisothiocyanate (resulting from the use of dazomet or metam)' explicitly covers metam-derived MITC, so it fits better than the plain active substance term RF-0790-001-PPP.",
+    "matched": [
+     "Methylisothiocyanate (resulting from the use of dazomet or metam)"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Metam",
@@ -18954,6 +19038,11 @@
    "definition": "Thiobencarb (4-chlorobenzyl methyl sulfone)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "medium",
+    "reason": "The EU definition 'Thiobencarb (4-chlorobenzyl methyl sulfone)' means the metabolite 4-chlorobenzyl methyl sulfone is measured, while the only matching candidate, RF-0420-001-PPP Thiobencarb, is the parent alone, so it is not a match."
+   },
    "components": [
     {
      "text": "Thiobencarb",
@@ -19430,6 +19519,11 @@
    "definition": "1,4-Diaminobutane  (aka Putrescine)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist term is 1,4-diaminobutane (putrescine); 4-Amino-butyric acid (GABA) and guazatine/iminoctadine are different chemicals."
+   },
    "components": [
     {
      "text": "1,4-Diaminobutane",
@@ -19592,6 +19686,11 @@
    "definition": "Ampelomyces quisqualis strain AQ10",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is Ampelomyces quisqualis strain AQ10; the other microorganisms listed (Beauveria, Bacillus, Pseudomonas, Streptomyces) are different organisms and strains."
+   },
    "components": [
     {
      "text": "Ampelomyces quisqualis strain AQ10",
@@ -19623,6 +19722,11 @@
    "definition": "Bacillus amyloliquefaciens (formerly subtilis) str. QST 713",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is Bacillus amyloliquefaciens/subtilis strain QST 713; the shortlisted amyloliquefaciens strains (AH2, AT-332) and the subtilis strains (FMCH002, IAB/BS03, RTI477) are different strains, and strain codes identify different active substances."
+   },
    "components": [
     {
      "text": "Bacillus amyloliquefaciens (formerly subtilis) str. QST 713",
@@ -19697,6 +19801,11 @@
    "definition": "Coniothyrium minitans strain CON/M/91-08 (DSM 9660)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist entry is Coniothyrium minitans strain CON/M/91-08 (DSM 9660); the other microorganism entries are different species or strains."
+   },
    "components": [
     {
      "text": "Coniothyrium minitans strain CON/M/91-08 (DSM 9660)",
@@ -19767,6 +19876,11 @@
    "definition": "Extract from Tea tree",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The definition is 'Extract from Tea tree' (a plant extract), and none of the shortlisted PARAM terms is a tea tree extract or tea tree oil; they are unrelated chemicals."
+   },
    "components": [
     {
      "text": "Extract from Tea tree",
@@ -19789,6 +19903,11 @@
    "definition": "Fatty acids / Lauric acid",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The EU definition covers fatty acids / lauric acid (C12), but the shortlist has only caprylic acid (C8 fatty acid) and unrelated acids, so none is the same substance."
+   },
    "components": [
     {
      "text": "Lauric acid",
@@ -19820,6 +19939,11 @@
    "definition": "Fatty acids C7-C20",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "medium",
+    "reason": "The EU definition covers the whole group of fatty acids C7-C20, while the only fatty acid candidate (fatty acid 8:0, caprylic acid) is a single C8 member; the other candidates are unrelated acids, so there is no same-substance match."
+   },
    "components": [
     {
      "text": "Fatty acids C7-C20",
@@ -19851,6 +19975,12 @@
    "definition": "Fatty acids:  fatty acid methyl ester",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": "RF-00000248-NTR",
+    "confidence": "low",
+    "reason": "The EU definition covers fatty acids measured as methyl esters (the generic 'Fatty acids' active substance), and the only fatty acid term in the shortlist is fatty acid 8:0 (caprylic acid), which is a plausible but uncertain match.",
+    "not_applied": "low confidence: kept as a suggestion, not a link"
+   },
    "components": [
     {
      "text": "fatty acid methyl ester",
@@ -19882,6 +20012,11 @@
    "definition": "Fatty acids:  Heptanoic acid",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The EU definition is heptanoic acid (C7 fatty acid), and the shortlist has no heptanoic acid term; fatty acid 8:0 (caprylic/octanoic acid) is a different substance."
+   },
    "components": [
     {
      "text": "Heptanoic acid",
@@ -19911,15 +20046,30 @@
   "name": "Fatty acids:  Octanoic acid (+)(++)",
   "default": {
    "definition": "Fatty acids:  Octanoic acid",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00000248-NTR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "Octanoic acid is the systematic name of caprylic acid (fatty acid 8:0), so the PARAM term names the same substance.",
+    "matched": [
+     "fatty acid 8:0 (caprylic acid)"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Octanoic acid",
      "name": "Octanoic acid",
      "role": "analyte",
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-00000248-NTR"
+     ]
     }
    ],
    "parts_from": "guided_model",
@@ -19944,6 +20094,11 @@
    "definition": "Fatty acids: Decanoic acid",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The EU definition is decanoic acid (capric acid, fatty acid 10:0), and the only fatty acid candidate is fatty acid 8:0 (caprylic acid), which is a different substance; no decanoic acid term is in the shortlist."
+   },
    "components": [
     {
      "text": "Decanoic acid",
@@ -19975,6 +20130,11 @@
    "definition": "Fatty acids: Oleic acid incl ethyloleate",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is oleic acid or ethyl oleate; the only fatty acid on the shortlist is caprylic acid (fatty acid 8:0), which is a different substance."
+   },
    "components": [
     {
      "text": "oleic acid",
@@ -20013,6 +20173,11 @@
    "definition": "Fatty acids: Pelargonic acid",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Pelargonic acid is fatty acid 9:0 (nonanoic acid); the only fatty acid candidate, fatty acid 8:0 (caprylic acid), is a different substance, and no other shortlist term is pelargonic acid."
+   },
    "components": [
     {
      "text": "Pelargonic acid",
@@ -20044,6 +20209,11 @@
    "definition": "Fatty alcohols/aliphatic alcohols",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlisted term is a fatty/aliphatic alcohol group; the candidates are acids, phosphates, or unrelated pesticides, and caprylic acid (fatty acid 8:0) is a carboxylic acid, not an alcohol."
+   },
    "components": [
     {
      "text": "Fatty alcohols/aliphatic alcohols",
@@ -20078,6 +20248,11 @@
    "definition": "Ferric phosphate (Iron (III) phosphate)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Ferric phosphate (iron(III) phosphate) has no matching entry in the shortlist; ferric pyrophosphate and the calcium phosphates are different substances, and the phosphonates and organophosphorus pesticides are unrelated."
+   },
    "components": [
     {
      "text": "Ferric phosphate (Iron (III) phosphate)",
@@ -20109,6 +20284,11 @@
    "definition": "Ferric sulphate (Iron (III) sulphate)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist term is ferric (iron III) sulphate; ferric pyrophosphate, aluminium sulphate and the other sulphates are different substances."
+   },
    "components": [
     {
      "text": "Ferric sulphate (Iron (III) sulphate)",
@@ -20140,6 +20320,11 @@
    "definition": "Ferrous sulphate (Iron (II) sulphate)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist entry is ferrous sulphate (iron(II) sulphate); ferric pyrophosphate is a different iron compound and the sulphates listed (ammonium, aluminium, etc.) are different substances."
+   },
    "components": [
     {
      "text": "Ferrous sulphate (Iron (II) sulphate)",
@@ -20171,6 +20356,11 @@
    "definition": "Folic acid",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is folic acid (vitamin B9); the listed acids (boric, lactic, benzoic, ascorbic, etc.) are all different substances."
+   },
    "components": [
     {
      "text": "Folic acid",
@@ -20202,6 +20392,11 @@
    "definition": "Garlic extract",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlisted term is garlic extract; Allium cepa extract is onion, a different plant extract, and the other candidates are unrelated substances."
+   },
    "components": [
     {
      "text": "Garlic extract",
@@ -20231,8 +20426,21 @@
   "name": "Gibberellin (++)",
   "default": {
    "definition": "Gibberellin",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-0230-001-PPP"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "medium",
+    "reason": "The EU definition 'Gibberellin' refers to the gibberellin active substance, which is gibberellic acid (GA3) in the PARAM catalogue; the other candidates are unrelated chemicals.",
+    "matched": [
+     "Gibberellic acid"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Gibberellin",
@@ -20241,8 +20449,10 @@
      "notes": [
       "The authoritative EU definition text provided is only the heading 'Gibberellin', with no further enumerated components or expressed-as basis."
      ],
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-0230-001-PPP"
+     ]
     }
    ],
    "parts_from": "guided_model",
@@ -20267,6 +20477,11 @@
    "definition": "Gliocladium catenulatum strain J1446",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlisted term is Gliocladium catenulatum strain J1446; the only microorganism entries are other species or strains (Beauveria bassiana, Purpureocillium lilacinum, Bacillus thuringiensis), which are different active substances."
+   },
    "components": [
     {
      "text": "Gliocladium catenulatum strain J1446",
@@ -20301,6 +20516,11 @@
    "definition": "Kieselguhr  (aka diatomaceous earth)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is kieselguhr/diatomaceous earth; the candidates are unrelated chemicals (sulfur, sulfonylureas, pyrethroids) or microorganisms."
+   },
    "components": [
     {
      "text": "Kieselguhr",
@@ -20414,6 +20634,11 @@
    "definition": "Isaria fumosorosea Apopka strain 97 (formely Paecilomyces fumosoroseus)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The shortlist has no Isaria fumosorosea (Paecilomyces fumosoroseus) Apopka strain 97 entry; the Beauveria bassiana and Pseudomonas strains are different organisms and the other candidates are unrelated chemicals."
+   },
    "components": [
     {
      "text": "Isaria fumosorosea Apopka strain 97 (formely Paecilomyces fumosoroseus)",
@@ -20445,6 +20670,12 @@
    "definition": "Pepper",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": "RF-00001608-PAR",
+    "confidence": "low",
+    "reason": "The EU definition 'Pepper' is a plain substance name, and the only candidate with 'Pepper' in its name is 'Pepper Dust Extraction Residue'; the other candidates are unrelated chemicals, so this is a plausible but uncertain match.",
+    "not_applied": "low confidence: kept as a suggestion, not a link"
+   },
    "components": [
     {
      "text": "Pepper",
@@ -20467,6 +20698,11 @@
    "definition": "Plant oils / Citronellol",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The definition is plant oils / citronellol, and none of the shortlisted terms is citronellol or a plant oil; they are unrelated synthetic pesticides."
+   },
    "components": [
     {
      "text": "Citronellol",
@@ -20501,6 +20737,11 @@
    "definition": "Plant oils / Clove oil Eugenol",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is clove oil or eugenol; the candidates are unrelated synthetic pesticides, a Bacillus strain, paraffin oils and an oregano/caraway essential oil preparation, which is a different product."
+   },
    "components": [
     {
      "text": "Eugenol",
@@ -20532,6 +20773,11 @@
    "definition": "Plant oils / Rapeseed oil",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is rapeseed oil or a plant oil; they are unrelated chemicals, a grape seed extract, and microorganisms."
+   },
    "components": [
     {
      "text": "Plant oils / Rapeseed oil",
@@ -20554,6 +20800,11 @@
    "definition": "Plant oils / Spearmint oil",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is spearmint oil; the shortlist has tall oil pitch and anethole, which are different substances, and the rest are unrelated active substances."
+   },
    "components": [
     {
      "text": "Plant oils / Spearmint oil",
@@ -20582,6 +20833,11 @@
     ],
     "score": 0.909,
     "reason": "different parent substance"
+   },
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is potassium iodide; potassium tri-iodide and silver iodide are different substances, and the other potassium salts are unrelated."
    },
    "components": [
     {
@@ -20614,6 +20870,11 @@
    "definition": "Potassium Thiocyanate",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is potassium thiocyanate; the shortlist only has other potassium salts (bicarbonate, phosphonates, sorbate, permanganate) and unrelated isothiocyanate or thiocarbonate compounds, which are different chemicals."
+   },
    "components": [
     {
      "text": "Potassium Thiocyanate",
@@ -20645,6 +20906,11 @@
    "definition": "Pseudomonas chlororaphis strain MA342",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The only Pseudomonas candidate is Pseudomonas sp. strain DSMZ 13134, a different strain from P. chlororaphis MA342, and no other shortlist term is the same organism."
+   },
    "components": [
     {
      "text": "Pseudomonas chlororaphis strain MA342",
@@ -20676,6 +20942,11 @@
    "definition": "Repellants: Blood meal",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is blood meal; gelatins and grape cane tannins are different substances, and the rest are synthetic pesticides or unrelated chemicals."
+   },
    "components": [
     {
      "text": "Blood meal",
@@ -20705,8 +20976,21 @@
   "name": "Seaweed extracts (++)",
   "default": {
    "definition": "Seaweed extracts",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00001703-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "Seaweed extracts and Sea-algae extract name the same active substance, since seaweed is marine algae.",
+    "matched": [
+     "Sea-algae extract"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Seaweed extracts",
@@ -20715,8 +20999,10 @@
      "notes": [
       "Definition consists only of the heading; no further components are named in the text."
      ],
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-00001703-PAR"
+     ]
     }
    ],
    "parts_from": "guided_model",
@@ -23407,6 +23693,11 @@
    "definition": "Adoxophyes orana GV strain BV-0001",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is Adoxophyes orana granulovirus strain BV-0001; the Beauveria bassiana strains, Pseudomonas sp. strain and the chemical substances are different organisms or compounds."
+   },
    "components": [
     {
      "text": "Adoxophyes orana GV strain BV-0001",
@@ -23477,6 +23768,11 @@
    "definition": "Purpureocillium lilacinum strain 251 (former Paecilomyces lilacinus strain 251)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The only Purpureocillium lilacinum entry is strain PL11, which is a different strain from strain 251, and no other candidate is the same organism."
+   },
    "components": [
     {
      "text": "Purpureocillium lilacinum strain 251",
@@ -23512,6 +23808,11 @@
    "definition": "Spodoptera exigua nuclear polyhedrosis virus",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is Spodoptera exigua nucleopolyhedrovirus; the only baculovirus listed is Cryptophlebia peltastica NPV, a different virus, and the rest are unrelated chemicals or fungi."
+   },
    "components": [
     {
      "text": "Spodoptera exigua nuclear polyhedrosis virus",
@@ -23543,6 +23844,11 @@
    "definition": "Zucchini Yellow Mosaik Virus, weak strain",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist entry is Zucchini Yellow Mosaic Virus (weak strain); the candidates are unrelated chemicals, bacteria or other organisms."
+   },
    "components": [
     {
      "text": "Zucchini Yellow Mosaik Virus, weak strain",
@@ -23574,6 +23880,11 @@
    "definition": "Aureobasidium pullulans strains DSM 14940 and DSM 14941",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist entry is Aureobasidium pullulans (strains DSM 14940 and DSM 14941); the candidates are other microorganisms or unrelated chemicals."
+   },
    "components": [
     {
      "text": "Aureobasidium pullulans strains DSM 14940 and DSM 14941",
@@ -24209,6 +24520,12 @@
    "definition": "Paraffin oil (CAS 64742-54-7)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": "RF-00014619-PAR",
+    "confidence": "medium",
+    "reason": "The EU definition is Paraffin oil (CAS 64742-54-7), which matches the active substance term 'Paraffin Oil'. The alternative 'Paraffin oils with carbon chain lengths C18-C30' is a different, narrower residue definition, and the shortlist does not show a CAS number to confirm either term, so confidence is medium.",
+    "not_applied": "the definition states CAS 64742-54-7; the term does not"
+   },
    "components": [
     {
      "text": "Paraffin oil",
@@ -24372,8 +24689,21 @@
   "name": "Indolylacetic acid",
   "default": {
    "definition": "Indolylacetic acid",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00003744-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "Indolylacetic acid is a synonym of indole-3-acetic acid (IAA), the same substance; indolylbutyric acid is a different compound.",
+    "matched": [
+     "indole-3-acetic acid"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Indolylacetic acid",
@@ -24489,6 +24819,11 @@
    "definition": "Phlebiopsis gigantea",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Phlebiopsis gigantea is a fungus used as a biocontrol agent, and none of the shortlisted chemical pesticide terms is the same organism or substance."
+   },
    "components": [
     {
      "text": "Phlebiopsis gigantea",
@@ -24520,6 +24855,11 @@
    "definition": "Paecilomyces fumosoroseus strain FE 9901",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist term is Paecilomyces (Isaria) fumosorosea strain FE 9901; Purpureocillium lilacinum PL11 (formerly Paecilomyces lilacinus) and the other microorganisms listed are different species or strains."
+   },
    "components": [
     {
      "text": "Paecilomyces fumosoroseus strain FE 9901",
@@ -24551,6 +24891,11 @@
    "definition": "Spodoptera littoralis nucleopolyhedrovirus",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is Spodoptera littoralis nucleopolyhedrovirus; the only nucleopolyhedrovirus listed (Cryptophlebia peltastica NPV, strain South Africa) is a different virus and active substance."
+   },
    "components": [
     {
      "text": "Spodoptera littoralis nucleopolyhedrovirus",
@@ -24582,6 +24927,11 @@
    "definition": "Bacillus firmus I-1582",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is Bacillus firmus I-1582; the shortlist only has other Bacillus species/strains (pumilus, subtilis, thuringiensis, etc.), which are different organisms or strains."
+   },
    "components": [
     {
      "text": "Bacillus firmus I-1582",
@@ -24691,6 +25041,11 @@
    "definition": "Helicoverpa armigera nucleopolyhedrovirus",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist term is Helicoverpa armigera nucleopolyhedrovirus; the only nucleopolyhedrovirus listed is Cryptophlebia peltastica NPV (South Africa strain), which is a different virus."
+   },
    "components": [
     {
      "text": "Helicoverpa armigera nucleopolyhedrovirus",
@@ -24816,6 +25171,11 @@
    "definition": "Chitosan hydrochloride",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is chitosan hydrochloride; the other hydrochloride and chloride salts (quinine, formetanate, trimethylamine, choline chloride) are different substances."
+   },
    "components": [
     {
      "text": "Chitosan hydrochloride",
@@ -24847,6 +25207,11 @@
    "definition": "Equisetum arvense L.",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Equisetum arvense L. (horsetail plant extract/basic substance) has no matching candidate in the shortlist; none of the listed terms is the same substance."
+   },
    "components": [
     {
      "text": "Equisetum arvense L",
@@ -24999,15 +25364,21 @@
   "name": "Chlorate (A)",
   "default": {
    "definition": "Chlorate",
-   "method": "near",
-   "score": 0.941,
+   "method": "model",
    "param_codes": [
     "RF-00000015-CHE"
    ],
    "evidence": {
-    "via": "near",
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The EU residue definition 'Chlorate' is the same substance as the PARAM term 'Chlorates' (plural form only); no other candidate is a chlorate.",
     "matched": [
      "Chlorates"
+    ],
+    "rule_method": "near",
+    "rule_codes": [
+     "RF-00000015-CHE"
     ]
    },
    "components": [
@@ -25015,8 +25386,10 @@
      "text": "chlorate",
      "name": "chlorate",
      "role": "analyte",
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-00000015-CHE"
+     ]
     }
    ],
    "parts_from": "guided_model",
@@ -25241,6 +25614,11 @@
    "definition": "Trichoderma polysporum strain IMI 206039",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is Trichoderma polysporum strain IMI 206039; the Trichoderma entries are other species and strains (T. afroharzianum Th2RI99, T. harzianum T78, T. atroviride 77B), and strain codes identify different active substances."
+   },
    "components": [
     {
      "text": "Trichoderma polysporum strain IMI 206039",
@@ -25272,6 +25650,11 @@
    "definition": "Geraniol",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted PARAM terms is geraniol; the candidates are different chemicals (alcohols, oils, azole fungicides and others), so no match exists."
+   },
    "components": [
     {
      "text": "Geraniol",
@@ -25303,6 +25686,11 @@
    "definition": "Sucrose",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Sucrose is not in the shortlist; the candidates are all different substances (e.g. sulfur, urea, sodium chloride, sulcotrione) and none is sucrose."
+   },
    "components": [
     {
      "text": "Sucrose",
@@ -25334,6 +25722,11 @@
    "definition": "Trichoderma asperellum (formerly T. harzianum) strains ICC012, T25 and TV1",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The shortlist has no Trichoderma asperellum entry; the Trichoderma candidates (T. harzianum T78, T. atroviride 77B, T. afroharzianum Th2RI99) are different species or strains, and strain codes identify different active substances."
+   },
    "components": [
     {
      "text": "Trichoderma asperellum strain ICC012",
@@ -25389,6 +25782,11 @@
    "definition": "Trichoderma atroviride (formerly T. harzianum) strains IMI 206040 and T11",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The shortlist has no Trichoderma atroviride strain IMI 206040 or T11; T. atroviride 77B, T. afroharzianum Th2RI99 and T. harzianum T78 are different strains, and the rest are unrelated chemicals."
+   },
    "components": [
     {
      "text": "Trichoderma atroviride strain IMI 206040",
@@ -25434,6 +25832,11 @@
    "definition": "Trichoderma afroharzianum (Formerly Trichoderma harzianum) strain T-22",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The shortlist has only other Trichoderma strains (Th2RI99, T78, 77B), and strain codes identify different active substances, so none matches strain T-22."
+   },
    "components": [
     {
      "text": "Trichoderma afroharzianum strain T-22",
@@ -25469,6 +25872,11 @@
    "definition": "Trichoderma gamsii (formerly T. viride) strain ICC080",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The shortlist has no Trichoderma gamsii ICC080 entry; the Trichoderma candidates (T. atroviride 77B, T. harzianum T78, T. afroharzianum Th2RI99) are different species or strains, and the rest are unrelated chemicals."
+   },
    "components": [
     {
      "text": "Trichoderma gamsii (formerly T. viride) strain ICC080",
@@ -25504,6 +25912,11 @@
    "definition": "Trichoderma asperellum (strain T34)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is Trichoderma asperellum strain T34; the shortlisted Trichoderma entries (harzianum T78, afroharzianum Th2RI99, atroviride 77B) are different species and strains, and the rest are unrelated chemicals."
+   },
    "components": [
     {
      "text": "Trichoderma asperellum (strain T34)",
@@ -25535,6 +25948,11 @@
    "definition": "Trichoderma atroviride strain I-1237",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The only Trichoderma atroviride candidate is strain 77B, a different strain from I-1237, and strain codes identify different active substances; the other candidates are different species or unrelated chemicals."
+   },
    "components": [
     {
      "text": "Trichoderma atroviride strain I-1237",
@@ -25605,6 +26023,11 @@
    "definition": "Capric acid",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Capric acid (decanoic acid, C10:0) is not in the shortlist; the nearest candidate, caprylic acid (fatty acid 8:0), is a different substance, and valeric acid is C5."
+   },
    "components": [
     {
      "text": "Capric acid",
@@ -25636,6 +26059,12 @@
    "definition": "Paraffin oil (CAS 64742-46-7)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": "RF-00014619-PAR",
+    "confidence": "medium",
+    "reason": "'Paraffin Oil' is the same substance as the EU 'Paraffin oil (CAS 64742-46-7)', whereas the other candidate is limited to C18-C30 chain-length paraffin oils, which is a different, narrower residue definition; the CAS number is not shown in the PARAM name, so confidence is not high.",
+    "not_applied": "the definition states CAS 64742-46-7; the term does not"
+   },
    "components": [
     {
      "text": "Paraffin oil",
@@ -25673,6 +26102,12 @@
    "definition": "Paraffin oil (CAS 72623-86-0)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": "RF-00014619-PAR",
+    "confidence": "medium",
+    "reason": "The EU definition is 'Paraffin oil (CAS 72623-86-0)', which matches the active substance term 'Paraffin Oil'; the alternative 'Paraffin oils with carbon chain lengths C18-C30' is a different, narrower residue definition, and the shortlist does not show a CAS number for either term to confirm the match.",
+    "not_applied": "the definition states CAS 72623-86-0; the term does not"
+   },
    "components": [
     {
      "text": "Paraffin oil",
@@ -25713,6 +26148,12 @@
    "definition": "Paraffin oil (CAS 8042-47-5)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": "RF-00014619-PAR",
+    "confidence": "medium",
+    "reason": "The EU definition is the active substance paraffin oil (CAS 8042-47-5), which matches the PARAM active-substance term 'Paraffin Oil'; the C18-C30 term is a different, narrower residue definition, and no CAS is given in the PARAM name to confirm.",
+    "not_applied": "the definition states CAS 8042-47-5; the term does not"
+   },
    "components": [
     {
      "text": "Paraffin oil",
@@ -25753,6 +26194,12 @@
    "definition": "Paraffin oil (CAS 97862-82-3)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": "RF-00014619-PAR",
+    "confidence": "medium",
+    "reason": "The EU definition is paraffin oil (CAS 97862-82-3), and the PARAM active substance 'Paraffin Oil' is the same substance; the shortlisted C18-C30 residue definition is a narrower chain-length-specific entry, and the shortlist shows no CAS conflict for the active-substance entry.",
+    "not_applied": "the definition states CAS 97862-82-3; the term does not"
+   },
    "components": [
     {
      "text": "Paraffin oil",
@@ -25973,15 +26420,21 @@
   "name": "3-decen-2-one",
   "default": {
    "definition": "3-decen-2-one",
-   "method": "near",
-   "score": 0.909,
+   "method": "model",
    "param_codes": [
     "RF-00007634-PAR"
    ],
    "evidence": {
-    "via": "near",
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "3-decen-2-one is the same substance as the PARAM term (3E) 3-decen-2-one; the EU definition just omits the E-stereochemistry descriptor.",
     "matched": [
      "(3E) 3-decen-2-one"
+    ],
+    "rule_method": "near",
+    "rule_codes": [
+     "RF-00007634-PAR"
     ]
    },
    "components": [
@@ -25989,8 +26442,10 @@
      "text": "3-decen-2-one",
      "name": "3-decen-2-one",
      "role": "analyte",
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-00007634-PAR"
+     ]
     }
    ],
    "parts_from": "guided_model",
@@ -26068,6 +26523,11 @@
    "definition": "Cydia pomonella Granulovirus (CpGV)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Cydia pomonella Granulovirus is a specific virus species, and the only related candidate, Betabaculovirus, is the broader genus, so no candidate is the same substance."
+   },
    "components": [
     {
      "text": "Cydia pomonella Granulovirus (CpGV)",
@@ -26138,6 +26598,11 @@
    "definition": "Sodium hydrogen carbonate",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlisted term is sodium hydrogen carbonate (sodium bicarbonate); the closest candidates, potassium hydrogen carbonate and sodium carbonate, are different substances."
+   },
    "components": [
     {
      "text": "Sodium hydrogen carbonate",
@@ -26208,6 +26673,11 @@
    "definition": "Beauveria bassiana strain ATCC 74040",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlisted Beauveria bassiana term carries strain ATCC 74040; the listed strains (147, NPP111B005, R444, IMI389521, GHA, 203, BOV1) are different strains and so different active substances."
+   },
    "components": [
     {
      "text": "Beauveria bassiana strain ATCC 74040",
@@ -26284,6 +26754,11 @@
    "definition": "Cerevisane",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Cerevisane is a Saccharomyces cerevisiae cell-wall extract, and none of the shortlisted terms (carvone, caffeine, casein, cysteine, cyromazine, etc.) is the same substance."
+   },
    "components": [
     {
      "text": "cerevisane",
@@ -26315,6 +26790,11 @@
    "definition": "COS-OGA",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "COS-OGA (chitosan oligosaccharides / pectin oligogalacturonides) is not in the shortlist; none of the candidates is the same substance."
+   },
    "components": [
     {
      "text": "COS-OGA",
@@ -26427,6 +26907,11 @@
    "definition": "Salix spp. cortex",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The definition is a plant material (willow bark, Salix spp. cortex) and none of the shortlisted terms are willow bark or Salix extract; they are unrelated chemicals."
+   },
    "components": [
     {
      "text": "Salix spp. cortex",
@@ -26449,6 +26934,11 @@
    "definition": "Vinegar",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted PARAM terms is vinegar (the EU basic substance); they are all unrelated pesticide active substances or residue definitions."
+   },
    "components": [
     {
      "text": "Vinegar",
@@ -26476,6 +26966,11 @@
    "definition": "Fructose",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is fructose; D-tagatose is a different sugar (a ketohexose epimer of fructose) and the rest are unrelated pesticides."
+   },
    "components": [
     {
      "text": "Fructose",
@@ -26507,6 +27002,11 @@
    "definition": "Pepino mosaic virus strain CH2 isolate 1906",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted PARAM terms is Pepino mosaic virus strain CH2 isolate 1906; the candidates are unrelated chemicals or other microorganisms, such as Cryptophlebia peltastica nucleopolyhedrovirus, a different virus."
+   },
    "components": [
     {
      "text": "Pepino mosaic virus strain CH2 isolate 1906",
@@ -26538,6 +27038,11 @@
    "definition": "Verticillium albo-atrum isolate WCS850",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The only Verticillium candidate is V. nonalfalfae Vert56, a different species and strain from V. albo-atrum isolate WCS850, so no shortlist term matches."
+   },
    "components": [
     {
      "text": "Verticillium albo-atrum isolate WCS850",
@@ -26571,6 +27076,11 @@
    "definition": "Bacillus amyloliquefaciens subsp. plantarum strain D747",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is Bacillus amyloliquefaciens subsp. plantarum strain D747; the only B. amyloliquefaciens entries are different strains (AT-332, AH2), and strain codes identify distinct active substances."
+   },
    "components": [
     {
      "text": "Bacillus amyloliquefaciens subsp. plantarum strain D747",
@@ -26602,6 +27112,11 @@
    "definition": "Streptomyces K61 (formerly S.griseoviridis)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The only Streptomyces strain in the shortlist is S. lydicus WYEC 108, a different strain (and active substance) from Streptomyces K61, and streptomycin is a different chemical."
+   },
    "components": [
     {
      "text": "Streptomyces K61 (formerly S.griseoviridis)",
@@ -26634,6 +27149,11 @@
    "definition": "Candida oleophila strain O",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The EU definition is the yeast Candida oleophila strain O, and none of the shortlisted terms is that microorganism; they are all unrelated chemical substances."
+   },
    "components": [
     {
      "text": "Candida oleophila strain O",
@@ -26665,6 +27185,11 @@
    "definition": "FEN 560  (also called fenugreek or fenugreek seed powder)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The EU definition 'FEN 560' is fenugreek seed powder, a basic substance, and none of the shortlisted PARAM terms (fenson, fentin, fenuron, fenthion and others) is fenugreek or the same substance."
+   },
    "components": [
     {
      "text": "FEN 560",
@@ -26700,6 +27225,11 @@
    "definition": "Methyl decanoate (CAS 110-42-9)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is methyl decanoate (CAS 110-42-9); the candidates are different chemicals such as ethyl hexanoate, ethyl formate and methyl bromide."
+   },
    "components": [
     {
      "text": "Methyl decanoate",
@@ -26731,6 +27261,11 @@
    "definition": "Methyl octanoate (CAS 111-11-5)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is methyl octanoate (CAS 111-11-5); ioxynil octanoate, ethyl hexanoate and the other candidates are different substances."
+   },
    "components": [
     {
      "text": "Methyl octanoate",
@@ -26840,6 +27375,11 @@
    "definition": "Trichoderma atroviride strain SC1",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The only Trichoderma atroviride candidate is strain 77B, which is a different strain from SC1, and no other shortlisted term is the same organism."
+   },
    "components": [
     {
      "text": "Trichoderma atroviride strain SC1",
@@ -27066,6 +27606,11 @@
    "definition": "Diammonium phosphate",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist term is diammonium phosphate; the ammonium candidates (sulphate, carbonates, acetate, hydroxide) and phosphate candidates (calcium, tricalcium, ferric pyrophosphate) are different substances."
+   },
    "components": [
     {
      "text": "Diammonium phosphate",
@@ -27097,6 +27642,11 @@
    "definition": "Saccharomyces cerevisiae strain LAS02",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist entry is Saccharomyces cerevisiae strain LAS02; the candidates are other microorganism strains or unrelated chemicals, so none matches."
+   },
    "components": [
     {
      "text": "Saccharomyces cerevisiae strain LAS02",
@@ -27128,6 +27678,11 @@
    "definition": "Whey",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The EU definition 'Whey' is a food/product (possibly an active substance like whey from milk), and none of the shortlisted terms is whey or a related substance; they are all unrelated chemicals."
+   },
    "components": [
     {
      "text": "Whey",
@@ -27189,6 +27744,11 @@
    "definition": "Sunflower oil",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is sunflower oil; 'bone oil' and the other candidates are different substances that only share a word or letters."
+   },
    "components": [
     {
      "text": "Sunflower oil",
@@ -27211,6 +27771,11 @@
    "definition": "Mild Pepino Mosaic Virus isolate VC1",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is Mild Pepino Mosaic Virus isolate VC1; all candidates are unrelated chemicals or a different microorganism (Streptomyces lydicus WYEC 108)."
+   },
    "components": [
     {
      "text": "Mild Pepino Mosaic Virus isolate VC1",
@@ -27242,6 +27807,11 @@
    "definition": "Mild Pepino Mosaic Virus isolate VX1",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The residue definition is a virus isolate (Mild Pepino Mosaic Virus isolate VX1), and none of the shortlisted terms are viruses or microorganisms; they are all unrelated chemical substances."
+   },
    "components": [
     {
      "text": "Mild Pepino Mosaic Virus isolate VX1",
@@ -27312,6 +27882,11 @@
    "definition": "Clayed charcoal",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is clayed charcoal; calcium carbonate, ethanol and the other candidates are different substances."
+   },
    "components": [
     {
      "text": "Clayed charcoal",
@@ -27334,6 +27909,11 @@
    "definition": "Urtica spp.",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Urtica spp. (nettle, a plant extract/basic substance) has no matching term in the shortlist; all candidates are unrelated chemicals such as urea, cartap or triticonazole."
+   },
    "components": [
     {
      "text": "Urtica spp",
@@ -27356,6 +27936,11 @@
    "definition": "Hydrogen peroxide",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is hydrogen peroxide; the candidates are different substances such as hydrogen cyanide, sodium hydroxide and calcium hydroxide."
+   },
    "components": [
     {
      "text": "Hydrogen peroxide",
@@ -27387,6 +27972,11 @@
    "definition": "Bacillus amyloliquefaciens strain FZB24",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is Bacillus amyloliquefaciens strain FZB24; the only B. amyloliquefaciens entries are strains AH2 and AT-332, which are different strains and therefore different active substances."
+   },
    "components": [
     {
      "text": "Bacillus amyloliquefaciens strain FZB24",
@@ -27418,6 +28008,11 @@
    "definition": "Bacillus amyloliquefaciens strain MBI 600",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is Bacillus amyloliquefaciens strain MBI 600; the two B. amyloliquefaciens entries (AH2, AT-332) are different strains, and strain codes identify different active substances."
+   },
    "components": [
     {
      "text": "Bacillus amyloliquefaciens strain MBI 600",
@@ -27527,6 +28122,11 @@
    "definition": "Beer",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The EU 'residue definition' is just 'Beer', a food commodity and not a pesticide substance, and none of the shortlisted pesticide terms corresponds to it."
+   },
    "components": [
     {
      "text": "Beer",
@@ -27549,6 +28149,11 @@
    "definition": "mustard seeds powder",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Mustard seeds powder is a plant-derived substance, and none of the shortlisted terms is mustard seed powder; the nearest, grape seed extract, is a different substance, and carbon disulphide and methyl bromide are unrelated chemicals."
+   },
    "components": [
     {
      "text": "mustard seeds powder",
@@ -27691,6 +28296,11 @@
    "definition": "Pasteuria nishizawae Pn1",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate in the shortlist is Pasteuria nishizawae Pn1; the Bacillus thuringiensis entries and chemical substances are different organisms or compounds."
+   },
    "components": [
     {
      "text": "Pasteuria nishizawae Pn1",
@@ -27915,8 +28525,21 @@
   "name": "Bicyclopyrone (sum of bicyclopyrone and its structurally related metabolites determined as the sum of the common moieties 2-(2- methoxyethoxymethyl)-6-(trifluoromethyl) pyridine-3-carboxylic acid (SYN503780) and (2-(2-hydroxyethoxymethyl)-6- (trifluoromethyl)pyridine-3-carboxylic acid (CSCD686480), expressed as bicyclopyrone)",
   "default": {
    "definition": "Bicyclopyrone (sum of bicyclopyrone and its structurally related metabolites determined as the sum of the common moieties 2-(2- methoxyethoxymethyl)-6-(trifluoromethyl) pyridine-3-carboxylic acid (SYN503780) and (2-(2-hydroxyethoxymethyl)-6- (trifluoromethyl)pyridine-3-carboxylic acid (CSCD686480), expressed as bicyclopyrone)",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00011515-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The EU definition is the sum of bicyclopyrone and its metabolites measured as common moieties SYN503780 and CSCD686480, which matches the PARAM residue definition term RF-00011515-PAR rather than the parent-only term.",
+    "matched": [
+     "Bicyclopyrone (sum of bicyclopyrone and its structurally related metabolites determined as the sum of the common moieties (SYN503780) and (CSCD686480)"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "bicyclopyrone",
@@ -28121,6 +28744,11 @@
    "definition": "ABE-IT 56",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "ABE-IT 56 is a code name for an experimental active substance (a Bacillus amyloliquefaciens-type microbial strain), and none of the shortlisted chemicals corresponds to it."
+   },
    "components": [
     {
      "text": "ABE-IT 56",
@@ -28143,6 +28771,11 @@
    "definition": "Beauveria bassiana PPRI 5339",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The shortlist has several Beauveria bassiana strains (203, R444, GHA, 147, BOV1, IMI389521, NPP111B005) but none is PPRI 5339, and different strain codes are different active substances."
+   },
    "components": [
     {
      "text": "Beauveria bassiana PPRI 5339",
@@ -28213,6 +28846,11 @@
    "definition": "Clonostachys rosea strain J1446 (formerly Gliocladium catenulatum strain J1446)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist term is Clonostachys rosea (Gliocladium catenulatum) strain J1446; the only microorganism candidate, Pseudomonas sp. strain DSMZ 13134, is a different organism and strain."
+   },
    "components": [
     {
      "text": "Clonostachys rosea strain J1446",
@@ -28248,6 +28886,11 @@
    "definition": "Onion oil",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is onion oil; the oil candidates (bone, corn, orange, soybean, paraffin, epoxidised soybean) are different substances."
+   },
    "components": [
     {
      "text": "Onion oil",
@@ -29048,8 +29691,21 @@
   "name": "Allium cepa L. bulb extract",
   "default": {
    "definition": "Allium cepa L. bulb extract",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00012015-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The EU definition 'Allium cepa L. bulb extract' is the onion extract active substance, which matches the PARAM term 'Allium cepa extract'.",
+    "matched": [
+     "Allium cepa extract"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Allium cepa L. bulb extract",
@@ -29885,8 +30541,21 @@
   "name": "Spirotetramat and spirotetramat-enol (sum of), expressed as spirotetramat(R)",
   "default": {
    "definition": "Spirotetramat and spirotetramat-enol (sum of), expressed as spirotetramat",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00000030-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The EU definition (spirotetramat plus spirotetramat-enol, expressed as spirotetramat) matches the PARAM residue definition for spirotetramat including its metabolite BYI08330-enol, expressed as spirotetramat; the other spirotetramat terms cover only the enol or only the parent.",
+    "matched": [
+     "Spirotetramat (spirotetramat and its metabolite BYI08330-enol expressed as spirotetramat)"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "spirotetramat",
@@ -29988,6 +30657,11 @@
    "definition": "Aqueous extract from the germinated seeds of sweet Lupinus albus",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is an aqueous extract of germinated sweet Lupinus albus seeds (BLAD-type substance); the candidates are unrelated chemicals or other extracts/oils."
+   },
    "components": [
     {
      "text": "Aqueous extract from the germinated seeds of sweet Lupinus albus",
@@ -30126,6 +30800,11 @@
    "definition": "Pepino Mosaic Virus, CH2 strain, mild isolate Abp2",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist entry is Pepino Mosaic Virus (strain CH2, isolate Abp2); the only virus-like entry, Betabaculovirus, is a different organism, and Pepper Dust Extraction Residue is unrelated."
+   },
    "components": [
     {
      "text": "Pepino Mosaic Virus, CH2 strain, mild isolate Abp2",
@@ -30157,6 +30836,11 @@
    "definition": "Pepino Mosaic Virus, EU strain, mild isolate Abp1",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is Pepino mosaic virus (EU strain, mild isolate Abp1); the candidates are unrelated chemicals or other organisms such as Betabaculovirus, which is a different virus genus."
+   },
    "components": [
     {
      "text": "Pepino Mosaic Virus, EU strain, mild isolate Abp1",
@@ -30684,6 +31368,11 @@
    "definition": "Spodoptera exigua multicapsid nucleopolyhedrovirus (SeMNPV) isolate BV-0004",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No candidate is Spodoptera exigua MNPV isolate BV-0004; the Cryptophlebia peltastica NPV is a different virus and 'Betabaculovirus' is a broader genus, not this specific isolate."
+   },
    "components": [
     {
      "text": "Spodoptera exigua multicapsid nucleopolyhedrovirus (SeMNPV) isolate BV-0004",
@@ -30953,15 +31642,21 @@
   "name": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim(A)",
   "default": {
    "definition": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim",
-   "method": "near",
-   "score": 0.976,
+   "method": "model",
    "param_codes": [
     "RF-00014256-PAR"
    ],
    "evidence": {
-    "via": "near",
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The PARAM term RF-00014256-PAR is the same cycloxydim residue definition (BH 517-TGSO2 / BH 517-5-OH-TGSO2, calculated in total), with only the trailing 'cycloxydim' cut off.",
     "matched": [
      "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as"
+    ],
+    "rule_method": "near",
+    "rule_codes": [
+     "RF-00014256-PAR"
     ]
    },
    "components": [
@@ -31356,6 +32051,11 @@
    "definition": "Repellants: Fish oil",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlist term is fish oil; the candidates (e.g. Paraffin Oil, Orange oil, Gelatins) are different substances."
+   },
    "components": [
     {
      "text": "Fish oil",
@@ -31387,6 +32087,11 @@
    "definition": "Repellants: Sheep fat",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The EU definition 'Repellants: Sheep fat' names a repellent substance (sheep fat), and none of the shortlisted terms is sheep fat or a fat/tallow product; the candidates are unrelated pesticides or plant extracts."
+   },
    "components": [
     {
      "text": "Sheep fat",
@@ -31526,6 +32231,11 @@
    "definition": "Straight Chain Lepidopteran Pheromones (SCLP)",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Straight Chain Lepidopteran Pheromones are a group of pheromone active substances, and none of the shortlisted terms (organophosphates, chlorinated compounds, captan/folpet metabolites, etc.) is a pheromone or SCLP."
+   },
    "components": [
     {
      "text": "Straight Chain Lepidopteran Pheromones (SCLP)",
@@ -31548,6 +32258,11 @@
    "definition": "Metarhizium brunneum strain Ma 43",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "No shortlisted term is Metarhizium brunneum strain Ma 43; the only M. brunneum entries are different strains (BNL102, Cb15-III), and strain codes identify different active substances."
+   },
    "components": [
     {
      "text": "Metarhizium brunneum strain Ma 43",
@@ -31963,14 +32678,20 @@
     "definition": "Phosphonic acid",
     "repairs": [],
     "issues": [],
-    "method": "none",
-    "param_codes": [],
+    "method": "model",
+    "param_codes": [
+     "RF-00015700-PAR"
+    ],
     "evidence": {
-     "rejected": [
-      "Phosphoric acid"
+     "via": "model",
+     "model": "claude-sonnet-5-5",
+     "confidence": "high",
+     "reason": "The EU definition 'Phosphonic acid' matches the PARAM residue definition 'Phosphonic acid and its salts expressed as phosphonic acid', which is the same substance; phosphoric acid and the fosetyl-Al sum are different residues.",
+     "matched": [
+      "Phosphonic acid and its salts expressed as phosphonic acid"
      ],
-     "score": 0.929,
-     "reason": "different parent substance"
+     "rule_method": "none",
+     "rule_codes": []
     },
     "components": [
      {
@@ -32055,6 +32776,11 @@
    "definition": "Bacillus amyloliquefaciens strain IT-45",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The shortlist has only B. amyloliquefaciens strains AH2 and AT-332, which are different strains from IT-45, and no other candidate is the same substance."
+   },
    "components": [
     {
      "text": "Bacillus amyloliquefaciens strain IT-45",
@@ -32086,6 +32812,11 @@
    "definition": "Pythium oligandrum strain M1",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The only Pythium oligandrum candidate is strain B301, but the EU definition names strain M1, and different strain codes identify different active substances."
+   },
    "components": [
     {
      "text": "Pythium oligandrum strain M1",
@@ -32117,6 +32848,11 @@
    "definition": "Trichoderma atroviride strain AGR2",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The shortlist has only Trichoderma atroviride 77B, a different strain from AGR2, so no candidate is the same active substance."
+   },
    "components": [
     {
      "text": "Trichoderma atroviride strain AGR2",
@@ -32148,6 +32884,11 @@
    "definition": "Trichoderma atroviride strain AT10",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The shortlist has only Trichoderma atroviride 77B, a different strain from AT10, and strain codes identify different active substances, so no candidate matches."
+   },
    "components": [
     {
      "text": "Trichoderma atroviride strain AT10",
@@ -32179,6 +32920,11 @@
    "definition": "Fat distillation residues",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is fat distillation residues; the nearest candidates (petroleum distillates, pepper dust extraction residue) are different substances."
+   },
    "components": [
     {
      "text": "Fat distillation residues",
@@ -32358,6 +33104,11 @@
    "definition": "Chitosan",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is chitosan; the candidates (triclosan, chlordane, captan, citral, etc.) are all different substances."
+   },
    "components": [
     {
      "text": "Chitosan",
@@ -32476,6 +33227,11 @@
     "issues": [],
     "method": "none",
     "param_codes": [],
+    "model_guess": {
+     "code": null,
+     "confidence": "high",
+     "reason": "None of the shortlisted terms covers ethephon; the candidates are other substances (pinoxaden, picloram, 2,4-D and so on), so there is no matching term."
+    },
     "components": [
      {
       "text": "ethephon",
@@ -32609,15 +33365,30 @@
   "name": "Repellants: Tall oil",
   "default": {
    "definition": "Repellants: Tall oil",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00009395-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "medium",
+    "reason": "The EU definition names 'Tall oil' (a repellent), and the closest PARAM term is 'Tall oil crude'; 'Tall oil pitch' is a different fraction, so the crude term is the better match.",
+    "matched": [
+     "Tall oil crude"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Tall oil",
      "name": "Tall oil",
      "role": "analyte",
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-00009395-PAR"
+     ]
     }
    ],
    "parts_from": "guided_model",
@@ -32642,6 +33413,11 @@
    "definition": "Plant oils / Citronella oil",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is citronella oil or a plant oil; the candidates are unrelated synthetic pesticides or other substances (e.g. lavandulyl senecioate is a different compound)."
+   },
    "components": [
     {
      "text": "Plant oils",
@@ -32676,14 +33452,20 @@
   "name": "Ipconazole (sum of constituent isomers)(F)",
   "default": {
    "definition": "Ipconazole (sum of constituent isomers)",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-0254-001-PPP"
+   ],
    "evidence": {
-    "rejected": [
-     "Penconazole (sum of constituent isomers)"
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The shortlist term 'Ipconazole' is the same substance as the EU definition, and the 'sum of constituent isomers' wording is only a minor difference; penconazole and the other azoles are different chemicals.",
+    "matched": [
+     "Ipconazole"
     ],
-    "score": 0.955,
-    "reason": "different parent substance"
+    "rule_method": "none",
+    "rule_codes": []
    },
    "components": [
     {
@@ -32768,6 +33550,11 @@
    "definition": "Methyl nonyl ketone",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "Methyl nonyl ketone (2-undecanone) is not in the shortlist; none of the candidates (e.g. methoprene, methyl bromide, ethyl hexanoate) is the same substance."
+   },
    "components": [
     {
      "text": "Methyl nonyl ketone",
@@ -33159,15 +33946,30 @@
   "name": "Total copper",
   "default": {
    "definition": "Total copper",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-0102-001-PPP"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "'Total copper' means the copper residue itself, which matches the PARAM term 'Copper'; 'Oxine copper' is a different compound.",
+    "matched": [
+     "Copper"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Total copper",
      "name": "Total copper",
      "role": "analyte",
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-0102-001-PPP"
+     ]
     }
    ],
    "parts_from": "guided_model",
@@ -33192,6 +33994,11 @@
    "definition": "Elemental iron",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is elemental iron (or an iron compound); they are unrelated organic pesticides, so no match exists."
+   },
    "components": [
     {
      "text": "Elemental iron",
@@ -33262,6 +34069,11 @@
    "definition": "Allium fistulosum, processed",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "The input 'Allium fistulosum, processed' is a plant commodity (Welsh onion), not a pesticide residue definition, and none of the shortlisted pesticide terms is the same substance."
+   },
    "components": [
     {
      "text": "Allium fistulosum, processed",
@@ -33282,15 +34094,30 @@
   "name": "Lysate of Willaertia magna",
   "default": {
    "definition": "Lysate of Willaertia magna",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00015858-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "The EU definition 'Lysate of Willaertia magna' refers to the active substance, a lysate of Willaertia magna (strain C2c Maky), which is the only Willaertia lysate in the shortlist and matches RF-00015858-PAR.",
+    "matched": [
+     "Lysate of Willaertia magna C2c Mak"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Lysate of Willaertia magna",
      "name": "Lysate of Willaertia magna",
      "role": "analyte",
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-00015858-PAR"
+     ]
     }
    ],
    "parts_from": "guided_model",
@@ -33315,6 +34142,11 @@
    "definition": "Onobrychis viciifolia (sainfoin) dried pellets",
    "method": "none",
    "param_codes": [],
+   "model_guess": {
+    "code": null,
+    "confidence": "high",
+    "reason": "None of the shortlisted terms is Onobrychis viciifolia (sainfoin) dried pellets; they are all unrelated chemical substances or oils."
+   },
    "components": [
     {
      "text": "Onobrychis viciifolia (sainfoin) dried pellets",
@@ -33382,15 +34214,30 @@
   "name": "Vitis vinifera L. seed extract (grape seed extract)",
   "default": {
    "definition": "Vitis vinifera L. seed extract (grape seed extract)",
-   "method": "none",
-   "param_codes": [],
+   "method": "model",
+   "param_codes": [
+    "RF-00001414-PAR"
+   ],
+   "evidence": {
+    "via": "model",
+    "model": "claude-sonnet-5-5",
+    "confidence": "high",
+    "reason": "Vitis vinifera L. seed extract is grape seed extract, which matches the PARAM term 'Grape seed extract'.",
+    "matched": [
+     "Grape seed extract"
+    ],
+    "rule_method": "none",
+    "rule_codes": []
+   },
    "components": [
     {
      "text": "Vitis vinifera L. seed extract (grape seed extract)",
      "name": "Vitis vinifera L. seed extract (grape seed extract)",
      "role": "analyte",
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-00001414-PAR"
+     ]
     }
    ],
    "parts_from": "guided_model",

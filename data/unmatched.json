@@ -7,7 +7,7 @@
  {
   "residue_id": 26,
   "definition": "Sum of bentazone, its salts and 6-hydroxy (free and conjugated), expressed as bentazone",
-  "method": "near"
+  "method": "model"
  },
  {
   "residue_id": 53,
@@ -22,7 +22,7 @@
  {
   "residue_id": 81,
   "definition": "Diquat",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 105,
@@ -57,17 +57,17 @@
  {
   "residue_id": 139,
   "definition": "kresoxim methyl (BF-490-9, expressed as parent)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 191,
   "definition": "Propoxycarbazone (propoxycarbazone, its salts and 2-hydroxypropoxycarbazone expressed as propoxycarbazone)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 192,
   "definition": "Sum of propyzamide and all metabolites containing the 3,5-dichlorobenzoic acid moiety, expressed as propyzamide",
-  "method": "near"
+  "method": "model"
  },
  {
   "residue_id": 215,
@@ -77,7 +77,7 @@
  {
   "residue_id": 260,
   "definition": "Clodinafop and its S-isomers and their salts, expressed as clodinafop",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 301,
@@ -87,7 +87,7 @@
  {
   "residue_id": 332,
   "definition": "Metam (see methylisothiocyanate)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 377,
@@ -152,7 +152,7 @@
  {
   "residue_id": 416,
   "definition": "Fatty acids:  Octanoic acid",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 417,
@@ -202,7 +202,7 @@
  {
   "residue_id": 426,
   "definition": "Gibberellin",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 427,
@@ -267,7 +267,7 @@
  {
   "residue_id": 448,
   "definition": "Seaweed extracts",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 784,
@@ -322,7 +322,7 @@
  {
   "residue_id": 2352,
   "definition": "Indolylacetic acid",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2355,
@@ -367,7 +367,7 @@
  {
   "residue_id": 2378,
   "definition": "Chlorate",
-  "method": "near"
+  "method": "model"
  },
  {
   "residue_id": 2398,
@@ -442,7 +442,7 @@
  {
   "residue_id": 2418,
   "definition": "3-decen-2-one",
-  "method": "near"
+  "method": "model"
  },
  {
   "residue_id": 2422,
@@ -612,7 +612,7 @@
  {
   "residue_id": 2536,
   "definition": "Bicyclopyrone (sum of bicyclopyrone and its structurally related metabolites determined as the sum of the common moieties 2-(2- methoxyethoxymethyl)-6-(trifluoromethyl) pyridine-3-carboxylic acid (SYN503780) and (2-(2-hydroxyethoxymethyl)-6- (trifluoromethyl)pyridine-3-carboxylic acid (CSCD686480), expressed as bicyclopyrone)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2538,
@@ -657,12 +657,12 @@
  {
   "residue_id": 2651,
   "definition": "Allium cepa L. bulb extract",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2750,
   "definition": "Spirotetramat and spirotetramat-enol (sum of), expressed as spirotetramat",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2770,
@@ -692,7 +692,7 @@
  {
   "residue_id": 3050,
   "definition": "Cycloxydim including degradation and reaction products which can be determined as 3-(3-thianyl)glutaric acid S-dioxide (BH 517-TGSO2) and/or 3-hydroxy-3-(3-thianyl)glutaric acid S-dioxide (BH 517-5-OH-TGSO2) or derivatives thereof, calculated in total as cycloxydim",
-  "method": "near"
+  "method": "model"
  },
  {
   "residue_id": 3230,
@@ -722,7 +722,7 @@
  {
   "residue_id": 3430,
   "definition": "Phosphonic acid",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 3510,
@@ -767,7 +767,7 @@
  {
   "residue_id": 3830,
   "definition": "Repellants: Tall oil",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 3850,
@@ -777,7 +777,7 @@
  {
   "residue_id": 3870,
   "definition": "Ipconazole (sum of constituent isomers)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 3910,
@@ -793,7 +793,7 @@
  {
   "residue_id": 4050,
   "definition": "Total copper",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 4110,
@@ -808,7 +808,7 @@
  {
   "residue_id": 4152,
   "definition": "Lysate of Willaertia magna",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 4153,
@@ -823,6 +823,6 @@
  {
   "residue_id": 4155,
   "definition": "Vitis vinifera L. seed extract (grape seed extract)",
-  "method": "none"
+  "method": "model"
  }
 ]

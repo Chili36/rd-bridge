@@ -34,6 +34,14 @@ class ResolverTest(unittest.TestCase):
         out = self.check("A01QX", "2-phenylphenol", "exception", "RF-0823-001-PPP")
         self.assertEqual(out["exception"]["repairs"][0]["to"], "1000000")
 
+    def test_model_link_resolves_like_any_other_link(self):
+        import json
+        rows = json.loads((ROOT / "data" / "residue_param_map.json").read_text())
+        r = Resolver(rows, Classifier.load(str(ROOT / "data" / "foodex2_ppp.json")))
+        out = r.resolve("A01DJ", "Chlorate")
+        self.assertEqual((out["status"], out["method"], out["param_codes"]),
+                         ("resolved", "model", ["RF-00000015-CHE"]))
+
     def test_near_link_is_not_resolved(self):
         out = self.r.resolve("A01DJ", 3050)  # Cycloxydim: near match only (PARAM name truncated)
         self.assertEqual((out["status"], out["method"]), ("untrusted_link", "near"))

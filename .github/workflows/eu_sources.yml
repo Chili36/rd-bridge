@@ -65,6 +65,21 @@ jobs:
           cat model-log.txt
           echo "model_exit=$status" >> "$GITHUB_ENV"
           # A transient model error must not hide successfully fetched EU updates.
+      - name: Guess PARAM links for definitions the rules cannot link
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        shell: bash
+        run: |
+          status=0
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            # Uses the map rebuilt above. Only new/changed unlinked definitions are asked;
+            # cached guesses are reused. Fail closed on more than 40 calls.
+            python -m rd_bridge.model_match --max-calls 40 > match-model-log.txt 2>&1 || status=$?
+          else
+            echo "No model API key: cached model guesses retained." > match-model-log.txt
+          fi
+          cat match-model-log.txt
+          echo "match_model_exit=$status" >> "$GITHUB_ENV"
       - name: Rebuild map and report acceptance cases
         shell: bash
         run: |
@@ -121,6 +136,7 @@ jobs:
             echo
             echo "**Post-refresh unit tests exit:** $updated_tests_exit"
             echo "**Model reading exit:** $model_exit"
+            echo "**Model PARAM guesses exit:** $match_model_exit"
             echo "**Acceptance cases exit:** $cases_exit (3 means existing/new cases failed)"
             echo
             cat eu-refresh-report.md
