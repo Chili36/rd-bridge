@@ -631,7 +631,9 @@
     {
       "residue_id": 413,
       "definition": "Fatty acids C7-C20",
-      "whole_rd_param_codes": [],
+      "whole_rd_param_codes": [
+        "RF-00000248-NTR"
+      ],
       "model_component_codes": [],
       "parser_component_codes": [],
       "model_reading": [

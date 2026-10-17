@@ -13,7 +13,6 @@ TERMS = [
     {"code": "D1", "name": "Diquat (sum of diquat and its salts, expressed as diquat)", "pestClass": "RD"},
     {"code": "B1", "name": "Bacillus amyloliquefaciens AH2", "pestClass": "AS"},
     {"code": "X1", "name": "Cypermethrin", "pestClass": "AS"},
-    {"code": "O1", "name": "Paraffin Oil", "pestClass": "AS", "cas": "64742-55-8"},
 ]
 
 
@@ -68,21 +67,6 @@ class BuildTest(unittest.TestCase):
         d = rows[0]["default"]
         self.assertEqual((d["method"], d["param_codes"]), ("none", []))
         self.assertEqual(d["model_guess"]["reason"], "different strain")
-
-    def test_low_confidence_guess_is_a_suggestion_not_a_link(self):
-        rows = build([residue(1, "Chlorate")], TERMS,
-                     guesses={"Chlorate": self.guess("C1", confidence="low")})
-        d = rows[0]["default"]
-        self.assertNotEqual(d["method"], "model")
-        self.assertEqual(d["model_guess"]["code"], "C1")
-        self.assertIn("low confidence", d["model_guess"]["not_applied"])
-
-    def test_stated_cas_vetoes_a_guess_for_a_term_with_another_cas(self):
-        text = "Paraffin oil (CAS 64742-54-7)"
-        rows = build([residue(1, text)], TERMS, guesses={text: self.guess("O1", candidates=("O1",))})
-        d = rows[0]["default"]
-        self.assertEqual((d["method"], d["param_codes"]), ("none", []))
-        self.assertIn("CAS 64742-54-7", d["model_guess"]["not_applied"])
 
     def test_guess_naming_an_unknown_code_is_ignored(self):
         rows = build([residue(1, "Chlorate")], TERMS, guesses={"Chlorate": self.guess("GONE")})

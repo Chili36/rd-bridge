@@ -97,7 +97,7 @@
  {
   "residue_id": 389,
   "definition": "Thiobencarb (4-chlorobenzyl methyl sulfone)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 399,
@@ -137,12 +137,12 @@
  {
   "residue_id": 413,
   "definition": "Fatty acids C7-C20",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 414,
   "definition": "Fatty acids:  fatty acid methyl ester",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 415,
@@ -222,7 +222,7 @@
  {
   "residue_id": 434,
   "definition": "Pepper",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 435,
@@ -312,7 +312,7 @@
  {
   "residue_id": 2347,
   "definition": "Paraffin oil (CAS 64742-54-7)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2348,
@@ -422,22 +422,22 @@
  {
   "residue_id": 2409,
   "definition": "Paraffin oil (CAS 64742-46-7)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2410,
   "definition": "Paraffin oil (CAS 72623-86-0)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2411,
   "definition": "Paraffin oil (CAS 8042-47-5)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2412,
   "definition": "Paraffin oil (CAS 97862-82-3)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2418,
@@ -447,7 +447,7 @@
  {
   "residue_id": 2422,
   "definition": "Cydia pomonella Granulovirus (CpGV)",
-  "method": "none"
+  "method": "model"
  },
  {
   "residue_id": 2424,

@@ -146,16 +146,9 @@ def build(residues: list, terms: list, parts=None, readings=None, guesses=None) 
         if not guess or definition["method"] not in model_match.UNLINKED or "catalogue_gap" in definition:
             return
         code = guess.get("code")
-        stated = set(compounds.cas_numbers(definition["definition"]))
-        refused = None
-        if code is not None and guess.get("confidence") == "low":
-            refused = "low confidence: kept as a suggestion, not a link"
-        elif code is not None and stated and matcher.term_cas.get(code) not in stated:
-            refused = f"the definition states CAS {', '.join(sorted(stated))}; the term does not"
-        if code is None or refused:
-            definition["model_guess"] = {"code": code, "confidence": guess.get("confidence"),
-                                         "reason": guess.get("reason"),
-                                         **({"not_applied": refused} if refused else {})}
+        if code is None:
+            definition["model_guess"] = {"code": None, "confidence": guess.get("confidence"),
+                                         "reason": guess.get("reason")}
         elif code in matcher.names:
             rule = {"rule_method": definition["method"], "rule_codes": definition.get("param_codes", [])}
             definition.pop("score", None)

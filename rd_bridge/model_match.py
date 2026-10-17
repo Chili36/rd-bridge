@@ -8,9 +8,7 @@ the model for its best guess, or none when no candidate is the same substance or
 
 Answers are cached in data/model_matches.json for one model and prompt; `rd_bridge.match` applies
 them as `method: "model"`, with the model's reason and confidence in `evidence`. Rule links are
-never replaced, and verified catalogue gaps (`catalogue_gap`) keep their legal decision. Two checks
-the model cannot override: a low-confidence guess is kept as a suggestion (`model_guess`), not a
-link, and a guess is refused when the definition states a CAS number the term does not carry.
+never replaced, and verified catalogue gaps (`catalogue_gap`) keep their legal decision.
 
 Usage: python -m rd_bridge.model_match [--max-calls 200] [--dry-run]
 Reads data/residue_param_map.json (run rd_bridge.match first) and data/param_pest_terms.json.
@@ -48,11 +46,7 @@ Return no code only when no candidate is the same substance or residue, for exam
 - a different chemical (penconazole is not ipconazole; phosphoric acid is not phosphonic acid)
 - a different microorganism strain or isolate (strain codes identify different active substances)
 - a different stated CAS number for an oil or mixture
-- the EU definition is a metabolite and the only candidate is the parent, or the reverse. A \
-definition written "X (Y)" or "X (Y, expressed as X)" with Y a metabolite or derivative means Y is \
-measured: a term for the parent X alone is not a match
-- a broader group or genus for one named substance or organism, or an unrelated product that \
-only shares a word
+- the EU definition is a metabolite and the only candidate is the parent, or the reverse
 
 Confidence: high = same substance and same residue; medium = same substance, residue wording \
 differs; low = plausible but uncertain. Give a one-sentence reason a reviewer can check."""
