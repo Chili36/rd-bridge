@@ -133,6 +133,35 @@ class MatcherTest(unittest.TestCase):
         self.assertEqual((out["method"], out["param_codes"]), ("ambiguous", ["A", "B"]))
         self.assertEqual(out["evidence"]["via"], "alias")
 
+    def test_conditional_clause_is_not_part_of_the_definition(self):
+        m = Matcher([term("D", "Dinocap (sum of dinocap isomers and their corresponding phenols "
+                               "expressed as dinocap)", "RD")])
+        clause = ("(Where only meptyldinocap or its corresponding phenol are detected but none of the other "
+                  "components constituting dinocap (including their corresponding phenols), the MRLs and "
+                  "residue definition of meptyldinocap are to be applied.)")
+        out = m.link("Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) "
+                     + clause, "")
+        self.assertEqual((out["method"], out["param_codes"]), ("exact", ["D"]))
+        self.assertEqual(out["evidence"]["conditional_clause"], clause)
+
+    def test_former_name_is_an_alias_not_part_of_the_name(self):
+        m = Matcher([term("A", "Akanthomyces muscarius Ve6")])
+        out = m.link("Akanthomyces muscarius Ve6 (formerly Lecanicillium muscarium strain Ve6)", "")
+        self.assertEqual((out["method"], out["param_codes"]), ("alias", ["A"]))
+
+    def test_element_symbol_suffix(self):
+        m = Matcher([term("S", "Sulfur (S)"), term("N", "Nitrogen (N)"), term("X", "Metolachlor (S)")])
+        self.assertEqual((m.link("Sulphur", "")["method"], m.link("Sulphur", "")["param_codes"]), ("alias", ["S"]))
+        # "(S)" there is a stereo descriptor, not an element symbol: no trusted link.
+        self.assertIn(m.link("Metolachlor", "")["method"], {"none", "near"})
+
+    def test_param_typo_constituent(self):
+        m = Matcher([term("F", "Flucythrinate (flucythrinate including other mixtures of consitutent isomers "
+                               "(sum of isomers))", "RD")])
+        out = m.link("Flucythrinate (flucythrinate including other mixtures of constituent isomers "
+                     "(sum of isomers))", "")
+        self.assertEqual((out["method"], out["param_codes"]), ("spelling", ["F"]))
+
     def test_exact_carries_no_evidence(self):
         out = self.link("Topramezone")
         self.assertEqual(out, {"method": "exact", "param_codes": ["T1"]})

@@ -20,6 +20,9 @@ from rd_bridge import catalogue_gaps, components, compounds, evidence_parts, foo
 
 FOOTNOTE_MARKERS = re.compile(r"\s*(\((R|F|A|\+|\+\+|\*|)\)\s*)+$")
 NEAR_CUTOFF = 0.9
+# "(Where only Y is detected …, the residue definition of Y applies.)" is an alternative rule, not part
+# of the summed residue (interpretation guidance EU-CONDITIONAL-CLAUSE); match without it, keep it as evidence.
+CONDITIONAL = re.compile(r"\s*(\(\s*where\s+only\b.*\))\s*$", re.I | re.S)
 norm = compounds.norm
 
 
@@ -60,6 +63,12 @@ class Matcher:
         return out
 
     def link(self, definition: str, head: str) -> dict:
+        clause = CONDITIONAL.search(definition)
+        if clause:
+            out = self.link(definition[:clause.start()], head)
+            if out["param_codes"]:
+                out.setdefault("evidence", {"via": out["method"]})["conditional_clause"] = clause.group(1)
+                return out
         forms = [definition]
         if head and not norm(definition).startswith(norm(head)):
             forms.append(f"{head} ({definition})")

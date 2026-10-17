@@ -35,7 +35,7 @@ class ResolverTest(unittest.TestCase):
         self.assertEqual(out["exception"]["repairs"][0]["to"], "1000000")
 
     def test_near_link_is_not_resolved(self):
-        out = self.r.resolve("A01DJ", 109)  # Flucythrinate: near match only
+        out = self.r.resolve("A01DJ", 3050)  # Cycloxydim: near match only (PARAM name truncated)
         self.assertEqual((out["status"], out["method"]), ("untrusted_link", "near"))
 
     def test_completeness_of_an_analysis(self):

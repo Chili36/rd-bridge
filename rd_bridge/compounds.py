@@ -17,6 +17,7 @@ import unicodedata
 SPELLING = [
     (r"sulph", "sulf"),
     (r"phtal", "phthal"),
+    (r"consitutent", "constituent"),  # PARAM 17.8 typo (flucythrinate)
     (r"\bdes(?=(?:ethyl|methyl))", "de"),
     (r"\bde-(?=(?:ethyl|methyl))", "de"),
     (r"\b(aka|also called)\b", " "),
@@ -36,7 +37,13 @@ PARENT_WORDS = {"parent", "parentcompound"}
 STEREO_PREFIX = re.compile(r"^\s*\((?:\d+)?[EZRS](?:\s*,\s*\d*[EZRS])*\)[\s-]*")
 CAS = re.compile(r"\bCAS(?:\s*(?:No\.?|number))?\s*:?\s*(\d{2,7}-\d{2}-\d)\b", re.I)
 CODE_LIKE = re.compile(r"^(?!CAS\b)(?:[A-Z]{2,}[A-Z0-9]*|[A-Z]{1,5}[- ]?\d[\w-]*|E\d{3}[a-z]?)$")
-ALIAS_PAREN = re.compile(r"\(\s*(?:aka|also called)\s+([^()]+?)\s*\)", re.I)
+ALIAS_PAREN = re.compile(r"\(\s*(?:aka|also called|formerly)\s+([^()]+?)\s*\)", re.I)
+# PARAM writes some elements as "Sulfur (S)"; the symbol is an identifier, not part of the name.
+ELEMENT_SYMBOL = re.compile(r"^([A-Za-z]+)\s*\(([A-Z][a-z]?)\)$")
+ELEMENTS = {"sulfur": "S", "nitrogen": "N", "iron": "Fe", "copper": "Cu", "zinc": "Zn", "phosphorus": "P",
+            "potassium": "K", "calcium": "Ca", "magnesium": "Mg", "aluminium": "Al", "aluminum": "Al",
+            "boron": "B", "manganese": "Mn", "silver": "Ag", "mercury": "Hg", "cadmium": "Cd", "lead": "Pb",
+            "arsenic": "As"}
 E_NUMBER = re.compile(r"\s+(E\d{3}[a-z]?)\s*$", re.I)
 
 
@@ -127,7 +134,10 @@ def aliases(definition: str) -> list:
     text = MARKERS.sub("", definition.strip())
     for m in ALIAS_PAREN.finditer(text):
         out.append(("aka", m.group(1)))
-    bare = ALIAS_PAREN.sub("", text).strip()
+    bare = re.sub(r"\s{2,}", " ", ALIAS_PAREN.sub("", text)).strip()
+    element = ELEMENT_SYMBOL.match(bare)
+    if element and ELEMENTS.get(canon(element.group(1))) == element.group(2):
+        out.append(("name", element.group(1)))
     head, body = _head_and_body(bare)
     if head and CODE_LIKE.match(body):
         out += [("code", body), ("name", head)]
