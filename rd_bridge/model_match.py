@@ -94,9 +94,15 @@ def _ratio(a: str, b: str, quick: bool = False) -> float:
 
 def candidates(definition: str, terms: list, limit: int = SHORTLIST) -> list:
     """PARAM terms most like the definition: by head name, full text and head word containment."""
-    key = tuple((t["code"], t["name"], t.get("pestClass")) for t in terms)
+    catalogue = _catalogue(tuple((t["code"], t["name"], t.get("pestClass")) for t in terms))
     return [{"code": code, "name": name, **({"class": cls} if cls else {})}
-            for code, name, cls in _shortlist(definition, key, limit)]
+            for code, name, cls in _shortlist(definition, catalogue, limit)]
+
+
+@functools.lru_cache(maxsize=8)
+def _catalogue(terms: tuple) -> tuple:
+    """The first equal copy of a catalogue key, so every memoised shortlist shares one copy."""
+    return terms
 
 
 @functools.lru_cache(maxsize=4096)
