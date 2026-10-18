@@ -32,7 +32,7 @@
  {
   "residue_id": 109,
   "definition": "Flucythrinate (flucythrinate including other mixtures of constituent isomers (sum of isomers))",
-  "method": "near"
+  "method": "spelling"
  },
  {
   "residue_id": 111,
@@ -80,11 +80,6 @@
   "method": "none"
  },
  {
-  "residue_id": 284,
-  "definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
-  "method": "none"
- },
- {
   "residue_id": 301,
   "definition": "Fenpyroximate (metabolite M-3, expressed as fenpyroximate (F))",
   "method": "compound_set"
@@ -97,7 +92,7 @@
  {
   "residue_id": 377,
   "definition": "Sulphur",
-  "method": "none"
+  "method": "alias"
  },
  {
   "residue_id": 389,
@@ -357,7 +352,7 @@
  {
   "residue_id": 2367,
   "definition": "Akanthomyces muscarius Ve6 (formerly Lecanicillium muscarium strain Ve6)",
-  "method": "none"
+  "method": "alias"
  },
  {
   "residue_id": 2368,

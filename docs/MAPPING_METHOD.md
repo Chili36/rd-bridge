@@ -40,6 +40,13 @@ not forced: an ambiguous or missing link is left visibly unresolved.
 | `near` | Similarity ≥0.9 **and** same parent substance: untrusted suggestion |
 | `none` | No supported link; do not substitute a fuzzy unrelated match |
 
+Before these methods, a trailing conditional clause such as Dinocap's "(Where only
+meptyldinocap … is detected …, the residue definition of meptyldinocap is to be applied.)"
+is set aside: it is an alternative rule, not part of the summed residue (guidance
+`EU-CONDITIONAL-CLAUSE`). The definition is matched without it and the clause is kept as
+`evidence.conditional_clause`. Former names in "(formerly …)" are treated like "aka" aliases,
+and PARAM element names written with their symbol ("Sulfur (S)") also match the plain name.
+
 Whole-definition `param_codes` describe the *sum/whole*, not necessarily
 the code of every chemical that a laboratory might measure separately.
 

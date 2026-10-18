@@ -5525,13 +5525,12 @@
   "name": "Flucythrinate (flucythrinate including other mixtures of constituent isomers (sum of isomers))(F)",
   "default": {
    "definition": "Flucythrinate (flucythrinate including other mixtures of constituent isomers (sum of isomers))",
-   "method": "near",
-   "score": 0.988,
+   "method": "spelling",
    "param_codes": [
     "RF-0201-002-PPP"
    ],
    "evidence": {
-    "via": "near",
+    "via": "spelling",
     "matched": [
      "Flucythrinate (flucythrinate including other mixtures of consitutent isomers (sum of isomers))"
     ]
@@ -5544,8 +5543,10 @@
      "notes": [
       "sum of constituent isomers, including other mixtures of constituent isomers"
      ],
-     "method": "none",
-     "param_codes": []
+     "method": "definition",
+     "param_codes": [
+      "RF-0201-002-PPP"
+     ]
     },
     {
      "text": "other mixtures of constituent isomers (sum of isomers)",
@@ -14013,8 +14014,14 @@
   "name": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)(F)",
   "default": {
    "definition": "Dinocap (sum of dinocap isomers and their corresponding phenols expressed as dinocap) (Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)",
-   "method": "none",
-   "param_codes": [],
+   "method": "exact",
+   "param_codes": [
+    "RF-0143-001-PPP"
+   ],
+   "evidence": {
+    "via": "exact",
+    "conditional_clause": "(Where only meptyldinocap or its corresponding phenol are detected but none of the other components constituting dinocap (including their corresponding phenols), the MRLs and residue definition of meptyldinocap are to be applied.)"
+   },
    "components": [
     {
      "text": "dinocap",
@@ -14023,7 +14030,7 @@
      "notes": [
       "sum of dinocap isomers (sum of isomers, no individual isomer named)"
      ],
-     "method": "family",
+     "method": "param_sum",
      "param_codes": [
       "RF-0143-002-PPP"
      ],
@@ -18438,8 +18445,22 @@
   "name": "Sulphur",
   "default": {
    "definition": "Sulphur",
-   "method": "none",
-   "param_codes": [],
+   "method": "alias",
+   "param_codes": [
+    "RF-00000111-CHE"
+   ],
+   "evidence": {
+    "via": "alias",
+    "matched": [
+     "Sulfur (S)"
+    ],
+    "aliases": [
+     {
+      "alias": "Sulphur",
+      "kind": "param_alias"
+     }
+    ]
+   },
    "components": [
     {
      "text": "Sulphur",
@@ -24738,8 +24759,22 @@
   "name": "Akanthomyces muscarius Ve6 (formerly Lecanicillium muscarium strain Ve6)",
   "default": {
    "definition": "Akanthomyces muscarius Ve6 (formerly Lecanicillium muscarium strain Ve6)",
-   "method": "none",
-   "param_codes": [],
+   "method": "alias",
+   "param_codes": [
+    "RF-00012026-PAR"
+   ],
+   "evidence": {
+    "via": "alias",
+    "matched": [
+     "Akanthomyces muscarius Ve6"
+    ],
+    "aliases": [
+     {
+      "alias": "Akanthomyces muscarius Ve6",
+      "kind": "name"
+     }
+    ]
+   },
    "components": [
     {
      "text": "Akanthomyces muscarius Ve6 (formerly Lecanicillium muscarium strain Ve6)",
