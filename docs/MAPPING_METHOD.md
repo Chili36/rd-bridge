@@ -38,7 +38,8 @@ not forced: an ambiguous or missing link is left visibly unresolved.
 | `alias` | An explicit synonym, identifier or alias matches |
 | `ambiguous` | Multiple possible PARAM candidates |
 | `near` | Similarity ≥0.9 **and** same parent substance: untrusted suggestion |
-| `none` | No supported link; do not substitute a fuzzy unrelated match |
+| `model` | The rules found no link; the model chose this PARAM term from a shortlist (see below) |
+| `none` | No supported link, and the model found no candidate for the same substance |
 
 Before these methods, a trailing conditional clause such as Dinocap's "(Where only
 meptyldinocap … is detected …, the residue definition of meptyldinocap is to be applied.)"
@@ -46,6 +47,20 @@ is set aside: it is an alternative rule, not part of the summed residue (guidanc
 `EU-CONDITIONAL-CLAUSE`). The definition is matched without it and the clause is kept as
 `evidence.conditional_clause`. Former names in "(formerly …)" are treated like "aka" aliases,
 and PARAM element names written with their symbol ("Sulfur (S)") also match the plain name.
+
+### Model guesses for what the rules cannot link
+
+The rules above link only on hard evidence, so many definitions with an obvious PARAM term under
+other wording stay unlinked ("Chlorate" / "Chlorates", "Indolylacetic acid" /
+"indole-3-acetic acid", PARAM names cut off at their field length). `rd_bridge.model_match`
+shortlists the 20 most similar PARAM pesticide terms for each such definition and asks
+Claude Sonnet 5.5 for the term a data reporter would use, or none when no candidate is the same
+substance (another chemical, another microorganism strain, another CAS number, parent versus
+metabolite). Answers are cached in `data/model_matches.json` for one model and prompt;
+`rd_bridge.match` applies them as `method: "model"` with the model's confidence and reason in
+`evidence`, and records a refusal as `model_guess`. Rule links are never replaced, and a verified
+`catalogue_gap` keeps its legal decision. The weekly EU refresh asks only for new or changed
+definitions (at most 40 calls).
 
 Whole-definition `param_codes` describe the *sum/whole*, not necessarily
 the code of every chemical that a laboratory might measure separately.

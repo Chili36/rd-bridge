@@ -17,7 +17,7 @@ import json
 from pathlib import Path
 
 from rd_bridge import (compare_parts, components, guided_model_parts,
-                       llm, match, model_parts)
+                       llm, match, model_match, model_parts)
 
 ROOT = guided_model_parts.ROOT
 SONNET = "claude-sonnet-5-5"
@@ -152,7 +152,8 @@ def rebuild(raw, terms, index, answers, root=ROOT):
     # All old baseline cache answers are present for definitions not in guided
     # results; no source or whole-RD text is changed by this step.
     base = model_parts.load(str(Path(root) / "data/model_parts.json"))
-    return match.build(raw, terms, index, {**base, **answers})
+    guesses = model_match.load(str(Path(root) / "data/model_matches.json"))
+    return match.build(raw, terms, index, {**base, **answers}, guesses)
 
 
 def fix_regressions(baseline, answers, *, raw, terms, index, data=None,

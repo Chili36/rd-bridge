@@ -16,7 +16,7 @@ import os
 import re
 import sys
 
-from rd_bridge import catalogue_gaps, components, compounds, evidence_parts, footnotes, guidance, guided_model_parts, model_parts, qualifier_parts
+from rd_bridge import catalogue_gaps, components, compounds, evidence_parts, footnotes, guidance, guided_model_parts, model_match, model_parts, qualifier_parts
 
 FOOTNOTE_MARKERS = re.compile(r"\s*(\((R|F|A|\+|\+\+|\*|)\)\s*)+$")
 NEAR_CUTOFF = 0.9
@@ -133,18 +133,39 @@ def linked(found: list) -> set:
     return {c for p in found if p["role"] == "analyte" for c in p.get("param_codes", [])}
 
 
-def build(residues: list, terms: list, parts=None, readings=None) -> list:
+def build(residues: list, terms: list, parts=None, readings=None, guesses=None) -> list:
     """`parts` (a components.ComponentIndex) adds each definition's components; `readings`
-    ({definition: model_parts answer}) are the model's readings of the definitions."""
+    ({definition: model_parts answer}) are the model's readings of the definitions; `guesses`
+    ({definition: model_match answer}) link definitions the rules leave unlinked."""
     matcher = Matcher(terms)
     readings = readings or {}
+    guesses = guesses or {}
+
+    def apply_guess(definition: dict) -> None:
+        guess = guesses.get(definition["definition"])
+        if not guess or definition["method"] not in model_match.UNLINKED or "catalogue_gap" in definition:
+            return
+        if not model_match.is_fresh(guess, definition["definition"], terms):
+            return  # made from an older PARAM shortlist; the next model_match run asks again
+        code = guess.get("code")
+        if code is None:
+            definition["model_guess"] = {"code": None, "confidence": guess.get("confidence"),
+                                         "reason": guess.get("reason")}
+        elif code in matcher.names:
+            rule = {"rule_method": definition["method"], "rule_codes": definition.get("param_codes", [])}
+            definition.pop("score", None)
+            definition.update(method="model", param_codes=[code], evidence={
+                "via": "model", "model": model_match.MODEL, "confidence": guess.get("confidence"),
+                "reason": guess.get("reason"), "matched": [matcher.names[code]], **rule})
 
     def entry(definition: dict, residue_name: str) -> dict:
+        text = definition["definition"]
         if parts is not None:
-            text = definition["definition"]
             gap = catalogue_gaps.explain(text, definition, parts)
             if gap:
                 definition["catalogue_gap"] = gap
+        apply_guess(definition)
+        if parts is not None:
             rules = parts.describe(text, definition, residue_name)
             definition["components"], definition["parts_from"] = rules, "rules"
             qualified = qualifier_parts.covered(text, parts)
@@ -250,7 +271,7 @@ def main() -> None:
         # prompt. Old Haiku cache stays intact; only independently cached guided
         # readings supersede entries with the same exact EU definition.
         readings.update(guided_model_parts.load())
-    rows = build(residues, terms, parts, readings)
+    rows = build(residues, terms, parts, readings, model_match.load())
     links = [r["default"] for r in rows] + [x for r in rows for x in r["exceptions"]]
     unmatched = [{"residue_id": r["residue_id"], "definition": d["definition"], "method": d["method"],
                   **({"reason": d["catalogue_gap"]["kind"]} if "catalogue_gap" in d else {})}
