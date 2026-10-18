@@ -30,6 +30,14 @@ class CandidatesTest(unittest.TestCase):
         codes = [t["code"] for t in model_match.candidates("Diquat", TERMS, limit=2)]
         self.assertIn("D1", codes)
 
+    def test_early_stop_gives_the_shortlist_of_scoring_every_term(self):
+        with open("data/param_pest_terms.json", encoding="utf-8") as fh:
+            terms = json.load(fh)
+        for text in ("Chlorate", "Indolylacetic acid", "Sum of fluopyram and its benzamide metabolite",
+                     "Bacillus amyloliquefaciens strain FZB24", "Copper compounds (copper)"):
+            every = model_match.candidates(text, terms, limit=len(terms))
+            self.assertEqual(model_match.candidates(text, terms), every[:model_match.SHORTLIST], text)
+
 
 class ValidateTest(unittest.TestCase):
     def test_code_must_be_one_of_the_candidates(self):

@@ -15,7 +15,9 @@ Reads data/residue_param_map.json (run rd_bridge.match first) and data/param_pes
 """
 import argparse
 import difflib
+import functools
 import hashlib
+import heapq
 import json
 import os
 import re
@@ -71,21 +73,69 @@ def _head(text: str) -> str:
     return compounds.norm(re.split(r"\s*[(,:]", text, maxsplit=1)[0])
 
 
+@functools.lru_cache(maxsize=None)
+def _term_keys(name: str) -> tuple:
+    """A PARAM name's head, normalised and canonical forms; the same 1391 names recur in every call."""
+    return _head(name), compounds.norm(name), compounds.canon(name)
+
+
+@functools.lru_cache(maxsize=None)
+def _matcher(b: str) -> difflib.SequenceMatcher:
+    """A SequenceMatcher keeping b's index, so only the definition side (seq1) changes per call."""
+    return difflib.SequenceMatcher(None, "", b)
+
+
+def _ratio(a: str, b: str, quick: bool = False) -> float:
+    """difflib ratio of a and b, or with `quick` its upper bound (quick_ratio)."""
+    m = _matcher(b)  # shared by every caller with this b, so set seq1 each time
+    m.set_seq1(a)
+    return m.quick_ratio() if quick else m.ratio()
+
+
 def candidates(definition: str, terms: list, limit: int = SHORTLIST) -> list:
     """PARAM terms most like the definition: by head name, full text and head word containment."""
+    catalogue = _catalogue(tuple((t["code"], t["name"], t.get("pestClass")) for t in terms))
+    return [{"code": code, "name": name, **({"class": cls} if cls else {})}
+            for code, name, cls in _shortlist(definition, catalogue, limit)]
+
+
+@functools.lru_cache(maxsize=8)
+def _catalogue(terms: tuple) -> tuple:
+    """The first equal copy of a catalogue key, so every memoised shortlist shares one copy."""
+    return terms
+
+
+@functools.lru_cache(maxsize=4096)
+def _shortlist(definition: str, terms: tuple, limit: int) -> tuple:
+    """`candidates` over (code, name, pestClass) terms, memoised: every match.build checks each
+    cached guess's shortlist against the same catalogue.
+
+    Terms are scored in order of their upper bound (difflib quick_ratio), and scoring stops once
+    no remaining term can reach the limit-th best score; the shortlist is the same as scoring
+    every term."""
     head, full = _head(definition), compounds.norm(definition)
     canon_head = compounds.canon(re.split(r"\s*[(,:]", definition, maxsplit=1)[0])
-    scored = []
+    bounded = []
     for t in terms:
-        name = t["name"]
-        score = max(difflib.SequenceMatcher(None, head, _head(name)).ratio(),
-                    difflib.SequenceMatcher(None, full, compounds.norm(name)).ratio())
-        if len(canon_head) > 4 and canon_head in compounds.canon(name):
-            score = max(score, 0.95)
-        scored.append((score, t["code"], t))
-    scored.sort(key=lambda s: (-s[0], s[1]))
-    return [{"code": t["code"], "name": t["name"], **({"class": t["pestClass"]} if t.get("pestClass") else {})}
-            for _, _, t in scored[:limit]]
+        term_head, term_norm, term_canon = _term_keys(t[1])
+        bump = 0.95 if len(canon_head) > 4 and canon_head in term_canon else 0.0
+        pairs = [(_ratio(head, term_head, quick=True), head, term_head),
+                 (_ratio(full, term_norm, quick=True), full, term_norm)]
+        bounded.append((max(bump, *(ub for ub, _, _ in pairs)), bump, pairs, t))
+    bounded.sort(key=lambda b: -b[0])
+    best, scored = [], []  # best: min-heap of the top `limit` scores so far
+    for upper, bump, pairs, t in bounded:
+        if best and len(best) >= limit and upper < best[0]:
+            break  # every later term's score is below the shortlist
+        # The score is a ratio only where that ratio's bound exceeds the containment bump
+        score = max([bump, *(_ratio(a, b) if ub > bump else 0.0 for ub, a, b in pairs)])
+        scored.append((score, t))
+        if len(best) < limit:
+            heapq.heappush(best, score)
+        elif best and score > best[0]:
+            heapq.heapreplace(best, score)
+    scored.sort(key=lambda s: (-s[0], s[1][0]))
+    return tuple(t for _, t in scored[:limit])
 
 
 def validate(answer: dict, listed: list) -> dict:
