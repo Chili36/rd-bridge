@@ -25,4 +25,6 @@ needs doing on the wiki side.
   CI also checks that `python -m rd_bridge.match`, `compare_parts` and `guidance_audit` reproduce
   the committed data (see `.github/workflows/tests.yml`).
 - After opening a PR, watch it for a short while. Codex reviews PRs: fix real findings, and ignore
-  small nitpicks if they keep coming. Then merge with `gh pr merge --admin`.
+  small nitpicks if they keep coming. Merge with `gh pr merge --admin` only once the tests pass
+  locally and every CI check on the PR is green; the bypass is for the review requirement, not
+  for pending or failing checks.
