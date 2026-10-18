@@ -97,12 +97,22 @@ def validate(answer: dict, listed: list) -> dict:
     return {"code": code, "confidence": answer["confidence"], "reason": answer["reason"].strip()}
 
 
+def shortlist_fingerprint(listed: list) -> str:
+    return hashlib.sha256(json.dumps([[c["code"], c["name"]] for c in listed]).encode()).hexdigest()[:16]
+
+
+def is_fresh(guess: dict | None, definition: str, terms: list) -> bool:
+    """A cached guess counts only while the PARAM shortlist it was made from is unchanged, so a new
+    catalogue that adds, renames or removes candidate terms gets the definition asked again."""
+    return bool(guess) and guess.get("shortlist") == shortlist_fingerprint(candidates(definition, terms))
+
+
 def ask(definition: str, terms: list) -> dict:
     listed = candidates(definition, terms)
     prompt = (f"EU residue definition:\n{definition}\n\nPARAM shortlist (code | name | class):\n"
               + "\n".join(f"{c['code']} | {c['name']} | {c.get('class', '')}" for c in listed))
     answer = validate(llm.call(SYSTEM, prompt, SCHEMA, model=MODEL, max_tokens=4000), listed)
-    return {**answer, "candidates": [c["code"] for c in listed]}
+    return {**answer, "candidates": [c["code"] for c in listed], "shortlist": shortlist_fingerprint(listed)}
 
 
 def unlinked(rows: list) -> list:
@@ -117,9 +127,14 @@ def unlinked(rows: list) -> list:
     return out
 
 
-def run(rows: list, terms: list, cached: dict, max_calls: int) -> dict:
-    """Ask for every uncached unlinked definition; refuse to start if that exceeds max_calls."""
-    todo = [t for t in unlinked(rows) if t not in cached]
+def pending(rows: list, terms: list, cached: dict) -> list:
+    return [t for t in unlinked(rows) if not is_fresh(cached.get(t), t, terms)]
+
+
+def run(rows: list, terms: list, cached: dict, max_calls: int) -> tuple[dict, list]:
+    """Ask for every unlinked definition without a fresh guess; refuse to start if that exceeds
+    max_calls. Returns the answers and the failures."""
+    todo = pending(rows, terms, cached)
     if len(todo) > max_calls:
         raise SystemExit(f"{len(todo)} definitions need a model call, more than --max-calls {max_calls}")
     answers, errors = dict(cached), []
@@ -130,7 +145,7 @@ def run(rows: list, terms: list, cached: dict, max_calls: int) -> dict:
             errors.append(f"{text[:60]}: {exc}")
     for error in errors:
         print(f"not cached: {error}", file=sys.stderr)
-    return answers
+    return answers, errors
 
 
 def load(path: str = CACHE) -> dict:
@@ -160,16 +175,18 @@ def main() -> None:
     with open("data/param_pest_terms.json", encoding="utf-8") as fh:
         terms = json.load(fh)
     cached = load()
-    todo = [t for t in unlinked(rows) if t not in cached]
+    todo = pending(rows, terms, cached)
     if args.dry_run:
         print(f"{len(todo)} definitions would be asked ({len(cached)} cached)")
         return
-    matches = run(rows, terms, cached, args.max_calls)
-    save(matches)
+    matches, errors = run(rows, terms, cached, args.max_calls)
+    save(matches)  # keep what succeeded
     asked = [t for t in todo if t in matches]
     linked = sum(1 for t in asked if matches[t]["code"])
     print(f"{MODEL}: {len(todo)} asked, {len(asked)} answered, {linked} linked, "
-          f"{len(asked) - linked} no match, {len(todo) - len(asked)} failed")
+          f"{len(asked) - linked} no match, {len(errors)} failed")
+    if errors:
+        sys.exit(1)  # the refresh workflow must see an incomplete run
 
 
 if __name__ == "__main__":

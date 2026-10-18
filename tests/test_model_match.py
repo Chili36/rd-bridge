@@ -45,8 +45,10 @@ class ValidateTest(unittest.TestCase):
 
 
 class BuildTest(unittest.TestCase):
-    def guess(self, code, reason="same substance", confidence="high", candidates=("C1",)):
-        return {"code": code, "confidence": confidence, "reason": reason, "candidates": list(candidates)}
+    def guess(self, code, reason="same substance", confidence="high", candidates=("C1",), text="Chlorate"):
+        shortlist = model_match.shortlist_fingerprint(model_match.candidates(text, TERMS))
+        return {"code": code, "confidence": confidence, "reason": reason, "candidates": list(candidates),
+                "shortlist": shortlist}
 
     def test_cached_guess_links_an_unmatched_definition(self):
         rows = build([residue(1, "Chlorate")], TERMS, guesses={"Chlorate": self.guess("C1", "plural form")})
@@ -58,15 +60,21 @@ class BuildTest(unittest.TestCase):
         self.assertEqual(d["evidence"]["model"], model_match.MODEL)
 
     def test_rule_links_are_never_replaced(self):
-        rows = build([residue(1, "Cypermethrin")], TERMS, guesses={"Cypermethrin": self.guess("C1")})
+        rows = build([residue(1, "Cypermethrin")], TERMS, guesses={"Cypermethrin": self.guess("C1", text="Cypermethrin")})
         self.assertEqual(rows[0]["default"]["method"], "exact")
 
     def test_model_no_match_leaves_the_definition_unlinked(self):
         rows = build([residue(1, "Bacillus amyloliquefaciens str. QST 713")], TERMS,
-                     guesses={"Bacillus amyloliquefaciens str. QST 713": self.guess(None, "different strain")})
+                     guesses={"Bacillus amyloliquefaciens str. QST 713": self.guess(
+                         None, "different strain", text="Bacillus amyloliquefaciens str. QST 713")})
         d = rows[0]["default"]
         self.assertEqual((d["method"], d["param_codes"]), ("none", []))
         self.assertEqual(d["model_guess"]["reason"], "different strain")
+
+    def test_guess_from_an_older_shortlist_is_ignored(self):
+        stale = {**self.guess("C1"), "shortlist": "old-catalogue"}
+        rows = build([residue(1, "Chlorate")], TERMS, guesses={"Chlorate": stale})
+        self.assertNotEqual(rows[0]["default"]["method"], "model")
 
     def test_guess_naming_an_unknown_code_is_ignored(self):
         rows = build([residue(1, "Chlorate")], TERMS, guesses={"Chlorate": self.guess("GONE")})
@@ -93,7 +101,8 @@ class CacheTest(unittest.TestCase):
         answers = iter([{"code": "C1", "confidence": "high", "reason": "plural"},
                         {"code": "I1", "confidence": "high", "reason": "synonym"}])
         with mock.patch.object(model_match.llm, "call", side_effect=lambda *a, **k: next(answers)) as call:
-            cached = model_match.run(rows, TERMS, cached={}, max_calls=5)
+            cached, errors = model_match.run(rows, TERMS, cached={}, max_calls=5)
+        assert errors == []
         self.assertEqual(call.call_count, 2)  # not the exact link, not the verified catalogue gap
         self.assertEqual(cached["Chlorate"]["code"], "C1")
         self.assertEqual(cached["Indolylacetic acid"]["code"], "I1")
@@ -102,6 +111,22 @@ class CacheTest(unittest.TestCase):
         call.assert_not_called()
         with self.assertRaises(SystemExit):
             model_match.run(rows, TERMS, cached={}, max_calls=1)
+
+    def test_changed_shortlist_is_asked_again(self):
+        rows = [{"residue_id": 1, "default": {"definition": "Chlorate", "method": "none"}, "exceptions": []}]
+        cached = {"Chlorate": {"code": None, "confidence": "high", "reason": "no term", "shortlist": "old"}}
+        reply = {"code": "C1", "confidence": "high", "reason": "plural"}
+        with mock.patch.object(model_match.llm, "call", return_value=reply) as call:
+            answers, errors = model_match.run(rows, TERMS, cached=cached, max_calls=5)
+        call.assert_called_once()
+        self.assertEqual(answers["Chlorate"]["code"], "C1")
+
+    def test_failed_requests_are_reported(self):
+        rows = [{"residue_id": 1, "default": {"definition": "Chlorate", "method": "none"}, "exceptions": []}]
+        with mock.patch.object(model_match.llm, "call", side_effect=model_match.llm.LLMError("HTTP 529")):
+            answers, errors = model_match.run(rows, TERMS, cached={}, max_calls=5)
+        self.assertEqual(len(errors), 1)
+        self.assertNotIn("Chlorate", answers)
 
 
 if __name__ == "__main__":

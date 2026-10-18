@@ -145,6 +145,8 @@ def build(residues: list, terms: list, parts=None, readings=None, guesses=None) 
         guess = guesses.get(definition["definition"])
         if not guess or definition["method"] not in model_match.UNLINKED or "catalogue_gap" in definition:
             return
+        if not model_match.is_fresh(guess, definition["definition"], terms):
+            return  # made from an older PARAM shortlist; the next model_match run asks again
         code = guess.get("code")
         if code is None:
             definition["model_guess"] = {"code": None, "confidence": guess.get("confidence"),
