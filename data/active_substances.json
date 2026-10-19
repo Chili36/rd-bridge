@@ -269,6 +269,13 @@
   "approval_status": "Approved",
   "cas": "119446-68-3",
   "name": "Difenoconazole",
+  "pesticide_residue_linked": "Difenoconazole (sum of constituent isomers)",
+  "substance_id": 631
+ },
+ {
+  "approval_status": "Approved",
+  "cas": "119446-68-3",
+  "name": "Difenoconazole",
   "pesticide_residue_linked": "Difenoconazole",
   "substance_id": 631
  },
