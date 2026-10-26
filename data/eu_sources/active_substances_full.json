@@ -1317,7 +1317,7 @@
   "classification_reg_1272": null,
   "corms": null,
   "expiry_date": null,
-  "legislations_actives": "<a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1490352680592&uri=CELEX:32017R0419\">Reg. (EU) 2017/419</a>",
+  "legislations_actives": "<a href=\"http://data.europa.eu/eli/reg_impl/2026/2340/oj\">Reg (EU) 2026/2340</a>; <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1490352680592&uri=CELEX:32017R0419\">Reg. (EU) 2017/419</a>",
   "legislations_old": null,
   "low_risk_active_substance": "No",
   "pest_res_linked_annex": "Annex IV",
