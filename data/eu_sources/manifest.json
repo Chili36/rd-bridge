@@ -19,7 +19,7 @@
       "No",
       "Yes"
      ],
-     "present": 4796
+     "present": 4797
     },
     "candidate_for_substitution_type": {
      "examples": [
@@ -89,8 +89,8 @@
     "tox_value_other"
    ],
    "page_count": 48,
-   "row_count": 4796,
-   "sha256": "5ecb7872a31a5943aa64badf7e94e37901ec2e1a829ae44d9a215ecc527e4dfc",
+   "row_count": 4797,
+   "sha256": "e8fbc423307674f2540583bb0f88fe8d18807db92077d767d58d1ec916bffbe5",
    "url": "https://api.datalake.sante.service.ec.europa.eu/sante/pesticides/active-substances?format=json&api-version=v3.0"
   },
   "residues": {

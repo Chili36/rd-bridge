@@ -10143,6 +10143,13 @@
   "substance_id": 783
  },
  {
+  "approval_status": "Not approved",
+  "cas": null,
+  "name": "Tetflupyrolimet",
+  "pesticide_residue_linked": "Default MRL of 0.01 mg/kg according to Art 18(1)(b) Reg 396 / 2005",
+  "substance_id": 1594
+ },
+ {
   "approval_status": "Pending",
   "cas": "10028-15-6",
   "name": "Ozone",
